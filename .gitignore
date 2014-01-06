@@ -1,0 +1,14 @@
+# Editor
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea
+
+# Project
+web
+node_modules
+dev/less/main.css

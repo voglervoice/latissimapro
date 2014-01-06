@@ -1,0 +1,17 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+# URL
+RewriteRule ^$   index.php [L]
+RewriteRule ^([0-9a-z-]*)$   /index.php?page=$1 [L]
+
+# Forbidden
+RedirectMatch 403 .ini$
+RedirectMatch 403 install.php$
+
+# Type Video Files
+AddType video/mp4 mp4 m4v
+AddType audio/mp4 m4a
+AddType video/ogg ogv
+AddType audio/ogg ogg oga
+AddType video/webm webm

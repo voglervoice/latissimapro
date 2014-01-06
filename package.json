@@ -1,0 +1,17 @@
+{
+    "name" : "Latissima Pro",
+    "version" : "0.1.0",
+    "author" : "Simon Doury",
+    "private" : true,
+
+    "devDependencies" : {
+        "grunt" :                   "~0.4.0",
+        "grunt-contrib-watch":          "*",
+        "grunt-contrib-less":			"*",
+        "grunt-contrib-requirejs":		"*",
+        "grunt-contrib-copy":			"*",
+        "grunt-contrib-clean":          "*",
+        "grunt-minjson":			    "*",
+        "matchdep":                     "*"
+    } 
+}
