@@ -9,6 +9,8 @@ require.config({
         history: 'vendors/history.min',
         modernizr: 'vendors/modernizr.min',
         tweenmax:'vendors/TweenMax.min',
+        publisher:'vendors/publisher',
+        events:'models/events',
         requestanimationframe: "vendors/polyfill.requestAnimationFrame"
     },
     shim: {
@@ -36,5 +38,8 @@ require([
         "App","html5shiv"
     ], function($, App) {
         var app;
-        $(function() {app = new App();});
+        $(function() {
+            app = new App();
+            app.start();
+        });
 });

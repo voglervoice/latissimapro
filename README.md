@@ -1,4 +1,4 @@
-# Latissima Pro -
+# Latissima Pro / site
 
 ## Require
 
