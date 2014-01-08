@@ -27,45 +27,35 @@
         <link rel="stylesheet" href="assets/css/main.css">
 
     </head>
-    <body 
-        data-twitter="<?php echo $jsonLangShare->twitter_text->texte; ?>"
-        data-pinterest="<?php echo $jsonLangShare->pinterest_text->texte; ?>"
-    >
+    <body>
         <script data-main="assets/js/main" src="assets/js/vendors/require.min.js"></script>
-
-        <h1>Lattissima Pro</h1>
-        <header></header>
-        <a href="#">visual</a>
-        <footer>
-            <a href="#"><?php echo $jsonLangGlobals->order->texte; ?></a>
-            <a href="#">Nespresso</a>
-            <ul>
-                <li><a href="#">contact</a></li>
-                <li><a href="#">legal notice</a></li>
-                <li><a href="#">store locator</a></li>
-            </ul>
-        </footer>
-        <div class="preloader"></div>
-        <a href="#"><span><?php echo $jsonLangGlobals->scroll_to_explore->texte; ?></span><div></div></a>
-        <nav>
-            <ul>
-                <li><a href="<?php echo $baseurlang; ?>home" data-link="home">Home</a></li>
-                <li><a href="<?php echo $baseurlang; ?>onetouch" data-link="onetouch">One touch is all</a></li>
-                <li><a href="<?php echo $baseurlang; ?>palette" data-link="palette">A palette of tastes</a></li>
-                <li><a href="<?php echo $baseurlang; ?>milk" data-link="milk">Milk to your taste</a></li>
-                <li><a href="<?php echo $baseurlang; ?>powerful" data-link="powerful">Powerful inside & out</a></li>
-            </ul>
-        </nav>
-        <div class="main">
-            <section id="home">
-                <a href="#">One touch is all</a>
-                <a href="#">Powerful inside and out</a>
-                <a href="#">Milk to your taste</a>
-                <a href="#">Palette of tastes</a>
-            </section>
-            <section id="onetouch">
-                
-            </section>
+        
+        <div class="content">
+            <?php include('php/views/blocks/header.php'); ?>
+            <?php include('php/views/blocks/footer.php'); ?>
+            
+            <div class="preloader"></div>
+            <a href="#"><span><?php echo $jsonLangGlobals->scroll_to_explore->texte; ?></span><div></div></a>
+            <nav>
+                <ul>
+                    <li><a href="<?php echo $baseurlang; ?>home" data-link="home">Home</a></li>
+                    <li><a href="<?php echo $baseurlang; ?>onetouch" data-link="onetouch">One touch is all</a></li>
+                    <li><a href="<?php echo $baseurlang; ?>palette" data-link="palette">A palette of tastes</a></li>
+                    <li><a href="<?php echo $baseurlang; ?>milk" data-link="milk">Milk to your taste</a></li>
+                    <li><a href="<?php echo $baseurlang; ?>powerful" data-link="powerful">Powerful inside & out</a></li>
+                </ul>
+            </nav>
+            <div class="main">
+                <section id="home">
+                    <a href="#">One touch is all</a>
+                    <a href="#">Powerful inside and out</a>
+                    <a href="#">Milk to your taste</a>
+                    <a href="#">Palette of tastes</a>
+                </section>
+                <section id="onetouch">
+                    
+                </section>
+            </div>
         </div>
     </body>
 </html>

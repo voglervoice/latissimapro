@@ -59,6 +59,7 @@ if(empty($territory) || empty($language)){
 // **************************************** init ******************************************
 $baseurl = 'http://'.$_SERVER['HTTP_HOST'].'/';
 $baseurlang = $baseurl.$language."_".$territory."/";
+$baseShareUrl = $baseurlang;
 
 // JSON LANG
 $jsonFile = $baseurl.'assets/datas/'+$language.'_'.$territory.'.json';
@@ -69,4 +70,6 @@ $jsonLang = json_decode($jsoncontent)->data->sections;
 // datas - shortcuts
 $jsonLangGlobals = $jsonLang->global__utils->blockText;
 $jsonLangShare = $jsonLang->global__facebook_twitter->blockText;
+$jsonLangFooter = $jsonLang->global__footer->blockText;
+
 ?>

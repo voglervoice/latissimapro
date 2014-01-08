@@ -10,6 +10,15 @@ define([
 		var isFullscreen = false;
 		var mainMenu = new MainMenu();
 		var home = new Home();
+		var windowW, windowH;
+
+		$( window ).resize(function() {
+			windowW = $( window ).width();
+			windowH = $( window ).height();
+			$('.content').width(windowW);
+			$('.content').height(windowH);
+		});
+		$(window).trigger('resize');
 
 		// public
 		this.start = function() {
