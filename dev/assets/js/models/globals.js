@@ -3,7 +3,7 @@ define([ ], function () {
           function Globals() {
           }
 
-          Globals.navigate = "navigate";
+          Globals.PAGE_HOME = "home";
 
           return Globals;
 });

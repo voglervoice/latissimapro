@@ -11,6 +11,7 @@ require.config({
         tweenmax:'vendors/TweenMax.min',
         publisher:'vendors/publisher',
         events:'models/events',
+        raphaeljs:'vendors/raphael-min',
         requestanimationframe: "vendors/polyfill.requestAnimationFrame"
     },
     shim: {
@@ -26,6 +27,10 @@ require.config({
         'modernizr': {
             exports: 'Modernizr'
         },
+        'raphaeljs': {
+             deps : ['jquery'],
+             exports : 'raphael'
+        },
         'tweenmax': {
             deps: ['jquery'],
             exports: 'TweenMax'
@@ -35,11 +40,19 @@ require.config({
 
 require([
         "jquery",
-        "App","html5shiv"
-    ], function($, App) {
+        "App",
+        "loader",
+        "publisher",
+        "events",
+        "html5shiv"
+    ], function($, App, Loader, publisher, Events) {
         var app;
+        var loader;
         $(function() {
             app = new App();
-            app.start();
+            publisher.subscribe(Events.loadStartComplete, function (){
+                app.start();
+            });
+            loader = new Loader();
         });
 });

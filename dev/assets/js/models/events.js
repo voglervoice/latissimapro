@@ -4,6 +4,7 @@ define([ ], function () {
           }
 
           Events.navigate = "navigate";
+          Events.loadStartComplete = "onLoadStartComplete";
 
           return Events;
 });

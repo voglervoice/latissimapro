@@ -1,24 +1,18 @@
 define([
-	"publisher",
-	"events",
-	"history",
-	"views/menu",
-	"views/home"
-], function(publisher, Events, History, MainMenu, Home) {
-	var App = function() {
+], function() {
+	var DatasLang = function() {
 		var self = this;
 		var isFullscreen = false;
 		var mainMenu = new MainMenu();
-		var home = new Home();
+		console.log("APP");
 
 		// public
 		this.start = function() {
-			console.log("APP START !");
+
 			History.Adapter.bind(window,'statechange',function(){ onAddressChange(History.getState().data.value); });
 
 			publisher.subscribe(Events.navigate, navigateTo);
 			mainMenu.start();
-			onAddressChange("home");
 		};
 		// private      
 		var navigateTo = function(id){
@@ -32,5 +26,5 @@ define([
 		};
 
 	};
-	return App;
+	return DatasLang;
 });

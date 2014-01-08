@@ -72,7 +72,7 @@ module.exports = function(grunt){
 		minjson: {
 			compile: {
 				files: {
-					'web/assets/datas/locales.json': 'dev/assets/datas/locales.json'
+					//'web/assets/datas/locales.json': 'dev/assets/datas/locales.json'
 				}
 			}
 		},
