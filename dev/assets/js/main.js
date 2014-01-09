@@ -29,7 +29,7 @@ require.config({
         },
         'raphaeljs': {
              deps : ['jquery'],
-             exports : 'raphael'
+             exports : 'Raphael'
         },
         'tweenmax': {
             deps: ['jquery'],

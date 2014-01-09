@@ -4,7 +4,7 @@ define([
     "events",
     "publisher",
     "raphaeljs"
-], function($, TweenMax, Events, publisher, raphael) {
+], function($, TweenMax, Events, publisher, Raphael) {
     /**
      * MainMenu
      * @param {HTMLElement} target

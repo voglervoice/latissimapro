@@ -17,6 +17,8 @@ define([
 			windowH = $( window ).height();
 			$('.content').width(windowW);
 			$('.content').height(windowH);
+
+			mainMenu.resize();
 		});
 		$(window).trigger('resize');
 

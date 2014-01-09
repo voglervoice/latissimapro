@@ -26,6 +26,47 @@ a { text-decoration: none; color: #fff; }
 	text-align: center;
 }
 
+// MAIN MENU
+nav{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 180px;
+    width: 155px;
+    margin-top: -95px;
+    z-index: 400;
+    ul{
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+    }
+    li{
+        position: absolute;
+        width : 100%;
+    }
+    ul li a{
+        text-align: right;
+        display: block;
+        width : 100%;
+        .light;
+        font-size: 14px;
+        letter-spacing: 1px;
+        span{
+            visibility: hidden;
+            margin-right: 10px;
+            display: block;
+            text-align: right;
+        }
+    }
+}
+
+#menu_picts{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
 // HEADER
 header{
     position: absolute;
@@ -93,6 +134,8 @@ header .white .sound .sound_sprit{.header_pict_all;background-position: -88px 0;
 header ul .fullscreen{padding-top: 1px;}
 header .black .fullscreen .fullscreen_sprit{.header_pict_all;background-position: -120px -15px;margin-top: 1px;}
 header .white .fullscreen .fullscreen_sprit{.header_pict_all;background-position: -120px 0;}
+
+// FOOTER
 
 footer{
     position: absolute;
