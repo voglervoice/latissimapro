@@ -9,7 +9,8 @@ define([
 	"views/coffeerange",
 	"views/design",
 	"views/milksystem",
-	"views/touchscreen"
+	"views/touchscreen",
+	"mousewheel"
 ], function($, publisher, Events, Globals, History, MainMenu, Home, CoffeeRange, Design, MilkSystem, Touchscreen) {
 	var App = function() {
 		var self = this;
@@ -81,21 +82,46 @@ define([
 			// DIRECT ACCESS TO :
 			transitionComplete = true;
 			onAddressChange("");
+
+			$('.content').mousewheel(function(event, delta, deltaX, deltaY) {
+				//console.log(deltaY);
+				if(transitionComplete && (deltaX > 1 || deltaY > 1)) openNextPage();
+				else if(transitionComplete && (deltaX < 1 || deltaY < 1)) openPrevPage();
+			});
 		};
 		// private      
 		var navigateTo = function(id){
-			console.log(id);
+			console.log("navigateTo : "+id);
 			var pageTitle = "Lattissima !";
+			var url = (id !== "")? id : " ";
 			if(isFullscreen)		onAddressChange(id);
-			else			History.pushState({value:id}, pageTitle, id);
+			else{
+				History.pushState({value:id}, pageTitle, url);
+			}
+		};
+		var openPrevPage = function(){
+			var next = "o";
+			if(goToId == Globals.PAGE_HOME)			next = Globals.PAGE_DESIGN;
+			else if(goToId == Globals.PAGE_TOUCHSCREEN)	next = Globals.PAGE_HOME;
+			else if(goToId == Globals.PAGE_COFFEE_RANGE)	next = Globals.PAGE_TOUCHSCREEN;
+			else if(goToId == Globals.PAGE_MILKSYSTEM)		next = Globals.PAGE_COFFEE_RANGE;
+			else if(goToId == Globals.PAGE_DESIGN)		next = Globals.PAGE_MILKSYSTEM;
+
+			if(next !== "o") navigateTo(next);
 		};
 		var openNextPage = function(){
-			console.log("openNextPage ! "+currentIndex);
+			var next = "o";
+			if(goToId == Globals.PAGE_HOME)			next = Globals.PAGE_TOUCHSCREEN;
+			else if(goToId == Globals.PAGE_TOUCHSCREEN)	next = Globals.PAGE_COFFEE_RANGE;
+			else if(goToId == Globals.PAGE_COFFEE_RANGE)	next = Globals.PAGE_MILKSYSTEM;
+			else if(goToId == Globals.PAGE_MILKSYSTEM)		next = Globals.PAGE_DESIGN;
+			else if(goToId == Globals.PAGE_DESIGN)		next = Globals.PAGE_HOME;
+
+			if(next !== "o") navigateTo(next);
 		};
 		var onAddressChange = function(value){
-			console.log("on address change - > "+value);
+
 			goToId = value;
-			console.log("  ******************* "+currentId+" / "+value+" :: "+transitionComplete);
 			if(currentId == value || !transitionComplete) return;
 
 			transitionComplete = false;
@@ -129,7 +155,7 @@ define([
 
 			$(window).trigger('resize');
 			if(currentSection !== null){
-				console.log("                        OPEN > "+currentId);
+				mainMenu.update(currentId);
 				currentIndex = index;
 				TweenMax.to($('.main'), 1.8, {top:-currentIndex*windowHContent, ease:Expo.easeInOut, onComplete:onSlideComplete});
 				currentSection.initOpen();
@@ -137,7 +163,6 @@ define([
 
 		};
 		var onSlideComplete = function(){
-			console.log("slide complete");
 			transitionComplete = true;
 			if(goToId !== currentId) onAddressChange(goToId);
 			else if(currentSection!==null) currentSection.open();

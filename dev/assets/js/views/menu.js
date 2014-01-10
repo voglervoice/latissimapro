@@ -26,6 +26,18 @@ define([
             $('.order_footer_btn_visual').css('right', $('.order_footer_btn span').width()+75);
         };
 
+        this.update = function(id) {
+            $('nav ul li a').each(function(){
+                if($(this).attr('data-link') == id){
+                    $(this).attr('data-selected', "1");
+                    mainMenuRollOver($(this));
+                }else{
+                    $(this).attr('data-selected', "0");
+                    mainMenuRollOut($(this));
+                }
+            });
+        };
+
         this.start = function() {
             console.log("Start menu");
             // footer
@@ -40,13 +52,9 @@ define([
                 event.preventDefault();
                 publisher.publish(Events.navigate, $(this).attr('data-link'));
             }).on('mouseenter', function(){
-                circles[parseInt($(this).attr('data-index'), 10)].animate({ r : 2, 'fill-opacity': 1, easing:'>'}, 200);
-                TweenMax.to($('span', this), 0.3, {autoAlpha:1, ease:Linear.easeNone});
-                TweenMax.to($('span', this), 0.3, {marginRight:50, ease:Expo.easeOut});
+                mainMenuRollOver($(this));
             }).on('mouseleave', function(){
-                circles[parseInt($(this).attr('data-index'), 10)].animate({ r : 4, 'fill-opacity': 0, easing:'<>'}, 300);
-                TweenMax.to($('span', this), 0.3, {autoAlpha:0, ease:Linear.easeNone});
-                TweenMax.to($('span', this), 0.3, {marginRight:10, ease:Expo.easeIn});
+                if($(this).attr('data-selected') == "0") mainMenuRollOut($(this));
             });
 
             // scroll to explore
@@ -74,6 +82,16 @@ define([
         };
 
         //  ******************* PRIVATE ******************* 
+        var mainMenuRollOver = function(target){
+            circles[parseInt(target.attr('data-index'), 10)].animate({ r : 2, 'fill-opacity': 1, easing:'>'}, 200);
+            TweenMax.to($('span', target), 0.3, {autoAlpha:1, ease:Linear.easeNone});
+            TweenMax.to($('span', target), 0.3, {marginRight:50, ease:Expo.easeOut});
+        };
+         var mainMenuRollOut = function(target){
+            circles[parseInt(target.attr('data-index'), 10)].animate({ r : 4, 'fill-opacity': 0, easing:'<>'}, 300);
+            TweenMax.to($('span', target), 0.3, {autoAlpha:0, ease:Linear.easeNone});
+            TweenMax.to($('span', target), 0.3, {marginRight:10, ease:Expo.easeIn});
+        };
         var openCircles = function(){
             for (var i = 0; i < circles.length; i++) {
                 TweenMax.delayedCall(0.06*i, openCircle, [circles[i]]);
@@ -95,6 +113,7 @@ define([
 
             $('nav ul li').each(function(index) {
                 $('a', this).attr('data-index', index);
+                $('a', this).attr('data-selected', "0");
                 var c = paper.circle($('nav').width()-32, index*menuSpace+20, 0).attr({
                     fill: "rgb(255,255,255)",
                     'fill-opacity': 0,
