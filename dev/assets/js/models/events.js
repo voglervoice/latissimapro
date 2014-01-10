@@ -4,6 +4,7 @@ define([ ], function () {
           }
 
           Events.navigate = "navigate";
+          Events.nextPage = "navigateToNextPage";
           Events.loadStartComplete = "onLoadStartComplete";
 
           return Events;

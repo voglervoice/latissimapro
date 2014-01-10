@@ -11,6 +11,7 @@ require.config({
         tweenmax:'vendors/TweenMax.min',
         publisher:'vendors/publisher',
         events:'models/events',
+        globals:'models/globals',
         raphaeljs:'vendors/raphael-min',
         requestanimationframe: "vendors/polyfill.requestAnimationFrame"
     },

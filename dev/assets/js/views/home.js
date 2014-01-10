@@ -5,11 +5,7 @@ define([
     "publisher",
     "raphaeljs"
 ], function($, TweenMax, Events, publisher, Raphael) {
-    /**
-     * MainMenu
-     * @param {HTMLElement} target
-     * @constructor
-     */
+
     var Home = function(target) {
         var self = this;
         var raphaW = $('#raphael_home_anchors').width();
@@ -23,19 +19,38 @@ define([
             
         };
 
-        this.open = function(){
-            var delayAnchor = 0.5;
+        this.initOpen = function(){
             for (var i = 0; i < lines.length; i++) {
                 // init
                 circleBase[i].attr({r: 0});
                 circlePulse1[i].attr({r: 0});
                 circlePulse2[i].attr({r: 0});
+                puces[i].attr({r: 0});
+                arrows[i].attr({path: arrows[i].data("introPath"), "stroke-width":"0"});
                 lines[i].attr({path: lines[i].data("initPath")});
                 rects[i].attr({x: rects[i].data("xInit"), y:rects[i].data("yInit"), width:0, height:0});
+                var linkElem = $(".home_anchors a[data-index='"+i+"']");
+                TweenMax.to(linkElem, 0, {alpha:0, left:parseInt(linkElem.attr('data-initl'), 10)});
+            }
+        };
+
+        this.open = function(){
+            var delayAnchor = 0.5;
+            for (var i = 0; i < lines.length; i++) {
                 // start animation
                 TweenMax.delayedCall(delayAnchor+0.2*i, openCircle, [i]);
                 TweenMax.delayedCall(delayAnchor+0.2*i+0.2, openLine, [i]);
             }
+        };
+
+        this.close = function(){
+            $('.home_anchors a').each(function(index) {
+                TweenMax.killTweensOf($(this));
+            });
+            TweenMax.killDelayedCallsTo(openCircle);
+            TweenMax.killDelayedCallsTo(openLine);
+            TweenMax.killDelayedCallsTo(openPuce);
+            TweenMax.killDelayedCallsTo(pulseCircle);
         };
 
         // ******************* private *******************
@@ -109,7 +124,7 @@ define([
                 var arrowInitRollPath = "M"+arrowPosXInit+" "+(posiEndY-5)+"L"+(arrowPosXInit+5)+" "+posiEndY+"L"+arrowPosXInit+" "+(posiEndY+5);
                 var arrow = paper.path(arrowInitIntroPath).attr({
                     "stroke": "#fff",
-                    "stroke-width": "0"}).data('startPath', arrowInitPath);
+                    "stroke-width": "0"}).data('startPath', arrowInitPath).data('introPath', arrowInitIntroPath);
 
                 lines.push(p);
                 circleBase.push(c);
@@ -128,6 +143,7 @@ define([
 
                 aXEnd.push(posiEndX+offsetLink);
                 var introOff = (offsetLink < 0)? 50 : -50;
+                $(this).attr('data-initl', (posiEndX+offsetLink+introOff));
                 $(this).css({'top':posiEndY-19, 'left':(posiEndX+offsetLink+introOff)});
 
                 TweenMax.to($('.home_anchors_roll', this), 0, {alpha:0});
@@ -149,8 +165,6 @@ define([
         };
 
         var openLine = function(index, end){
-            console.log("open line : "+index+" end : "+end);
-
             if(typeof end == "undefined" || end !== 1){
                 var endFirstLine = function(){ openLine(index, 1); };
                 lines[index].animate({path: lines[index].data('midPath'), easing:"<", callback:endFirstLine}, 200);

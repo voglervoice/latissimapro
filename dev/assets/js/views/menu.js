@@ -52,7 +52,7 @@ define([
             // scroll to explore
             $('.scroll_to_explore').on('click', function(event){
                 event.preventDefault();
-                publisher.publish(Events.navigate, $(this).attr('data-link'));
+                publisher.publish(Events.nextPage);
             }).on('mouseenter', function(){
                 cScroll.animate({ r : 16, 'fill-opacity': 0, easing:'>'}, 190);
                 arrowScroll.animate({ "stroke": "#ffffff"}, 160);

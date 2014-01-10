@@ -38,6 +38,10 @@
 
             <div class="main">
                 <?php include('php/views/pages/home.php'); ?>
+                <?php include('php/views/pages/touchscreen.php'); ?>
+                <?php include('php/views/pages/coffeerange.php'); ?>
+                <?php include('php/views/pages/milksystem.php'); ?>
+                <?php include('php/views/pages/design.php'); ?>
             </div>
         </div>
     </body>
