@@ -57,14 +57,17 @@ if(empty($territory) || empty($language)){
 }
 
 // **************************************** init ******************************************
-$baseurl = 'http://'.$_SERVER['HTTP_HOST'].'/';
+$folder = "lattissima-pro/";
+if($_SERVER['HTTP_HOST'] == "latissimapro.dev:8080") $folder = "";
+$baseurl = 'http://'.$_SERVER['HTTP_HOST'].'/'.$folder;
 $baseurlang = $baseurl.$language."_".$territory."/";
 $baseShareUrl = $baseurlang;
-
 // JSON LANG
-$jsonFile = $baseurl.'assets/datas/'+$language.'_'.$territory.'.json';
+$dirname    =   $_SERVER['DOCUMENT_ROOT']."/".$folder;
+
+$jsonFile = $dirname.'assets/datas/'+$language.'_'.$territory.'.json';
 if (file_exists($jsonFile))         $jsoncontent = file_get_contents($jsonFile);
-else                                        $jsoncontent = file_get_contents("assets/datas/en_XX.json");
+else                                        $jsoncontent = file_get_contents($dirname.'assets/datas/en_XX.json');
 // datas
 $jsonLang = json_decode($jsoncontent)->data->sections;
 // datas - shortcuts

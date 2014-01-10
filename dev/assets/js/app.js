@@ -27,7 +27,10 @@ define([
 
 			mainMenu.resize();
 
-			if(currentSection !== null) currentSection.resize(windowW, windowH);
+			if(currentSection !== null){
+				currentSection.resize(windowW, windowH);
+				$('.section_background', currentSection).width(windowW);
+			}
 		});
 		$(window).trigger('resize');
 

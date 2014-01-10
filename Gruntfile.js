@@ -38,6 +38,12 @@ module.exports = function(grunt){
 				dest: "web/assets/datas/",
 				expand: true
 			},
+			php: {
+				cwd: 'dev/php/',
+				src: "**",
+				dest: "web/php/",
+				expand: true
+			},
 			fonts: {
 				cwd: 'dev/assets/fonts/',
 				src: "**",
@@ -150,6 +156,8 @@ module.exports = function(grunt){
 		"clean",
 		"copy:images",
 		"copy:fonts",
+		"copy:php",
+		"copy:data",
 		"minjson",
 		"copy:vendorsjs",
 		"copy:html",
