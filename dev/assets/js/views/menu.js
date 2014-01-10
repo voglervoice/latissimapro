@@ -14,7 +14,8 @@ define([
         var self = this;
         var menuSpace = 35;
         var paper = Raphael("menu_picts", $('nav').width(), $('nav').height());
-        var circles = [];
+        var paperScroll = Raphael("scroll_arrow", $('#scroll_arrow').width(), $('#scroll_arrow').height());
+        var circles = [], cScroll, arrowScroll;
 
         // ******************* public ******************* 
         this.resize = function(){
@@ -46,6 +47,18 @@ define([
                 circles[parseInt($(this).attr('data-index'), 10)].animate({ r : 4, 'fill-opacity': 0, easing:'<>'}, 300);
                 TweenMax.to($('span', this), 0.3, {autoAlpha:0, ease:Linear.easeNone});
                 TweenMax.to($('span', this), 0.3, {marginRight:10, ease:Expo.easeIn});
+            });
+
+            // scroll to explore
+            $('.scroll_to_explore').on('click', function(event){
+                event.preventDefault();
+                publisher.publish(Events.navigate, $(this).attr('data-link'));
+            }).on('mouseenter', function(){
+                cScroll.animate({ r : 16, 'fill-opacity': 0, easing:'>'}, 190);
+                arrowScroll.animate({ "stroke": "#ffffff"}, 160);
+            }).on('mouseleave', function(){
+                cScroll.animate({ r : 15, 'fill-opacity': 1, easing:'<>'}, 200);
+                arrowScroll.animate({ "stroke": "#525150"}, 190);
             });
 
             var delayOpen = 0.5;
@@ -89,6 +102,18 @@ define([
                     "stroke-width": "1"});
                 circles.push(c);
             });
+
+            var centerY = $('#scroll_arrow').height()*0.5, centerX = $('#scroll_arrow').width()*0.5;
+            cScroll = paperScroll.circle(centerX, centerY, 15).attr({
+                    fill: "rgb(255,255,255)",
+                    'fill-opacity': 1,
+                    "stroke": "#fff",
+                    "stroke-width": "1.5"});
+
+            var arrowSizeY = 8, arrowSizeX = 12, arrowPointY = centerY+arrowSizeY*0.5, arrowTopY = centerY-arrowSizeY*0.5, arrowStartX = centerX-arrowSizeX*0.5, arrowEndX = centerX+arrowSizeX*0.5;
+            arrowScroll = paperScroll.path("M"+arrowStartX+" "+arrowTopY+"L"+centerX+" "+arrowPointY+"L"+arrowEndX+" "+arrowTopY).attr({
+                    "stroke": "#525150",
+                    "stroke-width": "1.5"});
         };
 
         init();

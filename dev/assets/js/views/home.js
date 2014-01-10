@@ -15,17 +15,24 @@ define([
         var raphaW = $('#raphael_home_anchors').width();
         var raphaH = $('#raphael_home_anchors').height();
         var paper = Raphael("raphael_home_anchors", raphaW, raphaH);
-        var lines= [], circleBase = [], circlePulse1 = [], circlePulse2 = [], resultPath = [], midPath = [], rects = [], aXEnd = [], puces = [], arrows = [];
+        var lines= [], circleBase = [], circlePulse1 = [], circlePulse2 = [], rects = [], aXEnd = [], puces = [], arrows = [];
 
         // ******************* public ******************* 
+        this.elem = $('#home');
         this.resize = function(w, h){
             
         };
 
         this.open = function(){
-            console.log("OPEN HOME "+lines.length);
             var delayAnchor = 0.5;
             for (var i = 0; i < lines.length; i++) {
+                // init
+                circleBase[i].attr({r: 0});
+                circlePulse1[i].attr({r: 0});
+                circlePulse2[i].attr({r: 0});
+                lines[i].attr({path: lines[i].data("initPath")});
+                rects[i].attr({x: rects[i].data("xInit"), y:rects[i].data("yInit"), width:0, height:0});
+                // start animation
                 TweenMax.delayedCall(delayAnchor+0.2*i, openCircle, [i]);
                 TweenMax.delayedCall(delayAnchor+0.2*i+0.2, openLine, [i]);
             }
@@ -70,11 +77,13 @@ define([
                     offsetLink = -btnTextWidth;
                 }
 
-                midPath.push("M"+posiX+" "+posiY+"L"+posiCurbX+" "+posiCurbY+"L"+posiCurbX+" "+posiCurbY);
-                resultPath.push("M"+posiX+" "+posiY+"L"+posiCurbX+" "+posiCurbY+"L"+posiEndX+" "+posiEndY);
-                var p = paper.path("M"+posiX+" "+posiY).attr({
+                var p = paper.path("M"+posiX+" "+posiY)
+                    .attr({
                     "stroke": "#fff",
-                    "stroke-width": "1.5"});
+                    "stroke-width": "1.5"})
+                    .data('initPath',  "M"+posiX+" "+posiY)
+                    .data('resultPath', "M"+posiX+" "+posiY+"L"+posiCurbX+" "+posiCurbY+"L"+posiEndX+" "+posiEndY)
+                    .data('midPath', "M"+posiX+" "+posiY+"L"+posiCurbX+" "+posiCurbY+"L"+posiCurbX+" "+posiCurbY);
 
                 // rectangle with rounded corners
                 var baseX = posiEndX+offsetLink;
@@ -82,7 +91,13 @@ define([
                     fill: "rgb(208,208,208)",
                     'fill-opacity': 0,
                     "stroke": "#fff",
-                    "stroke-width": "1.5"}).data("w", btnTextWidth).data("h", btnRectH).data("x", baseX).data("y", posiEndY-btnRectH*0.5);
+                    "stroke-width": "1.5"})
+                    .data("w", btnTextWidth)
+                    .data("h", btnRectH)
+                    .data("xInit", posiEndX)
+                    .data("x", baseX)
+                    .data("yInit", posiEndY)
+                    .data("y", posiEndY-btnRectH*0.5);
                 var radius = Math.floor(btnRectH*0.5) - 4;
                 var puce = paper.circle((baseX + radius + 5), posiEndY, 0).attr({
                     fill: "rgb(132,131,128)",
@@ -121,8 +136,8 @@ define([
                     TweenMax.to($('.home_anchors_roll', this), 0.3, {left:-25, alpha:1, ease:Circ.easeInOut});
                     TweenMax.to($('.home_anchors_off', this), 0.3, {left:$(this).width(), alpha:0, ease:Circ.easeInOut});
                     r.animate({'fill-opacity': 1}, 200);
-                    puce.animate({cx: baseX + btnTextWidth - radius - 5}, 300, "cubic-bezier(0.9,0.5,0.5,0.9)");
-                    arrow.animate({path: arrowInitRollPath}, 300, "cubic-bezier(0.9,0.5,0.5,0.9)");
+                    puce.animate({cx: baseX + btnTextWidth - radius - 5}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
+                    arrow.animate({path: arrowInitRollPath}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
                 }).on('mouseleave', function(event){
                     r.animate({'fill-opacity': 0}, 200);
                     TweenMax.to($('.home_anchors_roll', this), 0.3, {left:-$(this).width()+10, alpha:0, ease:Expo.easeInOut});
@@ -138,10 +153,10 @@ define([
 
             if(typeof end == "undefined" || end !== 1){
                 var endFirstLine = function(){ openLine(index, 1); };
-                lines[index].animate({path: midPath[index], easing:"<", callback:endFirstLine}, 200);
+                lines[index].animate({path: lines[index].data('midPath'), easing:"<", callback:endFirstLine}, 200);
             }else{
                 var lineComplete = function(){ openRect(index); };
-                lines[index].animate({path: resultPath[index], easing:">", callback:lineComplete}, 150);
+                lines[index].animate({path: lines[index].data('resultPath'), easing:">", callback:lineComplete}, 150);
             }
         };
         var openRect = function(index){

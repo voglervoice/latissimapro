@@ -1,4 +1,7 @@
-<a href="#" class="scroll_to_explore"><span><?php echo $jsonLangGlobals->scroll_to_explore->texte; ?></span></a>
+<a href="#" class="scroll_to_explore">
+	<span><?php echo $jsonLangGlobals->scroll_to_explore->texte; ?></span>
+	<div id="scroll_arrow"></div>
+</a>
 <nav>
     <ul>
         <li><a href="<?php echo $baseurlang; ?>home" data-link="home"><span>Home</span></a></li>
