@@ -7,10 +7,9 @@ define([
 ], function($, TweenMax, Events, publisher, Raphael) {
     /**
      * MainMenu
-     * @param {HTMLElement} target
      * @constructor
      */
-    var MainMenu = function(target) {
+    var MainMenu = function() {
         var self = this;
         var menuSpace = 35;
         var paper = Raphael("menu_picts", $('nav').width(), $('nav').height());

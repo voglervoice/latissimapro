@@ -3,28 +3,30 @@ define([
     "tweenmax",
     "events",
     "publisher",
-    "raphaeljs"
-], function($, TweenMax, Events, publisher, Raphael) {
+    "views/backgroundsection"
+], function($, TweenMax, Events, publisher, BackgroundSection) {
 
-    var Design = function(target) {
+    var Design = function() {
         var self = this;
       
 
         // ******************* public ******************* 
         this.elem = $('#design');
+        this.bg = new BackgroundSection(this.elem);
         this.resize = function(w, h){
-            
+            this.bg.resize(w, h);
         };
 
         this.initOpen = function(){
-
+            this.bg.open();
         };
-
+        
         this.open = function(){
         
         };
 
         this.close = function(){
+            this.bg.close();
         };
 
         // ******************* private *******************

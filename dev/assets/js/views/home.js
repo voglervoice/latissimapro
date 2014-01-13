@@ -3,10 +3,11 @@ define([
     "tweenmax",
     "events",
     "publisher",
-    "raphaeljs"
-], function($, TweenMax, Events, publisher, Raphael) {
+    "raphaeljs",
+    "views/backgroundsection"
+], function($, TweenMax, Events, publisher, Raphae, BackgroundSection) {
 
-    var Home = function(target) {
+    var Home = function() {
         var self = this;
         var raphaW = $('#raphael_home_anchors').width();
         var raphaH = $('#raphael_home_anchors').height();
@@ -15,11 +16,13 @@ define([
 
         // ******************* public ******************* 
         this.elem = $('#home');
+        this.bg = new BackgroundSection(this.elem);
         this.resize = function(w, h){
-            
+            this.bg.resize(w,h);
         };
 
         this.initOpen = function(){
+            this.bg.open();
             for (var i = 0; i < lines.length; i++) {
                 // init
                 circleBase[i].attr({r: 0});
@@ -44,6 +47,7 @@ define([
         };
 
         this.close = function(){
+            this.bg.close();
             $('.home_anchors a').each(function(index) {
                 TweenMax.killTweensOf($(this));
             });

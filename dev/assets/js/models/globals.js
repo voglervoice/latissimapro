@@ -3,6 +3,11 @@ define([ ], function () {
           function Globals() {
           }
 
+          // vars
+          Globals.is_animated = true;
+          Globals.canvas_enabled = true;
+
+          // const
           Globals.PAGE_HOME = "";
           Globals.PAGE_TOUCHSCREEN = "touchscreen";
           Globals.PAGE_COFFEE_RANGE = "coffeerange";

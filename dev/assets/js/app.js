@@ -10,8 +10,9 @@ define([
 	"views/design",
 	"views/milksystem",
 	"views/touchscreen",
+	"modernizr",
 	"mousewheel"
-], function($, publisher, Events, Globals, History, MainMenu, Home, CoffeeRange, Design, MilkSystem, Touchscreen) {
+], function($, publisher, Events, Globals, History, MainMenu, Home, CoffeeRange, Design, MilkSystem, Touchscreen, Modernizr) {
 	var App = function() {
 		var self = this;
 		var isFullscreen = false;
@@ -26,6 +27,9 @@ define([
 		var footerH = 37;
 		var currentId = "null", goToId = "", currentIndex = -1;
 		var transitionComplete=false;
+
+
+		Globals.canvas_enabled = Modernizr.canvas;
 
 		TweenMax.to($('.content'), 0, {autoAlpha:0});
 
@@ -48,21 +52,7 @@ define([
 			mainMenu.resize();
 
 			if(currentSection !== null){
-				var imgBg = $('.section_background', currentSection.elem);
-				var baseImageW = parseInt( imgBg.attr('data-w'), 10);
-				var baseImageH = parseInt( imgBg.attr('data-h'), 10);
-				var imageW = windowW;
-				var imageH = baseImageH*windowW/baseImageW;
-				if(imageH < windowHContent){
-					imageH = windowHContent;
-					imageW = baseImageW*windowHContent/baseImageH;
-				}
-				imgBg.width(imageW);
-				imgBg.height(imageH);
-				imgBg.css('left', -(imageW-windowW)*0.5);
-				imgBg.css('top', -(imageH-windowHContent)*0.5);
-
-				currentSection.resize(windowW, windowH);
+				currentSection.resize(windowW, windowHContent);
 			}
 			if(currentIndex !== -1) $('.main').css('top', -currentIndex*windowHContent);
 		});
@@ -128,6 +118,7 @@ define([
 			currentId = value;
 
 			if(currentSection !== null) currentSection.close();
+
 			currentSection = null;
 			var  index = 0;
 			switch(currentId){
