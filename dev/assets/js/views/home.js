@@ -12,7 +12,7 @@ define([
         var raphaW = $('#raphael_home_anchors').width();
         var raphaH = $('#raphael_home_anchors').height();
         var paper = Raphael("raphael_home_anchors", raphaW, raphaH);
-        var lines= [], circleBase = [], circlePulse1 = [], circlePulse2 = [], rects = [], aXEnd = [], puces = [], arrows = [];
+        var lines= [], circleBase = [], circlePulse1 = [], circlePulse2 = [], rects = [], aXEnd = [], aXStart = [], puces = [], arrows = [];
 
         // ******************* public ******************* 
         this.elem = $('#home');
@@ -48,13 +48,23 @@ define([
 
         this.close = function(){
             this.bg.close();
-            $('.home_anchors a').each(function(index) {
-                TweenMax.killTweensOf($(this));
-            });
+          
             TweenMax.killDelayedCallsTo(openCircle);
             TweenMax.killDelayedCallsTo(openLine);
             TweenMax.killDelayedCallsTo(openPuce);
             TweenMax.killDelayedCallsTo(pulseCircle);
+
+            $('.home_anchors a').each(function(index) {
+                TweenMax.killTweensOf($(this));
+                var rect = rects[index];
+                rect.animate({ width : 0, x:rect.data("xInit"), easing:'<>'},260);
+                TweenMax.delayedCall(0.15, function(){rect.animate({ height : 0, y:rect.data("yInit"), easing:'<>'},100);});
+                TweenMax.to($(this), 0.3, {alpha:0, left:aXStart[index], ease:Circ.easeIn});
+                var arrow = arrows[index];
+                puces[index].animate({ r : 0, easing:'<>'},300);
+                arrow.animate({ path : arrow.data("introPath"), "stroke-width": "0", easing:'<>'},300);
+                closeLine(index);
+            });
         };
 
         // ******************* private *******************
@@ -146,6 +156,7 @@ define([
                 set.push(arrow);
 
                 aXEnd.push(posiEndX+offsetLink);
+                aXStart.push(posiEndX+offsetLink+introOff);
                 var introOff = (offsetLink < 0)? 50 : -50;
                 $(this).attr('data-initl', (posiEndX+offsetLink+introOff));
                 $(this).css({'top':posiEndY-19, 'left':(posiEndX+offsetLink+introOff)});
@@ -175,6 +186,15 @@ define([
             }else{
                 var lineComplete = function(){ openRect(index); };
                 lines[index].animate({path: lines[index].data('resultPath'), easing:">", callback:lineComplete}, 150);
+            }
+        };
+        var closeLine = function(index, end){
+            if(typeof end == "undefined" || end !== 1){
+                var endFirstLine = function(){ closeLine(index, 1); };
+                lines[index].animate({path: lines[index].data('midPath'), easing:"<", callback:endFirstLine}, 150);
+            }else{
+                circleBase[index].animate({ r : 0, easing:'backIn'},200);
+                lines[index].animate({path: lines[index].data('initPath'), easing:">"}, 200);
             }
         };
         var openRect = function(index){

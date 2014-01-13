@@ -16,9 +16,10 @@ define([
         this.bg = new BackgroundSection(this.elem);
         var milkMachine = new ImageElem($(".milk_machine", this.elem));
         var milkElement = milkMachine.getElement();
+
         this.resize = function(w, h){
             this.bg.resize(w, h);
-            var ratio = h/900;
+            var ratio = h/863;
             milkMachine.setSize(618*ratio,687*ratio);
             milkElement.css({'margin-left': -(618+48)*ratio, 'left':'50%'});
         };
