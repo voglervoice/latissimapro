@@ -29,7 +29,7 @@ define([
 		var transitionComplete=false;
 
 
-		Globals.canvas_enabled = Modernizr.canvas;
+		Globals.canvas_enabled = (Modernizr.canvas && Modernizr.webgl)? true : false;
 
 		TweenMax.to($('.content'), 0, {autoAlpha:0});
 
@@ -76,7 +76,7 @@ define([
 			$('.content').mousewheel(function(event, delta, deltaX, deltaY) {
 				//console.log(deltaY);
 				if(transitionComplete && (deltaX > 1 || deltaY > 1)) openNextPage();
-				else if(transitionComplete && (deltaX < 1 || deltaY < 1)) openPrevPage();
+				else if(transitionComplete && (deltaX < -1 || deltaY < -1)) openPrevPage();
 			});
 		};
 		// private      

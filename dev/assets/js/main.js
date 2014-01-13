@@ -13,6 +13,7 @@ require.config({
         events:'models/events',
         globals:'models/globals',
         raphaeljs:'vendors/raphael-min',
+        glfx:'vendors/glfx',
         requestanimationframe: "vendors/polyfill.requestAnimationFrame"
     },
     shim: {
@@ -27,6 +28,9 @@ require.config({
         },
         'modernizr': {
             exports: 'Modernizr'
+        },
+        'glfx': {
+            exports: 'fx'
         },
         'raphaeljs': {
              deps : ['jquery'],

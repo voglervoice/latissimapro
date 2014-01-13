@@ -1,13 +1,13 @@
 define([
     "jquery",
     "tweenmax",
-    "events",
-    "publisher"
-], function($, TweenMax, Events, publisher) {
+    "views/imageelem"
+], function($, TweenMax, ImageElem) {
 
     var BackgroundSection = function(parent) {
         var self = this;
         var element = $('.section_background', parent);
+        var glImage = new ImageElem(element);
                 
         // ******************* public ******************* 
         this.resize = function(w, h){
@@ -19,21 +19,16 @@ define([
                     imageH = h;
                     imageW = baseImageW*h/baseImageH;
             }
-            element.width(imageW);
-            element.height(imageH);
-            element.css('left', -(imageW-w)*0.5);
-            element.css('top', -(imageH-h)*0.5);
+            glImage.setSize(imageW, imageH);
+            glImage.setCss({'left':-(imageW-w)*0.5,'top':-(imageH-h)*0.5});
         };
 
         this.open = function(){
-            TweenMax.killTweensOf(element);
-            TweenMax.to(element, 0, {alpha:0});
-            TweenMax.to(element, 2, {alpha:1, delay:0.6});
+            glImage.show(2,0.6);
         };
 
         this.close = function(){
-            TweenMax.killTweensOf(element);
-            TweenMax.to(element, 1.8, {alpha:0});
+            glImage.hide(1.8);
         };
 
         // ******************* private *******************
