@@ -1,8 +1,9 @@
 define([
     "jquery",
     "tweenmax",
+    "globals",
     "views/imageelem"
-], function($, TweenMax, ImageElem) {
+], function($, TweenMax, Globals, ImageElem) {
 
     var BackgroundSection = function(parent) {
         var self = this;
@@ -24,16 +25,15 @@ define([
         };
 
         this.open = function(){
-            glImage.show(2,0.6);
+            glImage.show(2,0);
         };
 
         this.close = function(){
-            glImage.hide(1.8);
+            glImage.hide(2.5, 0.2);
         };
 
         // ******************* private *******************
          var init = function(index){
-            TweenMax.to(element, 0, {alpha:0});
         };
 
         init();

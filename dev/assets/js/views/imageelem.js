@@ -11,7 +11,12 @@ define([
         var canvas, texture, canvasElement;
         this.brightnessValue = -1;
                 
-        // ******************* public ******************* 
+        // ******************* public *******************
+
+        this.getElement = function(){
+            return (typeof canvas !== "undefined")? canvasElement : element;
+        };
+
         this.setSize = function(w,h){
             if(typeof canvas !== "undefined"){
                 canvas.width = w;
@@ -44,7 +49,6 @@ define([
             if(typeof time == "undefined") time = 1;
             if(typeof delay == "undefined") delay = 0;
              if(typeof canvas !== "undefined"){
-                delay = 0;
                 TweenMax.killTweensOf(self);
                 brightnessValue = -1;
                 updateBrightness();
@@ -61,8 +65,6 @@ define([
             if(typeof delay == "undefined") delay = 0;
             if(typeof canvas !== "undefined"){
                 TweenMax.killTweensOf(self);
-                delay = 0.2;
-                time +=1.9;
                 TweenMax.to(self, time, {brightnessValue:-1, delay:delay, onUpdate:updateBrightness});
              }else{
                 TweenMax.killTweensOf(element);
@@ -71,31 +73,34 @@ define([
         };
 
         // ******************* private *******************
-         var init = function(index){
-            if(Globals.canvas_enabled){
-                canvas = fx.canvas();
-                texture = canvas.texture(element[0]);
-                canvas.width = texture.width;
-                canvas.height = texture.height;
-                canvasElement = $(canvas);
-                canvasElement.css('position', 'absolute');
-                canvasElement.css('z-index', '1');
-                // replace the image with the canvas
-                element[0].parentNode.insertBefore(canvas, element[0]);
-                element.css("display", "none");
-                self.brightnessValue = -1;
-                updateBrightness();
-                //element.replaceWith(canvasElem);
-            }else{
-                TweenMax.to(element, 0, {alpha:0});
-            }
-        };
-
         var updateBrightness = function(){
             canvas.draw(texture, canvas.width, canvas.height).brightnessContrast(self.brightnessValue, 0).update();
         };
 
-        init();
+        ///// INIT 
+        if(Globals.canvas_enabled){
+            canvas = fx.canvas();
+            texture = canvas.texture(element[0]);
+            canvas.width = texture.width;
+            canvas.height = texture.height;
+            canvasElement = $(canvas);
+            canvasElement.css('position', element.css('position'));
+            canvasElement.css('z-index', element.css('z-index'));
+            canvasElement.css('left', element.css('left'));
+            canvasElement.css('top', element.css('top'));
+            canvasElement.css('bottom', element.css('bottom'));
+            canvasElement.css('margin-left', element.css('margin-left'));
+            canvasElement.css('margin-right', element.css('margin-right'));
+            canvasElement.css('margin-top', element.css('margin-top'));
+            // replace the image with the canvas
+            element[0].parentNode.insertBefore(canvas, element[0]);
+            element.css("display", "none");
+            self.brightnessValue = -1;
+            updateBrightness();
+            //element.replaceWith(canvasElem);
+        }else{
+            TweenMax.to(element, 0, {alpha:0});
+        }
     };
 
     return ImageElem;

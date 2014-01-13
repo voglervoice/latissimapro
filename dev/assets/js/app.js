@@ -16,6 +16,10 @@ define([
 	var App = function() {
 		var self = this;
 		var isFullscreen = false;
+		
+		Globals.canvas_enabled = (Modernizr.canvas && Modernizr.webgl)? true : false;
+		//Globals.canvas_enabled = false;
+
 		var mainMenu = new MainMenu();
 		var home = new Home();
 		var design = new Design();
@@ -28,8 +32,6 @@ define([
 		var currentId = "null", goToId = "", currentIndex = -1;
 		var transitionComplete=false;
 
-
-		Globals.canvas_enabled = (Modernizr.canvas && Modernizr.webgl)? true : false;
 
 		TweenMax.to($('.content'), 0, {autoAlpha:0});
 
