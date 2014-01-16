@@ -10,9 +10,10 @@ define([
 	"views/design",
 	"views/milksystem",
 	"views/touchscreen",
+	"views/popins",
 	"modernizr",
 	"mousewheel"
-], function($, publisher, Events, Globals, History, MainMenu, Home, CoffeeRange, Design, MilkSystem, Touchscreen, Modernizr) {
+], function($, publisher, Events, Globals, History, MainMenu, Home, CoffeeRange, Design, MilkSystem, Touchscreen, Popins, Modernizr) {
 	var App = function() {
 		var self = this;
 		var isFullscreen = false;
@@ -26,12 +27,14 @@ define([
 		var milksystem = new MilkSystem();
 		var touchscreen = new Touchscreen();
 		var coffeerange = new CoffeeRange();
+		var popins = new Popins();
 		var currentSection = null;
 		var windowW, windowH, windowHContent;
 		var footerH = 37;
 		var currentId = "null", goToId = "", currentIndex = -1;
 		var transitionComplete=false;
-
+		var baseLangUrl = $('body').attr('data-url');
+		var direct = $('body').attr('data-direct');
 
 		TweenMax.to($('.content'), 0, {autoAlpha:0});
 
@@ -66,6 +69,7 @@ define([
 
 			publisher.subscribe(Events.navigate, navigateTo);
 			publisher.subscribe(Events.nextPage, openNextPage);
+			
 			mainMenu.start();
 			
 			$(window).trigger('resize');
@@ -73,19 +77,20 @@ define([
 
 			// DIRECT ACCESS TO :
 			transitionComplete = true;
-			onAddressChange("");
+			onAddressChange(direct);
 
 			$('.content').mousewheel(function(event, delta, deltaX, deltaY) {
 				//console.log(deltaY);
-				if(transitionComplete && (deltaX > 1 || deltaY > 1)) openNextPage();
-				else if(transitionComplete && (deltaX < -1 || deltaY < -1)) openPrevPage();
+				if(transitionComplete && (deltaX > 0 || deltaY > 0)) openNextPage();
+				else if(transitionComplete && (deltaX < 0 || deltaY < 0)) openPrevPage();
 			});
 		};
 		// private      
 		var navigateTo = function(id){
 			console.log("navigateTo : "+id);
-			var pageTitle = "Lattissima !";
-			var url = (id !== "")? id : " ";
+			var pageTitle = "Lattissima Pro";
+			//var url = (id !== "")? id : " ";
+			var url = baseLangUrl+id;
 			if(isFullscreen)		onAddressChange(id);
 			else{
 				History.pushState({value:id}, pageTitle, url);
@@ -120,6 +125,8 @@ define([
 			currentId = value;
 
 			if(currentSection !== null) currentSection.close();
+
+			popins.close();
 
 			currentSection = null;
 			var  index = 0;

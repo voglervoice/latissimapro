@@ -152,6 +152,195 @@ nav{
 .design_machine{position: absolute; z-index: 10; left:50%; top:50%;margin-left: -520px;margin-top: -255px;}
 .design_content{position: absolute; z-index: 15; left:50%; top:50%; margin-left: 60px;margin-top: -300px;}
 
+// POPINS
+.popins{
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: 990;
+    overflow: hidden;
+    .popin{
+        background-color:#0a0a0a;
+        border:1px solid #424242;
+        border-radius: 10px;
+        left:50%;
+        top:50%;
+        position: absolute;
+        overflow: hidden;
+        z-index: 10;
+        h4{
+            margin-top: 30px;
+            width:100%;
+            text-align: center;
+            font-size: 24px;
+        }
+        .popin_close{
+            display: block;
+            position: absolute;
+            right: 0;
+            top:0;
+            width:21px;
+            height:21px;
+        }
+    }
+    .order_phone{
+        width:550px;
+        height:205px;
+        margin-left: -275px;
+        margin-top: -102px;
+        visibility: hidden;
+    }
+    .share_mail, .select_lang{
+        width:842px;
+        height:530px;
+        margin-left: -421px;
+        margin-top: -250px;
+    }
+    .select_lang{
+        background-image:url(../imgs/ui/bg_langs_popin.jpg); background-repeat: no-repeat;
+        .lang_zones{
+            position:absolute;
+            top:93px;
+            height:50px;
+            width:666px;
+            border-bottom: 1px solid #676767;
+            left:50%;
+            margin-left: -333px;
+            li{
+                float: left;
+                a{
+                    display: block;
+                    .regular;
+                    font-style: italic;
+                    font-size: 13px;
+                }
+            }
+        }
+        .select_langs{
+            position:absolute;
+            top:143px;
+            height:370px;
+            width:666px;
+            left:50%;
+            margin-left: -333px;
+            overflow: hidden;
+            div{
+                position:absolute;
+                margin-top: 34px;
+                width:666px;
+                height:340px;
+                margin-left: 30px;
+                ul{
+                    float: left;
+                    width:167px;
+                    li{
+                        margin-left: 33px;
+                    }
+                }
+            }
+        }
+    }
+    .share_mail{
+        visibility: hidden;
+        text-align: center;
+        background-image:url(../imgs/ui/bg_mail_popin.jpg); background-repeat: no-repeat;
+        background-position: 0 bottom;
+        span{
+            display: block;
+            width:100%;
+            margin-top: 17px;
+            .light;
+            font-size: 13px;
+            color:#787878;
+        }
+        form{
+            display: block;
+            position:absolute;
+            width:660px;
+            height:411px;
+            margin-left: -330px;
+            left:50%;
+            bottom: 0;
+            border-top: 1px solid #454545;
+            span{
+                margin-top: 30px;
+                color:#ffffff;
+                margin-bottom: 10px;
+                font-size: 12px;
+                .bold;
+            }
+            div{
+                width:100%;
+                height:37px;
+            }
+            input[type=text] {
+                background-color: #000000;
+                border-radius: 5px;
+                border: 1px solid #505050;
+                height: 40px;
+                width:230px;
+                color:#ffffff;
+                .regular;
+            }
+            input[type=submit] {
+                font-size: 14px;
+                border-radius: 5px;
+                padding-bottom:10px;
+                padding-top:10px;
+                padding-left:38px;
+                padding-right:38px;
+                color:#ffffff;
+                border: 0 none;
+                text-transform: uppercase;
+                /* fallback */
+                background-color: #8e773e;
+                /* Safari 4-5, Chrome 1-9 */
+                background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#726032), to(#9c8345));
+                /* Safari 5.1, Chrome 10+ */
+                background: -webkit-linear-gradient(top, #9c8345, #726032);
+                /* Firefox 3.6+ */
+                background: -moz-linear-gradient(top, #9c8345, #726032);
+                /* IE 10 */
+                background: -ms-linear-gradient(top, #9c8345, #726032);
+                /* Opera 11.10+ */
+                background: -o-linear-gradient(top, #9c8345, #726032);
+            }
+            input[type=submit]:focus {
+                outline:0;
+            }
+        }
+    }
+    .popin_black_bg{
+        width:100%;
+        height:100%;
+        background-color: #000000;
+        background-color: rgba(0,0,0,0.8);
+        z-index: 1;
+    }
+}
+
+.phone_number{
+    position: absolute;
+    left:50%;
+    top:103px;
+    width:230px;
+    height:42px;
+    margin-left: -115px;
+    background-color: #ffffff;
+    color:#000000;
+    border-radius: 3px;
+    background-image:url(../imgs/ui/phone.jpg); background-repeat: no-repeat;
+    background-position: 43px center;
+    span{
+        display: block;
+        .bold;
+        font-size: 14px;
+        margin-top: 14px;
+        width:100%;
+        text-align: center;
+    }
+}
+
 // HEADER
 header{
     position: absolute;
@@ -204,20 +393,21 @@ header ul .mail{ padding-top: 1px; }
 header .black .mail .mail_sprit{ .header_pict_all; background-position: -30px -15px; }
 header .white .mail .mail_sprit{ .header_pict_all; background-position: -30px 0; }
 header ul .pinterest{ padding-top: 0px; }
-header .black .pinterest .pinterest_sprit{.header_pict_all;background-position: -45px -15px;}
-header .white .pinterest .pinterest_sprit{.header_pict_all;background-position: -45px 0;}
+header .black .pinterest .pinterest_sprit{.header_pict_all; background-position: -45px -15px;}
+header .white .pinterest .pinterest_sprit{.header_pict_all; background-position: -45px 0;}
 header ul .twitter{padding-top: 0px;}
 header .black .twitter .twitter_sprit{.header_pict_all; background-position: -60px -15px;}
-header .white .twitter .twitter_sprit{.header_pict_all;background-position: -60px 0;}
+header .white .twitter .twitter_sprit{.header_pict_all; background-position: -60px 0;}
 header ul .facebook{padding-top: 0px;}
-header .black .facebook .facebook_sprit{.header_pict_all;background-position: -75px -15px;}
-header .white .facebook .facebook_sprit{.header_pict_all;background-position: -75px 0;}
+header .black .facebook .facebook_sprit{.header_pict_all; background-position: -75px -15px;}
+header .white .facebook .facebook_sprit{.header_pict_all; background-position: -75px 0;}
 header ul .sound{padding-top: 1px;}
-header .black .sound .sound_sprit{.header_pict_all;background-position: -88px -15px;}
-header .white .sound .sound_sprit{.header_pict_all;background-position: -88px 0;}
+header .black .sound .sound_sprit{.header_pict_all; background-position: -88px -15px;}
+header .white .sound .sound_sprit{.header_pict_all; background-position: -88px 0;}
+header .white .sound .sound_sprit_off{.header_pict_all; background-position: -103px 0;}
 header ul .fullscreen{padding-top: 1px;}
-header .black .fullscreen .fullscreen_sprit{.header_pict_all;background-position: -120px -15px;margin-top: 1px;}
-header .white .fullscreen .fullscreen_sprit{.header_pict_all;background-position: -120px 0;}
+header .black .fullscreen .fullscreen_sprit{.header_pict_all; background-position: -120px -15px;margin-top: 1px;}
+header .white .fullscreen .fullscreen_sprit{.header_pict_all; background-position: -120px 0;}
 
 // FOOTER
 
@@ -235,12 +425,12 @@ footer{
 footer .logo{
     position: relative;
     float: left;
-    width: 90px;
-    height: 18px;
+    width: 93px;
+    height: 17px;
     cursor: pointer;
     margin-top: 11px;
     margin-left: 30px;
-    margin-right: 30px;
+    margin-right: 26px;
     .picts_all;
     background-position: 0px -30px;
     display: block;
@@ -289,4 +479,52 @@ footer .sep {width:22px; height: 7px; border-left: 1px solid #5f5f5f;}
             z-index: 513;
             width:119px;
             height:123px;
+}
+
+
+/** Retina **/
+@media
+(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+    header .android .android_sprit{
+        background:url("../imgs/ui/retina/android@2x.png");
+        background-size:9px 10px; background-position: 0 0px; background-repeat: no-repeat;
+    }
+    header .white .facebook .facebook_sprit{
+        background:url("../imgs/ui/retina/facebook_white@2x.png");
+        background-size:7px 12px; background-position: 0 0px; background-repeat: no-repeat;
+    }
+    header .white .fullscreen .fullscreen_sprit{
+        background:url("../imgs/ui/retina/fullscreen_white@2x.png");
+        background-size:16px 12px; background-position: 0 0px; background-repeat: no-repeat;
+    }
+    header .white .mail .mail_sprit{
+        background:url("../imgs/ui/retina/mail_white@2x.png");
+        background-size:15px 10px; background-position: 0 0px; background-repeat: no-repeat;
+    }
+    header .white .pinterest .pinterest_sprit{
+        background:url("../imgs/ui/retina/pinterest_white@2x.png");
+        background-size:9px 12px; background-position: 0 0px; background-repeat: no-repeat;
+    }
+    header .white .sound .sound_sprit{
+        background:url("../imgs/ui/retina/sound@2x_all.png");
+        background-size:9px 21px; background-position: 0 0px; background-repeat: no-repeat;
+    }
+    header .white .sound .sound_sprit_off{
+        background:url("../imgs/ui/retina/sound@2x_all.png");
+        background-size:9px 21px; background-position: 0 -11px; background-repeat: no-repeat;
+    }
+    header .white .apple .apple_sprit{
+        background:url("../imgs/ui/retina/apple_white@2x.png");
+        background-size:9px 11px; background-position: 0 0px; background-repeat: no-repeat;
+    }
+    header .white .twitter .twitter_sprit{
+        background:url("../imgs/ui/retina/twitter_white@2x.png");
+        background-size:11px 9px; background-position: 0 0px; background-repeat: no-repeat;
+    }
+    footer .logo{
+        background:url("../imgs/ui/retina/logo_footer_nespresso_white@2x.png");
+        background-size:93px 17px; background-repeat: no-repeat;
+        height: 17px;
+        width: 93px;
+    }
 }

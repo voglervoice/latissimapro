@@ -70,7 +70,7 @@ module.exports = function(grunt){
 					src: "dev/index.php",
 					dest: "web/index.php"
 				}, {
-					src: "dev/.htaccess",
+					src: "dev/web.htaccess",
 					dest: "web/.htaccess"
 				}]
 			}

@@ -5,7 +5,7 @@ define([
     "publisher",
     "raphaeljs",
     "views/backgroundsection"
-], function($, TweenMax, Events, publisher, Raphae, BackgroundSection) {
+], function($, TweenMax, Events, publisher, Raphael, BackgroundSection) {
 
     var Home = function() {
         var self = this;

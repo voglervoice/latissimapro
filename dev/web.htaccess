@@ -14,7 +14,7 @@
 
 	# Depends server configuration for URL prefix for relative paths (defined here) (part after server name)
 	# It's usually `/` but could be a `/folder/` or `/folder/subfolder/.../`
-	RewriteBase /
+	RewriteBase /lattissima-pro/
 	# Default value for preprod and prod: /lattissima-pro/
 	# Add a message in case of that produce errors in redirections (but handle others too)
 	ErrorDocument 500 "500 Internal Server Error. Maybe check the RewriteBase value?"

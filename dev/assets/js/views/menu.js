@@ -39,6 +39,45 @@ define([
 
         this.start = function() {
             console.log("Start menu");
+
+            // header
+            $('header ul li a').on('click', function(event){
+                var top = $(window).height()*0.5;
+                var left = $(window).width()*0.5;
+
+                if($(this).hasClass('fullscreen_sprit')){
+                    event.preventDefault();
+                    publisher.publish(Events.toogleFullscreen);
+                }else if($(this).hasClass('sound_sprit')){
+                    event.preventDefault();
+                    $(this).attr('class', 'sound_sprit_off');
+                    publisher.publish(Events.soundOff);
+                }else if($(this).hasClass('sound_sprit_off')){
+                    $(this).attr('class', 'sound_sprit');
+                    event.preventDefault();
+                    publisher.publish(Events.soundOn);
+                }else if($(this).hasClass('flags')){
+                    event.preventDefault();
+                    publisher.publish(Events.openPopin, "select_lang");
+                }else if($(this).hasClass('mail_sprit')){
+                    event.preventDefault();
+                    publisher.publish(Events.openPopin, "share_mail");
+                }else if($(this).hasClass('mail_sprit')){
+                    event.preventDefault();
+                }else if($(this).hasClass('share_facebook')){
+                    event.preventDefault();
+                    window.open($(this).attr('href'),'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,top='+Math.max(0,top-200)+', left='+Math.max(0,left-400)+',height=350,width=800');
+                }else if($(this).hasClass('share_twitter')){
+                    event.preventDefault();
+                    window.open($(this).attr('href'),'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,top='+Math.max(0,top-150)+', left='+Math.max(0,left-300)+',height=290,width=600');
+                }else if($(this).hasClass('share_pinterest')){
+                    event.preventDefault();
+                    window.open($(this).attr('href'),'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,top='+Math.max(0,top-180)+', left='+Math.max(0,left-350)+',height=350,width=700');
+                }else if($(this).hasClass('qrcode')){
+                    event.preventDefault();
+                }
+            });
+
             // footer
             $('footer ul li a').on('mouseover', function(){
                 TweenMax.to($(this), 0.3, {alpha:1});

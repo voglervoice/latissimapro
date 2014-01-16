@@ -9,7 +9,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>Lattissima Pro</title>
-
+        <base href="<?php echo $baseurl; ?>">
+        <meta name="base" content="TODO">
         <meta name="description" content="TODO">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,17 +25,18 @@
         <meta property="og:description" content="<?php echo $jsonLangShare->facebook_text->texte; ?>"/>
 
         <!-- Css -->
-        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="<?php echo $baseurl; ?>assets/css/main.css">
 
     </head>
-    <body>
-        <script data-main="assets/js/main" src="assets/js/vendors/require.min.js"></script>
+    <body data-url="<?php echo $baseurlang; ?>" data-direct="<?php echo $direct; ?>">
+        <script data-main="<?php echo $baseurl; ?>assets/js/main" src="<?php echo $baseurl; ?>assets/js/vendors/require.min.js"></script>
         
         <div class="preloader"></div>
         <div class="content">
             <?php include('php/views/blocks/header.php'); ?>
             <?php include('php/views/blocks/footer.php'); ?>
             <?php include('php/views/blocks/menu.php'); ?>
+            <?php include('php/views/blocks/popins.php'); ?>
 
             <div class="main">
                 <?php include('php/views/pages/home.php'); ?>
