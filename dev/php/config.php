@@ -104,13 +104,20 @@ $baseShareUrl = $baseurlang;
 $dirname    =   $_SERVER['DOCUMENT_ROOT']."/".$folder;
 
 $jsonFile = $dirname.'assets/datas/'.$language.'_'.$territory.'.json';
+$jsonCmsFile = $dirname.'assets/datas/_cms_'.$territory.'.json';
 if (file_exists($jsonFile))         $jsoncontent = file_get_contents($jsonFile);
 else                                        $jsoncontent = file_get_contents($dirname.'assets/datas/en_XX.json');
-
+if (file_exists($jsonCmsFile))  $jsonCmsContent = file_get_contents($jsonCmsFile);
+else                                        $jsonCmsContent = file_get_contents($dirname.'assets/datas/_cms_XX.json');
 // datas
 $jsonLang = json_decode($jsoncontent)->data->sections;
+$jsonCms = json_decode($jsonCmsContent)->data->sections;
 // datas - shortcuts
 $jsonLangGlobals = $jsonLang->global__utils->blockText;
 $jsonLangShare = $jsonLang->global__facebook_twitter->blockText;
 $jsonLangFooter = $jsonLang->global__footer->blockText;
+$jsonLangMail = $jsonLang->global__mail->blockText;
+$jsonLangMenu = $jsonLang->navigation_menu->blockText;
+$jsonLangRangeGlobals = $jsonLang->range__global->blockText;
+$jsonLangRangeCapsules = $jsonLang->range__grand_cru->blockText;
 ?>

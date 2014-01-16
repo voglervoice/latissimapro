@@ -58,6 +58,7 @@ section{ position: absolute; width:100%; height: 100%; overflow: hidden;}
 h2{
     text-transform: uppercase;
     font-size: 30px;
+    letter-spacing: 1px;
 }
 
 // MAIN MENU
@@ -125,7 +126,7 @@ nav{
                 padding-right: 17px;
                 .regular;
                 font-size: 16px;
-                padding-top: 9px;
+                padding-top: 10px;
             }
     }
 }
@@ -147,10 +148,63 @@ nav{
 
 .milk_machine{position: absolute; z-index: 10; left:50%; bottom:0;margin-left: -666px;}
 
+// ***** COFFEE RANGE ***** //
+
+.range_machine{position: absolute; z-index: 10; left:0; bottom:0;}
+.range_content{
+    position: absolute; z-index: 15; top:50%; margin-top: -315px;
+    .range_sep{margin-top: 22px; margin-bottom: 23px; height:1px; width:100%; background-color: #ffffff;}
+    .range_description{font-size: 16px; .light; letter-spacing: 1px;}
+    .range_coffees{
+        width:100%;
+        margin-top: 60px;
+        .range_cat{
+            float: left;
+            margin-right: 34px;
+            .range_cat_title{
+                float: left;
+                width:100%;
+                height:30px;
+                span{
+                    .regular;
+                    display: block;
+                    float: left;
+                    font-size: 15px;
+                }
+                div{
+                    margin-top: 8px;
+                    margin-left: 19px;
+                    float: left;
+                    height: 1px;
+                    background-color: #ffffff;
+                }
+            }
+            .range_cat_caps{
+                width:100%;
+                height:104px;
+                a{
+                    display: block;
+                    float: left;
+                    width:55px;
+                    height:90px;
+                    margin-right: 20px;
+                    span{
+                        display: block;
+                        width:100%;
+                        text-align: center;
+                        .light;
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // ***** DESIGN ***** //
 
-.design_machine{position: absolute; z-index: 10; left:50%; top:50%;margin-left: -520px;margin-top: -255px;}
-.design_content{position: absolute; z-index: 15; left:50%; top:50%; margin-left: 60px;margin-top: -300px;}
+.design_machine{position: absolute; z-index: 10; left:50%; top:50%; margin-left: -520px; margin-top: -255px;}
+.design_content{position: absolute; z-index: 15; left:50%; top:50%; margin-left: 60px; margin-top: -300px;}
 
 // POPINS
 .popins{

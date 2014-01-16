@@ -32,7 +32,6 @@ define([
         };
         
         this.open = function(){
-        
         };
 
         this.close = function(){

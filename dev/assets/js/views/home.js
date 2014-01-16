@@ -12,7 +12,7 @@ define([
         var raphaW = $('#raphael_home_anchors').width();
         var raphaH = $('#raphael_home_anchors').height();
         var paper = Raphael("raphael_home_anchors", raphaW, raphaH);
-        var lines= [], circleBase = [], circlePulse1 = [], circlePulse2 = [], rects = [], aXEnd = [], aXStart = [], puces = [], arrows = [];
+        var lines= [], circleBase = [], circlePulse1 = [], circlePulse2 = [], rects = [], aXEnd = [], puces = [], arrows = [];
 
         // ******************* public ******************* 
         this.elem = $('#home');
@@ -59,7 +59,7 @@ define([
                 var rect = rects[index];
                 rect.animate({ width : 0, x:rect.data("xInit"), easing:'<>'},260);
                 TweenMax.delayedCall(0.15, function(){rect.animate({ height : 0, y:rect.data("yInit"), easing:'<>'},100);});
-                TweenMax.to($(this), 0.3, {alpha:0, left:aXStart[index], ease:Circ.easeIn});
+                TweenMax.to($(this), 0.25, {alpha:0, left:parseInt($(this).attr('data-initl'), 10), ease:Circ.easeIn});
                 var arrow = arrows[index];
                 puces[index].animate({ r : 0, easing:'<>'},300);
                 arrow.animate({ path : arrow.data("introPath"), "stroke-width": "0", easing:'<>'},300);
@@ -156,7 +156,6 @@ define([
                 set.push(arrow);
 
                 aXEnd.push(posiEndX+offsetLink);
-                aXStart.push(posiEndX+offsetLink+introOff);
                 var introOff = (offsetLink < 0)? 50 : -50;
                 $(this).attr('data-initl', (posiEndX+offsetLink+introOff));
                 $(this).css({'top':posiEndY-19, 'left':(posiEndX+offsetLink+introOff)});

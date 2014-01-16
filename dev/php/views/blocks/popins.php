@@ -36,24 +36,24 @@
 	</div>
 	<div class="share_mail popin">
 		<a href="#" class="popin_close"></a>
-		<h4>Share the site with a friend</h4>
-		<span>Please complete the fields below</span>
+		<h4><?php echo $jsonLangMail->form_title->texte; ?></h4>
+		<span><?php echo $jsonLangMail->form_subheading->texte; ?></span>
 		<form>
-			<span>Your name</span>
+			<span><?php echo $jsonLangMail->form_senders_name->texte; ?></span>
 			<input type="text" value="" name="name" />
-			<span>Your email</span>
+			<span><?php echo $jsonLangMail->form_senders_email->texte; ?></span>
 			<input type="text" value="" name="email" />
-			<span>Your friend's email</span>
+			<span><?php echo $jsonLangMail->form_receivers_email->texte; ?></span>
 			<input type="text" value="" name="friend_email" />
 			<div></div>
-			<input type="submit" value="Send" />
+			<input type="submit" value="<?php echo $jsonLangMail->form_send->texte; ?>" />
 		</form>
 		
 	</div>
 	<div class="order_phone popin">
 		<a href="#" class="popin_close"></a>
-		<h4>Order by phone</h4>
-		<div class="phone_number"><span>80001999</span></div>
+		<h4><?php echo $jsonLangGlobals->order_by_phone_->texte; ?></h4>
+		<div class="phone_number"><span><?php echo $jsonLangGlobals->order_by_phone_number_->texte; ?></span></div>
 	</div>
 	<div class='popin_black_bg'></div>
 </div>

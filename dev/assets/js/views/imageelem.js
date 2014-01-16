@@ -23,7 +23,6 @@ define([
                 canvas.height = h;
                 texture.width = w;
                 texture.height = h;
-                console.log("SET SIZE "+w+"/"+h);
                 updateBrightness();
                 //ctx.drawImage(element[0],0,0,w,h);
             }else{
