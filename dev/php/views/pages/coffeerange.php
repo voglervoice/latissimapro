@@ -1,14 +1,11 @@
 <?php
-$capsules_folder = 'assets/imgs/sections/capsules/';
-$caps_w = 52;
-$caps_h = 49;
 $index = 0;
 function getCapsules($datas, $start, $nbCaps){
 	$markup = "";
 	for ($i = $start; $i < $start+$nbCaps; $i++) {
 		$jsonId = 'grand_cru_'.($i+1);
 		$markup .= "<a href='#' data-link='".$jsonId."'>";
-		$markup .= "<img src='".$capsules_folder.$jsonId.".png' width='".$caps_w."' height='".$caps_h."' />";
+		$markup .= "<img src='assets/imgs/sections/capsules/".$jsonId.".png' width='52' height='49' />";
 		$markup .= "<span>".$datas->$jsonId->texte."</span>";
 		$markup .= "</a>";
 	}

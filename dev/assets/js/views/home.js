@@ -162,7 +162,10 @@ define([
 
                 TweenMax.to($('.home_anchors_roll', this), 0, {alpha:0});
                 TweenMax.to($(this), 0, {alpha:0});
-                $(this).on('mouseenter', function(event){
+                $(this).on('click', function(event){
+                    event.preventDefault();
+                    publisher.publish(Events.navigate, $(this).attr('data-link'));
+                }).on('mouseenter', function(event){
                     TweenMax.to($('.home_anchors_roll', this), 0.3, {left:-25, alpha:1, ease:Circ.easeInOut});
                     TweenMax.to($('.home_anchors_off', this), 0.3, {left:$(this).width(), alpha:0, ease:Circ.easeInOut});
                     r.animate({'fill-opacity': 1}, 200);
