@@ -59,6 +59,7 @@ h2{
     text-transform: uppercase;
     font-size: 30px;
     letter-spacing: 1px;
+    display:inline-block;
 }
 
 // MAIN MENU
@@ -203,6 +204,7 @@ nav{
 .milk_machine{position: absolute; z-index: 10; left:50%; bottom:0;margin-left: -666px;}
 .milk_content{
     position: absolute; z-index: 15; top:50%; margin-top: -235px; margin-left: 130px; left:50%;
+    .content_line_milk_sep{margin-top: 17px; margin-bottom: 12px; height:1px; width:100%; background-color: #ffffff;}
     .milk_description{
         .light;
         display: block;
@@ -250,8 +252,51 @@ nav{
 
 // ***** DESIGN ***** //
 
-.design_machine{position: absolute; z-index: 10; left:50%; top:50%; margin-left: -520px; margin-top: -255px;}
-.design_content{position: absolute; z-index: 15; left:50%; top:50%; margin-left: 60px; margin-top: -300px;}
+.design_machine{position: absolute; z-index: 10; left:0; bottom:0; }
+.design_content{
+    .content_line_design_sep{margin-top: 4px; margin-bottom: 14px; height:1px; width:100%; background-color: #ffffff;}
+    position: absolute; z-index: 15; left:506px; top:50%; margin-top: -261px; width:100%;
+    .design_description{
+        .light;
+        display: block;
+        font-size: 15px;
+        width:100%;
+        line-height: 29px;
+        letter-spacing: 1px;
+    }
+    .design_content_infos{
+        width:100%;
+        .design_content_infos_col{
+            float:left;
+            width:190px;
+            margin-top: 60px;
+            h3{
+                display: inline-block;
+                height:70px;
+                padding-right: 70px;
+                .regular;
+                font-size: 18px;
+            }
+            div{
+                height:1px;
+                background-color: #ffffff;
+                margin-bottom: 28px;
+                width:132px;
+            }
+            ul{
+                li{
+                    padding-right: 20px;
+                    font-size: 14px;
+                    .light;
+                    margin-bottom:30px;
+                    letter-spacing: 1px;
+                    list-style-type : disc;
+                    margin-left: 13px;
+                }
+            }
+        }
+    }
+}
 
 // POPINS
 .popins{

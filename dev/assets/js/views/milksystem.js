@@ -52,7 +52,7 @@ define([
 
         // ******************* private *******************
          var init = function(index){
-            TweenMax.to($('.content_line_sep', ct), 0, {alpha:0.15});
+            TweenMax.to($('.content_line_milk_sep', ct), 0, {alpha:0.15});
             TweenMax.to(ct, 0, {alpha:0});
         };
 

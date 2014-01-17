@@ -39,8 +39,8 @@ define([
 		TweenMax.to($('.content'), 0, {autoAlpha:0});
 
 		$( window ).resize(function() {
-			windowW = $( window ).width();
-			windowH = $( window ).height();
+			windowW = $(window).width();
+			windowH = $(window).height();
 			windowHContent = windowH-footerH;
 			$('.content').width(windowW);
 			$('.content').height(windowH);
