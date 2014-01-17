@@ -23,7 +23,7 @@ define([
             rangeMachine.setSize(433*ratio, 523*ratio);
             ct.css('left', 433*ratio+115);
             ct.width(w - (433*ratio+115)-200);
-            $('.range_sep').width($('.range_description').width());
+            $('.content_line_sep', ct).width($('.range_description').width());
             $('.range_cat_title').each(function(event){
                 $('div', this).width($(this).width()-$('span', this).width()-50);
             });
@@ -53,7 +53,7 @@ define([
 
         // ******************* private *******************
          var init = function(index){
-            TweenMax.to($('.range_sep'), 0, {alpha:0.15});
+            TweenMax.to($('.content_line_sep', ct), 0, {alpha:0.15});
             TweenMax.to($('.range_cat_title div'), 0, {alpha:0.2});
             TweenMax.to(ct, 0, {alpha:0});
         };

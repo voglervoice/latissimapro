@@ -144,16 +144,13 @@ nav{
     z-index: 3;
 }
 
-// ***** MILK ***** //
-
-.milk_machine{position: absolute; z-index: 10; left:50%; bottom:0;margin-left: -666px;}
+.content_line_sep{margin-top: 22px; margin-bottom: 23px; height:1px; width:100%; background-color: #ffffff;}
 
 // ***** COFFEE RANGE ***** //
 
 .range_machine{position: absolute; z-index: 10; left:0; bottom:0;}
 .range_content{
     position: absolute; z-index: 15; top:50%; margin-top: -315px;
-    .range_sep{margin-top: 22px; margin-bottom: 23px; height:1px; width:100%; background-color: #ffffff;}
     .range_description{font-size: 16px; .light; letter-spacing: 1px;}
     .range_coffees{
         width:100%;
@@ -198,6 +195,56 @@ nav{
                 }
             }
         }
+    }
+}
+
+// ***** MILK ****** //
+
+.milk_machine{position: absolute; z-index: 10; left:50%; bottom:0;margin-left: -666px;}
+.milk_content{
+    position: absolute; z-index: 15; top:50%; margin-top: -235px; margin-left: 130px; left:50%;
+    .milk_description{
+        .light;
+        display: block;
+        float: left;
+        font-size: 15px;
+        width:100%;
+        line-height: 29px;
+        letter-spacing: 1px;
+    }
+    .visual_fig{
+        position:relative;
+        background-image:url(../imgs/sections/milk_fig_bg.png); background-repeat: no-repeat;
+        width:197px;
+        height:204px;
+        float:left;
+        margin-left: 12px;
+        margin-top: 29px;
+        .visual_pot{
+            background-image:url(../imgs/sections/milk_fig_pot.png); background-repeat: no-repeat;
+            width:66px;
+            height:66px;
+            margin-left: 65px;
+        }
+        span{
+            display: block;
+            position: absolute;
+            top:142px;
+            text-align: center;
+            .bold;
+            font-size: 14px;
+            width:166px;
+            left:50%;
+            margin-left: -83px;
+        }
+    }
+    .logo_clean{
+        margin-top: 22px;
+        background-image:url(../imgs/sections/milk_pict_clean.png); background-repeat: no-repeat;
+        width:60px;
+        height:99px;
+        float:left;
+        margin-left: 12px;
     }
 }
 

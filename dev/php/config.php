@@ -32,13 +32,16 @@ $previewMode = isset($_GET['preview']);
 $prod = false;
 if(strpos($_SERVER['SERVER_NAME'], 'nespresso') !== false) $prod = true;
 
-//If territory is not defined
 if(empty($territory)){
     //get it with Geoloc by IP (if it exist)
     if(file_exists('../lib/geoloc.class.php')){
         include_once('../lib/geoloc.class.php');
         $geo = new NesGeoLoc();
-        $territory = $geo­>getCountryCode();
+        $territory = $geo­->getCountryCode();
+    }else if(file_exists('php/class/geoloc.class.php')){
+        include_once('php/class/geoloc.class.php');
+        $geogeo = new NesGeoLoc();
+        $territory = $geogeo->getCountryCode();
     }else{
         $territory = null;
         $language = null;
@@ -52,8 +55,8 @@ if(strtoupper($territory) == 'LU'){
     $territory = 'UK';
 }
 
-if(file_exists('admin/loc/includes/db_connect.php')){
-        include_once('admin/loc/includes/db_connect.php');
+if(file_exists('../admin/loc/includes/db_connect.php')){
+        include_once('../admin/loc/includes/db_connect.php');
         // If language is not defined, get default language
         if(empty($language)){
             $query = 'SELECT code, RSID, launching FROM loc_langues INNER JOIN cms ON cms.code_pays = SUBSTRING_INDEX(loc_langues.code,\'_\',­1) WHERE SUBSTRING_INDEX(code,\'_\',­1) LIKE :territory AND native = 1';
@@ -120,4 +123,5 @@ $jsonLangMail = $jsonLang->global__mail->blockText;
 $jsonLangMenu = $jsonLang->navigation_menu->blockText;
 $jsonLangRangeGlobals = $jsonLang->range__global->blockText;
 $jsonLangRangeCapsules = $jsonLang->range__grand_cru->blockText;
+$jsonLangMilk = $jsonLang->milk->blockText;
 ?>

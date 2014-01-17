@@ -15,7 +15,7 @@ function getCapsules($datas, $start, $nbCaps){
 <section id="coffeerange">
 	<div class="range_content">
 		<h2><?php echo $jsonLangRangeGlobals->title->texte; ?></h2>
-		<div class="range_sep"></div>
+		<div class="content_line_sep"></div>
 		<span class="range_description"><?php echo $jsonLangRangeGlobals->description_text->texte; ?></span>
 		<div class="range_coffees">
 			<div class="range_cat">
