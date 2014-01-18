@@ -125,4 +125,5 @@ $jsonLangRangeGlobals = $jsonLang->range__global->blockText;
 $jsonLangRangeCapsules = $jsonLang->range__grand_cru->blockText;
 $jsonLangMilk = $jsonLang->milk->blockText;
 $jsonLangDesign = $jsonLang->{'powerful_inside_&_out'}->blockText;
+$jsonLangTouch = $jsonLang->one_touch_is_all->blockText;
 ?>
