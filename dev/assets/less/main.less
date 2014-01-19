@@ -362,20 +362,58 @@ nav{
             left:50%;
             margin-left: -333px;
             overflow: hidden;
-            div{
+            .lang_zone{
                 position:absolute;
                 margin-top: 34px;
-                width:666px;
+                width:800px;
                 height:340px;
                 margin-left: 30px;
                 ul{
                     float: left;
                     width:167px;
                     li{
-                        margin-left: 33px;
+                        clear: both;
+                        list-style-type : none;
+                        height: 54px;
+                        font-size: 11px;
+                        width:167px;
+                        text-transform: capitalize;
+                        letter-spacing: 1px;
+                        .country_title{
+                            width:167px;
+                            height:21px;
+                            .country_flag{
+                                background-image: url(../imgs/ui/flags.png);
+                                width: 16px;
+                                height: 11px;
+                                margin-right: 9px;
+                                float :left;
+                                border: 1px solid black;
+                            }
+                            span{
+                                .regular;
+                                display: block;
+                                float:left;
+                            }
+                        }
+                        .country_langs{
+                            margin-left: 25px;
+                            .light;
+                            a{
+                                display: block;
+                                float: left;
+                                margin-right: 4px;
+                                height:11px;
+                            }
+                            .country_lang_sep{
+                                padding-left: 4px;
+                                border-left: 1px solid #a4a4a4;
+                            }
+                        }
                     }
                 }
             }
+            
         }
     }
     .share_mail{

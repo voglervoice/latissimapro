@@ -3,35 +3,42 @@
 		<a href="#" class="popin_close"></a>
 		<h4>Select your country</h4>
 		<ul class="lang_zones">
-			<li><a href="#" data-type="africa">Africa</a></li>
-			<li><a href="#" data-type="america">America</a></li>
-			<li><a href="#" data-type="europe">Europe</a></li>
-			<li><a href="#" data-type="middle_east">Middle East</a></li>
-			<li><a href="#" data-type="asia">Asia</a></li>
-			<li><a href="#" data-type="oceania">Oceania</a></li>
+		<?php
+			foreach ($jsonCountries->continents as $key => $value)
+				echo "<li><a href='#' data-type='".$key."'>".$key."</a></li>";
+		?>
 		</ul>
 		<div class="select_langs">
-			<div data-type="africa" class="lang_zone">
-				<ul>
-					<li>France</li>
-					<li>France</li>
-					<li>France</li>
-					<li>France</li>
-					<li>France</li>
-				</ul>
-				<ul>
-					<li>France</li>
-					<li>France</li>
-					<li>France</li>
-					<li>France</li>
-					<li>France</li>
-				</ul>
-			</div>
-			<div data-type="america" class="lang_zone">America</div>
-			<div data-type="europe" class="lang_zone">Europe</div>
-			<div data-type="middle_east" class="lang_zone">Middle East</div>
-			<div data-type="asia" class="lang_zone">Asia</div>
-			<div data-type="oceania" class="lang_zone">Oceania</div>
+		<?php
+			foreach ($jsonCountries->continents as $key => $value) {
+				echo "<div data-type='".$key."' class='lang_zone'>";
+				$i = 0;
+				$nbCountries = count((array)$value->countries);
+				$limitNum = 4;
+				if($nbCountries > 18) $limitNum = 6;
+				else if($nbCountries > 8) $limitNum = 5;
+				foreach ($value->countries as $country_id => $country) {
+					if($i == 0) echo "<ul>";
+            				echo "<li><div class='country_title'>";
+            				echo "<div class='country_flag _".$country_id."'></div><span>".$country->title."</span></div>";
+            				echo "<div class='country_langs'>";
+            				$l = 0;
+            				foreach ($country->languages as $lang_infos) {
+            					$classPlus = ($l > 0)? "class='country_lang_sep'" : "";
+            					echo "<a href='".$baseurl.$lang_infos->code."' ".$classPlus.">".$lang_infos->name."</a>";
+            					$l++;
+            				}
+            				echo "</div>";
+            				echo "</li>";
+					$i++;
+					if($i == $limitNum){
+						echo "</ul>";
+						$i = 0;	
+					}
+				}
+				echo "</div>";
+			}
+		?>
 		</div>
 	</div>
 	<div class="share_mail popin">

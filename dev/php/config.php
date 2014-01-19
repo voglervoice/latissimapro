@@ -103,15 +103,16 @@ if($_SERVER['HTTP_HOST'] == "latissimapro.dev:8080") $folder = "";
 $baseurl = 'http://'.$_SERVER['HTTP_HOST'].'/'.$folder;
 $baseurlang = $baseurl.$language."_".$territory."/";
 $baseShareUrl = $baseurlang;
-// JSON LANG
+// JSON LANG ::
 $dirname    =   $_SERVER['DOCUMENT_ROOT']."/".$folder;
+$jsonFolderPath = $dirname.'assets/datas/';
 
-$jsonFile = $dirname.'assets/datas/'.$language.'_'.$territory.'.json';
-$jsonCmsFile = $dirname.'assets/datas/_cms_'.$territory.'.json';
+$jsonFile = $jsonFolderPath.$language.'_'.$territory.'.json';
+$jsonCmsFile = $jsonFolderPath.'_cms_'.$territory.'.json';
 if (file_exists($jsonFile))         $jsoncontent = file_get_contents($jsonFile);
-else                                        $jsoncontent = file_get_contents($dirname.'assets/datas/en_XX.json');
+else                                        $jsoncontent = file_get_contents($jsonFolderPath.'en_XX.json');
 if (file_exists($jsonCmsFile))  $jsonCmsContent = file_get_contents($jsonCmsFile);
-else                                        $jsonCmsContent = file_get_contents($dirname.'assets/datas/_cms_XX.json');
+else                                        $jsonCmsContent = file_get_contents($jsonFolderPath.'_cms_XX.json');
 // datas
 $jsonLang = json_decode($jsoncontent)->data->sections;
 $jsonCms = json_decode($jsonCmsContent)->data->sections;
@@ -126,4 +127,9 @@ $jsonLangRangeCapsules = $jsonLang->range__grand_cru->blockText;
 $jsonLangMilk = $jsonLang->milk->blockText;
 $jsonLangDesign = $jsonLang->{'powerful_inside_&_out'}->blockText;
 $jsonLangTouch = $jsonLang->one_touch_is_all->blockText;
+
+// JSON COUNTRIES ::
+$jsonCountriesContent = file_get_contents($jsonFolderPath.'countries.json');
+$jsonCountries = json_decode($jsonCountriesContent);
+
 ?>
