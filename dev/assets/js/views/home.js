@@ -9,7 +9,7 @@ define([
 
     var Home = function() {
         var self = this;
-        var raphaW = $('#raphael_home_anchors').width();
+        var raphaW = $('#raphael_home_anchors').width(), promoW;
         var raphaH = $('#raphael_home_anchors').height();
         var paper = Raphael("raphael_home_anchors", raphaW, raphaH);
         var lines= [], circleBase = [], circlePulse1 = [], circlePulse2 = [], rects = [], aXEnd = [], puces = [], arrows = [];
@@ -22,6 +22,11 @@ define([
         };
 
         this.initOpen = function(){
+            promoW = 20+$('.home_promotion_price').width()+Math.max($('.home_promotion_title').width(), $('.home_promotion_cta').width()) + 60;
+            $('.home_promotion').width(promoW);
+            $('.home_promotion_border').width(promoW-10);
+            $('.home_promotion').css('right', "-"+promoW+"px");
+
             this.bg.open();
             for (var i = 0; i < lines.length; i++) {
                 // init
@@ -44,6 +49,14 @@ define([
                 TweenMax.delayedCall(delayAnchor+0.2*i, openCircle, [i]);
                 TweenMax.delayedCall(delayAnchor+0.2*i+0.2, openLine, [i]);
             }
+
+            if($('.home_promotion').attr('data-on') == '1')
+            {
+                $('.home_promotion').css('visibility', 'visible');
+                TweenMax.to($('.home_promotion'), 0.35, {right:"-20px", ease:Expo.easeOut, delay:3});
+            }else{
+                $('.home_promotion').css('display', 'none');
+            }
         };
 
         this.close = function(){
@@ -65,6 +78,11 @@ define([
                 arrow.animate({ path : arrow.data("introPath"), "stroke-width": "0", easing:'<>'},300);
                 closeLine(index);
             });
+
+            if($('.home_promotion').attr('data-on') == '1'){
+                TweenMax.killTweensOf($('.home_promotion'));
+                TweenMax.to($('.home_promotion'), 0.4, {right:-promoW, ease:Circ.easeInOut});
+            }
         };
 
         // ******************* private *******************
@@ -179,6 +197,14 @@ define([
                     arrow.animate({path: arrowInitPath}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
                 });
             });
+
+            if($('.home_promotion').attr('data-on') == '1'){
+                $('.home_promotion a').on('mouseenter', function(event){
+                    TweenMax.to($('.home_promotion'), 0.3, {right:-10, ease:Expo.easeOut});
+                }).on('mouseleave', function(event){
+                    TweenMax.to($('.home_promotion'), 0.35, {right:-20, ease:Circ.easeInOut});
+                });
+            }
         };
 
         var openLine = function(index, end){

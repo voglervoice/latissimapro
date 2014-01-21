@@ -33,9 +33,9 @@ module.exports = function(grunt){
 				expand: true
 			},
 			data: {
-				cwd: 'dev/assets/datas/',
+				cwd: 'dev/json/',
 				src: "**",
-				dest: "web/assets/datas/",
+				dest: "web/json/",
 				expand: true
 			},
 			php: {
@@ -120,7 +120,7 @@ module.exports = function(grunt){
 				}
 			},
 			data: {
-				files: "dev/assets/datas/*",
+				files: "dev/json/*",
 				tasks: "copy:data",
 				options: {
 					event: ['all']

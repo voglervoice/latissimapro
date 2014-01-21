@@ -115,6 +115,44 @@ nav{
     margin-top: -510px;
 }
 
+.home_promotion{
+    position: absolute;
+    z-index: 150;
+    right:0;
+    top:93px;
+    height: 96px;
+    width:600px;
+    visibility: hidden;
+    .rounded-corners(5px);
+    .background-vertical-gradient(#217bd9, #1859c0, #1e70d3);
+    .home_promotion_border{
+        position: absolute;
+        z-index: 1;
+        left:2px;
+        top:2px;
+        height: 88px;
+        width:570px;
+        .rounded-corners(2px);
+        border: 2px solid #7ab0e8;
+        .transparency(0.8);
+    }
+    a{
+        display: block;
+        position: absolute;
+        z-index: 10;
+        width:100%;
+        height:100%;
+        .home_promotion_receive{display: block; position: absolute; top:15px; left:17px; font-size: 12px; .light;}
+        .home_promotion_price{position: absolute; top:20px; left:14px; .bold;
+            .home_promotion_price_value{font-size:60px; }
+            .home_promotion_price_currency{font-size:24px; }
+        }
+        .home_promotion_title{ display: block; position: absolute; top:20px; font-size:24px; left:120px; .bold; text-transform: uppercase;}
+        .home_promotion_date{ display: block; position: absolute; top:50px; left:120px; font-size:13px; .light;}
+        .home_promotion_cta{ display: block; position: absolute; top:66px; left:120px; font-size:13px; .regular;}
+    }
+}
+
 .home_anchors{ .home_anchors_position; z-index: 50;
     a{ position: absolute;
         display: block;
@@ -151,6 +189,7 @@ nav{
 // ***** COFFEE RANGE ***** //
 
 .range_machine{position: absolute; z-index: 10; left:0; bottom:0;}
+.range_rolls{position: absolute; z-index: 20;};
 .range_content{
     position: absolute; z-index: 15; top:50%; margin-top: -315px;
     .range_description{font-size: 16px; .light; letter-spacing: 1px;}
@@ -300,7 +339,7 @@ nav{
     .popin{
         background-color:#0a0a0a;
         border:1px solid #424242;
-        border-radius: 10px;
+        .rounded-corners(10px);
         left:50%;
         top:50%;
         position: absolute;
@@ -381,7 +420,7 @@ nav{
                         letter-spacing: 1px;
                         .country_title{
                             width:167px;
-                            height:21px;
+                            height:19px;
                             .country_flag{
                                 background-image: url(../imgs/ui/flags.png);
                                 width: 16px;
@@ -451,7 +490,7 @@ nav{
             }
             input[type=text] {
                 background-color: #000000;
-                border-radius: 5px;
+                .rounded-corners(5px);
                 border: 1px solid #505050;
                 height: 40px;
                 width:230px;
@@ -460,26 +499,15 @@ nav{
             }
             input[type=submit] {
                 font-size: 14px;
-                border-radius: 5px;
+                .rounded-corners(5px);
                 padding-bottom:10px;
                 padding-top:10px;
                 padding-left:38px;
                 padding-right:38px;
                 color:#ffffff;
                 border: 0 none;
+                .background-vertical-gradient(#9c8345, #726032, #8e773e);
                 text-transform: uppercase;
-                /* fallback */
-                background-color: #8e773e;
-                /* Safari 4-5, Chrome 1-9 */
-                background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#726032), to(#9c8345));
-                /* Safari 5.1, Chrome 10+ */
-                background: -webkit-linear-gradient(top, #9c8345, #726032);
-                /* Firefox 3.6+ */
-                background: -moz-linear-gradient(top, #9c8345, #726032);
-                /* IE 10 */
-                background: -ms-linear-gradient(top, #9c8345, #726032);
-                /* Opera 11.10+ */
-                background: -o-linear-gradient(top, #9c8345, #726032);
             }
             input[type=submit]:focus {
                 outline:0;
@@ -504,7 +532,7 @@ nav{
     margin-left: -115px;
     background-color: #ffffff;
     color:#000000;
-    border-radius: 3px;
+    .rounded-corners(3px);
     background-image:url(../imgs/ui/phone.jpg); background-repeat: no-repeat;
     background-position: 43px center;
     span{
@@ -657,6 +685,37 @@ footer .sep {width:22px; height: 7px; border-left: 1px solid #5f5f5f;}
             height:123px;
 }
 
+/** TOOLS **/
+
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.background-vertical-gradient (@topColor, @bottomColor, @defaultColor){
+            /* fallback */
+            background-color: @defaultColor;
+            /* Safari 4-5, Chrome 1-9 */
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@bottomColor), to(@topColor));
+            /* Safari 5.1, Chrome 10+ */
+            background: -webkit-linear-gradient(top, @topColor, @bottomColor);
+            /* Firefox 3.6+ */
+            background: -moz-linear-gradient(top, @topColor, @bottomColor);
+            /* IE 10 */
+            background: -ms-linear-gradient(top, @topColor, @bottomColor);
+            /* Opera 11.10+ */
+            background: -o-linear-gradient(top, @topColor, @bottomColor);
+}
+
+.transparency (@value: 1) {
+    zoom: 1;
+    @valueOnHundred : @value * 100;
+    filter: alpha(opacity=@valueOnHundred);
+    opacity: @value;
+}
 
 /** Retina **/
 @media

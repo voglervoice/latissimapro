@@ -1,7 +1,7 @@
 {
   "data": {
     "cms": {
-       "lang":"fr_FR" 
+       "lang":"fr_RE" 
     },
     "sections": {
        "global__footer":{
@@ -277,19 +277,9 @@
             "label":"capsules_category_1",
             "texte":""
           },
-          "capsules_category_1_text": {
-             "id": "7_7",
-            "label":"capsules_category_1_text",
-            "texte":""
-          },
           "capsules_category_2": {
              "id": "7_11",
             "label":"capsules_category_2",
-            "texte":""
-          },
-          "capsules_category_2_text": {
-             "id": "7_14",
-            "label":"capsules_category_2_text",
             "texte":""
           },
           "capsules_category_3": {
@@ -297,19 +287,9 @@
             "label":"capsules_category_3",
             "texte":""
           },
-          "capsules_category_3_text": {
-             "id": "7_13",
-            "label":"capsules_category_3_text",
-            "texte":""
-          },
           "capsules_category_4": {
              "id": "7_12",
             "label":"capsules_category_4",
-            "texte":""
-          },
-          "capsules_category_4_text": {
-             "id": "7_10",
-            "label":"capsules_category_4_text",
             "texte":""
           },
           "capsules_category_5": {
@@ -317,19 +297,9 @@
             "label":"capsules_category_5",
             "texte":""
           },
-          "capsules_category_5_text": {
-             "id": "7_3",
-            "label":"capsules_category_5_text",
-            "texte":""
-          },
           "capsules_category_6": {
              "id": "7_4",
             "label":"capsules_category_6",
-            "texte":""
-          },
-          "capsules_category_6_text": {
-             "id": "7_6",
-            "label":"capsules_category_6_text",
             "texte":""
           }
         }
@@ -352,9 +322,9 @@
             "label":"pinterest_text",
             "texte":""
           },
-          "twitter_text_": {
+          "twitter_text": {
              "id": "3_7",
-            "label":"twitter_text_",
+            "label":"twitter_text",
             "texte":""
           }
         }
@@ -420,27 +390,27 @@
           "home": {
              "id": "12_3",
             "label":"home",
-            "texte":"Home"
+            "texte":""
           },
           "one_touch_is_all": {
              "id": "12_2",
             "label":"one_touch_is_all",
-            "texte":"Intuitive<br>touchscreen"
+            "texte":""
           },
-          "range": {
+          "a_wide_range_of_grands_crus": {
              "id": "12_4",
-            "label":"range",
-            "texte":"Coffee range"
+            "label":"a_wide_range_of_grands_crus",
+            "texte":""
           },
-          "milk": {
+          "delicious_coffee_&_milk_recipes": {
              "id": "12_5",
-            "label":"milk",
-            "texte":"Milk system"
+            "label":"delicious_coffee_&_milk_recipes",
+            "texte":""
           },
-          "powerful__inside_&_out": {
+          "powerful__inside_&amp;_out": {
              "id": "12_6",
-            "label":"powerful__inside_&_out",
-            "texte":"Design"
+            "label":"powerful__inside_&amp;_out",
+            "texte":""
           }
         }
       },
@@ -470,6 +440,111 @@
           "with_milk___": {
              "id": "6_12",
             "label":"with_milk___",
+            "texte":""
+          }
+        }
+      },
+      "powerful_inside_&_out":{
+        "section":"powerful_inside_&_out",
+        "blockText":{
+          "title": {
+             "id": "10_15",
+            "label":"title",
+            "texte":""
+          },
+          "text": {
+             "id": "10_14",
+            "label":"text",
+            "texte":""
+          },
+          "bloc_1_•_characteristics": {
+             "id": "10_13",
+            "label":"bloc_1_•_characteristics",
+            "texte":""
+          },
+          "bloc_1__info_1": {
+             "id": "10_17",
+            "label":"bloc_1__info_1",
+            "texte":""
+          },
+          "bloc_1__info_2": {
+             "id": "10_18",
+            "label":"bloc_1__info_2",
+            "texte":""
+          },
+          "bloc_1__info_3": {
+             "id": "10_19",
+            "label":"bloc_1__info_3",
+            "texte":""
+          },
+          "bloc_1__info_4": {
+             "id": "10_24",
+            "label":"bloc_1__info_4",
+            "texte":""
+          },
+          "bloc_2_•_intuitive_touchscreen": {
+             "id": "10_20",
+            "label":"bloc_2_•_intuitive_touchscreen",
+            "texte":""
+          },
+          "bloc_2__info_1": {
+             "id": "10_21",
+            "label":"bloc_2__info_1",
+            "texte":""
+          },
+          "bloc_2__info_2": {
+             "id": "10_22",
+            "label":"bloc_2__info_2",
+            "texte":""
+          },
+          "bloc_3_•_optimal_milk_froth_quality": {
+             "id": "10_11",
+            "label":"bloc_3_•_optimal_milk_froth_quality",
+            "texte":""
+          },
+          "bloc_3__info_1": {
+             "id": "10_10",
+            "label":"bloc_3__info_1",
+            "texte":""
+          },
+          "bloc_3__info_2": {
+             "id": "10_1",
+            "label":"bloc_3__info_2",
+            "texte":""
+          },
+          "bloc_4_•_auto_clean_system": {
+             "id": "10_3",
+            "label":"bloc_4_•_auto_clean_system",
+            "texte":""
+          },
+          "bloc_4__info_1": {
+             "id": "10_4",
+            "label":"bloc_4__info_1",
+            "texte":""
+          },
+          "bloc_4__info_2": {
+             "id": "10_5",
+            "label":"bloc_4__info_2",
+            "texte":""
+          },
+          "download_user_guide": {
+             "id": "10_9",
+            "label":"download_user_guide",
+            "texte":""
+          },
+          "user_guide_url": {
+             "id": "10_23",
+            "label":"user_guide_url",
+            "texte":""
+          },
+          "assistance_video": {
+             "id": "10_7",
+            "label":"assistance_video",
+            "texte":""
+          },
+          "youtube_video_playlist_url": {
+             "id": "10_8",
+            "label":"youtube_video_playlist_url",
             "texte":""
           }
         }
@@ -830,116 +905,6 @@
           "schema_milk_froth_text_": {
              "id": "9_2",
             "label":"schema_milk_froth_text_",
-            "texte":""
-          }
-        }
-      },
-      "powerful_inside_&_out":{
-        "section":"powerful_inside_&_out",
-        "blockText":{
-          "title": {
-             "id": "10_15",
-            "label":"title",
-            "texte":""
-          },
-          "text": {
-             "id": "10_14",
-            "label":"text",
-            "texte":""
-          },
-          "bloc_1_•_intutive_touchscreen": {
-             "id": "10_13",
-            "label":"bloc_1_•_intutive_touchscreen",
-            "texte":""
-          },
-          "bloc_1__info_1": {
-             "id": "10_17",
-            "label":"bloc_1__info_1",
-            "texte":""
-          },
-          "bloc_1__info_2": {
-             "id": "10_18",
-            "label":"bloc_1__info_2",
-            "texte":""
-          },
-          "bloc_1__info_3": {
-             "id": "10_19",
-            "label":"bloc_1__info_3",
-            "texte":""
-          },
-          "bloc_2_•_optimal_milk_froth_quality": {
-             "id": "10_20",
-            "label":"bloc_2_•_optimal_milk_froth_quality",
-            "texte":""
-          },
-          "bloc_2__info_1": {
-             "id": "10_21",
-            "label":"bloc_2__info_1",
-            "texte":""
-          },
-          "bloc_2__info_2": {
-             "id": "10_22",
-            "label":"bloc_2__info_2",
-            "texte":""
-          },
-          "bloc_2__info_3": {
-             "id": "10_12",
-            "label":"bloc_2__info_3",
-            "texte":""
-          },
-          "bloc_3_•_auto_clean_system": {
-             "id": "10_11",
-            "label":"bloc_3_•_auto_clean_system",
-            "texte":""
-          },
-          "bloc_3__info_1": {
-             "id": "10_10",
-            "label":"bloc_3__info_1",
-            "texte":""
-          },
-          "bloc_3__info_2": {
-             "id": "10_1",
-            "label":"bloc_3__info_2",
-            "texte":""
-          },
-          "bloc_3__info_3": {
-             "id": "10_2",
-            "label":"bloc_3__info_3",
-            "texte":""
-          },
-          "bloc_4_•_high_qualitative_material": {
-             "id": "10_3",
-            "label":"bloc_4_•_high_qualitative_material",
-            "texte":""
-          },
-          "bloc_4__info_1": {
-             "id": "10_4",
-            "label":"bloc_4__info_1",
-            "texte":""
-          },
-          "bloc_4__info_2": {
-             "id": "10_5",
-            "label":"bloc_4__info_2",
-            "texte":""
-          },
-          "download_user_guide": {
-             "id": "10_9",
-            "label":"download_user_guide",
-            "texte":""
-          },
-          "user_guide_url": {
-             "id": "10_23",
-            "label":"user_guide_url",
-            "texte":""
-          },
-          "video_title": {
-             "id": "10_7",
-            "label":"video_title",
-            "texte":""
-          },
-          "video_url": {
-             "id": "10_8",
-            "label":"video_url",
             "texte":""
           }
         }

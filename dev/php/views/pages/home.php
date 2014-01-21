@@ -1,4 +1,17 @@
 <section id="home">
+	<div class="home_promotion" data-on="<?php echo $jsonCms->promocoupon1; ?>">
+		<a href="<?php echo $jsonLangHomePromo->url->texte; ?>" target="_blank">
+			<span class="home_promotion_receive"><?php echo $jsonLangHomePromo->receive->texte; ?></span>
+			<div class="home_promotion_price">
+				<span class="home_promotion_price_value"><?php echo $jsonLangHomePromo->price->texte ?></span>
+				<span class="home_promotion_price_currency"><?php echo $jsonLangHomePromo->currency->texte; ?></span>
+			</div>
+			<span class="home_promotion_title">Cash Back</span>
+			<span class="home_promotion_date"><?php echo $jsonLangHomePromo->range_date->texte; ?></span>
+			<span class="home_promotion_cta"><?php echo $jsonLangHomePromo->cta->texte; ?></span>
+		</a>
+		<div class="home_promotion_border"></div>
+	</div>
 	<div class="home_anchors">
 		<a href="<?php echo $baseurlang; ?>touchscreen" data-centerx="-51" data-centery="-259" data-link="touchscreen">
 			<span class="home_anchors_off"><?php echo $jsonLang->one_touch_is_all->blockText->title->texte; ?></span>
