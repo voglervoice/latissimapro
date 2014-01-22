@@ -1,4 +1,5 @@
 <section id="milksystem">
+	<div class="milk_zoom"><div class="milk_zoom_inner"><div class="milk_zoom_img"></div></div></div>
 	<div class="milk_content">
 		<h2><?php echo $jsonLangMilk->title->texte; ?></h2>
 		<div class="content_line_milk_sep"></div>

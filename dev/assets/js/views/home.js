@@ -4,8 +4,9 @@ define([
     "events",
     "publisher",
     "raphaeljs",
-    "views/backgroundsection"
-], function($, TweenMax, Events, publisher, Raphael, BackgroundSection) {
+    "views/backgroundsection",
+    "views/imageelem"
+], function($, TweenMax, Events, publisher, Raphael, BackgroundSection, ImageElem) {
 
     var Home = function() {
         var self = this;
@@ -17,6 +18,9 @@ define([
         // ******************* public ******************* 
         this.elem = $('#home');
         this.bg = new BackgroundSection(this.elem);
+        var homeMachine = new ImageElem($(".home_machine", this.elem));
+        var homeElement = homeMachine.getElement();
+
         this.resize = function(w, h){
             this.bg.resize(w,h);
         };
@@ -40,6 +44,8 @@ define([
                 var linkElem = $(".home_anchors a[data-index='"+i+"']");
                 TweenMax.to(linkElem, 0, {alpha:0, left:parseInt(linkElem.attr('data-initl'), 10)});
             }
+
+            homeMachine.show(1.2,1.2);
         };
 
         this.open = function(){
@@ -83,6 +89,8 @@ define([
                 TweenMax.killTweensOf($('.home_promotion'));
                 TweenMax.to($('.home_promotion'), 0.4, {right:-promoW, ease:Circ.easeInOut});
             }
+
+            homeMachine.hide(1);
         };
 
         // ******************* private *******************
