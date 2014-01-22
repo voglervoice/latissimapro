@@ -169,9 +169,7 @@ define([
         };
 
         var createButton = function(elem){
-            console.log(elem.data('index'), unvisibleButtons[elem.data('index')]);
             var datas = unvisibleButtons[elem.data('index')];
-            console.log(datas[0]);
             var path = "M"+(positionInPaper.x+datas[0].x)+" "+(positionInPaper.y+datas[0].y);
             path += "L"+(positionInPaper.x+datas[1].x)+" "+(positionInPaper.y+datas[1].y);
             path += "L"+(positionInPaper.x+datas[2].x)+" "+(positionInPaper.y+datas[2].y);

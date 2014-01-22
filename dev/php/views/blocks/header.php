@@ -5,6 +5,7 @@ $facebook = $jsonLangShare->facebook_text->texte;
 $pinterest_image = "";
 ?>
 <!--HEADER-->
+<div class="nespresso_logo"></div>
 <h1>Lattissima Pro</h1>
 <header>
     <ul class="white">

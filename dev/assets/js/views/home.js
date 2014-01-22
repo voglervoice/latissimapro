@@ -23,6 +23,7 @@ define([
 
         this.resize = function(w, h){
             this.bg.resize(w,h);
+            homeElement.css({'left':'50%', 'top':'50%'});
         };
 
         this.initOpen = function(){
