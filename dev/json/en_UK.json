@@ -1,7 +1,7 @@
 {
   "data": {
     "cms": {
-       "lang":"en_XX" 
+       "lang":"en_UK" 
     },
     "sections": {
        "global__footer":{
@@ -90,7 +90,7 @@
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":"http://www.nespresso.com/r/order/UK"
+            "texte":"https://www.nespresso.com/uk/en/Order-Machines"
           },
           "country_and_language": {
              "id": "1_2",
@@ -120,12 +120,12 @@
           "order_by_phone_": {
              "id": "2_20",
             "label":"order_by_phone_",
-            "texte":"Order by phone"
+            "texte":""
           },
           "order_phone_number_": {
              "id": "2_9",
             "label":"order_phone_number_",
-            "texte":"00800 89808"
+            "texte":""
           },
           "order_now": {
              "id": "2_8",
@@ -315,17 +315,17 @@
           "facebook_text": {
              "id": "3_5",
             "label":"facebook_text",
-            "texte":"Prepare now the most indulgent milk recipes at home in a single touch."
+            "texte":"Prepare the most indulgent milk recipes at home with a single touch."
           },
           "pinterest_text": {
              "id": "3_6",
             "label":"pinterest_text",
-            "texte":"Prepare now the most indulgent milk recipes at home in a single touch."
+            "texte":"Prepare the most indulgent milk recipes at home with a single touch."
           },
           "twitter_text": {
              "id": "3_7",
             "label":"twitter_text",
-            "texte":"With Lattissima Pro, prepare the most indulgent milk recipes at home in a single touch #LattissimaPro #Nespresso"
+            "texte":"With Lattissima Pro, prepare the most indulgent milk recipes at home with a single touch #LattissimaPro #Nespresso"
           }
         }
       },
@@ -925,7 +925,7 @@
           "currency": {
              "id": "11_4",
             "label":"currency",
-            "texte":"€"
+            "texte":"£"
           },
           "price": {
              "id": "11_3",
@@ -940,7 +940,7 @@
           "range_date": {
              "id": "11_1",
             "label":"range_date",
-            "texte":"Until 31.5.2014"
+            "texte":"Until 31/6/2014"
           },
           "url": {
              "id": "11_6",

@@ -202,9 +202,9 @@
             "label":"discover",
             "texte":""
           },
-          "en_savoir_plus": {
+          "discover_more": {
              "id": "2_14",
-            "label":"en_savoir_plus",
+            "label":"discover_more",
             "texte":""
           }
         }
@@ -417,6 +417,11 @@
       "range__global":{
         "section":"range__global",
         "blockText":{
+          "_discover_range": {
+             "id": "6_14",
+            "label":"_discover_range",
+            "texte":""
+          },
           "title": {
              "id": "6_7",
             "label":"title",
@@ -662,104 +667,104 @@
             "label":"grand_cru_22",
             "texte":""
           },
-          "kazaar__aromatic_profile": {
+          "grand_cru_1aromatic_profile": {
              "id": "8_62",
-            "label":"kazaar__aromatic_profile",
+            "label":"grand_cru_1aromatic_profile",
             "texte":""
           },
-          "kazaar__aromatic_profile_with_milk": {
+          "grand_cru_1aromatic_profile_with_milk": {
              "id": "8_61",
-            "label":"kazaar__aromatic_profile_with_milk",
+            "label":"grand_cru_1aromatic_profile_with_milk",
             "texte":""
           },
-          "dharkan__aromatic_profile": {
+          "grand_cru_2aromatic_profile": {
              "id": "8_60",
-            "label":"dharkan__aromatic_profile",
+            "label":"grand_cru_2aromatic_profile",
             "texte":""
           },
-          "dharkan__aromatic_profile_with_milk": {
+          "grand_cru_2aromatic_profile_with_milk": {
              "id": "8_59",
-            "label":"dharkan__aromatic_profile_with_milk",
+            "label":"grand_cru_2aromatic_profile_with_milk",
             "texte":""
           },
-          "ristretto_aromatic_profile": {
+          "grand_cru_3aromatic_profile": {
              "id": "8_58",
-            "label":"ristretto_aromatic_profile",
+            "label":"grand_cru_3aromatic_profile",
             "texte":""
           },
-          "ristretto_aromatic_profile_with_milk": {
+          "grand_cru_3aromatic_profile_with_milk": {
              "id": "8_57",
-            "label":"ristretto_aromatic_profile_with_milk",
+            "label":"grand_cru_3aromatic_profile_with_milk",
             "texte":""
           },
-          "arpeggio_aromatic_profile": {
+          "grand_cru_4aromatic_profile": {
              "id": "8_56",
-            "label":"arpeggio_aromatic_profile",
+            "label":"grand_cru_4aromatic_profile",
             "texte":""
           },
-          "arpeggio_aromatic_profile_with_milk": {
+          "grand_cru_4aromatic_profile_with_milk": {
              "id": "8_55",
-            "label":"arpeggio_aromatic_profile_with_milk",
+            "label":"grand_cru_4aromatic_profile_with_milk",
             "texte":""
           },
-          "roma_aromatic_profile": {
+          "grand_cru_5aromatic_profile": {
              "id": "8_54",
-            "label":"roma_aromatic_profile",
+            "label":"grand_cru_5aromatic_profile",
             "texte":""
           },
-          "roma_aromatic_profile_with_milk": {
+          "grand_cru_5aromatic_profile_with_milk": {
              "id": "8_53",
-            "label":"roma_aromatic_profile_with_milk",
+            "label":"grand_cru_5aromatic_profile_with_milk",
             "texte":""
           },
-          "livanto_aromatic_profile": {
+          "grand_cru_6aromatic_profile": {
              "id": "8_52",
-            "label":"livanto_aromatic_profile",
+            "label":"grand_cru_6aromatic_profile",
             "texte":""
           },
-          "livanto_aromatic_profile_with_milk": {
+          "grand_cru_6aromatic_profile_with_milk": {
              "id": "8_51",
-            "label":"livanto_aromatic_profile_with_milk",
+            "label":"grand_cru_6aromatic_profile_with_milk",
             "texte":""
           },
-          "capriccio_aromatic_profile": {
+          "grand_cru_7aromatic_profile": {
              "id": "8_66",
-            "label":"capriccio_aromatic_profile",
+            "label":"grand_cru_7aromatic_profile",
             "texte":""
           },
-          "capriccio_aromatic_profile_with_milk": {
+          "grand_cru_7aromatic_profile_with_milk": {
              "id": "8_31",
-            "label":"capriccio_aromatic_profile_with_milk",
+            "label":"grand_cru_7aromatic_profile_with_milk",
             "texte":""
           },
-          "volluto_aromatic_profile": {
+          "grand_cru_8aromatic_profile": {
              "id": "8_13",
-            "label":"volluto_aromatic_profile",
+            "label":"grand_cru_8aromatic_profile",
             "texte":""
           },
-          "volluto_aromatic_profile_with_milk": {
+          "grand_cru_8aromatic_profile_with_milk": {
              "id": "8_12",
-            "label":"volluto_aromatic_profile_with_milk",
+            "label":"grand_cru_8aromatic_profile_with_milk",
             "texte":""
           },
-          "cosi_aromatic_profile": {
+          "grand_cru_9aromatic_profile": {
              "id": "8_11",
-            "label":"cosi_aromatic_profile",
+            "label":"grand_cru_9aromatic_profile",
             "texte":""
           },
-          "cosi_aromatic_profile_with_milk": {
+          "grand_cru_9aromatic_profile_with_milk": {
              "id": "8_10",
-            "label":"cosi_aromatic_profile_with_milk",
+            "label":"grand_cru_9aromatic_profile_with_milk",
             "texte":""
           },
-          "indriya_from_india_aromatic_profile": {
+          "grand_cru_10aromatic_profile": {
              "id": "8_9",
-            "label":"indriya_from_india_aromatic_profile",
+            "label":"grand_cru_10aromatic_profile",
             "texte":""
           },
-          "indriya_from_india_aromatic_profile_with_milk": {
+          "grand_cru_10aromatic_profile_with_milk": {
              "id": "8_8",
-            "label":"indriya_from_india_aromatic_profile_with_milk",
+            "label":"grand_cru_10aromatic_profile_with_milk",
             "texte":""
           },
           "dulsao_do_brasil_aromatic_profile": {
@@ -772,104 +777,104 @@
             "label":"dulsao_do_brasil_aromatic_profile_with_milk",
             "texte":""
           },
-          "rosabaya_de_colombia_aromatic_profile": {
+          "grand_cru_11aromatic_profile": {
              "id": "8_5",
-            "label":"rosabaya_de_colombia_aromatic_profile",
+            "label":"grand_cru_11aromatic_profile",
             "texte":""
           },
-          "rosabaya_de_colombia_aromatic_profile_with_milk": {
+          "grand_cru_11aromatic_profile_with_milk": {
              "id": "8_4",
-            "label":"rosabaya_de_colombia_aromatic_profile_with_milk",
+            "label":"grand_cru_11aromatic_profile_with_milk",
             "texte":""
           },
-          "bukeela_ka_ethiopia__aromatic_profile": {
+          "grand_cru_13aromatic_profile": {
              "id": "8_3",
-            "label":"bukeela_ka_ethiopia__aromatic_profile",
+            "label":"grand_cru_13aromatic_profile",
             "texte":""
           },
-          "bukeela_ka_ethiopia__aromatic_profile_with_milk": {
+          "grand_cru_13aromatic_profile_with_milk": {
              "id": "8_2",
-            "label":"bukeela_ka_ethiopia__aromatic_profile_with_milk",
+            "label":"grand_cru_13aromatic_profile_with_milk",
             "texte":""
           },
-          "fortissio_lungo_aromatic_profile": {
+          "grand_cru_17aromatic_profile": {
              "id": "8_1",
-            "label":"fortissio_lungo_aromatic_profile",
+            "label":"grand_cru_17aromatic_profile",
             "texte":""
           },
-          "fortissio_lungo_aromatic_profile_with_milk": {
+          "grand_cru_17aromatic_profile_with_milk": {
              "id": "8_14",
-            "label":"fortissio_lungo_aromatic_profile_with_milk",
+            "label":"grand_cru_17aromatic_profile_with_milk",
             "texte":""
           },
-          "vivalto_lungo_aromatic_profile": {
+          "grand_cru_18aromatic_profile": {
              "id": "8_15",
-            "label":"vivalto_lungo_aromatic_profile",
+            "label":"grand_cru_18aromatic_profile",
             "texte":""
           },
-          "vivalto_lungo_aromatic_profile_with_milk": {
+          "grand_cru_18aromatic_profile_with_milk": {
              "id": "8_16",
-            "label":"vivalto_lungo_aromatic_profile_with_milk",
+            "label":"grand_cru_18aromatic_profile_with_milk",
             "texte":""
           },
-          "linizio_lungo_aromatic_profile": {
+          "grand_cru_19aromatic_profile": {
              "id": "8_30",
-            "label":"linizio_lungo_aromatic_profile",
+            "label":"grand_cru_19aromatic_profile",
             "texte":""
           },
-          "linizio_lungo_aromatic_profile_with_milk": {
+          "grand_cru_19aromatic_profile_with_milk": {
              "id": "8_29",
-            "label":"linizio_lungo_aromatic_profile_with_milk",
+            "label":"grand_cru_19aromatic_profile_with_milk",
             "texte":""
           },
-          "decaffeinato_intenso_aromatic_profile": {
+          "grand_cru_14aromatic_profile": {
              "id": "8_28",
-            "label":"decaffeinato_intenso_aromatic_profile",
+            "label":"grand_cru_14aromatic_profile",
             "texte":""
           },
-          "decaffeinato_intenso_aromatic_profile_with_milk": {
+          "grand_cru_14aromatic_profile_with_milk": {
              "id": "8_27",
-            "label":"decaffeinato_intenso_aromatic_profile_with_milk",
+            "label":"grand_cru_14aromatic_profile_with_milk",
             "texte":""
           },
-          "decaffeinato_lungo_aromatic_profile": {
+          "grand_cru_15lungo_aromatic_profile": {
              "id": "8_26",
-            "label":"decaffeinato_lungo_aromatic_profile",
+            "label":"grand_cru_15lungo_aromatic_profile",
             "texte":""
           },
-          "decaffeinato_lungo_aromatic_profile_with_milk": {
+          "grand_cru_15lungo_aromatic_profile_with_milk": {
              "id": "8_25",
-            "label":"decaffeinato_lungo_aromatic_profile_with_milk",
+            "label":"grand_cru_15lungo_aromatic_profile_with_milk",
             "texte":""
           },
-          "decaffeinato_aromatic_profile": {
+          "grand_cru_15aromatic_profile": {
              "id": "8_24",
-            "label":"decaffeinato_aromatic_profile",
+            "label":"grand_cru_15aromatic_profile",
             "texte":""
           },
-          "decaffeinato_aromatic_profile_with_milk": {
+          "grand_cru_15aromatic_profile_with_milk": {
              "id": "8_23",
-            "label":"decaffeinato_aromatic_profile_with_milk",
+            "label":"grand_cru_15aromatic_profile_with_milk",
             "texte":""
           },
-          "caramelito_aromatic_profile": {
+          "grand_cru_20aromatic_profile": {
              "id": "8_21",
-            "label":"caramelito_aromatic_profile",
+            "label":"grand_cru_20aromatic_profile",
             "texte":""
           },
-          "caramelito_aromatic_profile_with_milk": {
+          "grand_cru_20aromatic_profile_with_milk": {
              "id": "8_22",
-            "label":"caramelito_aromatic_profile_with_milk",
+            "label":"grand_cru_20aromatic_profile_with_milk",
             "texte":""
           },
-          "vanilio_aromatic_profile": {
+          "grand_cru_21aromatic_profile": {
              "id": "8_19",
-            "label":"vanilio_aromatic_profile",
+            "label":"grand_cru_21aromatic_profile",
             "texte":""
           },
-          "vanilio_aromatic_profile_with_milk": {
+          "grand_cru_21aromatic_profile_with_milk": {
              "id": "8_20",
-            "label":"vanilio_aromatic_profile_with_milk",
+            "label":"grand_cru_21aromatic_profile_with_milk",
             "texte":""
           },
           "ciocattino_aromatic_profile": {

@@ -1,0 +1,139 @@
+{
+	"capsules":
+		[
+			{	"label":"grand_cru_1",
+				"id":"kazaar",
+				"name":"Kazaar",
+				"src":"_0014_Kazaar.jpg",
+				"force":12
+			},
+			{	"label":"grand_cru_2",
+				"id":"dharkan",
+				"name":"Dharkan",
+				"src":"_0011_Dharkan.jpg",
+				"force":11
+			},
+			{	"label":"grand_cru_3",
+				"id":"ristretto",
+				"name":"Ristretto",
+				"src":"_0012_Ristretto.jpg",
+				"force":10
+			},
+			{	"label":"grand_cru_4",
+				"id":"arpeggio",
+				"name":"Arpeggio",
+				"src":"_0010_Arpeggio.jpg",
+				"force":9
+			},
+			{	"label":"grand_cru_5",
+				"id":"roma",
+				"name":"Roma",
+				"src":"_0013_Roma.jpg",
+				"force":8
+			},
+			{	"label":"grand_cru_6",
+				"id":"livanto",
+				"name":"Livanto",
+				"src":"_0005_Livanto.jpg",
+				"force":6
+			},
+			{	"label":"grand_cru_7",
+				"id":"capriccio",
+				"name":"Capriccio",
+				"src":"_0007_Capriccio.jpg",
+				"force":5
+			},
+			{	"label":"grand_cru_8",
+				"id":"volluto",
+				"name":"Volluto",
+				"src":"_0004_Volluto.jpg",
+				"force":4
+			},
+			{	"label":"grand_cru_9",
+				"id":"cosi",
+				"name":"Cosi",
+				"src":"_0006_Cosi.jpg",
+				"force":3
+			},
+			{	"label":"grand_cru_10",
+				"id":"indriya",
+				"name":"Indriya",
+				"src":"_0016_Indriya.jpg",
+				"force":10
+			},
+			{	"label":"grand_cru_11",
+				"id":"rosabaya_de_colombia",
+				"name":"Rosabaya de Colombia",
+				"src":"_0000_Rosabaya_de_Colombia.jpg",
+				"force":8
+			},
+			{	"label":"grand_cru_12",
+				"id":"dulsao_do_brasil",
+				"name":"Dulsao do Brasil",
+				"src":"_0001_Dulsao_do_Brasil.jpg",
+				"force":4
+			},
+			{	"label":"grand_cru_13",
+				"id":"bukeela_ka_ethopia",
+				"name":"Bukeela ka Ethopia",
+				"src":"_0021_Bukeela_ka_Ethopia.jpg",
+				"force":3
+			},			
+			{	"label":"grand_cru_14",
+				"id":"decaffeinato_intenso",
+				"name":"Decaffeinato Intenso",
+				"src":"_0020_Decafeinato_Intenso.jpg",
+				"force":7
+			},			
+			{	"label":"grand_cru_15",
+				"id":"decaffeinato",
+				"name":"Decaffeinato",
+				"src":"_0009_Decaffeinato.jpg",
+				"force":2
+			},
+			{	"label":"grand_cru_16",
+				"id":"decaffeinato_lungo",
+				"name":"Decaffeinato Lungo",
+				"src":"_0008_Decaffeinato_Lungo.jpg",
+				"force":3
+			},
+			{	"label":"grand_cru_17",
+				"id":"fortissio_lungo",
+				"name":"Fortissio Lungo",
+				"src":"_0015_Fortissio_Lungo.jpg",
+				"force":7
+			},
+			{	"label":"grand_cru_18",
+				"id":"vivalto_lungo",
+				"name":"Vivalto Lungo",
+				"src":"_0002_Vivalto_Lungo.jpg",
+				"force":6
+			},
+			{	"label":"grand_cru_19",
+				"id":"linizio_lungo",
+				"name":"Linizio Lungo",
+				"src":"_0003_Linizio_Lungo.jpg",
+				"force":4
+			},
+			{	"label":"grand_cru_20",
+				"id":"caramelito",
+				"name":"Caramelito",
+				"src":"_0017_Caramelito.jpg",
+				"force":6
+			},
+			{	"label":"grand_cru_21",
+				"id":"vanilio",
+				"name":"Vanilio",
+				"src":"_0019_Vanilio.jpg",
+				"force":6
+			},
+			{	"label":"grand_cru_22",
+				"id":"ciocattino",
+				"name":"Ciocattino",
+				"src":"_0018_Ciocattino.jpg",
+				"force":6
+			}
+			
+		]
+	
+}
