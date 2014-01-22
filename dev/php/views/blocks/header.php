@@ -1,5 +1,5 @@
 <?php
-$twitter = $jsonLangShare->twitter_text_->texte;
+$twitter = $jsonLangShare->twitter_text->texte;
 $pinterest = $jsonLangShare->pinterest_text->texte;
 $facebook = $jsonLangShare->facebook_text->texte;
 $pinterest_image = "";

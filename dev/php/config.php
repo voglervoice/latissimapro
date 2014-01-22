@@ -30,8 +30,8 @@ if(count($pathSlices) > 0){
 // preview mode
 $previewMode = isset($_GET['preview']);
 
-$prod = false;
-if(strpos($_SERVER['SERVER_NAME'], 'nespresso') !== false) $prod = true;
+$prodMode = false;
+if(strpos($_SERVER['SERVER_NAME'], 'nespresso') !== false) $prodMode = true;
 
 if(empty($territory)){
     //get it with Geoloc by IP (if it exist)
@@ -66,7 +66,7 @@ if(file_exists('admin/loc/includes/db_connect.php')){
     }else{
         $query = 'SELECT code, RSID, launching FROM loc_langues INNER JOIN cms ON cms.code_pays = SUBSTRING_INDEX(loc_langues.code,\'_\',-1) WHERE code = CONCAT(:language, \'_\', :territory)';
     }
-    //RSID == ApplicationContext->getCountryTrackingCode()
+
     $data = $pdo->prepare($query);
     $data->bindParam(':language', $language);
     $data->bindParam(':territory', $territory);

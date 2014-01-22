@@ -41,6 +41,10 @@
 				</ul>
 			</div>
 		</div>
+		<div class="design_footer">
+			<a href="<?php echo $jsonLangDesign->user_guide_url->texte ?>" target="_blank" class="design_pdf"><?php echo $jsonLangDesign->download_user_guide->texte ?></a>
+			<a href="<?php echo $jsonLangDesign->youtube_video_playlist_url->texte ?>" target="_blank" class="design_youtube"><?php echo $jsonLangDesign->assistance_video->texte ?></a>
+		</div>
 	</div>
 	<img src="assets/imgs/sections/design_machine.png" class="design_machine" />
     	<img src="assets/imgs/sections/design_bg.jpg" class="section_background" data-w="1440" data-h="864" />

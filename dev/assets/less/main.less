@@ -372,10 +372,29 @@ nav{
 // ***** DESIGN ***** //
 
 .design_machine{position: absolute; z-index: 10; left:0; bottom:0; }
+.design_pdf{background-image: url(../imgs/sections/design_pdf_pict.png); padding-left: 45px;}
+.design_youtube{background-image: url(../imgs/sections/design_youtube_pict.png); padding-left: 39px;}
 .design_content{
     .content_line_design_sep{margin-top: 4px; margin-bottom: 14px; height:1px; width:100%; background-color: #ffffff;}
     position: absolute; z-index: 15; left:506px; top:50%; margin-top: -261px; width:100%;
     .design_description{ .content_span_text;}
+    .design_footer{
+        margin-top: 50px;
+        width:100%;
+        clear: both;
+        a{
+            .light;
+            font-size: 12px;
+            text-transform: uppercase;
+            display: block;
+            float: left;
+            .transparency(0.5);
+            margin-right: 46px;
+            height:35px;
+            padding-top: 3px;
+            background-repeat: no-repeat;
+        }
+    }
     .design_content_infos{
         width:100%;
         .design_content_infos_col{
@@ -843,4 +862,8 @@ footer .sep {width:22px; height: 7px; border-left: 1px solid #5f5f5f;}
         height: 17px;
         width: 93px;
     }
+
+    // sections
+    .design_pdf{background-image: url("../imgs/sections/retina/design_pdf_pict@2x.png"); background-size:30px 39px;}
+    .design_youtube{background-image: url("../imgs/sections/retina/design_youtube_pict@2x.png"); background-size:29px 27px;}
 }
