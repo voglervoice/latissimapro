@@ -11,9 +11,10 @@ define([
 	"views/milksystem",
 	"views/touchscreen",
 	"views/popins",
+	"utils/tracker",
 	"modernizr",
 	"mousewheel"
-], function($, publisher, Events, Globals, History, MainMenu, Home, CoffeeRange, Design, MilkSystem, Touchscreen, Popins, Modernizr) {
+], function($, publisher, Events, Globals, History, MainMenu, Home, CoffeeRange, Design, MilkSystem, Touchscreen, Popins, SiteTracker, Modernizr) {
 	var App = function() {
 		var self = this;
 		var isFullscreen = false;
@@ -35,6 +36,7 @@ define([
 		var transitionComplete=false;
 		var baseLangUrl = $('body').attr('data-url');
 		var direct = $('body').attr('data-direct');
+		var tracker = new SiteTracker($('body').attr('data-lang'), $('body').attr('data-country'));
 
 		TweenMax.to($('.content'), 0, {autoAlpha:0});
 
@@ -69,7 +71,7 @@ define([
 
 			publisher.subscribe(Events.navigate, navigateTo);
 			publisher.subscribe(Events.nextPage, openNextPage);
-			
+
 			mainMenu.start();
 			
 			$(window).trigger('resize');
@@ -167,7 +169,6 @@ define([
 			if(goToId !== currentId) onAddressChange(goToId);
 			else if(currentSection!==null) currentSection.open();
 		};
-
 	};
 	return App;
 });

@@ -137,6 +137,16 @@ $jsonLangHomePromo = $jsonLang->spring_activation->blockText;
 $jsonCountriesContent = file_get_contents($jsonFolderPath.'countries.json');
 $jsonCountries = json_decode($jsonCountriesContent);
 
+// test date from json
+$now = new DateTime("now");
+$launchingDate = date_create($jsonCountries->launching);
+if($launchingDate > $now && !$previewMode){
+    $redirection = 'http://www.nespresso.com/worldofcoffee/';
+    header('HTTP/1.0 308 Permanent Redirect');
+    header('Location: ' . $redirection);
+    exit();
+}
+
 // JSON CAPSULES ::
 $jsonCapsulesContent = file_get_contents($jsonFolderPath.'capsules.json');
 $jsonCapsulesList = json_decode($jsonCapsulesContent)->capsules;
