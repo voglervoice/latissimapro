@@ -4,7 +4,7 @@ function getCapsules($datas, $start, $nbCaps){
 	$markup = "";
 	for ($i = $start; $i < $start+$nbCaps; $i++) {
 		$jsonId = 'grand_cru_'.($i+1);
-		$markup .= "<a href='#' data-link='".$jsonId."'>";
+		$markup .= "<a href='#' data-id='".$jsonId."'>";
 		$markup .= "<div class='".$jsonId."' ></div>";
 		$markup .= "<span>".$datas->$jsonId->texte."</span>";
 		$markup .= "</a>";
@@ -15,19 +15,29 @@ function getCapsules($datas, $start, $nbCaps){
 <section id="coffeerange">
 	<div class="range_rolls">
 		<?php
-		//echo $jsonLangRangeCapsules;
-		/*foreach ($jsonLangRangeCapsules as $key => $value) {
+		foreach ($jsonLangRangeCapsules as $key => $value) {
 			if(strpos($key, 'grand_cru_') === 0){
-				$aromJsonId = str_replace(" ", "_", strtolower($value->texte)).'_aromatic_profile';
+				$force = 0;
+				foreach ($jsonCapsulesList as $capsuleObj) {
+					if($capsuleObj->label == $key){
+						$force = $capsuleObj->force;
+						break;
+					}
+				}
+
+				$aromJsonId = $key.'_aromatic_profile';
 				$milkJsonId = $aromJsonId.'_with_milk';
 				//echo ' -> '.$aromJsonId.' ///// '.$milkJsonId;
-				echo '<div data-id="'.$key.'">';
-					echo '<div class="range_roll_title">'.$value->texte.'</div>';
-					echo '<div class="range_roll_arom">'.$jsonLangRangeCapsules->$aromJsonId->texte.'</div>';
-					echo '<div class="range_roll_milk">'.$jsonLangRangeCapsules->$milkJsonId->texte.'</div>';
+				echo '<div data-id="'.$key.'" class="range_roll">';
+					echo '<span class="range_roll_title">'.$value->texte.'</span>';
+					echo '<span class="range_roll_intensity"><strong>'.$jsonLangRangeGlobals->intensity->texte.'</strong></span>';
+					echo '<span class="range_roll_intensity_value_num">'.$force.'</span>';
+					echo '<div class="range_roll_intensity_value"></div>';
+					echo '<span class="range_roll_arom"><strong>'.$jsonLangRangeGlobals->aromatic_notes->texte.'</strong> '.$jsonLangRangeCapsules->$aromJsonId->texte.'</span>';
+					echo '<span class="range_roll_milk"><strong>'.$jsonLangRangeGlobals->with_milk___->texte.'</strong> '.$jsonLangRangeCapsules->$milkJsonId->texte.'</span>';
 				echo '</div>';
 			}
-		}*/
+		}
 		?>
 	</div>
 	<div class="range_content">

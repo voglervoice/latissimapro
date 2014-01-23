@@ -77,6 +77,7 @@ define([
         // ******************* private *******************
          var init = function(index){
             TweenMax.to(ct, 0, {alpha:0});
+            TweenMax.to($('.touchscreen_roll'), 0, {borderRadius:0, width:0, height:0, alpha:0});
             TweenMax.to($('.content_line_sep', ct), 0, {alpha:0.15});
 
             for (var i = 0; i < unvisibleButtons.length; i++) {

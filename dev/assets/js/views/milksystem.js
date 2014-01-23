@@ -113,6 +113,7 @@ define([
          var init = function(index){
             TweenMax.to($('.content_line_milk_sep', ct), 0, {alpha:0.15});
             TweenMax.to(ct, 0, {alpha:0});
+            TweenMax.to($('.milk_zoom'), 0, {width:0, height:0, borderRadius:0, alpha:0});
         };
 
         var animPot =function(){

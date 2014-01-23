@@ -137,4 +137,8 @@ $jsonLangHomePromo = $jsonLang->spring_activation->blockText;
 $jsonCountriesContent = file_get_contents($jsonFolderPath.'countries.json');
 $jsonCountries = json_decode($jsonCountriesContent);
 
+// JSON CAPSULES ::
+$jsonCapsulesContent = file_get_contents($jsonFolderPath.'capsules.json');
+$jsonCapsulesList = json_decode($jsonCapsulesContent)->capsules;
+
 ?>

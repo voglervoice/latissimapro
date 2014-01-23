@@ -3,12 +3,14 @@ define([
     "tweenmax",
     "events",
     "publisher",
+    "raphaeljs",
     "views/backgroundsection",
     "views/imageelem"
-], function($, TweenMax, Events, publisher, BackgroundSection, ImageElem) {
+], function($, TweenMax, Events, publisher, Raphael, BackgroundSection, ImageElem) {
 
     var CoffeeRange = function() {
         var self = this;
+        var sets = [];
       
         // ******************* public ******************* 
         this.elem = $('#coffeerange');
@@ -52,10 +54,54 @@ define([
         };
 
         // ******************* private *******************
+        var showIntensity = function(set, force){
+            for (var i = 0; i < force; i++) TweenMax.delayedCall(i*0.1, animateIntensity, [set[i]]);
+        };
+
+        var animateIntensity = function(elem){ elem.animate({'fill-opacity': 1, 'stroke-opacity': 0}, 250); };
+
          var init = function(index){
             TweenMax.to($('.content_line_sep', ct), 0, {alpha:0.15});
             TweenMax.to($('.range_cat_title div'), 0, {alpha:0.2});
+            TweenMax.to($('.range_roll'), 0, {autoAlpha:0});
             TweenMax.to(ct, 0, {alpha:0});
+
+            $('.range_cat_caps a').on('click', function(event){ event.preventDefault();
+            }).on('mouseenter', function(event){
+                TweenMax.to($('.range_cat_title'), 0.6, {alpha:0.2});
+                TweenMax.to($(".range_cat_caps a[data-id!='"+$(this).attr('data-id')+"']"), 0.6, {alpha:0.2});
+                var roll = $(".range_roll[data-id='"+$(this).attr('data-id')+"']");
+                var leftRoll = $(this).offset().left - 57;
+                var topRoll = $(this).offset().top - roll.height();
+                roll.css({'left':leftRoll, 'top':topRoll});
+                TweenMax.killDelayedCallsTo(animateIntensity);
+                var set = sets[$(this).attr('data-id')];
+                set.attr({ "fill-opacity":"0", "stroke-opacity": "1"});
+                TweenMax.to(roll, 0.6, {autoAlpha:1, ease:Linear.easeNone, onComplete:showIntensity, onCompleteParams:[set, $('.range_roll_intensity_value_num' ,roll).html()]});
+            }).on('mouseleave', function(event){
+                TweenMax.to($('.range_cat_title'), 0.5, {alpha:1});
+                TweenMax.to($('.range_cat_caps a'), 0.5, {alpha:1});
+                TweenMax.to($(".range_roll[data-id='"+$(this).attr('data-id')+"']"), 0.5, {autoAlpha:0, ease:Linear.easeNone});
+            });
+
+            $('.range_roll').each(function(index) {
+                var positionLeft = $('.range_roll_intensity', this).position().left + $('.range_roll_intensity', this).width() + 5;
+                var container = $('.range_roll_intensity_value', this);
+                container.css({'left':positionLeft});
+                $('.range_roll_intensity_value_num', this).css({'left':positionLeft + container.width()});
+                var paper = Raphael(container[0], container.width(), container.height());
+                var set= paper.set(), radius = 3, posiX = 6, posiY = 8;
+                for (var i = 0; i <12; i++) {
+                    var c = paper.circle(posiX, posiY, radius).attr({
+                        fill: "rgb(255,255,255)",
+                        "stroke": "#fff",
+                        "fill-opacity":"0",
+                        "stroke-width": "1"});
+                    set.push(c);
+                    posiX += radius*2 + 5;
+                }
+                sets[$(this).attr('data-id')] = set;
+            });
         };
 
         init();

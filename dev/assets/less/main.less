@@ -206,13 +206,36 @@ nav{
 // ***** COFFEE RANGE ***** //
 
 .range_machine{position: absolute; z-index: 10; left:0; bottom:0;}
-.range_rolls{position: absolute; z-index: 20;};
+.range_rolls{
+    position: absolute; z-index: 20;
+    .range_roll{
+        visibility: hidden;
+        left:200px;
+        top:200px;
+        position: absolute;
+        width:376px;
+        height:173px;
+        background-image:url(../imgs/sections/range_roll.png); background-repeat: no-repeat;
+        @media @highdensity {
+            background-image: url("../imgs/sections/retina/range_roll.png"); background-size: 376px 173px;
+        }
+        div, span{ position:absolute; left:32px;
+            strong{.bold;}
+        }
+        .range_roll_title{ font-size: 14px; .bold; text-transform: uppercase; top:12px; }
+        .range_roll_intensity{ font-size: 13px; .light; top:52px; }
+        .range_roll_intensity_value_num{ font-size: 13px; .bold; top:52px; color:#cbaa58;}
+        .range_roll_intensity_value{ top:52px; width:140px; height:18px;}
+        .range_roll_arom{ font-size: 13px; .light; top:93px; }
+        .range_roll_milk{ font-size: 13px; .light; top:131px; }
+    }
+};
 .range_content{
     position: absolute; z-index: 15; top:50%; margin-top: -315px;
     .range_description{font-size: 16px; .light; letter-spacing: 1px;}
     .range_coffees{
         width:100%;
-        margin-top: 60px;
+        margin-top: 55px;
         .range_cat{
             float: left;
             margin-right: 34px;
@@ -236,12 +259,12 @@ nav{
             }
             .range_cat_caps{
                 width:100%;
-                height:104px;
+                height:114px;
                 a{
                     display: block;
                     float: left;
                     width:55px;
-                    height:90px;
+                    height:100px;
                     margin-right: 20px;
                     span{
                         display: block;
@@ -249,6 +272,7 @@ nav{
                         text-align: center;
                         .light;
                         font-size: 11px;
+                        padding-top: 10px;
                     }
                     div{
                        // assets/imgs/sections/capsules/".$jsonId.".png
