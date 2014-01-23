@@ -5,7 +5,7 @@ function getCapsules($datas, $start, $nbCaps){
 	for ($i = $start; $i < $start+$nbCaps; $i++) {
 		$jsonId = 'grand_cru_'.($i+1);
 		$markup .= "<a href='#' data-link='".$jsonId."'>";
-		$markup .= "<img src='assets/imgs/sections/capsules/".$jsonId.".png' width='52' height='49' />";
+		$markup .= "<div class='".$jsonId."' ></div>";
 		$markup .= "<span>".$datas->$jsonId->texte."</span>";
 		$markup .= "</a>";
 	}
