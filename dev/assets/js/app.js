@@ -167,7 +167,34 @@ define([
 		var onSlideComplete = function(){
 			transitionComplete = true;
 			if(goToId !== currentId) onAddressChange(goToId);
-			else if(currentSection!==null) currentSection.open();
+			else if(currentSection!==null){
+				currentSection.open();
+				// track page :
+				var pageName = "", subPageName = "", subsubPageName = "", prop4 = "";
+				switch(currentId){
+					case Globals.PAGE_HOME :
+						pageName = "homepage";
+						break;
+					case Globals.PAGE_TOUCHSCREEN :
+						pageName = "one-touch-is-all";
+						break;
+					case Globals.PAGE_COFFEE_RANGE :
+						pageName = "coffee";
+						subPageName = "palette-of-taste";
+						prop4 = "hub";
+						break;
+					case Globals.PAGE_MILKSYSTEM :
+						pageName = "milk";
+						subPageName = "milk-to-your-taste";
+						prop4 = "hub";
+						break;
+					case Globals.PAGE_DESIGN :
+						pageName = "machine";
+						subPageName = "powerful-inside-out";
+						break;
+				}
+				tracker.trackPage(pageName, subPageName, subsubPageName, prop4);
+			}
 		};
 	};
 	return App;

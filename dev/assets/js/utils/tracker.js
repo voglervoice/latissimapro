@@ -8,13 +8,13 @@ define([
         var self = this;
         var lang = lang_, countryCode = countryCode_;
         var account = "nesp-preprod";
+        var channel = "UCE:latissimapro";
       
 
         // ******************* public ******************* 
         this.trackPage = function(pageName, subPageName, subsubPageName, prop4){
             reinit();
 
-            var channel = "UCE:latissimapro";
             var pageNameTrack =  channel+":"+pageName;
             if(typeof subPageName == "undefined") subPageName = "";
             if(typeof subsubPageName == "undefined") subsubPageName = "";
@@ -88,7 +88,7 @@ define([
             s.prop5         =   "";
             s.prop8         =   "";
             s.prop9         =   "";
-            s.prop18        =   "";
+            s.prop18       =   "";
             s.eVar8         =   "";
             s.eVar9         =   "";
             s.eVar10        =   "";
@@ -104,15 +104,65 @@ define([
             s.event18       =   "";
             s.event30       =   "";
             s.event47       =   "";
-            s.pe            =   "";
-            s.pev2          =   "";
+            s.pe                =   "";
+            s.pev2            =   "";
         };
 
         var init = function(){
             publisher.subscribe(Events.trackPage, self.trackPage);
             publisher.subscribe(Events.trackEvent, self.trackEvent);
 
-            // header & footer
+            // EVENTS -- header & footer ************************
+
+            var link_open = "lnk_o", link_dll = "lnk_d";
+
+            // HEADER share
+            $('.share_pinterest').on('click', function(event){
+                self.trackEvent(link_open, channel+":footer:share:pinterest:click", channel+":footer:share:pinterest:click", "", "", "set", "");
+            });
+            $('.share_twitter').on('click', function(event){
+                self.trackEvent(link_open, channel+":footer:share:twitter:click", channel+":footer:share:twitter:click", "", "", "set", "");
+            });
+            $('.share_facebook').on('click', function(event){
+                self.trackEvent(link_open, channel+":footer:share:facebook:click", channel+":footer:share:facebook:click", "", "", "set", "");
+            });
+            // HEADER
+            $('#select_country a').on('click', function(event){
+                self.trackEvent(link_open, channel+":footer:function-selection:country-language-change:click");
+            });
+            $('.store_locator_link').on('click', function(event){
+                self.trackEvent(link_open, channel+":footer:function-selection:store-locator:click");
+            });
+            $('.contact_link').on('click', function(event){
+                self.trackEvent(link_open, channel+":footer:function-selection:contacts:click");
+            });
+            $('.legals_link').on('click', function(event){
+                self.trackEvent(link_open, channel+":footer:function-selection:legal-terms:click");
+            });
+            $('.logo').on('click', function(event){
+                self.trackEvent(link_open, channel+":footer:function-selection:nespresso-logo:click");
+            });
+            $('.apple a').on('click', function(event){
+                self.trackEvent(link_open, channel+":footer:function-selection:ios-app-store:click");
+            });
+            $('.android a').on('click', function(event){
+                self.trackEvent(link_open, channel+":footer:function-selection:droid-app-store:click");
+            });
+            // ORDER
+            $('.order_footer_btn_visual').on('click', function(event){
+                self.trackEvent(link_open, channel+":order:click", "", channel+":order:click", "", "set");
+            });
+            $('.order_footer_btn').on('click', function(event){
+                self.trackEvent(link_open, channel+":order:click", "", channel+":order:click", "", "set");
+            });
+
+            // DESIGN
+            $('.design_pdf').on('click', function(event){
+                self.trackEvent(link_dll, channel+":machine:latissimapro-user-guide:download:click", "", "", channel+":machine:latissimapro-user-guide:download:click", "", "", "set");
+            });
+            $('.design_youtube').on('click', function(event){
+                self.trackEvent(link_open, channel+":machine:video-view:youtube:click");
+            });
         };
 
         init();
