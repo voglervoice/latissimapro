@@ -3,8 +3,9 @@ define([
     "tweenmax",
     "events",
     "publisher",
-    "raphaeljs"
-], function($, TweenMax, Events, publisher, Raphael) {
+    "raphaeljs",
+    "buzz"
+], function($, TweenMax, Events, publisher, Raphael, buzz) {
     /**
      * MainMenu
      * @constructor
@@ -15,7 +16,9 @@ define([
         var paper = Raphael("menu_picts", $('nav').width(), $('nav').height());
         var paperScroll = Raphael("scroll_arrow", $('#scroll_arrow').width(), $('#scroll_arrow').height());
         var circles = [], cScroll, arrowScroll;
-
+        var music = new buzz.sound($('body').attr("data-baseurl")+"assets/music/nespressoU_lead_loop", {
+    formats: [ "mp3"], preload: true
+});
         // ******************* public ******************* 
         this.resize = function(){
             $('.scroll_to_explore').css('margin-left', -$('.scroll_to_explore').width()*0.5);
@@ -38,7 +41,8 @@ define([
         };
 
         this.start = function() {
-            console.log("Start menu");
+
+            music.loop().play().fadeIn();
 
             // header
             $('header ul li a').on('click', function(event){
@@ -51,11 +55,13 @@ define([
                 }else if($(this).hasClass('sound_sprit')){
                     event.preventDefault();
                     $(this).attr('class', 'sound_sprit_off');
-                    publisher.publish(Events.soundOff);
+                    music.togglePlay();
+                    //publisher.publish(Events.soundOff);
                 }else if($(this).hasClass('sound_sprit_off')){
                     $(this).attr('class', 'sound_sprit');
                     event.preventDefault();
-                    publisher.publish(Events.soundOn);
+                    music.togglePlay();
+                    //publisher.publish(Events.soundOn);
                 }else if($(this).hasClass('flags')){
                     event.preventDefault();
                     publisher.publish(Events.openPopin, "select_lang");

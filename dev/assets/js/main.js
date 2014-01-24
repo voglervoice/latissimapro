@@ -14,6 +14,7 @@ require.config({
         globals:'models/globals',
         raphaeljs:'vendors/raphael-min',
         glfx:'vendors/glfx',
+        buzz:'vendors/buzz.min',
         requestanimationframe: "vendors/polyfill.requestAnimationFrame"
     },
     shim: {
@@ -31,6 +32,9 @@ require.config({
         },
         'glfx': {
             exports: 'fx'
+        },
+        'buzz':{
+            exports:'buzz'
         },
         'raphaeljs': {
              deps : ['jquery'],

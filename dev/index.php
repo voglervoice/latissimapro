@@ -10,7 +10,7 @@
 
         <title>Lattissima Pro</title>
         <base href="<?php echo $baseurl; ?>">
-        <meta name="base" content="TODO">
+
         <meta name="description" content="TODO">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,6 +30,7 @@
     </head>
     <body
     data-url="<?php echo $baseurlang; ?>"
+    data-baseurl="<?php echo $baseurl; ?>"
     data-direct="<?php echo $direct; ?>"
     data-lang="<?php echo $language; ?>"
     data-country="<?php echo $territory; ?>"
