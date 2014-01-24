@@ -79,7 +79,8 @@ define([
 
 			// DIRECT ACCESS TO :
 			transitionComplete = true;
-			onAddressChange(direct);
+			if(direct === "" && $('body').attr('data-lang-defined') == "0")	navigateTo("");
+			else								onAddressChange(direct);
 
 			$('.content').mousewheel(function(event, delta, deltaX, deltaY) {
 				//console.log(deltaY);

@@ -34,6 +34,7 @@
     data-direct="<?php echo $direct; ?>"
     data-lang="<?php echo $language; ?>"
     data-country="<?php echo $territory; ?>"
+    data-lang-defined="<?php echo $langDefined; ?>"
         >
         <script data-main="<?php echo $baseurl; ?>assets/js/main" src="<?php echo $baseurl; ?>assets/js/vendors/require.min.js"></script>
         

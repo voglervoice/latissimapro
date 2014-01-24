@@ -15,6 +15,7 @@ $baseFullPath = array_shift($requestParts);
 $fullPath = substr($baseFullPath, strlen($base));
 $pathSlices = explode('/', $fullPath, 2);
 $direct = "";
+$langDefined = 0;
 //echo var_dump($pathSlices);
 if(count($pathSlices) > 0){
     //echo "LANG : ".$pathSlices[0];
@@ -25,6 +26,7 @@ if(count($pathSlices) > 0){
         //echo "DIRECT -> : ".$pathSlices[1];
         $direct = $pathSlices[1];
     }
+    if(!empty($territory)) $langDefined = 1;
 }
 
 // preview mode
