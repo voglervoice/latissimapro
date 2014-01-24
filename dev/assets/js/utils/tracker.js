@@ -13,6 +13,7 @@ define([
 
         // ******************* public ******************* 
         this.trackPage = function(pageName, subPageName, subsubPageName, prop4){
+            if(pageName === "" || typeof s == "undefined") return;
             reinit();
 
             var pageNameTrack =  channel+":"+pageName;
@@ -52,6 +53,7 @@ define([
         };
 
         this.trackEvent = function(pe, pev2, eVar30, eVar20, eVar41, event18, event30, event47){
+            if(typeof s == "undefined") return;
             reinit();
 
             if(typeof eVar20 == "undefined") eVar20 = "";
@@ -142,12 +144,14 @@ define([
             $('.logo').on('click', function(event){
                 self.trackEvent(link_open, channel+":footer:function-selection:nespresso-logo:click");
             });
+            /*
             $('.apple a').on('click', function(event){
                 self.trackEvent(link_open, channel+":footer:function-selection:ios-app-store:click");
             });
             $('.android a').on('click', function(event){
                 self.trackEvent(link_open, channel+":footer:function-selection:droid-app-store:click");
             });
+            */
             // ORDER
             $('.order_footer_btn_visual').on('click', function(event){
                 self.trackEvent(link_open, channel+":order:click", "", channel+":order:click", "", "set");

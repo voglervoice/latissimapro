@@ -7,6 +7,7 @@ $pinterest_image = "";
 <!--HEADER-->
 <div class="nespresso_logo"></div>
 <h1>Lattissima Pro</h1>
+<div class="qrcode_apple"></div><div class="qrcode_android"></div>
 <header>
     <ul class="white">
         <li id="select_country" class="border flag"><a class="<?php echo '_'.$territory; ?> flags" href="#"></a><!--img src="<?php echo IMG_DIR;?>flags/<?php echo strtolower($code_country); ?>.png" alt="flag" /--></li>

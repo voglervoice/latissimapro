@@ -107,6 +107,17 @@ define([
                 arrowScroll.animate({ "stroke": "#525150"}, 190);
             });
 
+            //qrcode
+            TweenMax.to($('.qrcode_apple'), 0, {autoAlpha:0});
+            TweenMax.to($('.qrcode_android'), 0, {autoAlpha:0});
+            $('.qrcode').on('mouseenter', function(event){
+                if($('div', this).hasClass('apple_sprit')) TweenMax.to($('.qrcode_apple'), 0.2, {autoAlpha:1, ease:Linear.easeNone});
+                else if($('div', this).hasClass('android_sprit')) TweenMax.to($('.qrcode_android'), 0.2, {autoAlpha:1, ease:Linear.easeNone});
+            }).on('mouseleave', function(){
+                if($('div', this).hasClass('apple_sprit')) TweenMax.to($('.qrcode_apple'), 0.3, {autoAlpha:0, ease:Linear.easeNone});
+                else if($('div', this).hasClass('android_sprit')) TweenMax.to($('.qrcode_android'), 0.3, {autoAlpha:0, ease:Linear.easeNone});
+            });
+
             var delayOpen = 0.5;
 
             // OPEN

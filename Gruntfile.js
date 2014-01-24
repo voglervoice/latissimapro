@@ -72,6 +72,9 @@ module.exports = function(grunt){
 				}, {
 					src: "dev/web.htaccess",
 					dest: "web/.htaccess"
+				}, {
+					src: "dev/s_code.js",
+					dest: "web/s_code.js"
 				}]
 			}
 		},
@@ -129,6 +132,7 @@ module.exports = function(grunt){
 			html: {
 				files: [
 					"dev/index.php",
+					"dev/s_code.js",
 					"dev/.htaccess"
 				],
 				tasks: ["copy:html"],

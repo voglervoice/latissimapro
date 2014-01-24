@@ -322,11 +322,17 @@ nav{
         float:left;
         margin-left: 12px;
         margin-top: 29px;
+        @media @highdensity {
+            background-image: url("../imgs/sections/retina/milk_fig_bg@2x.png"); background-size: 197px 204px;
+        }
         .visual_pot{
             background-image:url(../imgs/sections/milk_fig_pot.png); background-repeat: no-repeat;
             width:66px;
             height:66px;
             margin-left: 65px;
+            @media @highdensity {
+                background-image: url("../imgs/sections/retina/milk_fig_pot@2x.png"); background-size: 66px 66px;
+            }
         }
         span{
             display: block;
@@ -347,6 +353,9 @@ nav{
         height:99px;
         float:left;
         margin-left: 12px;
+        @media @highdensity {
+                background-image: url("../imgs/sections/retina/milk_pict_clean@2x.png"); background-size: 60px 99px;
+            }
     }
 }
 
@@ -759,6 +768,29 @@ header .white .sound .sound_sprit_off{.header_pict_all; background-position: -10
 header ul .fullscreen{padding-top: 1px;}
 header .black .fullscreen .fullscreen_sprit{.header_pict_all; background-position: -120px -15px;margin-top: 1px;}
 header .white .fullscreen .fullscreen_sprit{.header_pict_all; background-position: -120px 0;}
+
+.qrcode_view{
+    .rounded-corners(10px);
+    background-color: #ffffff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 950;
+    width:150px;
+    height:150px;
+    top:42px;
+    visibility: hidden;
+}
+.qrcode_apple{
+    right: 150px;
+    .qrcode_view;
+    background-image:url(../imgs/ui/Nespresso_iTunesStore.qr.gif); 
+}
+.qrcode_android{
+    right: 125px;
+    .qrcode_view;
+    background-image:url(../imgs/ui/Nespresso_GooglePlay.qr.gif); 
+}
 
 // FOOTER
 

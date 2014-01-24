@@ -89,7 +89,6 @@ define([
 		};
 		// private      
 		var navigateTo = function(id){
-			console.log("navigateTo : "+id);
 			var pageTitle = "Lattissima Pro";
 			//var url = (id !== "")? id : " ";
 			var url = baseLangUrl+id;

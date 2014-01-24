@@ -51,25 +51,14 @@
                 <?php include('php/views/pages/design.php'); ?>
             </div>
         </div>
-    </body>
-
-<script language="JavaScript" type="text/javascript">
-
-/* Replace in live site with var s_account="nesp-preprod" */
-var s_account="nesp-preprod";
-
-</script>
-
-/* Include the s_code.js used on other pages of the site */
-<script language="JavaScript" type="text/javascript" src=".../s_code.js"></script>
-<script language="JavaScript" type="text/javascript">
-/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
-var s_code=s.t();if(s_code)document.write(s_code)//-->
-</script>
-<script language="JavaScript" type="text/javascript"><!--
-if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
-//--></script><noscript><a href="http://www.omniture.com" title="Web Analytics"><img
+<script language="JavaScript" type="text/javascript">var s_account="nesp-preprod";</script>
+<script language="JavaScript" type="text/javascript" src="s_code.js"></script>
+<script language="JavaScript" type="text/javascript"><!--var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+        <script language="JavaScript" type="text/javascript"><!--
+            if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+            //--></script><noscript><a href="http://www.omniture.com" title="Web Analytics"><img
 src="http://metrics.nespresso.com/b/ss/nesp-prod/1/H.21--NS/0"
 height="1" width="1" border="0" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
-<!-- End SiteCatalyst code version: H.21. -->
+        <!-- End SiteCatalyst code version: H.21. -->
+    </body>
 </html>
