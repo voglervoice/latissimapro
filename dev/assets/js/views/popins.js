@@ -13,7 +13,18 @@ define([
         this.open = function(id){
             clearPopins();
             TweenMax.to($("."+id), 0.1, {autoAlpha:1});
-            if(id !== "order_phone") TweenMax.to($('.popin_black_bg'), 0.2, {autoAlpha:1});
+            if(id !== "order_phone") {
+                if(id== "share_mail"){
+                    TweenMax.killTweensOf($('.success_message'));
+                    TweenMax.to($('.from_message'), 0, {autoAlpha:0});
+                    $("."+id+" input[type='text']").each(function(index) {
+                        $(this).removeClass("errorfield");
+                        $(this).removeClass("noerrorfield");
+                        $(this).addClass("noerrorfield");
+                    });
+                }
+                TweenMax.to($('.popin_black_bg'), 0.2, {autoAlpha:1});
+            }
             TweenMax.to($('.popins'), 0.6, {autoAlpha:1});
 
             if(id == "select_lang") openLangZone($( '.lang_zones li a' ).first().attr('data-type'));
@@ -86,6 +97,45 @@ define([
             $('.lang_zones li a').on('click', function(event){
                     event.preventDefault();
                     openLangZone($(this).attr('data-type'));
+            });
+
+            $(".share_mail input[type='text']").on('click', function(event) {
+                $(this).removeClass("errorfield");
+                $(this).removeClass("noerrorfield");
+                $(this).addClass("noerrorfield");
+                TweenMax.to($('.from_message'), 0.3, {autoAlpha:0});
+            });
+            TweenMax.to($('.from_message'), 0, {autoAlpha:0});
+
+            $("#mail_share").on("submit", function(e){
+                e.preventDefault();
+                var ok = true;
+                $("input[type='text']", this).each(function(index) {
+                    $(this).removeClass("errorfield");
+                     if($(this).val() === ""){
+                        $(this).removeClass("noerrorfield");
+                        $(this).addClass("errorfield");
+                        ok = false;
+                    }
+                });
+
+                if(!ok) return false;
+
+                $.ajax({
+                    url:    $(this).attr('action'),
+                    type:   $(this).attr('method'),
+                    data:   $(this).serialize(),
+                    dataType: 'html',
+                    success: function(data) {
+                        if( data.toString() != '1' ){
+                            TweenMax.to($('.error_message'), 0.5, {autoAlpha:1});
+                        }else{
+                            TweenMax.to($('.success_message'), 0.5, {autoAlpha:1});
+                            TweenMax.to($('.success_message'), 0.5, {autoAlpha:0, delay:4});
+                        }
+                        //
+                    }
+                });//end ajax
             });
 
             clearPopins();

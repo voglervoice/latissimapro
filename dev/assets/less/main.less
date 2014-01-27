@@ -624,6 +624,12 @@ nav{
             font-size: 13px;
             color:#787878;
         }
+        .from_message{
+            position: absolute;
+            text-align: center;
+            bottom: 17px;
+            visibility: hidden;
+        }
         form{
             display: block;
             position:absolute;
@@ -647,11 +653,16 @@ nav{
             input[type=text] {
                 background-color: #000000;
                 .rounded-corners(5px);
-                border: 1px solid #505050;
                 height: 40px;
                 width:230px;
                 color:#ffffff;
                 .regular;
+            }
+            .errorfield{
+                border: 1px solid #c92424;
+            }
+            .noerrorfield{
+                border: 1px solid #505050;
             }
             input[type=submit] {
                 font-size: 14px;
@@ -664,9 +675,14 @@ nav{
                 border: 0 none;
                 .background-vertical-gradient(#9c8345, #726032, #8e773e);
                 text-transform: uppercase;
+                cursor: pointer;
             }
+            input:focus { outline: #8e773e solid 1px; }
             input[type=submit]:focus {
-                outline:0;
+                outline:none;
+            }
+            input[type=text]:focus {
+                border: 1px solid #505050;
             }
         }
     }

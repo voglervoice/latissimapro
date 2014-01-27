@@ -45,17 +45,18 @@
 		<a href="#" class="popin_close"></a>
 		<h4><?php echo $jsonLangMail->form_title->texte; ?></h4>
 		<span><?php echo $jsonLangMail->form_subheading->texte; ?></span>
-		<form>
+		<form id="mail_share" method="POST" action="<?php echo $baseurl; ?>/mailing/mailing.php">
 			<span><?php echo $jsonLangMail->form_senders_name->texte; ?></span>
-			<input type="text" value="" name="name" />
+			<input type="text" value="" name="senderName" />
 			<span><?php echo $jsonLangMail->form_senders_email->texte; ?></span>
-			<input type="text" value="" name="email" />
+			<input type="text" value="" name="senderMail" />
 			<span><?php echo $jsonLangMail->form_receivers_email->texte; ?></span>
-			<input type="text" value="" name="friend_email" />
+			<input type="text" value="" name="emailFriends" />
 			<div></div>
 			<input type="submit" value="<?php echo $jsonLangMail->form_send->texte; ?>" />
 		</form>
-		
+		<span class="success_message from_message"><?php echo $jsonLangMail->success_message->texte; ?></span>
+		<span class="error_message from_message"><?php echo $jsonLangMail->error_message->texte; ?></span>
 	</div>
 	<div class="order_phone popin">
 		<a href="#" class="popin_close"></a>
