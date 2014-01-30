@@ -42,5 +42,16 @@
 		<div class="content_line_sep"></div>
 		<span><?php echo $jsonLangTouch->text->texte; ?></span>
 	</div>
-    	<img src="assets/imgs/sections/home_bg.jpg" class="section_background" data-w="1440" data-h="854" />
+	<img src="assets/imgs/sections/touch_vignettage.png" class="touch_vignettage" />
+	<div class="screen_rolls">
+		<img src="assets/imgs/sections/touch_screen0.png" />
+		<img src="assets/imgs/sections/touch_screen1.png" />
+		<img src="assets/imgs/sections/touch_screen2.png" />
+		<img src="assets/imgs/sections/touch_screen3.png" />
+		<img src="assets/imgs/sections/touch_screen4.png" />
+		<img src="assets/imgs/sections/touch_screen5.png" />
+		<img src="assets/imgs/sections/touch_screen6.png" />
+	</div>
+	<img src="assets/imgs/sections/touch_machine.png" class="touch_machine" />
+    	<img src="assets/imgs/sections/touch_bg.jpg" class="section_background" data-w="1440" data-h="864" />
 </section>

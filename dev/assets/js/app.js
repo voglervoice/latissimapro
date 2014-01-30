@@ -22,12 +22,7 @@ define([
 		Globals.canvas_enabled = (Modernizr.canvas && Modernizr.webgl)? true : false;
 		//Globals.canvas_enabled = false;
 
-		var mainMenu = new MainMenu();
-		var home = new Home();
-		var design = new Design();
-		var milksystem = new MilkSystem();
-		var touchscreen = new Touchscreen();
-		var coffeerange = new CoffeeRange();
+		var mainMenu, home, design, milksystem, touchscreen, coffeerange;
 		var popins = new Popins();
 		var currentSection = null;
 		var windowW, windowH, windowHContent;
@@ -37,7 +32,15 @@ define([
 		var baseLangUrl = $('body').attr('data-url');
 		var direct = $('body').attr('data-direct');
 		var tracker = new SiteTracker($('body').attr('data-lang'), $('body').attr('data-country'));
+		mainMenu = new MainMenu();
+		home = new Home();
+		/*design = new Design();
+		milksystem = new MilkSystem();
+		touchscreen = new Touchscreen();
+		coffeerange = new CoffeeRange();*/
+		popins = new Popins();
 
+		$('section').css('visibility', 'hidden');
 		TweenMax.to($('.content'), 0, {autoAlpha:0});
 
 		$( window ).resize(function() {
@@ -56,27 +59,31 @@ define([
 				$(this).css('top', windowHContent*index);
 			});
 
-			mainMenu.resize();
+			if(typeof mainMenu != "undefined"){
+				mainMenu.resize();
 
-			if(currentSection !== null){
-				currentSection.resize(windowW, windowHContent);
+				if(currentSection !== null){
+					currentSection.resize(windowW, windowHContent);
+				}
+				if(currentIndex !== -1) $('.main').css('top', -currentIndex*windowHContent);
 			}
-			if(currentIndex !== -1) $('.main').css('top', -currentIndex*windowHContent);
 		});
-		$(window).trigger('resize');
 
 		// public
 		this.start = function() {
+			$(window).trigger('resize');
+
+			TweenMax.to($('.content'), 0.5, {autoAlpha:1, onComplete:function(){
+				mainMenu.start();
+				TweenMax.delayedCall(1.2, initContent);
+			}});
+		};
+
+		var initContent = function(){
 			History.Adapter.bind(window,'statechange',function(){ onAddressChange(History.getState().data.value); });
 
 			publisher.subscribe(Events.navigate, navigateTo);
 			publisher.subscribe(Events.nextPage, openNextPage);
-
-			mainMenu.start();
-			
-			$(window).trigger('resize');
-			TweenMax.to($('.content'), 0.2, {autoAlpha:1});
-
 			// DIRECT ACCESS TO :
 			transitionComplete = true;
 			if(direct === "" && $('body').attr('data-lang-defined') == "0")	navigateTo("");
@@ -123,6 +130,7 @@ define([
 			goToId = value;
 			if(currentId == value || !transitionComplete) return;
 
+			TweenMax.killDelayedCallsTo(createOtherPage);
 			transitionComplete = false;
 			currentId = value;
 
@@ -135,28 +143,34 @@ define([
 			switch(currentId){
 				case Globals.PAGE_HOME :
 					index = 0;
+					if(typeof home == "undefined") home = new Home();
 					currentSection = home;
 					break;
 				case Globals.PAGE_TOUCHSCREEN :
 					index = 1;
+					if(typeof touchscreen == "undefined") touchscreen = new Touchscreen();
 					currentSection = touchscreen;
 					break;
 				case Globals.PAGE_COFFEE_RANGE :
 					index = 2;
+					if(typeof coffeerange == "undefined") coffeerange = new CoffeeRange();
 					currentSection = coffeerange;
 					break;
 				case Globals.PAGE_MILKSYSTEM :
 					index = 3;
+					if(typeof milksystem == "undefined") milksystem = new MilkSystem();
 					currentSection = milksystem;
 					break;
 				case Globals.PAGE_DESIGN :
 					index = 4;
+					if(typeof design == "undefined") design = new Design();
 					currentSection = design;
 					break;
 			}
 
 			$(window).trigger('resize');
 			if(currentSection !== null){
+				currentSection.elem.css('visibility', 'visible');
 				mainMenu.update(currentId);
 				currentIndex = index;
 				TweenMax.to($('.main'), 1.8, {top:-currentIndex*windowHContent, ease:Expo.easeInOut, onComplete:onSlideComplete});
@@ -194,6 +208,38 @@ define([
 						break;
 				}
 				tracker.trackPage(pageName, subPageName, subsubPageName, prop4);
+
+				if(typeof touchscreen == "undefined" || typeof coffeerange == "undefined" || typeof milksystem == "undefined" || typeof design == "undefined")
+				TweenMax.delayedCall(2.5, createOtherPage, [currentId]);
+			}
+		};
+
+		var createOtherPage = function(id){
+			switch(id){
+				case Globals.PAGE_HOME :
+					if(typeof touchscreen == "undefined") {
+						touchscreen = new Touchscreen();
+						TweenMax.delayedCall(2, createOtherPage, [Globals.PAGE_TOUCHSCREEN]);
+					}
+					break;
+				case Globals.PAGE_TOUCHSCREEN :
+					if(typeof coffeerange == "undefined"){
+						coffeerange = new CoffeeRange();
+						TweenMax.delayedCall(2, createOtherPage, [Globals.PAGE_COFFEE_RANGE]);
+					}
+					break;
+				case Globals.PAGE_COFFEE_RANGE :
+					if(typeof milksystem == "undefined"){
+						milksystem = new MilkSystem();
+						TweenMax.delayedCall(2, createOtherPage, [Globals.PAGE_MILKSYSTEM]);
+					}
+					break;
+				case Globals.PAGE_MILKSYSTEM :
+					if(typeof design == "undefined"){
+						design = new Design();
+						TweenMax.delayedCall(2, createOtherPage, [Globals.PAGE_HOME]);
+					}
+					break;
 			}
 		};
 	};

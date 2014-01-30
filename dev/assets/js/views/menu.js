@@ -44,6 +44,11 @@ define([
 
             music.loop().play().fadeIn();
 
+            if($('body').attr('data-prodmode') == '0'){
+                $('.sound_sprit').attr('class', 'sound_sprit_off');
+                 music.togglePlay();
+            }
+
             // header
             $('header ul li a').on('click', function(event){
                 var top = $(window).height()*0.5;
@@ -124,7 +129,7 @@ define([
                 else if($('div', this).hasClass('android_sprit')) TweenMax.to($('.qrcode_android'), 0.3, {autoAlpha:0, ease:Linear.easeNone});
             });
 
-            var delayOpen = 0.5;
+            var delayOpen = 0.1;
 
             // OPEN
             TweenMax.to($('nav'), 0.2, {autoAlpha:1, delay:delayOpen+0.4, onComplete:openCircles});

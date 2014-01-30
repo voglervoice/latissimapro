@@ -95,7 +95,7 @@ define([
             element[0].parentNode.insertBefore(canvas, element[0]);
             element.css("display", "none");
             self.brightnessValue = -1;
-            updateBrightness();
+            //updateBrightness();
             //element.replaceWith(canvasElem);
         }else{
             TweenMax.to(element, 0, {alpha:0});

@@ -4,7 +4,7 @@ require.config({
     paths: {
         html5shiv: 'vendors/html5shiv',
         jquery: 'vendors/jquery-1.10.2.min',
-        preloader: 'vendors/jquery.preloader',
+        preloader: 'vendors/jquery.preload',
         mousewheel: 'vendors/jquery.mousewheel',
         history: 'vendors/history.min',
         modernizr: 'vendors/modernizr.min',
@@ -53,7 +53,8 @@ require([
         "loader",
         "publisher",
         "events",
-        "html5shiv"
+        "html5shiv",
+        "preloader"
     ], function($, App, Loader, publisher, Events) {
         var app;
         var loader;

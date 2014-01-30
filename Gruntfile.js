@@ -50,6 +50,12 @@ module.exports = function(grunt){
 				dest: "web/assets/fonts/",
 				expand: true
 			},
+			music: {
+				cwd: 'dev/assets/music/',
+				src: "**",
+				dest: "web/assets/music/",
+				expand: true
+			},
 			vendorsjs: {
 				files: [{
 					src: "dev/assets/js/vendors/require.min.js",
@@ -122,6 +128,13 @@ module.exports = function(grunt){
 					event: ['all']
 				}
 			},
+			music: {
+				files: "dev/assets/music/*",
+				tasks: "copy:music",
+				options: {
+					event: ['all']
+				}
+			},
 			data: {
 				files: "dev/json/*",
 				tasks: "copy:data",
@@ -160,8 +173,8 @@ module.exports = function(grunt){
 		"clean",
 		"copy:images",
 		"copy:fonts",
+		"copy:music",
 		"copy:php",
-		"copy:data",
 		"minjson",
 		"copy:vendorsjs",
 		"copy:html",

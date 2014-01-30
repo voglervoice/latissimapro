@@ -22,6 +22,7 @@ define([
             }
             glImage.setSize(imageW, imageH);
             glImage.setCss({'left':-(imageW-w)*0.5,'top':-(imageH-h)*0.5});
+            return {width:imageW, height:imageH, left:-(imageW-w)*0.5, top:-(imageH-h)*0.5};
         };
 
         this.open = function(){

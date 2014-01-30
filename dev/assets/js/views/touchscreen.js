@@ -4,54 +4,73 @@ define([
     "events",
     "publisher",
     "raphaeljs",
-    "views/backgroundsection"
-], function($, TweenMax, Events, publisher, Raphael, BackgroundSection) {
+    "views/backgroundsection",
+    "views/imageelem"
+], function($, TweenMax, Events, publisher, Raphael, BackgroundSection, ImageElem) {
 
     var Touchscreen = function() {
         var self = this;
-         var positionInPaper = {x:500, y:400};
+        var resizeRatio = 0;
+         var positionInPaper = {x:0, y:0};
          var buttonWidth = $('.touchscreen_roll').first().width(), buttonInnerWidth = $('.touchscreen_roll_inner').first().width();
          var unvisibleButtons = [
-            [{x:-152,y:-134},{x:-53,y:-116},{x:-88,y:-55},{x:-182,y:-74}],
-            [{x:-191,y:-62},{x:-107,y:-41},{x:-141,y:25},{x:-236,y:0}],
-            [{x:-244,y:22},{x:-147,y:36},{x:-193,y:110},{x:-292,y:84}],
-            [{x:-82,y:51},{x:21,y:75},{x:-18,y:148},{x:-123,y:121}],
-            [{x:85,y:84},{x:198,y:113},{x:167,y:191},{x:55,y:162}],
-            [{x:122,y:-5},{x:227,y:26},{x:202,y:98},{x:94,y:73}],
-            [{x:156,y:-79},{x:249,y:-58},{x:230,y:9},{x:126,y:-16}]
+            [{x:228,y:373},{x:323,y:388},{x:300,y:450},{x:197,y:435}],
+            [{x:190,y:449},{x:294,y:461},{x:264,y:533},{x:156,y:518}],
+            [{x:149,y:532},{x:256,y:547},{x:222,y:623},{x:113,y:607}],
+            [{x:322,y:556},{x:432,y:572},{x:408,y:653},{x:294,y:634}],
+            [{x:494,y:575},{x:618,y:595},{x:601,y:684},{x:476,y:664}],
+            [{x:515,y:486},{x:637,y:505},{x:619,y:584},{x:503,y:568}],
+            [{x:539,y:409},{x:653,y:425},{x:636,y:497},{x:525,y:480}]
          ];
          var rollPosition = [
-            {x:-252,y:-404},
-            {x:-291,y:-190},
-            {x:-344,y:-100},
-            {x:-182,y:-70},
-            {x:-10,y:-40},
-            {x:22,y:-115},
-            {x:56,y:-190}
+            {x:319,y:390},
+            {x:286,y:467},
+            {x:249,y:551},
+            {x:426,y:576},
+            {x:608,y:603},
+            {x:627,y:513},
+            {x:644,y:432}
          ];
+         var rollOffset = {x:-50, y:-250};
+         var btns = [];
+         var screenPos = {x:76, y:178};
 
         // ******************* public ******************* 
         this.elem = $('#touchscreen');
         this.bg = new BackgroundSection(this.elem);
+        var touchMachine = new ImageElem($(".touch_machine", this.elem));
+        var touchElement = touchMachine.getElement();
         var ct = $('.touch_content', this.elem);
         var paper = Raphael("touchscreen_buttons", 800, 800);
 
         this.resize = function(w, h){
-            this.bg.resize(w, h);
+            var dresize = this.bg.resize(w, h);
+            $('.touch_vignettage').css({'left':dresize.left+'px', 'top':dresize.top+'px', 'width':dresize.width+'px', 'height':dresize.height+'px'});
+            /*$('.touch_vignettage').width(w);
+            $('.touch_vignettage').height(h);*/
+            resizeRatio = h/864;
             var ratioW = w/1440;
             var imgWidth = 827*ratioW;
             var ctLeft = imgWidth+60;
             ct.css('left', ctLeft);
             ct.width(w-ctLeft- 230);
+            touchMachine.setSize(842*resizeRatio,h);
 
             $('.touchscreen_roll').each(function(index) {
-                $(this).attr('data-left', positionInPaper.x + rollPosition[index].x);
-                $(this).attr('data-top', positionInPaper.y + rollPosition[index].y);
-                 $(this).css({'left':positionInPaper.x + rollPosition[index].x, 'top': positionInPaper.y + rollPosition[index].y });
+                $(this).attr('data-left', positionInPaper.x + rollPosition[index].x*resizeRatio + rollOffset.x);
+                $(this).attr('data-top', positionInPaper.y + rollPosition[index].y*resizeRatio + rollOffset.y);
+                $(this).css({'left':positionInPaper.x + rollPosition[index].x*resizeRatio + rollOffset.x, 'top': positionInPaper.y + rollPosition[index].y*resizeRatio + rollOffset.y });
             });
+
+            for (var i = 0; i < btns.length; i++) updateButton(btns[i]);
+
+            $('.screen_rolls').css({'top':screenPos.y*resizeRatio, 'left':screenPos.x*resizeRatio});
+            $('.screen_rolls img').width(639*resizeRatio);
+            $('.screen_rolls img').height(517*resizeRatio);
         };
 
         this.initOpen = function(){
+            TweenMax.to($('.screen_rolls img'), 0, {alpha:0});
             TweenMax.to($('.touchscreen_roll'), 0, {borderRadius:0, width:0, height:0, alpha:0});
             TweenMax.to($('.touchscreen_roll_inner'), 0, {borderRadius:0, width:0, height:0, left:0, top:0});
             TweenMax.to($('.touchscreen_roll_inner div'), 0, {left:(-buttonInnerWidth*0.5), top:(-buttonInnerWidth*0.5), alpha:0});
@@ -62,6 +81,10 @@ define([
             this.bg.open();
             TweenMax.killTweensOf(ct);
             TweenMax.to(ct, 1.2, {alpha:1, delay:1.3});
+
+            touchElement.css('left', "-300px");
+            touchMachine.show(1.2,1.2);
+            TweenMax.to(touchElement, 0.8, {left:0, delay:0.8, ease:Circ.easeOut});
         };
         
         this.open = function(){
@@ -72,6 +95,9 @@ define([
             this.bg.close();
             TweenMax.killTweensOf(ct);
             TweenMax.to(ct, 0.5, {alpha:0});
+
+            touchMachine.hide(1);
+            TweenMax.to(touchElement, 0.9, {left:-300, ease:Circ.easeIn});
         };
 
         // ******************* private *******************
@@ -91,13 +117,16 @@ define([
                     "cursor":"pointer"})
                     .data('index',  i);
                     
-                    createButton(p);
+                    updateButton(p);
                     p.hover(overButton, outButton, p, p);
+
+                    btns.push(p);
             }
         };
 
         var overButton = function(){
             var elem = this;
+            var id = parseInt(elem.data('index'), 10);
             var rollDiv = $('.touchscreen_roll:eq( '+elem.data('index')+' )');
             var innerDiv = $('.touchscreen_roll_inner', rollDiv);
             var innerDivImg = $('div', innerDiv);
@@ -131,6 +160,10 @@ define([
 
             TweenMax.to(innerDivImg, 0.7, {alpha:1, delay:0.1});
             TweenMax.to(rollDiv, motionTime*0.5, {alpha:1, delay:0.05});
+
+            $('.screen_rolls img').each(function(index) {
+                TweenMax.to($(this), 0.5, {alpha:(index == id)? 1 : 0});
+            });
         };
 
         var outButton = function(){
@@ -167,15 +200,16 @@ define([
                 ease:motionEase});
 
             TweenMax.to(innerDivImg, motionTime*0.5, {alpha:0});
+            TweenMax.to($('.screen_rolls img'), 0.5, {alpha:0});
         };
 
-        var createButton = function(elem){
+        var updateButton = function(elem){
             var datas = unvisibleButtons[elem.data('index')];
-            var path = "M"+(positionInPaper.x+datas[0].x)+" "+(positionInPaper.y+datas[0].y);
-            path += "L"+(positionInPaper.x+datas[1].x)+" "+(positionInPaper.y+datas[1].y);
-            path += "L"+(positionInPaper.x+datas[2].x)+" "+(positionInPaper.y+datas[2].y);
-            path += "L"+(positionInPaper.x+datas[3].x)+" "+(positionInPaper.y+datas[3].y);
-            path += "L"+(positionInPaper.x+datas[0].x)+" "+(positionInPaper.y+datas[0].y);
+            var path = "M"+(positionInPaper.x+datas[0].x*resizeRatio)+" "+(positionInPaper.y+datas[0].y*resizeRatio);
+            path += "L"+(positionInPaper.x+datas[1].x*resizeRatio)+" "+(positionInPaper.y+datas[1].y*resizeRatio);
+            path += "L"+(positionInPaper.x+datas[2].x*resizeRatio)+" "+(positionInPaper.y+datas[2].y*resizeRatio);
+            path += "L"+(positionInPaper.x+datas[3].x*resizeRatio)+" "+(positionInPaper.y+datas[3].y*resizeRatio);
+            path += "L"+(positionInPaper.x+datas[0].x*resizeRatio)+" "+(positionInPaper.y+datas[0].y*resizeRatio);
             elem.attr({'path':path});
         };
 
