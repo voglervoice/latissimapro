@@ -10,7 +10,7 @@ define([
 
     var Touchscreen = function() {
         var self = this;
-        var resizeRatio = 0;
+        var resizeRatio = 1;
          var positionInPaper = {x:0, y:0};
          var buttonWidth = $('.touchscreen_roll').first().width(), buttonInnerWidth = $('.touchscreen_roll_inner').first().width();
          var unvisibleButtons = [
@@ -32,7 +32,7 @@ define([
             {x:644,y:432}
          ];
          var rollOffset = {x:-50, y:-250};
-         var btns = [];
+         var btns = [], puces = [];
          var screenPos = {x:76, y:178};
 
         // ******************* public ******************* 
@@ -41,7 +41,8 @@ define([
         var touchMachine = new ImageElem($(".touch_machine", this.elem));
         var touchElement = touchMachine.getElement();
         var ct = $('.touch_content', this.elem);
-        var paper = Raphael("touchscreen_buttons", 800, 800);
+        var paper = Raphael("touchscreen_buttons", 1000, 1000);
+        var paper2 = Raphael("touchscreen_puces", 1000, 1000);
 
         this.resize = function(w, h){
             var dresize = this.bg.resize(w, h);
@@ -61,8 +62,13 @@ define([
                 $(this).attr('data-top', positionInPaper.y + rollPosition[index].y*resizeRatio + rollOffset.y);
                 $(this).css({'left':positionInPaper.x + rollPosition[index].x*resizeRatio + rollOffset.x, 'top': positionInPaper.y + rollPosition[index].y*resizeRatio + rollOffset.y });
             });
-
-            for (var i = 0; i < btns.length; i++) updateButton(btns[i]);
+            var i;
+            for (i = 0; i < btns.length; i++) updateButton(btns[i]);
+            for (i = 0; i < puces.length; i++){
+                puces[i].attr({'cx':rollPosition[i].x*resizeRatio, 'cy':rollPosition[i].y*resizeRatio});
+                puces[i].data('b').attr({'cx':rollPosition[i].x*resizeRatio, 'cy':rollPosition[i].y*resizeRatio});
+                puces[i].data('b2').attr({'cx':rollPosition[i].x*resizeRatio, 'cy':rollPosition[i].y*resizeRatio});
+            }
 
             $('.screen_rolls').css({'top':screenPos.y*resizeRatio, 'left':screenPos.x*resizeRatio});
             $('.screen_rolls img').width(639*resizeRatio);
@@ -70,6 +76,11 @@ define([
         };
 
         this.initOpen = function(){
+            for (var i = 0; i < puces.length; i++){
+                puces[i].attr({'r':0});
+                puces[i].data('b').attr({'r':0});
+                puces[i].data('b2').attr({'r':0});
+            }
             TweenMax.to($('.screen_rolls img'), 0, {alpha:0});
             TweenMax.to($('.touchscreen_roll'), 0, {borderRadius:0, width:0, height:0, alpha:0});
             TweenMax.to($('.touchscreen_roll_inner'), 0, {borderRadius:0, width:0, height:0, left:0, top:0});
@@ -88,12 +99,23 @@ define([
         };
         
         this.open = function(){
-        
+            for (var i = 0; i < puces.length; i++){
+                TweenMax.delayedCall(i*0.3, openPuce, [puces[i]]);
+            }
         };
 
         this.close = function(){
             this.bg.close();
+            TweenMax.killDelayedCallsTo(openPuce);
+            TweenMax.killDelayedCallsTo(pulseCircle);
+            TweenMax.killDelayedCallsTo(pulseC);
             TweenMax.killTweensOf(ct);
+            for (var i = 0; i < puces.length; i++){
+                puces[i].animate({ r : 0, easing:'backIn', 'cx':rollPosition[i].x*resizeRatio - 30},100);
+                puces[i].data('b').animate({ r : 0, easing:'backIn', 'cx':rollPosition[i].x*resizeRatio - 30},150);
+                puces[i].data('b2').animate({ r : 0, easing:'backIn', 'cx':rollPosition[i].x*resizeRatio - 30},200);
+            }
+
             TweenMax.to(ct, 0.5, {alpha:0});
 
             touchMachine.hide(1);
@@ -101,26 +123,63 @@ define([
         };
 
         // ******************* private *******************
+        var pulseCircle = function(el){
+            var baseDelay = 5;
+            TweenMax.delayedCall(baseDelay, pulseC, [el.data('b2'), 10, 13]);
+            TweenMax.delayedCall(baseDelay+0.1, pulseC, [el.data('b'), 7, 9]);
+            TweenMax.delayedCall(baseDelay+0.3, pulseC, [el, 3, 5]);
+
+            TweenMax.delayedCall(baseDelay, pulseCircle, [el]);
+        };
+
+        var pulseC = function(c, baseR, newR){
+            c.animate({ r : newR, easing:'>', callback:function(){
+                c.animate({ r : baseR, easing:'<>'},250);
+            }},250);
+        };
+
+        var openPuce = function(el){
+            el.data('b2').animate({ r : 10, easing:'backOut', callback:function(){
+                el.data('b').animate({ r : 7, easing:'backOut', callback:function(){
+                    el.animate({ r : 3, easing:'backOut', callback:function(){
+                     pulseCircle(el);
+                    }},250);
+                }},250);
+            }},250);
+        };
+
          var init = function(index){
             TweenMax.to(ct, 0, {alpha:0});
             TweenMax.to($('.touchscreen_roll'), 0, {borderRadius:0, width:0, height:0, alpha:0});
             TweenMax.to($('.content_line_sep', ct), 0, {alpha:0.15});
 
             for (var i = 0; i < unvisibleButtons.length; i++) {
-                var p = paper.path("M"+positionInPaper.x+" "+positionInPaper.y)
-                    .attr({
-                    fill: "rgb(208,208,208)",
-                    'fill-opacity': 0,
-                    "stroke": "#fff",
-                    "stroke-opacity": 0,
-                    "stroke-width": "3",
-                    "cursor":"pointer"})
-                    .data('index',  i);
-                    
-                    updateButton(p);
-                    p.hover(overButton, outButton, p, p);
+                    var p = paper.path("M"+positionInPaper.x+" "+positionInPaper.y)
+                        .attr({
+                        fill: "rgb(208,208,208)",
+                        'fill-opacity': 0,
+                        "stroke": "#fff",
+                        "stroke-opacity": 0,
+                        "stroke-width": "3",
+                        "cursor":"pointer"})
+                        .data('index',  i);
+                        
+                        updateButton(p);
+                        p.hover(overButton, outButton, p, p);
 
-                    btns.push(p);
+                        btns.push(p);
+                        
+                        console.log(rollPosition[i].x, rollPosition[i].y, resizeRatio);
+                    var c = paper2.circle(rollPosition[i].x*resizeRatio, rollPosition[i].y*resizeRatio, 6).attr({
+                    "stroke-width": "1.5", "stroke": "#ffffff", "fill-opacity": "0", "stroke-opacity": "0.3"});
+                    var c2 = paper2.circle(rollPosition[i].x*resizeRatio, rollPosition[i].y*resizeRatio, 9).attr({
+                    "stroke-width": "3", "stroke": "#ffffff", "fill-opacity": "0", "stroke-opacity": "0.1"});
+                    var puce = paper2.circle(rollPosition[i].x*resizeRatio, rollPosition[i].y*resizeRatio, 3).attr({
+                    fill: "rgb(130,212,255)",
+                    "stroke-width": "2",
+                    "stroke": "#82d4ff",
+                    "stroke-opacity": "0.3"}).data("b", c).data("b2", c2);
+                     puces.push(puce);
             }
         };
 

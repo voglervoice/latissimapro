@@ -91,8 +91,8 @@ define([
 
 			$('.content').mousewheel(function(event, delta, deltaX, deltaY) {
 				//console.log(deltaY);
-				if(transitionComplete && (deltaX > 0 || deltaY > 0)) openNextPage();
-				else if(transitionComplete && (deltaX < 0 || deltaY < 0)) openPrevPage();
+				if(transitionComplete && (deltaX > 0 || deltaY > 0)) openPrevPage();
+				else if(transitionComplete && (deltaX < 0 || deltaY < 0)) openNextPage();
 			});
 		};
 		// private      
