@@ -430,7 +430,7 @@
           "description_text": {
              "id": "6_8",
             "label":"description_text",
-            "texte":"Nespresso Capsules preserve the aromas of freshly ground coffee. <br>A great Espresso and Milk specialty always starts with a great Espresso.<br>Choose from 22 Grands Crus and prepare for a voyage of sensorial experiences. "
+            "texte":"Nespresso Capsules preserve the aromas of freshly ground coffee. <br>A great Espresso and Milk specialty always starts with a great Espresso.<br>Choose from 22 Grands Crus and prepare for a voyage of sensorial experiences."
           },
           "intensity": {
              "id": "6_11",
@@ -470,17 +470,17 @@
           "bloc_1__info_1": {
              "id": "10_17",
             "label":"bloc_1__info_1",
-            "texte":"Refined brushed aluminium finish<br>"
+            "texte":"Refined brushed aluminium finish"
           },
           "bloc_1__info_2": {
              "id": "10_18",
             "label":"bloc_1__info_2",
-            "texte":"19 bar<br>"
+            "texte":"19 bar"
           },
           "bloc_1__info_3": {
              "id": "10_19",
             "label":"bloc_1__info_3",
-            "texte":"Machine ready in 25 seconds<br>"
+            "texte":"Machine ready in 25 seconds"
           },
           "bloc_1__info_4": {
              "id": "10_24",
@@ -500,7 +500,7 @@
           "bloc_2__info_2": {
              "id": "10_22",
             "label":"bloc_2__info_2",
-            "texte":"Delicious beverages at the touch of a button<br>"
+            "texte":"Delicious beverages at the touch of a button"
           },
           "bloc_3_•_optimal_milk_froth_quality": {
              "id": "10_11",
@@ -510,7 +510,7 @@
           "bloc_3__info_1": {
              "id": "10_10",
             "label":"bloc_3__info_1",
-            "texte":"Advanced steamer technology<br>"
+            "texte":"Advanced steamer technology"
           },
           "bloc_3__info_2": {
              "id": "10_1",
@@ -575,17 +575,17 @@
           "grand_cru_4": {
              "id": "8_44",
             "label":"grand_cru_4",
-            "texte":"Arpeggio "
+            "texte":"Arpeggio"
           },
           "grand_cru_5": {
              "id": "8_45",
             "label":"grand_cru_5",
-            "texte":"Roma "
+            "texte":"Roma"
           },
           "grand_cru_6": {
              "id": "8_46",
             "label":"grand_cru_6",
-            "texte":"Livanto "
+            "texte":"Livanto"
           },
           "grand_cru_7": {
              "id": "8_47",
@@ -595,12 +595,12 @@
           "grand_cru_8": {
              "id": "8_40",
             "label":"grand_cru_8",
-            "texte":"Volluto "
+            "texte":"Volluto"
           },
           "grand_cru_9": {
              "id": "8_39",
             "label":"grand_cru_9",
-            "texte":"Cosi "
+            "texte":"Cosi"
           },
           "grand_cru_10": {
              "id": "8_38",
@@ -615,7 +615,7 @@
           "grand_cru_12": {
              "id": "8_36",
             "label":"grand_cru_12",
-            "texte":"Dulsão <i>do Brasil</i> "
+            "texte":"Dulsão <i>do Brasil</i>"
           },
           "grand_cru_13": {
              "id": "8_32",
@@ -815,7 +815,7 @@
           "grand_cru_18_aromatic_profile_with_milk": {
              "id": "8_16",
             "label":"grand_cru_18_aromatic_profile_with_milk",
-            "texte":"Toasted, fruity, roasted nuts "
+            "texte":"Toasted, fruity, roasted nuts"
           },
           "grand_cru_19_aromatic_profile": {
              "id": "8_30",
@@ -825,7 +825,7 @@
           "grand_cru_19_aromatic_profile_with_milk": {
              "id": "8_29",
             "label":"grand_cru_19_aromatic_profile_with_milk",
-            "texte":"Toasted cereal, fruity "
+            "texte":"Toasted cereal, fruity"
           },
           "grand_cru_14_aromatic_profile": {
              "id": "8_28",
@@ -845,7 +845,7 @@
           "grand_cru_15_lungo_aromatic_profile_with_milk": {
              "id": "8_25",
             "label":"grand_cru_15_lungo_aromatic_profile_with_milk",
-            "texte":"Toasted cereal, green fruity "
+            "texte":"Toasted cereal, green fruity"
           },
           "grand_cru_15_aromatic_profile": {
              "id": "8_24",
@@ -905,7 +905,7 @@
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
             "label":"text_paragraph_2_auto_clean",
-            "texte":"Simply rotate the milk regulator knob in the Clean position. The machine hygiene is assessed by International Certification Body, ensuring high standard cleanliness.<br>"
+            "texte":"Simply rotate the milk regulator knob in the Clean position. The machine hygiene is assessed by International Certification Body, ensuring high standard cleanliness."
           },
           "schema_milk_froth_text_": {
              "id": "9_2",

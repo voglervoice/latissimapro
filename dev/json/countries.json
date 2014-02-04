@@ -3,7 +3,7 @@
     "Africa":{
       "countries":{
         "DZ":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2014-03-11",
           "title":"ALGERIA",
           "rsid":"",
           "languages":[
@@ -21,35 +21,18 @@
         },
         "EG":{
           "publish_date":"2100-01-01",
-          "title":"EGYPT",
-          "rsid":"eg",
-          "languages":[
-            {
-              "code":"en_EG",
-              "lang":"en",
-              "name":"english"
-            }
-          ]
+          "title":null,
+          "rsid":null,
+          "languages":null
         },
         "MA":{
           "publish_date":"2100-01-01",
-          "title":"MOROCCO",
-          "rsid":"ma",
-          "languages":[
-            {
-              "code":"fr_MA",
-              "lang":"fr",
-              "name":"fran\u00e7ais"
-            },
-            {
-              "code":"en_MA",
-              "lang":"en",
-              "name":"english"
-            }
-          ]
+          "title":null,
+          "rsid":null,
+          "languages":null
         },
         "MU":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"MAURITIUS",
           "rsid":"mu",
           "languages":[
@@ -66,7 +49,7 @@
           ]
         },
         "RE":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"R\u00c9UNION",
           "rsid":"re",
           "languages":[
@@ -84,22 +67,16 @@
         },
         "ZA":{
           "publish_date":"2100-01-01",
-          "title":"SOUTH AFRICA",
-          "rsid":"za",
-          "languages":[
-            {
-              "code":"en_ZA",
-              "lang":"en",
-              "name":"english"
-            }
-          ]
+          "title":null,
+          "rsid":null,
+          "languages":null
         }
       }
     },
     "America":{
       "countries":{
         "AR":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2014-03-11",
           "title":"ARGENTINA",
           "rsid":"24",
           "languages":[
@@ -117,23 +94,12 @@
         },
         "BR":{
           "publish_date":"2100-01-01",
-          "title":"BRAZIL",
-          "rsid":"21",
-          "languages":[
-            {
-              "code":"pt_BR",
-              "lang":"pt",
-              "name":"PORTUGU\u00caS"
-            },
-            {
-              "code":"en_BR",
-              "lang":"en",
-              "name":"english"
-            }
-          ]
+          "title":null,
+          "rsid":null,
+          "languages":null
         },
         "CA":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"CANADA",
           "rsid":"25",
           "languages":[
@@ -150,7 +116,7 @@
           ]
         },
         "CL":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2014-02-03",
           "title":"CHILE",
           "rsid":"",
           "languages":[
@@ -167,7 +133,7 @@
           ]
         },
         "DO":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"DOMINICAN REPUBLIC",
           "rsid":"do",
           "languages":[
@@ -189,7 +155,7 @@
           ]
         },
         "GP":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"GUADELOUPE",
           "rsid":"gp",
           "languages":[
@@ -206,7 +172,7 @@
           ]
         },
         "MQ":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"MARTINIQUE",
           "rsid":"mq",
           "languages":[
@@ -224,23 +190,12 @@
         },
         "MX":{
           "publish_date":"2100-01-01",
-          "title":"MEXICO",
-          "rsid":"35",
-          "languages":[
-            {
-              "code":"en_MX",
-              "lang":"en",
-              "name":"english"
-            },
-            {
-              "code":"es_MX",
-              "lang":"es",
-              "name":"ESPA\u00d1OL"
-            }
-          ]
+          "title":null,
+          "rsid":null,
+          "languages":null
         },
         "US":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"UNITED STATES",
           "rsid":"12",
           "languages":[
@@ -267,23 +222,12 @@
       "countries":{
         "CN":{
           "publish_date":"2100-01-01",
-          "title":"CHINA",
-          "rsid":"28",
-          "languages":[
-            {
-              "code":"cn_CN",
-              "lang":"cn",
-              "name":"\u4e2d\u6587"
-            },
-            {
-              "code":"en_CN",
-              "lang":"en",
-              "name":"english"
-            }
-          ]
+          "title":null,
+          "rsid":null,
+          "languages":null
         },
         "HK":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"HONG KONG",
           "rsid":"26",
           "languages":[
@@ -300,7 +244,7 @@
           ]
         },
         "JP":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"JAPAN",
           "rsid":"30",
           "languages":[
@@ -317,7 +261,7 @@
           ]
         },
         "KR":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"KOREA, REPUBLIC OF",
           "rsid":"29",
           "languages":[
@@ -334,7 +278,7 @@
           ]
         },
         "SG":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"SINGAPORE",
           "rsid":"27",
           "languages":[
@@ -347,23 +291,12 @@
         },
         "TR":{
           "publish_date":"2100-01-01",
-          "title":"TURKEY",
-          "rsid":"tk",
-          "languages":[
-            {
-              "code":"en_TR",
-              "lang":"en",
-              "name":"english"
-            },
-            {
-              "code":"tr_TR",
-              "lang":"tr",
-              "name":"T\u00fcrk"
-            }
-          ]
+          "title":null,
+          "rsid":null,
+          "languages":null
         },
         "TW":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"TAIWAN",
           "rsid":"33",
           "languages":[
@@ -384,7 +317,7 @@
     "Europe":{
       "countries":{
         "AT":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"AUSTRIA",
           "rsid":"5",
           "languages":[
@@ -401,7 +334,7 @@
           ]
         },
         "BE":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2014-03-03",
           "title":"BELGIUM",
           "rsid":"6",
           "languages":[
@@ -409,11 +342,6 @@
               "code":"fr_BE",
               "lang":"fr",
               "name":"fran\u00e7ais"
-            },
-            {
-              "code":"de_BE",
-              "lang":"de",
-              "name":"deutsch"
             },
             {
               "code":"en_BE",
@@ -428,7 +356,7 @@
           ]
         },
         "CH":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2014-02-01",
           "title":"SWITZERLAND",
           "rsid":"1",
           "languages":[
@@ -455,7 +383,7 @@
           ]
         },
         "CY":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"CYPRUS",
           "rsid":"cy",
           "languages":[
@@ -467,7 +395,7 @@
           ]
         },
         "CZ":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"CZECH REPUBLIC",
           "rsid":"32",
           "languages":[
@@ -484,7 +412,7 @@
           ]
         },
         "DE":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"GERMANY",
           "rsid":"3",
           "languages":[
@@ -501,7 +429,7 @@
           ]
         },
         "DK":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"DENMARK",
           "rsid":"20",
           "languages":[
@@ -518,7 +446,7 @@
           ]
         },
         "ES":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"SPAIN",
           "rsid":"14",
           "languages":[
@@ -531,11 +459,16 @@
               "code":"en_ES",
               "lang":"en",
               "name":"english"
+            },
+            {
+              "code":"ca_ES",
+              "lang":"ca",
+              "name":"Catal\u00e0"
             }
           ]
         },
         "FI":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"FINLAND",
           "rsid":"18",
           "languages":[
@@ -569,7 +502,7 @@
           ]
         },
         "GR":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2014-03-03",
           "title":"GREECE",
           "rsid":"39",
           "languages":[
@@ -586,7 +519,7 @@
           ]
         },
         "HU":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"HUNGARY",
           "rsid":"15",
           "languages":[
@@ -603,7 +536,7 @@
           ]
         },
         "IE":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"IRELAND",
           "rsid":"",
           "languages":[
@@ -615,7 +548,7 @@
           ]
         },
         "IT":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"ITALY",
           "rsid":"4",
           "languages":[
@@ -632,7 +565,7 @@
           ]
         },
         "NL":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2014-02-03",
           "title":"NETHERLANDS",
           "rsid":"7",
           "languages":[
@@ -649,7 +582,7 @@
           ]
         },
         "NO":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2014-03-03",
           "title":"NORWAY",
           "rsid":"10",
           "languages":[
@@ -666,7 +599,7 @@
           ]
         },
         "PL":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"POLAND",
           "rsid":"13",
           "languages":[
@@ -683,7 +616,7 @@
           ]
         },
         "PT":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"PORTUGAL",
           "rsid":"9",
           "languages":[
@@ -700,7 +633,7 @@
           ]
         },
         "RU":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2014-02-01",
           "title":"RUSSIAN FEDERATION",
           "rsid":"11",
           "languages":[
@@ -717,7 +650,7 @@
           ]
         },
         "SE":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"SWEDEN",
           "rsid":"16",
           "languages":[
@@ -735,23 +668,12 @@
         },
         "TR":{
           "publish_date":"2100-01-01",
-          "title":"TURKEY",
-          "rsid":"tk",
-          "languages":[
-            {
-              "code":"en_TR",
-              "lang":"en",
-              "name":"english"
-            },
-            {
-              "code":"tr_TR",
-              "lang":"tr",
-              "name":"T\u00fcrk"
-            }
-          ]
+          "title":null,
+          "rsid":null,
+          "languages":null
         },
         "UK":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"UNITED KINGDOM",
           "rsid":"8",
           "languages":[
@@ -773,7 +695,7 @@
           "languages":null
         },
         "BH":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"BAHRAIN",
           "rsid":"bh",
           "languages":[
@@ -785,7 +707,7 @@
           ]
         },
         "JO":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"JORDAN",
           "rsid":"jo",
           "languages":[
@@ -798,18 +720,12 @@
         },
         "KW":{
           "publish_date":"2100-01-01",
-          "title":"KUWAIT",
-          "rsid":"kw",
-          "languages":[
-            {
-              "code":"en_KW",
-              "lang":"en",
-              "name":"english"
-            }
-          ]
+          "title":null,
+          "rsid":null,
+          "languages":null
         },
         "LB":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"LEBANON",
           "rsid":"lb",
           "languages":[
@@ -821,7 +737,7 @@
           ]
         },
         "OM":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"OMAN",
           "rsid":"om",
           "languages":[
@@ -833,7 +749,7 @@
           ]
         },
         "QA":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"QATAR",
           "rsid":"qa",
           "languages":[
@@ -846,22 +762,16 @@
         },
         "SA":{
           "publish_date":"2100-01-01",
-          "title":"SAUDI ARABIA",
-          "rsid":"sa",
-          "languages":[
-            {
-              "code":"en_SA",
-              "lang":"en",
-              "name":"english"
-            }
-          ]
+          "title":null,
+          "rsid":null,
+          "languages":null
         }
       }
     },
     "Oceanie":{
       "countries":{
         "AU":{
-          "publish_date":"2013-03-03",
+          "publish_date":"2013-03-10",
           "title":"AUSTRALIA",
           "rsid":"19",
           "languages":[
@@ -873,7 +783,7 @@
           ]
         },
         "NZ":{
-          "publish_date":"2100-01-01",
+          "publish_date":"2013-03-03",
           "title":"NEW ZEALAND",
           "rsid":"40",
           "languages":[

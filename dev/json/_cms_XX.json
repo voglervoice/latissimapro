@@ -1,18 +1,6 @@
 {
   "code_pays":"XX",
   "launching":"2013-10-21",
-  "nointro":0,
-  "lightintro":0,
-  "fullintro":0,
-  "classical_color1":0,
-  "classical_color2":0,
-  "classical_color3":0,
-  "classical_color4":0,
-  "limited_color1":0,
-  "limited_color2":0,
-  "pureplayer_color1":0,
-  "pureplayer_color2":0,
-  "aeroccino":0,
   "rosabaya_de_colombia":1,
   "dulsao_do_brasil":1,
   "vivalto_lungo":1,
@@ -35,7 +23,5 @@
   "ciocattino":1,
   "vanilio":1,
   "bukeela_ka_ethopia":0,
-  "promocoupon1":0,
-  "promo_localactivation":0,
-  "promo_socialmedia":0
+  "promocoupon1":0
 }

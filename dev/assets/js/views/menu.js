@@ -23,7 +23,8 @@ define([
         this.resize = function(){
             $('.scroll_to_explore').css('margin-left', -$('.scroll_to_explore').width()*0.5);
             $('nav ul li').each(function(index) {
-                $(this).css({'top':($('a', this).height() > 22)? menuSpace*index -1 :  menuSpace*index+9});
+                $(this).css({'top':($('a span', this).height() > 22)? menuSpace*index -1 :  menuSpace*index+9});
+                $('a', this).height($('a span', this).height()+2);
             });
             $('.order_footer_btn_visual').css('right', $('.order_footer_btn span').width()+50);
         };
@@ -145,12 +146,12 @@ define([
         var mainMenuRollOver = function(target){
             circles[parseInt(target.attr('data-index'), 10)].animate({ r : 2, 'fill-opacity': 1, easing:'>'}, 200);
             TweenMax.to($('span', target), 0.3, {autoAlpha:1, ease:Linear.easeNone});
-            TweenMax.to($('span', target), 0.3, {marginRight:50, ease:Expo.easeOut});
+            TweenMax.to($('span', target), 0.3, {right:50, ease:Expo.easeOut});
         };
          var mainMenuRollOut = function(target){
             circles[parseInt(target.attr('data-index'), 10)].animate({ r : 4, 'fill-opacity': 0, easing:'<>'}, 300);
             TweenMax.to($('span', target), 0.3, {autoAlpha:0, ease:Linear.easeNone});
-            TweenMax.to($('span', target), 0.3, {marginRight:10, ease:Expo.easeIn});
+            TweenMax.to($('span', target), 0.3, {right:10, ease:Expo.easeIn});
         };
         var openCircles = function(){
             for (var i = 0; i < circles.length; i++) {
