@@ -81,6 +81,7 @@ define([
                 puces[i].data('b').attr({'r':0});
                 puces[i].data('b2').attr({'r':0});
             }
+
             TweenMax.to($('.screen_rolls img'), 0, {alpha:0});
             TweenMax.to($('.touchscreen_roll'), 0, {borderRadius:0, width:0, height:0, alpha:0});
             TweenMax.to($('.touchscreen_roll_inner'), 0, {borderRadius:0, width:0, height:0, left:0, top:0});
@@ -99,6 +100,7 @@ define([
         };
         
         this.open = function(){
+            $('#touchscreen_puces').css('display', "block");
             for (var i = 0; i < puces.length; i++){
                 TweenMax.delayedCall(i*0.3, openPuce, [puces[i]]);
             }
@@ -110,11 +112,12 @@ define([
             TweenMax.killDelayedCallsTo(pulseCircle);
             TweenMax.killDelayedCallsTo(pulseC);
             TweenMax.killTweensOf(ct);
-            for (var i = 0; i < puces.length; i++){
+            $('#touchscreen_puces').css('display', "none");
+            /*for (var i = 0; i < puces.length; i++){
                 puces[i].animate({ r : 0, easing:'backIn', 'cx':rollPosition[i].x*resizeRatio - 30},100);
                 puces[i].data('b').animate({ r : 0, easing:'backIn', 'cx':rollPosition[i].x*resizeRatio - 30},150);
                 puces[i].data('b2').animate({ r : 0, easing:'backIn', 'cx':rollPosition[i].x*resizeRatio - 30},200);
-            }
+            }*/
 
             TweenMax.to(ct, 0.5, {alpha:0});
 

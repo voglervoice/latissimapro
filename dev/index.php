@@ -33,31 +33,33 @@
     data-url="<?php echo $baseurlang; ?>"
     data-baseurl="<?php echo $baseurl; ?>"
     data-direct="<?php echo $direct; ?>"
-    data-lang="<?php echo $language; ?>"
+    data-lang="<?php echo $languagesite; ?>"
     data-country="<?php echo $territory; ?>"
     data-lang-defined="<?php echo $langDefined; ?>"
         >
         <script data-main="<?php echo $baseurl; ?>assets/js/main" src="<?php echo $baseurl; ?>assets/js/vendors/require.min.js"></script>
-        <div class="nespresso_logo"></div>
-        <div class="preloader">
-            <div class="logo_preload"></div>
-            <a class="machine_preload" href="<?php echo $jsonLangGlobals->order_online_shop_link->texte; ?>" target="_blank">
-                <span><?php echo $jsonLangGlobals->order->texte; ?></span>
-            </a>
-            <span class="loader_pct">00<sup>%</sup></span>
-        </div>
-        <div class="content">
-            <?php include('php/views/blocks/header.php'); ?>
-            <?php include('php/views/blocks/footer.php'); ?>
-            <?php include('php/views/blocks/menu.php'); ?>
-            <?php include('php/views/blocks/popins.php'); ?>
+        <div class="container">
+            <div class="nespresso_logo"></div>
+            <div class="preloader">
+                <div class="logo_preload"></div>
+                <a class="machine_preload" href="<?php echo $jsonLangGlobals->order_online_shop_link->texte; ?>" target="_blank">
+                    <span><?php echo $jsonLangGlobals->order->texte; ?></span>
+                </a>
+                <span class="loader_pct">00<sup>%</sup></span>
+            </div>
+            <div class="content">
+                <?php include('php/views/blocks/header.php'); ?>
+                <?php include('php/views/blocks/footer.php'); ?>
+                <?php include('php/views/blocks/menu.php'); ?>
+                <?php include('php/views/blocks/popins.php'); ?>
 
-            <div class="main">
-                <?php include('php/views/pages/home.php'); ?>
-                <?php include('php/views/pages/touchscreen.php'); ?>
-                <?php include('php/views/pages/coffeerange.php'); ?>
-                <?php include('php/views/pages/milksystem.php'); ?>
-                <?php include('php/views/pages/design.php'); ?>
+                <div class="main">
+                    <?php include('php/views/pages/home.php'); ?>
+                    <?php include('php/views/pages/touchscreen.php'); ?>
+                    <?php include('php/views/pages/coffeerange.php'); ?>
+                    <?php include('php/views/pages/milksystem.php'); ?>
+                    <?php include('php/views/pages/design.php'); ?>
+                </div>
             </div>
         </div>
 <script language="JavaScript" type="text/javascript">var s_account="nesp-preprod";</script>

@@ -43,7 +43,7 @@ function getCapsules($datas, $start, $nbCaps){
 	<div class="range_content">
 		<h2><?php echo $jsonLangRangeGlobals->title->texte; ?></h2>
 		<div class="content_line_sep"></div>
-		<span class="range_description"><?php echo $jsonLangRangeGlobals->description_text->texte; ?></span>
+		<span class="range_description"><?php echo proccedText($jsonLangRangeGlobals->description_text->texte); ?></span>
 		<div class="range_coffees">
 			<div class="range_cat">
 				<div class="range_cat_title"><span>Intenso</span><div></div></div>

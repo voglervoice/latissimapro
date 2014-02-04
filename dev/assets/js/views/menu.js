@@ -25,7 +25,7 @@ define([
             $('nav ul li').each(function(index) {
                 $(this).css({'top':($('a', this).height() > 22)? menuSpace*index -1 :  menuSpace*index+9});
             });
-            $('.order_footer_btn_visual').css('right', $('.order_footer_btn span').width()+75);
+            $('.order_footer_btn_visual').css('right', $('.order_footer_btn span').width()+50);
         };
 
         this.update = function(id) {

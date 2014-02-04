@@ -8,7 +8,7 @@ define([
     var BackgroundSection = function(parent) {
         var self = this;
         var element = $('.section_background', parent);
-        var glImage = new ImageElem(element);
+        //var glImage = new ImageElem(element);
                 
         // ******************* public ******************* 
         this.resize = function(w, h){
@@ -20,21 +20,29 @@ define([
                     imageH = h;
                     imageW = baseImageW*h/baseImageH;
             }
-            glImage.setSize(imageW, imageH);
-            glImage.setCss({'left':-(imageW-w)*0.5,'top':-(imageH-h)*0.5});
+            /*glImage.setSize(imageW, imageH);
+            glImage.setCss({'left':-(imageW-w)*0.5,'top':-(imageH-h)*0.5});*/
+            element.width(imageW);
+            element.height(imageH);
+            element.css({'left':-(imageW-w)*0.5,'top':-(imageH-h)*0.5});
             return {width:imageW, height:imageH, left:-(imageW-w)*0.5, top:-(imageH-h)*0.5};
         };
 
         this.open = function(){
-            glImage.show(2,0);
+            //glImage.show(2,0);
+            TweenMax.killTweensOf(element);
+            TweenMax.to(element, 2, {alpha:1, delay:0.8, ease:Linear.easeNone});
         };
 
         this.close = function(){
-            glImage.hide(2.5, 0.2);
+            //glImage.hide(2.5, 0.2);
+            TweenMax.killTweensOf(element);
+            TweenMax.to(element, 2, {alpha:0, ease:Linear.easeNone});
         };
 
         // ******************* private *******************
          var init = function(index){
+            TweenMax.to(element, 0, {alpha:0, ease:Linear.easeNone});
         };
 
         init();

@@ -38,14 +38,14 @@ define([
 		milksystem = new MilkSystem();
 		touchscreen = new Touchscreen();
 		coffeerange = new CoffeeRange();*/
-		popins = new Popins();
+		//popins = new Popins();
 
 		$('section').css('visibility', 'hidden');
 		TweenMax.to($('.content'), 0, {autoAlpha:0});
 
 		$( window ).resize(function() {
-			windowW = $(window).width();
-			windowH = $(window).height();
+			windowW = $('.container').width();
+			windowH = $('.container').height();
 			windowHContent = windowH-footerH;
 			$('.content').width(windowW);
 			$('.content').height(windowH);

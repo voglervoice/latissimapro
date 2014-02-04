@@ -55,7 +55,7 @@
 	<div class="touch_content">
 		<h2><?php echo $jsonLangTouch->title->texte; ?></h2>
 		<div class="content_line_sep"></div>
-		<span><?php echo $jsonLangTouch->text->texte; ?></span>
+		<span><?php echo proccedText($jsonLangTouch->text->texte); ?></span>
 	</div>
 	<img src="assets/imgs/sections/touch_vignettage.png" class="touch_vignettage" />
 	<div class="screen_rolls">

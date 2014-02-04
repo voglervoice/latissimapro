@@ -3,7 +3,7 @@
 		<div class="design_content_title">
 			<h2><?php echo $jsonLangDesign->title->texte; ?></h2>
 			<div class="content_line_design_sep"></div>
-			<span class="design_description"><?php echo $jsonLangDesign->text->texte; ?></span>
+			<span class="design_description"><?php echo proccedText($jsonLangDesign->text->texte); ?></span>
 		</div>
 		<div class="design_content_infos">
 			<div class="design_content_infos_col">

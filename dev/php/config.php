@@ -1,4 +1,6 @@
 <?php
+$territory = NULL;
+$languagesite = NULL;
 
 $base = dirname($_SERVER['PHP_SELF']) . '/';
 if($base == '//')
@@ -20,7 +22,7 @@ $langDefined = 0;
 if(count($pathSlices) > 0){
     //echo "LANG : ".$pathSlices[0];
     $country      = explode("_", $pathSlices[0]);
-    $language   = $country[0];
+    $languagesite   = $country[0];
     $territory    = $country[1];
     if(count($pathSlices) > 1){
         //echo "DIRECT -> : ".$pathSlices[1];
@@ -33,7 +35,9 @@ if(count($pathSlices) > 0){
 $previewMode = isset($_GET['preview']);
 
 $prodMode = false;
+$staging = false;
 if(strpos($_SERVER['SERVER_NAME'], 'nespresso') !== false) $prodMode = true;
+if(strpos($_SERVER['SERVER_NAME'], 'staging.nespresso') !== false) $staging = true;
 
 if(empty($territory)){
     //get it with Geoloc by IP (if it exist)
@@ -41,13 +45,9 @@ if(empty($territory)){
         include_once('../lib/geoloc.class.php');
         $geoloc = new NesGeoLoc();
         $territory = $geoloc->getCountryCode();
-    }else if(file_exists('php/class/geoloc.class.php')){
-        include_once('php/class/geoloc.class.php');
-        $geogeo = new NesGeoLoc();
-        $territory = $geogeo->getCountryCode();
     }else{
-        $territory = null;
-        $language = null;
+        $territory = NULL;
+        $languagesite = NULL;
     }
 }
 
@@ -63,26 +63,31 @@ if(file_exists('admin/loc/includes/db_connect.php')){
     include_once('admin/loc/includes/db_connect.php');
 
     // If language is not defined, get default language
-    if(empty($language)){
+    if(empty($languagesite)){
         $query = 'SELECT code, RSID, launching FROM loc_langues INNER JOIN cms ON cms.code_pays = SUBSTRING_INDEX(loc_langues.code,\'_\',-1) WHERE SUBSTRING_INDEX(code,\'_\',-1) LIKE :territory AND native = 1';
+        $data = $pdo->prepare($query);
+        $data->bindParam(':territory', $territory, PDO::PARAM_STR);
     }else{
         $query = 'SELECT code, RSID, launching FROM loc_langues INNER JOIN cms ON cms.code_pays = SUBSTRING_INDEX(loc_langues.code,\'_\',-1) WHERE code = CONCAT(:language, \'_\', :territory)';
+        $data = $pdo->prepare($query);
+        $data->bindParam(':territory', $territory, PDO::PARAM_STR);
+        $data->bindParam(':language', $languagesite, PDO::PARAM_STR);
     }
-
-    $data = $pdo->prepare($query);
-    $data->bindParam(':language', $language);
-    $data->bindParam(':territory', $territory);
+    
+    //echo "<br /> data execute() ? ";
+    //var_dump($data->execute());
 
     // If query is executed, we get a result and the pub date is before now (only if not preview mode)
-    if($data->execute() && ($row = $data->fetch(PDO::FETCH_OBJ)) !== false && (strtotime($row->launching) <= time() || $previewMode)){
-        list($language, $territory) = explode('_', $row->code, 2);
+    if($data->execute() && ($row = $data->fetch(PDO::FETCH_OBJ)) !== false && (strtotime($row->launching) <= time() || $previewMode || $staging)){
+    //if($data->execute() && ($row = $data->fetch(PDO::FETCH_OBJ)) !== false){
+        list($languagesite, $territory) = explode('_', $row->code, 2);
     }else{
-        $territory = null;
-        $language = null;
+        $territory = NULL;
+        $languagesite = NULL;
     }
-}elseif(empty($territory) || empty($language)){//special case for local
+}elseif(empty($territory) || empty($languagesite)){//special case for local
     $territory = 'XX';
-    $language = 'en';
+    $languagesite = 'en';
 }
 
 // REDIRECTIONS -- ??
@@ -91,14 +96,16 @@ $detectMobile   =   new Mobile_Detect();
 if ( $detectMobile->isMobile() || $detectMobile->isTablet() ) {
     // TODO : good urls
     $redirection = 'http://www.nespresso.com/lattisima_pro_mobile/';
-    header('HTTP/1.0 308 Permanent Redirect');
+    //header('HTTP/1.0 308 Permanent Redirect');
     header('Location: ' . $redirection);
     exit();
 }
 
-if(empty($territory) || empty($language)){
+//echo "<br /> ".$territory.' ///// '.$languagesite;
+
+if((empty($territory) || empty($languagesite)) && !$staging){
     $redirection = 'http://www.nespresso.com/worldofcoffee/';
-    header('HTTP/1.0 308 Permanent Redirect');
+    //header('HTTP/1.0 308 Permanent Redirect');
     header('Location: ' . $redirection);
     exit();
 }
@@ -107,13 +114,13 @@ if(empty($territory) || empty($language)){
 $folder = "lattissima-pro/";
 if($_SERVER['HTTP_HOST'] == "latissimapro.dev:8080") $folder = "";
 $baseurl = 'http://'.$_SERVER['HTTP_HOST'].'/'.$folder;
-$baseurlang = $baseurl.$language."_".$territory."/";
+$baseurlang = $baseurl.$languagesite."_".$territory."/";
 $baseShareUrl = $baseurlang;
 // JSON LANG ::
 $dirname    =   $_SERVER['DOCUMENT_ROOT']."/".$folder;
 $jsonFolderPath = $dirname.'json/';
 
-$jsonFile = $jsonFolderPath.$language.'_'.$territory.'.json';
+$jsonFile = $jsonFolderPath.$languagesite.'_'.$territory.'.json';
 $jsonCmsFile = $jsonFolderPath.'_cms_'.$territory.'.json';
 if (file_exists($jsonFile))         $jsoncontent = file_get_contents($jsonFile);
 else                                        $jsoncontent = file_get_contents($jsonFolderPath.'en_XX.json');
@@ -140,17 +147,23 @@ $jsonCountriesContent = file_get_contents($jsonFolderPath.'countries.json');
 $jsonCountries = json_decode($jsonCountriesContent);
 
 // test date from json
-$now = new DateTime("now");
+/*$now = new DateTime("now");
 $launchingDate = date_create($jsonCountries->launching);
 if($launchingDate > $now && !$previewMode){
     $redirection = 'http://www.nespresso.com/worldofcoffee/';
     header('HTTP/1.0 308 Permanent Redirect');
     header('Location: ' . $redirection);
     exit();
-}
+}*/
 
 // JSON CAPSULES ::
 $jsonCapsulesContent = file_get_contents($jsonFolderPath.'capsules.json');
 $jsonCapsulesList = json_decode($jsonCapsulesContent)->capsules;
+
+// italic
+function proccedText($string){
+    $pattern = '/\b(nespresso)\b/i';
+    return preg_replace($pattern, '<i>$0</i>', $string);
+}
 
 ?>

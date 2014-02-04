@@ -3,7 +3,7 @@
 	<div class="milk_content">
 		<h2><?php echo $jsonLangMilk->title->texte; ?></h2>
 		<div class="content_line_milk_sep"></div>
-		<span class="milk_description"><?php echo $jsonLangMilk->text_paragraph_1_milk_frothtext_paragraph_1_milk_froth->texte; ?></span>
+		<span class="milk_description"><?php echo proccedText($jsonLangMilk->text_paragraph_1_milk_frothtext_paragraph_1_milk_froth->texte); ?></span>
 		<div class="visual_fig">
 			<div class="visual_pot"></div>
 			<span><?php echo $jsonLangMilk->schema_milk_froth_text_->texte; ?></span>
