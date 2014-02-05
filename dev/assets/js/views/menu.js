@@ -4,15 +4,15 @@ define([
     "events",
     "publisher",
     "raphaeljs",
-    "buzz"
-], function($, TweenMax, Events, publisher, Raphael, buzz) {
+    "buzz", "globals"
+], function($, TweenMax, Events, publisher, Raphael, buzz, Globals) {
     /**
      * MainMenu
      * @constructor
      */
     var MainMenu = function() {
         var self = this;
-        var menuSpace = 35, isFullscreen = false;
+        var menuSpace = 35;
         var paper = Raphael("menu_picts", $('nav').width(), $('nav').height());
         var paperScroll = Raphael("scroll_arrow", $('#scroll_arrow').width(), $('#scroll_arrow').height());
         var circles = [], cScroll, arrowScroll;
@@ -39,6 +39,7 @@ define([
                     mainMenuRollOut($(this));
                 }
             });
+            TweenMax.to($('.scroll_to_explore'), 0.5, {autoAlpha:(id == Globals.PAGE_DESIGN)?0 : 1});
         };
 
         this.start = function() {
@@ -57,8 +58,8 @@ define([
 
                 if($(this).hasClass('fullscreen_sprit')){
                     event.preventDefault();
-                    //publisher.publish(Events.toogleFullscreen);
-                    toogleFullscreen();
+                    publisher.publish(Events.toggleFullscreen);
+                    //toggleFullScreen();
                 }else if($(this).hasClass('sound_sprit')){
                     event.preventDefault();
                     $(this).attr('class', 'sound_sprit_off');
@@ -195,25 +196,6 @@ define([
             arrowScroll = paperScroll.path("M"+arrowStartX+" "+arrowTopY+"L"+centerX+" "+arrowPointY+"L"+arrowEndX+" "+arrowTopY).attr({
                     "stroke": "#525150",
                     "stroke-width": "1.5"});
-        };
-
-        var toggleFullScreen = function() {
-            if (    (document.fullScreenElement && document.fullScreenElement !== null) ||
-                    (!document.mozFullScreen && !document.webkitIsFullScreen)) {
-                    if (document.documentElement.requestFullScreen) {
-                        document.documentElement.requestFullScreen();
-                    }else if (document.documentElement.mozRequestFullScreen) {
-                        document.documentElement.mozRequestFullScreen();
-                    } else if (document.documentElement.webkitRequestFullScreen) {
-                        document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-                    }
-                    isFullscreen = true;
-            }else{
-                    if (document.cancelFullScreen)          document.cancelFullScreen();
-                    else if (document.mozCancelFullScreen)      document.mozCancelFullScreen();
-                    else if (document.webkitCancelFullScreen)       document.webkitCancelFullScreen();
-                    isFullscreen = false;
-            }
         };
 
         init();

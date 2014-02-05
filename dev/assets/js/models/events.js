@@ -8,7 +8,7 @@ define([ ], function () {
           Events.loadStartComplete = "onLoadStartComplete";
           Events.soundOff = "soundOff";
           Events.soundOn = "soundOn";
-          Events.toogleFullscreen = "toogleFullscreen";
+          Events.toggleFullscreen = "toggleFullscreen";
           Events.openPopin = "openPopin";
           Events.closePopins = "closePopins";
           Events.trackPage = "trackPage";

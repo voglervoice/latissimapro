@@ -85,6 +85,7 @@ define([
 
 			publisher.subscribe(Events.navigate, navigateTo);
 			publisher.subscribe(Events.nextPage, openNextPage);
+			publisher.subscribe(Events.toggleFullscreen, toggleFullScreen);
 			// DIRECT ACCESS TO :
 			transitionComplete = true;
 			if(direct === "" && $('body').attr('data-lang-defined') == "0")	navigateTo("");
@@ -127,7 +128,7 @@ define([
 			if(next !== "o") navigateTo(next);
 		};
 		var onAddressChange = function(value){
-
+			if(value == "none") return;
 			goToId = value;
 			if(currentId == value || !transitionComplete) return;
 
@@ -241,6 +242,27 @@ define([
 						TweenMax.delayedCall(2, createOtherPage, [Globals.PAGE_HOME]);
 					}
 					break;
+			}
+		};
+		var toggleFullScreen = function() {
+			if (    (document.fullScreenElement && document.fullScreenElement !== null) ||
+				(!document.mozFullScreen && !document.webkitIsFullScreen)) {
+				if (document.documentElement.requestFullScreen) {
+					document.documentElement.requestFullScreen();
+				}else if (document.documentElement.mozRequestFullScreen) {
+					document.documentElement.mozRequestFullScreen();
+				} else if (document.documentElement.webkitRequestFullScreen) {
+					document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+				}
+				isFullscreen = true;
+			}else{
+				if (document.cancelFullScreen)          document.cancelFullScreen();
+				else if (document.mozCancelFullScreen)      document.mozCancelFullScreen();
+				else if (document.webkitCancelFullScreen)       document.webkitCancelFullScreen();
+				isFullscreen = false;
+				var pageTitle = "Lattissima Pro";
+				var url = baseLangUrl+currentId;
+				History.pushState({value:'none'}, pageTitle, url);
 			}
 		};
 	};

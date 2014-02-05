@@ -50,8 +50,8 @@ define([
             ctLeft = Math.min(ctLeft, w-ctW);
             ct.css('left', ctLeft+offsetCtPlus );
             ct.width(ctW);
-            var lfooter = ctLeft+offsetCtPlus + (w-((ctLeft+offsetCtPlus)-wFooterBtn))*0.5;
-            $('.design_footer').css('left', lfooter);
+            var lfooter = (w-(ctLeft+offsetCtPlus+wFooterBtn+180))*0.5;
+            $('.design_footer').css('margin-left', lfooter);
 
             if(w < 1350){
                 if(Globals.lang == "de"){
@@ -83,9 +83,7 @@ define([
                 $('.design_content_infos_col li').css('margin-bottom', '15px');
                 $('.design_content_infos_col').css('margin-bottom', '40px');
             }
-
-             
-            
+            ct.css('margin-top', -ct.height()*0.5);
         };
 
         this.initOpen = function(){
