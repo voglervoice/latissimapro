@@ -402,14 +402,14 @@
             "label":"a_wide_range_of_grands_crus",
             "texte":"Kávé választék"
           },
-          "delicious_coffee_&_milk_recipes": {
+          "delicious_coffee_and_milk_recipes": {
              "id": "12_5",
-            "label":"delicious_coffee_&_milk_recipes",
+            "label":"delicious_coffee_and_milk_recipes",
             "texte":"Tejes rendszer"
           },
-          "powerful__inside_&amp;_out": {
+          "powerful__inside_andamp;_out": {
              "id": "12_6",
-            "label":"powerful__inside_&amp;_out",
+            "label":"powerful__inside_andamp;_out",
             "texte":"Funkciók"
           }
         }
@@ -449,8 +449,8 @@
           }
         }
       },
-      "powerful_inside_&_out":{
-        "section":"powerful_inside_&_out",
+      "powerful_inside_and_out":{
+        "section":"powerful_inside_and_out",
         "blockText":{
           "title": {
              "id": "10_15",
@@ -465,12 +465,12 @@
           "bloc_1_•_characteristics": {
              "id": "10_13",
             "label":"bloc_1_•_characteristics",
-            "texte":""
+            "texte":"Jellemzők"
           },
           "bloc_1__info_1": {
              "id": "10_17",
             "label":"bloc_1__info_1",
-            "texte":""
+            "texte":"Csiszolt aluminium borítás"
           },
           "bloc_1__info_2": {
              "id": "10_18",
@@ -480,7 +480,7 @@
           "bloc_1__info_3": {
              "id": "10_19",
             "label":"bloc_1__info_3",
-            "texte":""
+            "texte":"üzemkész állapot 25 másodpercen belül"
           },
           "bloc_1__info_4": {
              "id": "10_24",
@@ -500,7 +500,7 @@
           "bloc_2__info_2": {
              "id": "10_22",
             "label":"bloc_2__info_2",
-            "texte":""
+            "texte":"Ínycsiklandó receptek egy érintéssel"
           },
           "bloc_3_•_optimal_milk_froth_quality": {
              "id": "10_11",
@@ -515,7 +515,7 @@
           "bloc_3__info_2": {
              "id": "10_1",
             "label":"bloc_3__info_2",
-            "texte":""
+            "texte":"Hűtőszekrényben tárolható tejtartály (0,5 L)"
           },
           "bloc_4_•_auto_clean_system": {
              "id": "10_3",
@@ -525,17 +525,17 @@
           "bloc_4__info_1": {
              "id": "10_4",
             "label":"bloc_4__info_1",
-            "texte":""
+            "texte":"A kávégép higiéniája  külső laboratórium által tesztelt"
           },
           "bloc_4__info_2": {
              "id": "10_5",
             "label":"bloc_4__info_2",
-            "texte":""
+            "texte":"A kávégép tejesrendszereének elemei mosogatógépben tisztíthatóak"
           },
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":""
+            "texte":"Használati utasítás letöltése"
           },
           "user_guide_url": {
              "id": "10_23",

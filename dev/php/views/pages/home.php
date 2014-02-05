@@ -6,7 +6,6 @@
 				<span class="home_promotion_price_value"><?php echo $jsonLangHomePromo->price->texte ?></span>
 				<span class="home_promotion_price_currency"><?php echo $jsonLangHomePromo->currency->texte; ?></span>
 			</div>
-			<span class="home_promotion_title">Cash Back</span>
 			<span class="home_promotion_date"><?php echo $jsonLangHomePromo->range_date->texte; ?></span>
 			<span class="home_promotion_cta"><?php echo $jsonLangHomePromo->cta->texte; ?></span>
 		</a>
@@ -18,8 +17,8 @@
 			<span class="home_anchors_roll"><?php echo $jsonLang->one_touch_is_all->blockText->title->texte; ?></span>
 		</a>
 		<a href="<?php echo $baseurlang; ?>design" data-centerx="-125" data-centery="-75" data-link="design">
-			<span class="home_anchors_off"><?php echo $jsonLang->{'powerful_inside_&_out'}->blockText->title->texte; ?></span>
-			<span class="home_anchors_roll"><?php echo $jsonLang->{'powerful_inside_&_out'}->blockText->title->texte; ?></span>
+			<span class="home_anchors_off"><?php echo $jsonLang->{'powerful_inside_and_out'}->blockText->title->texte; ?></span>
+			<span class="home_anchors_roll"><?php echo $jsonLang->{'powerful_inside_and_out'}->blockText->title->texte; ?></span>
 		</a>
 		<a href="<?php echo $baseurlang; ?>milksystem" data-centerx="23" data-centery="-175"  data-link="milksystem">
 			<span class="home_anchors_off"><?php echo $jsonLang->milk->blockText->title->texte; ?></span>

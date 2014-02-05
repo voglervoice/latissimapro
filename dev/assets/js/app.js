@@ -19,6 +19,7 @@ define([
 		var self = this;
 		var isFullscreen = false;
 		
+		Globals.lang = $('body').attr('data-lang');
 		Globals.canvas_enabled = (Modernizr.canvas && Modernizr.webgl)? true : false;
 		//Globals.canvas_enabled = false;
 

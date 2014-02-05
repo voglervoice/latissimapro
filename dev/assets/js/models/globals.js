@@ -4,6 +4,7 @@ define([ ], function () {
           }
 
           // vars
+          Globals.lang = "en";
           Globals.is_animated = true;
           Globals.canvas_enabled = true;
 

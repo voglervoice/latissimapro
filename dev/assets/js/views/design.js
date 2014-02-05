@@ -4,8 +4,8 @@ define([
     "events",
     "publisher",
     "views/backgroundsection",
-    "views/imageelem"
-], function($, TweenMax, Events, publisher, BackgroundSection, ImageElem) {
+    "views/imageelem","globals"
+], function($, TweenMax, Events, publisher, BackgroundSection, ImageElem, Globals) {
 
     var Design = function() {
         var self = this;
@@ -22,15 +22,70 @@ define([
             this.bg.resize(w, h);
             var ratioH = h/864;
             var ratioW = w/1440;
+            var offsetCt =77, offsetCtPlus = 0;
+            if(w < 980){
+                ratioH = ratioW-0.1;
+                designElement.css('left', "-100px");
+               offsetCt = -20;
+               offsetCtPlus = -80;
+            }else if(w < 1007){
+                ratioH = ratioW;
+                designElement.css('left', "-45px");
+                offsetCt = -20;
+            }else if(w < 1074){
+                ratioH = ratioH-0.15;
+                designElement.css('left', "-40px");
+                offsetCt = -10;
+            }else if(w < 1195){
+                ratioH = ratioH-0.1;
+                designElement.css('left', "-10px");
+                offsetCt = 50;
+            }else{
+                designElement.css('left', "0");
+            }
+
             designMachine.setSize(432*ratioH,671*ratioH);
             var ctW = Math.min(830, w - 432*ratioH-180);
-            var ctLeft = Math.max(432*ratioH+77, (w - (432*ratioH+196))*0.5);
-            ct.css('left', ctLeft );
+            var ctLeft = Math.max(432*ratioH+offsetCt, (w - (432*ratioH+196))*0.5);
+            ctLeft = Math.min(ctLeft, w-ctW);
+            ct.css('left', ctLeft+offsetCtPlus );
             ct.width(ctW);
-            $('.design_content_title').width(Math.min(w - 432*ratioH-180, Math.max(500, $("h2", this.elem).width()+10)));
-            var lfooter = (ctW - wFooterBtn)*0.5;
-            $('.design_footer').css('margin-left', lfooter);
-            $('.design_footer').width(ctW - lfooter - 5);
+            var lfooter = ctLeft+offsetCtPlus + (w-((ctLeft+offsetCtPlus)-wFooterBtn))*0.5;
+            $('.design_footer').css('left', lfooter);
+
+            if(w < 1350){
+                if(Globals.lang == "de"){
+                    $('.design_content_infos_col h3').css('font-size', '12px');
+                    $('.design_content_infos_col li').css('font-size', '11px');
+                }else{
+                    $('.design_content_infos_col h3').css('font-size', '13px');
+                }
+                $('.design_content_infos_col').width(150);
+                $('.design_content_infos').width(630);
+            }else{
+                $('.design_content_infos_col h3').css('font-size', '16px');
+                $('.design_content_infos_col li').css('font-size', '13px');
+                $('.design_content_infos_col').width(190);
+                $('.design_content_infos').width(810);
+            }
+
+            var titleW = Math.min(w - 432*ratioH-180, Math.max(500, $("h2", this.elem).width()+10));
+            $('.design_content_title').width(Math.max($('.design_content_infos').width()-80, titleW));
+
+            var hh = $('.design_content_title').height()+$('.design_content_subtitle').height() + $('.design_content_infos').height();
+
+            if(h-hh < 560){
+                $('.design_content_infos_col').css('margin-top', '30px');
+                $('.design_content_infos_col li').css('margin-bottom', '10px');
+                $('.design_content_infos_col').css('margin-bottom', '25px');
+            }else{
+                $('.design_content_infos_col').css('margin-top', '60px');
+                $('.design_content_infos_col li').css('margin-bottom', '15px');
+                $('.design_content_infos_col').css('margin-bottom', '40px');
+            }
+
+             
+            
         };
 
         this.initOpen = function(){
@@ -60,8 +115,9 @@ define([
             TweenMax.to($('.design_content_infos_col div', ct), 0, {alpha:0.28});
             TweenMax.to($('.design_content_infos ul li', ct), 0, {alpha:0.6});
 
-            wFooterBtn = 50;
+            wFooterBtn = 90;
             $('.design_footer a').each(function(index){ wFooterBtn += $(this).width()+50; });
+            $(".design_footer").width(wFooterBtn);
 
             $('.design_footer a').on('mouseenter', function(event){
                 TweenMax.to($(this), 0.3, {alpha:1});

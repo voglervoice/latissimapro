@@ -31,7 +31,7 @@ $pinterest_image = "";
                 <a target="_blank" class="share_facebook" href="https://www.facebook.com/sharer.php?u=<?php echo $baseShareUrl; ?>" ></a>
             </div></li>
         <?php } ?>
-        <li class="sound"><a class="sound_sprit" href="#"></a></li>
         <li class="fullscreen"><a class="fullscreen_sprit" href="#"></a></li>
+        <li class="sound"><a class="sound_sprit" href="#"></a></li>
     </ul>
 </header>

@@ -81,7 +81,7 @@ if(file_exists('admin/loc/includes/db_connect.php')){
     if($data->execute() && ($row = $data->fetch(PDO::FETCH_OBJ)) !== false && (strtotime($row->launching) <= time() || $previewMode || $staging)){
     //if($data->execute() && ($row = $data->fetch(PDO::FETCH_OBJ)) !== false){
         list($languagesite, $territory) = explode('_', $row->code, 2);
-    }else{
+    }elseif($langDefined == 0 || !$staging){
         $territory = NULL;
         $languagesite = NULL;
     }
@@ -89,6 +89,8 @@ if(file_exists('admin/loc/includes/db_connect.php')){
     $territory = 'XX';
     $languagesite = 'en';
 }
+
+
 
 // REDIRECTIONS -- ??
 require_once("php/class/Mobile_Detect.php");
@@ -138,7 +140,7 @@ $jsonLangMenu = $jsonLang->navigation_menu->blockText;
 $jsonLangRangeGlobals = $jsonLang->range__global->blockText;
 $jsonLangRangeCapsules = $jsonLang->range__grand_cru->blockText;
 $jsonLangMilk = $jsonLang->milk->blockText;
-$jsonLangDesign = $jsonLang->{'powerful_inside_&_out'}->blockText;
+$jsonLangDesign = $jsonLang->{'powerful_inside_and_out'}->blockText;
 $jsonLangTouch = $jsonLang->one_touch_is_all->blockText;
 $jsonLangHomePromo = $jsonLang->spring_activation->blockText;
 

@@ -22,14 +22,43 @@ define([
         this.resize = function(w, h){
             this.bg.resize(w, h);
             var ratio = h/863;
+            var offsetCt = 115;
+            if(w < 1165){
+                ratio = w /1440;
+                rangeElement.css('left', -180*ratio);
+                offsetCt = -100*ratio-45;
+            }else if(w < 1190){
+                offsetCt = -10;
+                rangeElement.css('left', -45);
+            }else if(w < 1280){
+                offsetCt = 25;
+                rangeElement.css('left', -30);
+            }else
+                rangeElement.css('left', 0);
+
             rangeMachine.setSize(433*ratio, 523*ratio);
-            ct.css('left', 433*ratio+115);
-            ct.width(w - (433*ratio+115)-200);
+            
+            
+            ct.css('left', 433*ratio+offsetCt);
+            var contentW = Math.max(744, w - (433*ratio+115)-200);
+         
+            ct.width(contentW);
+
             $('.content_line_sep', ct).width($('.range_description').width());
             $('.range_cat_title').each(function(event){
                 $('div', this).width($(this).width()-$('span', this).width()-50);
             });
+            var diff = h - $('.range_content').height();
+            if(diff < 90) $('.range_coffees').css('margin-top', 5);
+            else if(diff > 200) $('.range_coffees').css('margin-top', 50);
+            else $('.range_coffees').css('margin-top', 15);
             
+            if(h < 695)
+                $('.content_line_sep', ct).css({'margin-top': 9, 'margin-bottom': 11});
+            else
+                $('.content_line_sep', ct).css({'margin-top': 18, 'margin-bottom': 22});
+
+            ct.css('top', Math.max(75, (h -86-ct.height())*0.5));
         };
 
         this.initOpen = function(){

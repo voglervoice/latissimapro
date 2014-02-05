@@ -31,7 +31,7 @@ define([
             {x:627,y:513},
             {x:644,y:432}
          ];
-         var rollOffset = {x:-50, y:-250};
+         var rollOffset = {x:-50, y:-250}, offsetLeft = 0;
          var btns = [], puces = [];
          var screenPos = {x:76, y:178};
 
@@ -49,18 +49,32 @@ define([
             $('.touch_vignettage').css({'left':dresize.left+'px', 'top':dresize.top+'px', 'width':dresize.width+'px', 'height':dresize.height+'px'});
             /*$('.touch_vignettage').width(w);
             $('.touch_vignettage').height(h);*/
-            resizeRatio = h/864;
             var ratioW = w/1440;
-            var imgWidth = 827*ratioW;
-            var ctLeft = imgWidth+60;
-            ct.css('left', ctLeft);
-            ct.width(w-ctLeft- 230);
-            touchMachine.setSize(842*resizeRatio,h);
+            resizeRatio = Math.min(h/864, ratioW);
+            var imgWidth = 842*resizeRatio;
+            if(imgWidth>w*0.5) {
+                imgWidth = w*0.5;
+                resizeRatio = imgWidth/842;
+            }
+            var ctWidth = Math.max(w-imgWidth-70- 190, 275);
+            offsetLeft = Math.max(-77, w - imgWidth - ctWidth -70 -190);
+
+            var ctLeft = offsetLeft+imgWidth+70;
+            var topVal = h-864*resizeRatio;
+            ct.css('left', ctLeft-(Math.min(450,ctWidth)-ctWidth)*0.7);
+            ct.width(Math.min(450,ctWidth));
+            $('#touchscreen_buttons').css({'top': topVal, 'left':offsetLeft});
+            $('#touchscreen_puces').css({'top': topVal, 'left':offsetLeft});
+            $('.touchscreen_rolls').css({'top': topVal, 'left':offsetLeft});
+            touchElement.css({'top': topVal, 'left':offsetLeft});
+            touchMachine.setSize(842*resizeRatio,864*resizeRatio);
 
             $('.touchscreen_roll').each(function(index) {
-                $(this).attr('data-left', positionInPaper.x + rollPosition[index].x*resizeRatio + rollOffset.x);
-                $(this).attr('data-top', positionInPaper.y + rollPosition[index].y*resizeRatio + rollOffset.y);
-                $(this).css({'left':positionInPaper.x + rollPosition[index].x*resizeRatio + rollOffset.x, 'top': positionInPaper.y + rollPosition[index].y*resizeRatio + rollOffset.y });
+                var xRoll = positionInPaper.x + rollPosition[index].x*resizeRatio + rollOffset.x;
+                var yRoll = positionInPaper.y + rollPosition[index].y*resizeRatio + rollOffset.y;
+                $(this).attr('data-left', xRoll);
+                $(this).attr('data-top', yRoll);
+                $(this).css({'left':xRoll, 'top': yRoll });
             });
             var i;
             for (i = 0; i < btns.length; i++) updateButton(btns[i]);
@@ -70,7 +84,7 @@ define([
                 puces[i].data('b2').attr({'cx':rollPosition[i].x*resizeRatio, 'cy':rollPosition[i].y*resizeRatio});
             }
 
-            $('.screen_rolls').css({'top':screenPos.y*resizeRatio, 'left':screenPos.x*resizeRatio});
+            $('.screen_rolls').css({'top':screenPos.y*resizeRatio+topVal, 'left':screenPos.x*resizeRatio+offsetLeft});
             $('.screen_rolls img').width(639*resizeRatio);
             $('.screen_rolls img').height(517*resizeRatio);
         };
@@ -94,9 +108,9 @@ define([
             TweenMax.killTweensOf(ct);
             TweenMax.to(ct, 1.2, {alpha:1, delay:1.3});
 
-            touchElement.css('left', "-300px");
+            touchElement.css('left', offsetLeft-300);
             touchMachine.show(1.2,1.2);
-            TweenMax.to(touchElement, 0.8, {left:0, delay:0.8, ease:Circ.easeOut});
+            TweenMax.to(touchElement, 0.8, {left:offsetLeft, delay:0.8, ease:Circ.easeOut});
         };
         
         this.open = function(){

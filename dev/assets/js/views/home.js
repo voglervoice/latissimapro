@@ -24,10 +24,13 @@ define([
         this.resize = function(w, h){
             this.bg.resize(w,h);
             homeElement.css({'left':'50%', 'top':'50%'});
+            /*var ratio = Math.min(Math.min(h/864, w/1440), 1);
+            homeMachine.setSize(574*ratio,567*ratio);
+            homeElement.css({'left':(w-574*ratio)*0.5, 'top':(h-567*ratio)*0.5});*/
         };
 
         this.initOpen = function(){
-            promoW = 20+$('.home_promotion_price').width()+Math.max($('.home_promotion_title').width(), $('.home_promotion_cta').width()) + 60;
+            promoW = 20+$('.home_promotion_price').width()+$('.home_promotion_cta').width() + 60;
             $('.home_promotion').width(promoW);
             $('.home_promotion_border').width(promoW-10);
             $('.home_promotion').css('right', "-"+promoW+"px");
@@ -97,7 +100,7 @@ define([
         // ******************* private *******************
          var init = function(index){
             $('.home_anchors a').each(function(index) {
-                var btnRectH = 36;
+                var btnRectH = 33;
                 var btnTextWidth = $('span', this).width()+parseInt($('span', this).css('padding-left'), 10)+parseInt($('span', this).css('padding-right'), 10);
                 $(this).width(btnTextWidth);
                 $('span', this).css({'width': btnTextWidth, 'display':'block', 'height':$(this).height()});

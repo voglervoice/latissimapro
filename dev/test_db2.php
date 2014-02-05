@@ -14,7 +14,7 @@ if(file_exists('../lib/geoloc.class.php')){
 
 echo '<br /> country from geoloc class : '.$territory.'<br />';
 
-$territory = "MA";
+$territory = "FR";
 $languagesite = "fr";
 
 echo '<br /> lang : '.$languagesite;

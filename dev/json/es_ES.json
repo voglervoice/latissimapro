@@ -402,14 +402,14 @@
             "label":"a_wide_range_of_grands_crus",
             "texte":"Gama de cafés"
           },
-          "delicious_coffee_&_milk_recipes": {
+          "delicious_coffee_and_milk_recipes": {
              "id": "12_5",
-            "label":"delicious_coffee_&_milk_recipes",
+            "label":"delicious_coffee_and_milk_recipes",
             "texte":"Sistema de leche"
           },
-          "powerful__inside_&amp;_out": {
+          "powerful__inside_andamp;_out": {
              "id": "12_6",
-            "label":"powerful__inside_&amp;_out",
+            "label":"powerful__inside_andamp;_out",
             "texte":"Funciones"
           }
         }
@@ -449,8 +449,8 @@
           }
         }
       },
-      "powerful_inside_&_out":{
-        "section":"powerful_inside_&_out",
+      "powerful_inside_and_out":{
+        "section":"powerful_inside_and_out",
         "blockText":{
           "title": {
              "id": "10_15",

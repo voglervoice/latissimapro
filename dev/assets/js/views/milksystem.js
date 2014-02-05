@@ -21,14 +21,24 @@ define([
 
         this.resize = function(w, h){
             this.bg.resize(w, h);
-            var ratio = h/863;
+            var ratio = Math.min(h/1000, w/1440);
+            //var ctWidth = Math.max(450, w*0.5 - 270);
+            var ctWidth = 450;
+            var machineLeft = w*0.5-666;
             milkMachine.setSize(618*ratio,687*ratio);
-            milkElement.css({'margin-left': -(618+48)*ratio, 'left':'50%'});
-            ct.width(w*0.5 - 270);
+            var ctLeft = machineLeft+618*ratio + 134;
+            milkElement.css('left', machineLeft);
+            ct.css('left', Math.max(ctLeft, w-240-ctWidth));
+            ct.width(ctWidth);
 
-            $('.milk_zoom').attr('data-left', w*0.5 - 190*ratio);
-            $('.milk_zoom').attr('data-top', h - 687*ratio-70);
-            $('.milk_zoom').css({'left':w*0.5 - 190*ratio, 'top':h - 687*ratio-70});
+            var zoomLeft = machineLeft+618*ratio-110;
+            var zoomTop = h - 687*ratio-100;
+
+            $('.milk_zoom').attr('data-left', zoomLeft);
+            $('.milk_zoom').attr('data-top', zoomTop);
+            $('.milk_zoom').css({'left':zoomLeft, 'top':zoomTop});
+
+            $('.visual_fig').css('margin-left', (ctWidth-275)*0.5);
         };
 
         this.initOpen = function(){

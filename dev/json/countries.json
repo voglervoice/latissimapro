@@ -27,9 +27,20 @@
         },
         "MA":{
           "publish_date":"2100-01-01",
-          "title":null,
-          "rsid":null,
-          "languages":null
+          "title":"MOROCCO",
+          "rsid":"ma",
+          "languages":[
+            {
+              "code":"fr_MA",
+              "lang":"fr",
+              "name":"fran\u00e7ais"
+            },
+            {
+              "code":"en_MA",
+              "lang":"en",
+              "name":"english"
+            }
+          ]
         },
         "MU":{
           "publish_date":"2013-03-03",
@@ -561,6 +572,23 @@
               "code":"en_IT",
               "lang":"en",
               "name":"english"
+            }
+          ]
+        },
+        "LU":{
+          "publish_date":"2013-03-03",
+          "title":"LUXEMBOURG",
+          "rsid":"lu",
+          "languages":[
+            {
+              "code":"en_LU",
+              "lang":"en",
+              "name":"english"
+            },
+            {
+              "code":"fr_LU",
+              "lang":"fr",
+              "name":"fran\u00e7ais"
             }
           ]
         },

@@ -19,7 +19,7 @@
 @mobile: ~"only screen and (max-width: 320px)";
 
 // Base
-html, body { background: #000000; color: #fff; .text_regular; min-width: 900px; width: 100%; height: 100%; }
+html, body { background: #000000; color: #fff; .text_regular; width: 100%; height: 100%; }
 .container{position: absolute; width: 100%; height: 100%; overflow: hidden;}
 a { text-decoration: none; color: #fff; }
 
@@ -48,7 +48,7 @@ a { text-decoration: none; color: #fff; }
     }
     .loader_pct{
         position:absolute;
-        top:50%; margin-top: -27px;
+        top:50%; margin-top: -50px;
         left:50%; width:170px; margin-left: -85px; text-align: center;
         font-size: 50px;
         display: block;
@@ -203,7 +203,6 @@ nav{
             .home_promotion_price_value{font-size:60px; }
             .home_promotion_price_currency{font-size:24px; }
         }
-        .home_promotion_title{ display: block; position: absolute; top:20px; font-size:24px; left:120px; .bold; text-transform: uppercase;}
         .home_promotion_date{ display: block; position: absolute; top:50px; left:120px; font-size:13px; .light;}
         .home_promotion_cta{ display: block; position: absolute; top:66px; left:120px; font-size:13px; .regular;}
     }
@@ -220,8 +219,8 @@ nav{
                 padding-left: 42px;
                 padding-right: 17px;
                 .light;
-                font-size: 16px;
-                padding-top: 10px;
+                font-size: 14px;
+                padding-top: 11px;
             }
     }
 }
@@ -240,7 +239,7 @@ nav{
 }
 
 .content_line_sep{margin-top: 18px; margin-bottom: 22px; height:1px; width:100%; background-color: #ffffff;}
-.content_span_text{ .light; display: block; font-size: 15px; width:100%; line-height: 29px; letter-spacing: 1px; }
+.content_span_text{ .light; display: block; font-size: 13px; width:100%; line-height: 22px; letter-spacing: 1px; }
 
 // ***** COFFEE RANGE ***** //
 
@@ -270,10 +269,10 @@ nav{
     }
 };
 .range_content{
-    position: absolute; z-index: 15; top:50%; margin-top: -315px;
-    .range_description{font-size: 16px; .light; letter-spacing: 1px;}
+    position: absolute; z-index: 15;
+    .range_description{font-size: 13px; .light; letter-spacing: 1px; line-height: 22px; }
     .range_coffees{
-        width:100%;
+        width:744px;
         margin-top: 55px;
         .range_cat{
             float: left;
@@ -348,9 +347,9 @@ nav{
         }
     }
 }
-.milk_machine{position: absolute; z-index: 10; left:50%; bottom:0;margin-left: -666px;}
+.milk_machine{position: absolute; z-index: 10; left:50%; bottom:0;}
 .milk_content{
-    position: absolute; z-index: 15; top:50%; margin-top: -235px; margin-left: 130px; left:50%;
+    position: absolute; z-index: 15; top:50%; margin-top: -235px;
     .content_line_milk_sep{margin-top: 17px; margin-bottom: 12px; height:1px; width:100%; background-color: #ffffff;}
     .milk_description{.content_span_text;float:left;}
     .visual_fig{
@@ -406,7 +405,7 @@ nav{
     img{ position: absolute;}
 }
 .touch_content{
-    position: absolute; z-index: 20; left:88px; top:50%; margin-top: -171px; width:100%;
+    position: absolute; z-index: 16; left:88px; top:50%; margin-top: -171px; width:100%;
     span{ .content_span_text; }
 }
 .touchscreen_buttons_pos{
@@ -484,7 +483,6 @@ nav{
     position: absolute; z-index: 15; left:506px; top:50%; margin-top: -261px; width:100%;
     .design_description{ .content_span_text;}
     .design_footer{
-        margin-top: 50px;
         width:100%;
         clear: both;
         a{
@@ -506,25 +504,27 @@ nav{
             float:left;
             width:190px;
             margin-top: 60px;
+            margin-bottom: 40px;
             h3{
                 display: inline-block;
-                height:70px;
-                padding-right: 70px;
+                height:50px;
+                padding-right: 50px;
                 .regular;
-                font-size: 18px;
+                font-size: 16px;
             }
             div{
                 height:1px;
                 background-color: #ffffff;
-                margin-bottom: 28px;
+                margin-bottom: 22px;
                 width:132px;
             }
             ul{
+                width:100%;
                 li{
                     padding-right: 20px;
-                    font-size: 14px;
+                    font-size: 13px;
                     .light;
-                    margin-bottom:30px;
+                    margin-bottom:15px;
                     letter-spacing: 1px;
                     list-style-type : disc;
                     margin-left: 13px;
