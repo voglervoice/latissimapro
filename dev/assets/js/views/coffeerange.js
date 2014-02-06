@@ -83,11 +83,11 @@ define([
         };
 
         // ******************* private *******************
-        var showIntensity = function(set, force){
+       /* var showIntensity = function(set, force){
             for (var i = 0; i < force; i++) TweenMax.delayedCall(i*0.1, animateIntensity, [set[i]]);
-        };
+        };*/
 
-        var animateIntensity = function(elem){ elem.animate({'fill-opacity': 1, 'stroke-opacity': 0}, 250); };
+        //var animateIntensity = function(elem){ elem.animate({'fill-opacity': 1, 'stroke-opacity': 0}, 250); };
 
          var init = function(index){
             TweenMax.to($('.content_line_sep', ct), 0, {alpha:0.15});
@@ -103,10 +103,11 @@ define([
                 var leftRoll = $(this).offset().left - 57;
                 var topRoll = $(this).offset().top - roll.height();
                 roll.css({'left':leftRoll, 'top':topRoll});
-                TweenMax.killDelayedCallsTo(animateIntensity);
-                var set = sets[$(this).attr('data-id')];
-                set.attr({ "fill-opacity":"0", "stroke-opacity": "1"});
-                TweenMax.to(roll, 0.6, {autoAlpha:1, ease:Linear.easeNone, onComplete:showIntensity, onCompleteParams:[set, $('.range_roll_intensity_value_num' ,roll).html()]});
+                //TweenMax.killDelayedCallsTo(animateIntensity);
+                /*var set = sets[$(this).attr('data-id')];
+                set.attr({ "fill-opacity":"0", "stroke-opacity": "1"});*/
+                //TweenMax.to(roll, 0.6, {autoAlpha:1, ease:Linear.easeNone, onComplete:showIntensity, onCompleteParams:[set, $('.range_roll_intensity_value_num' ,roll).html()]});
+                TweenMax.to(roll, 0.6, {autoAlpha:1, ease:Linear.easeNone});
             }).on('mouseleave', function(event){
                 TweenMax.to($('.range_cat_title'), 0.5, {alpha:1});
                 TweenMax.to($('.range_cat_caps a'), 0.5, {alpha:1});
@@ -114,6 +115,7 @@ define([
             });
 
             $('.range_roll').each(function(index) {
+                var force = parseInt($('.range_roll_intensity_value_num' ,this).html(), 10);
                 var positionLeft = $('.range_roll_intensity', this).position().left + $('.range_roll_intensity', this).width() + 5;
                 var container = $('.range_roll_intensity_value', this);
                 container.css({'left':positionLeft});
@@ -124,8 +126,8 @@ define([
                     var c = paper.circle(posiX, posiY, radius).attr({
                         fill: "rgb(255,255,255)",
                         "stroke": "#fff",
-                        "fill-opacity":"0",
-                        "stroke-width": "1"});
+                        "fill-opacity":(i<force)? '1':"0",
+                        "stroke-width": (i<force)? '0':"1"});
                     set.push(c);
                     posiX += radius*2 + 5;
                 }

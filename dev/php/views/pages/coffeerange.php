@@ -6,7 +6,7 @@ function getCapsules($datas, $start, $nbCaps){
 		$jsonId = 'grand_cru_'.($i+1);
 		$markup .= "<a href='#' data-id='".$jsonId."'>";
 		$markup .= "<div class='".$jsonId."' ></div>";
-		$markup .= "<span>".$datas->$jsonId->texte."</span>";
+		$markup .= "<span>".proccedText($datas->$jsonId->texte)."</span>";
 		$markup .= "</a>";
 	}
 	return $markup;
@@ -29,12 +29,12 @@ function getCapsules($datas, $start, $nbCaps){
 				$milkJsonId = $aromJsonId.'_with_milk';
 				//echo ' -> '.$aromJsonId.' ///// '.$milkJsonId;
 				echo '<div data-id="'.$key.'" class="range_roll">';
-					echo '<span class="range_roll_title">'.$value->texte.'</span>';
+					echo '<span class="range_roll_title">'.proccedText($value->texte).'</span>';
 					echo '<span class="range_roll_intensity"><strong>'.$jsonLangRangeGlobals->intensity->texte.'</strong></span>';
 					echo '<span class="range_roll_intensity_value_num">'.$force.'</span>';
 					echo '<div class="range_roll_intensity_value"></div>';
-					echo '<span class="range_roll_arom"><strong>'.$jsonLangRangeGlobals->aromatic_notes->texte.'</strong> '.$jsonLangRangeCapsules->$aromJsonId->texte.'</span>';
-					echo '<span class="range_roll_milk"><strong>'.$jsonLangRangeGlobals->with_milk___->texte.'</strong> '.$jsonLangRangeCapsules->$milkJsonId->texte.'</span>';
+					echo '<span class="range_roll_arom"><strong>'.proccedText($jsonLangRangeGlobals->aromatic_notes->texte).'</strong> '.proccedText($jsonLangRangeCapsules->$aromJsonId->texte).'</span>';
+					echo '<span class="range_roll_milk"><strong>'.proccedText($jsonLangRangeGlobals->with_milk___->texte).'</strong> '.proccedText($jsonLangRangeCapsules->$milkJsonId->texte).'</span>';
 				echo '</div>';
 			}
 		}

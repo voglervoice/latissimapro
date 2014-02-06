@@ -164,8 +164,25 @@ $jsonCapsulesList = json_decode($jsonCapsulesContent)->capsules;
 
 // italic
 function proccedText($string){
-    $pattern = '/\b(nespresso)\b/i';
-    return preg_replace($pattern, '<i>$0</i>', $string);
+    $pattern1 = '/\b(nespresso)\b/i';
+    $string = preg_replace($pattern1, '<i>$0</i>', $string);
+
+    $pattern2 = '/\b(lattissima pro)\b/i';
+    $string = preg_replace($pattern2, '<i>$0</i>', $string);
+
+    $pattern3 = '/\b(de colombia)\b/i';
+    $string = preg_replace($pattern3, '<i>$0</i>', $string);
+
+    $pattern4 = '/\b(from india)\b/i';
+    $string = preg_replace($pattern4, '<i>$0</i>', $string);
+
+    $pattern5 = '/\b(do brasil)\b/i';
+    $string = preg_replace($pattern5, '<i>$0</i>', $string);
+
+    $pattern6 = '/\b(ka ethiopia)\b/i';
+    $string = preg_replace($pattern6, '<i>$0</i>', $string);
+
+    return $string;
 }
 
 ?>
