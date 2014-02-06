@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":""
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":""
+          },
           "share": {
              "id": "1_11",
             "label":"share",

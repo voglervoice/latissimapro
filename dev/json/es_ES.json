@@ -10,7 +10,7 @@
           "nespresso_link": {
              "id": "1_19",
             "label":"nespresso_link",
-            "texte":"http://www.nespresso.com/es/es"
+            "texte":"www.nespresso.com/es/es/home"
           },
           "contact": {
              "id": "1_6",
@@ -20,7 +20,7 @@
           "contact_link": {
              "id": "1_7",
             "label":"contact_link",
-            "texte":"http://www.nespresso.com/es/es/contact_nespresso/"
+            "texte":"www.nespresso.com/es/es/contactus"
           },
           "legals": {
              "id": "1_8",
@@ -30,12 +30,17 @@
           "legals_link": {
              "id": "1_9",
             "label":"legals_link",
-            "texte":"http://www.nespresso.com/es/es/terms_and_conditions"
+            "texte":"www.nespresso.com/es/es/pages/legal"
           },
           "store_locator": {
              "id": "1_10",
             "label":"store_locator",
             "texte":"Puntos de venta"
+          },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/es/es/store_locator/"
           },
           "share": {
              "id": "1_11",
@@ -90,7 +95,7 @@
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":"https://nesclub.nespresso.com/id/login/"
+            "texte":"www.nespresso.com/es/es/login"
           },
           "country_and_language": {
              "id": "1_2",
@@ -920,12 +925,12 @@
           "receive": {
              "id": "11_5",
             "label":"receive",
-            "texte":"Reciba"
+            "texte":"Reciba hasta"
           },
           "currency": {
              "id": "11_4",
             "label":"currency",
-            "texte":""
+            "texte":"60€"
           },
           "price": {
              "id": "11_3",
@@ -935,17 +940,17 @@
           "cta": {
              "id": "11_2",
             "label":"cta",
-            "texte":""
+            "texte":"Benefíciese de esta oferta"
           },
           "range_date": {
              "id": "11_1",
             "label":"range_date",
-            "texte":""
+            "texte":"Hasta el 01/06/2014"
           },
           "url": {
              "id": "11_6",
             "label":"url",
-            "texte":""
+            "texte":"www.nespresso.com/es/es/login"
           }
         }
       }

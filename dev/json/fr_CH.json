@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Points de vente"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/ch/fr/pages/store-locator"
+          },
           "share": {
              "id": "1_11",
             "label":"share",
@@ -165,7 +170,7 @@
           "scroll_to_explore": {
              "id": "2_13",
             "label":"scroll_to_explore",
-            "texte":"Faire défiler pour parcourir"
+            "texte":"Faire défiler pour explorer"
           },
           "top": {
              "id": "2_12",
@@ -395,17 +400,17 @@
           "one_touch_is_all": {
              "id": "12_2",
             "label":"one_touch_is_all",
-            "texte":"Écran tactile intuitif"
+            "texte":"Écran tactile<br>intuitif"
           },
           "a_wide_range_of_grands_crus": {
              "id": "12_4",
             "label":"a_wide_range_of_grands_crus",
-            "texte":"Gamme de cafés"
+            "texte":"Les Grands Crus"
           },
           "delicious_coffee_and_milk_recipes": {
              "id": "12_5",
             "label":"delicious_coffee_and_milk_recipes",
-            "texte":"Système pour le lait"
+            "texte":"Système<br>pour le lait"
           },
           "powerful__inside_andamp;_out": {
              "id": "12_6",
@@ -505,7 +510,7 @@
           "bloc_3_•_optimal_milk_froth_quality": {
              "id": "10_11",
             "label":"bloc_3_•_optimal_milk_froth_quality",
-            "texte":"Mousse de lait de qualité optimale"
+            "texte":"Qualité de mousse de lait optimale"
           },
           "bloc_3__info_1": {
              "id": "10_10",
@@ -515,7 +520,7 @@
           "bloc_3__info_2": {
              "id": "10_1",
             "label":"bloc_3__info_2",
-            "texte":"Réservoir à lait de 300 ml qui peut se ranger dans le frigo"
+            "texte":"Bac à lait de 300 ml qui peut se ranger dans le frigo"
           },
           "bloc_4_•_auto_clean_system": {
              "id": "10_3",
@@ -535,7 +540,7 @@
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":"Télécharger le guide utilisateur"
+            "texte":"Télécharger <br>le guide utilisateur"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -545,7 +550,7 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Regarder nos vidéos d'assistance"
+            "texte":"Regarder nos vidéos <br>d'assistance"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",

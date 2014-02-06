@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Händlersuche"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/de/de/pages/store-locator"
+          },
           "share": {
              "id": "1_11",
             "label":"share",
@@ -370,7 +375,7 @@
           "touchscreen_picto_5": {
              "id": "5_3",
             "label":"touchscreen_picto_5",
-            "texte":"Heiße Milch"
+            "texte":"Warme Milch"
           },
           "touchscreen_picto_6": {
              "id": "5_2",
@@ -430,7 +435,7 @@
           "description_text": {
              "id": "6_8",
             "label":"description_text",
-            "texte":"Die Nespresso Kapseln erhalten die Aromen des frisch gemahlenen Kaffees. Jede Kaffeespezialität mit Milch basiert auf einem großartigen Espresso. Wählen Sie aus 22 Grands Crus und freuen Sie sich auf ein unvergessliches sensorisches Erlebnis."
+            "texte":"Die Nespresso Kapseln erhalten die Aromen des frisch gemahlenen Kaffees. Jede Kaffeespezialität mit Milch basiert auf einem großartigen Espresso. Wählen Sie aus 22 Grands Crus und freuen Sie sich auf ein unvergessliches Genusserlebnis."
           },
           "intensity": {
              "id": "6_11",
@@ -620,7 +625,7 @@
           "grand_cru_13": {
              "id": "8_32",
             "label":"grand_cru_13",
-            "texte":"Bukeela ka Ethiopia Lungo"
+            "texte":"Bukeela ka Ethiopia"
           },
           "grand_cru_14": {
              "id": "8_33",
@@ -895,7 +900,7 @@
           "title": {
              "id": "9_5",
             "label":"title",
-            "texte":"Köstliche Kaffee und Milchrezepte"
+            "texte":"Köstliche Kaffee- und Milchrezepte"
           },
           "text_paragraph_1_milk_frothtext_paragraph_1_milk_froth": {
              "id": "9_4",
@@ -930,7 +935,7 @@
           "price": {
              "id": "11_3",
             "label":"price",
-            "texte":"100 beim Kauf einer Nespresso Maschine*"
+            "texte":"100"
           },
           "cta": {
              "id": "11_2",
@@ -940,7 +945,7 @@
           "range_date": {
              "id": "11_1",
             "label":"range_date",
-            "texte":"Bis zum 31.05.2014"
+            "texte":"beim Kauf einer Nespresso Maschine*<br>Bis zum 31.05.2014"
           },
           "url": {
              "id": "11_6",

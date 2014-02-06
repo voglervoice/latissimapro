@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Boutique finden"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/at/de/verkaufspunkte/"
+          },
           "share": {
              "id": "1_11",
             "label":"share",

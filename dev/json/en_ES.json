@@ -10,7 +10,7 @@
           "nespresso_link": {
              "id": "1_19",
             "label":"nespresso_link",
-            "texte":"http://www.nespresso.com/es/en"
+            "texte":"www.nespresso.com/es/en/home"
           },
           "contact": {
              "id": "1_6",
@@ -20,7 +20,7 @@
           "contact_link": {
              "id": "1_7",
             "label":"contact_link",
-            "texte":"http://www.nespresso.com/es/en/contact_nespresso"
+            "texte":"www.nespresso.com/es/en/contactus"
           },
           "legals": {
              "id": "1_8",
@@ -30,12 +30,17 @@
           "legals_link": {
              "id": "1_9",
             "label":"legals_link",
-            "texte":"http://www.nespresso.com/es/en/terms_and_conditions"
+            "texte":"www.nespresso.com/es/en/pages/legal"
           },
           "store_locator": {
              "id": "1_10",
             "label":"store_locator",
             "texte":"Store Locator"
+          },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/es/en/store_locator/"
           },
           "share": {
              "id": "1_11",
@@ -90,7 +95,7 @@
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":"https://nesclub.nespresso.com/id/login/"
+            "texte":"www.nespresso.com/es/en/login"
           },
           "country_and_language": {
              "id": "1_2",
@@ -525,7 +530,7 @@
           "bloc_4__info_1": {
              "id": "10_4",
             "label":"bloc_4__info_1",
-            "texte":""
+            "texte":"Assessed by International Certification Body"
           },
           "bloc_4__info_2": {
              "id": "10_5",
@@ -920,17 +925,17 @@
           "receive": {
              "id": "11_5",
             "label":"receive",
-            "texte":"Receive"
+            "texte":"Receive up to"
           },
           "currency": {
              "id": "11_4",
             "label":"currency",
-            "texte":""
+            "texte":"€"
           },
           "price": {
              "id": "11_3",
             "label":"price",
-            "texte":""
+            "texte":"60"
           },
           "cta": {
              "id": "11_2",
@@ -940,12 +945,12 @@
           "range_date": {
              "id": "11_1",
             "label":"range_date",
-            "texte":"Between 21st March 2014 and 18th May 2014 (inclusive)"
+            "texte":"Until 01.06.2014"
           },
           "url": {
              "id": "11_6",
             "label":"url",
-            "texte":""
+            "texte":"www.nespresso.com/es/en/login"
           }
         }
       }

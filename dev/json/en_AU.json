@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Store Locator"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/au/en/pages/store-locator"
+          },
           "share": {
              "id": "1_11",
             "label":"share",
@@ -525,7 +530,7 @@
           "bloc_4__info_1": {
              "id": "10_4",
             "label":"bloc_4__info_1",
-            "texte":""
+            "texte":"Assessed by International Certification Body"
           },
           "bloc_4__info_2": {
              "id": "10_5",
@@ -535,7 +540,7 @@
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":"Download user guide"
+            "texte":"Download <br>user guide"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -545,7 +550,7 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Watch our assistance videos"
+            "texte":"Watch our <br>assistance videos"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
@@ -925,12 +930,12 @@
           "currency": {
              "id": "11_4",
             "label":"currency",
-            "texte":"$"
+            "texte":""
           },
           "price": {
              "id": "11_3",
             "label":"price",
-            "texte":"$80 cash-back on Lattissima *When purchased from a participating retailer between 21st March 2014 and 18th May 2014 (inclusive). Cannot be used in conjunction with any other offer or promotion. See full terms of offer on the redemption form for details."
+            "texte":"$80"
           },
           "cta": {
              "id": "11_2",

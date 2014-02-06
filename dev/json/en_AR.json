@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Store Locator"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/ar/en/store_locator/"
+          },
           "share": {
              "id": "1_11",
             "label":"share",
@@ -90,7 +95,7 @@
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":"http://www.nespresso.com/r/order/UK"
+            "texte":"https://nesclub.nespresso.com/id/login/"
           },
           "country_and_language": {
              "id": "1_2",
@@ -550,7 +555,7 @@
           "youtube_video_playlist_url": {
              "id": "10_8",
             "label":"youtube_video_playlist_url",
-            "texte":"http://www.youtube.com/Playlist"
+            "texte":"http://www.youtube.com/watch?v=wR1UmomDVic&list=PLQ2eIUsAVWUwvKh3kBxoG0O8-DOb60o5M"
           }
         }
       },

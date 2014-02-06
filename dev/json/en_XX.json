@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Store Locator"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/uk/en/store_locator"
+          },
           "share": {
              "id": "1_11",
             "label":"share",
@@ -535,7 +540,7 @@
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":"Download user guide"
+            "texte":"Download <br>user guide"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -545,7 +550,7 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Watch our assistance videos"
+            "texte":"Watch our <br>assistance videos"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",

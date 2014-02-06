@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Puntos de venta"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/ar/es/store_locator/"
+          },
           "share": {
              "id": "1_11",
             "label":"share",
@@ -90,7 +95,7 @@
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":"https://nesclub.nespresso.com/index/"
+            "texte":"https://nesclub.nespresso.com/id/login/"
           },
           "country_and_language": {
              "id": "1_2",
@@ -165,7 +170,7 @@
           "scroll_to_explore": {
              "id": "2_13",
             "label":"scroll_to_explore",
-            "texte":"Desplácese para explorar"
+            "texte":"Desplazarse"
           },
           "top": {
              "id": "2_12",
@@ -470,7 +475,7 @@
           "bloc_1__info_1": {
              "id": "10_17",
             "label":"bloc_1__info_1",
-            "texte":"Acabado en aluminio pulido refinado"
+            "texte":"Acabado refinado en aluminio pulido"
           },
           "bloc_1__info_2": {
              "id": "10_18",
@@ -505,7 +510,7 @@
           "bloc_3_•_optimal_milk_froth_quality": {
              "id": "10_11",
             "label":"bloc_3_•_optimal_milk_froth_quality",
-            "texte":"Espuma de leche de calidad óptima"
+            "texte":"Espuma de leche óptima"
           },
           "bloc_3__info_1": {
              "id": "10_10",
@@ -535,7 +540,7 @@
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":"Descargar el manual de uso"
+            "texte":"Descargar <br>el manual de uso"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -545,12 +550,12 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Ver los vídeos de nuestro Servicio de Asistencia Técnica"
+            "texte":"Ver los vídeos de nuestro <br>Servicio de Asistencia Técnica"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
             "label":"youtube_video_playlist_url",
-            "texte":"http://www.youtube.com/watch?v=sk1ro_zQLlE&list=PLQ2eIUsAVWUwvKh3kBxoG0O8-DOb60o5M&index=1"
+            "texte":"http://www.youtube.com/watch?v=wR1UmomDVic&list=PLQ2eIUsAVWUwvKh3kBxoG0O8-DOb60o5M"
           }
         }
       },
@@ -695,7 +700,7 @@
           "grand_cru_3_aromatic_profile_with_milk": {
              "id": "8_57",
             "label":"grand_cru_3_aromatic_profile_with_milk",
-            "texte":"Fuerte, con mucho cuerpo, con un aroma amargo"
+            "texte":"Fuerte, amargo y con mucho cuerpo"
           },
           "grand_cru_4_aromatic_profile": {
              "id": "8_56",
@@ -705,7 +710,7 @@
           "grand_cru_4_aromatic_profile_with_milk": {
              "id": "8_55",
             "label":"grand_cru_4_aromatic_profile_with_milk",
-            "texte":"Fuerte, con mucho cuerpo, con un aroma amargo"
+            "texte":"Fuerte, amargo y con mucho cuerpo"
           },
           "grand_cru_5_aromatic_profile": {
              "id": "8_54",
@@ -725,7 +730,7 @@
           "grand_cru_6_aromatic_profile_with_milk": {
              "id": "8_51",
             "label":"grand_cru_6_aromatic_profile_with_milk",
-            "texte":"Ligero, dulce y a galletita"
+            "texte":"Equilibrado, dulce y a galletita"
           },
           "grand_cru_7_aromatic_profile": {
              "id": "8_66",
@@ -745,7 +750,7 @@
           "grand_cru_8_aromatic_profile_with_milk": {
              "id": "8_12",
             "label":"grand_cru_8_aromatic_profile_with_milk",
-            "texte":"Muy ligero, dulce, suave"
+            "texte":"Muy equilibrado, dulce, suave"
           },
           "grand_cru_9_aromatic_profile": {
              "id": "8_11",
@@ -755,7 +760,7 @@
           "grand_cru_9_aromatic_profile_with_milk": {
              "id": "8_10",
             "label":"grand_cru_9_aromatic_profile_with_milk",
-            "texte":"Muy ligero, dulce, suave y lácteo"
+            "texte":"Muy equilibrado, dulce, suave y lácteo"
           },
           "grand_cru_10_aromatic_profile": {
              "id": "8_9",
@@ -765,7 +770,7 @@
           "grand_cru_10_aromatic_profile_with_milk": {
              "id": "8_8",
             "label":"grand_cru_10_aromatic_profile_with_milk",
-            "texte":"Fuerte, con mucho cuerpo, con un aroma amargo"
+            "texte":"Fuerte, amargo y con mucho cuerpo"
           },
           "grand_cru_12_aromatic_profile": {
              "id": "8_7",
@@ -775,7 +780,7 @@
           "grand_cru_12_aromatic_profile_with_milk": {
              "id": "8_6",
             "label":"grand_cru_12_aromatic_profile_with_milk",
-            "texte":"Ligero, dulce y a galletita"
+            "texte":"Equilibrado, dulce y a galletita"
           },
           "grand_cru_11_aromatic_profile": {
              "id": "8_5",
@@ -785,7 +790,7 @@
           "grand_cru_11_aromatic_profile_with_milk": {
              "id": "8_4",
             "label":"grand_cru_11_aromatic_profile_with_milk",
-            "texte":"Ligero, dulce y a galletita"
+            "texte":"Equilibrado, dulce y a galletita"
           },
           "grand_cru_13_aromatic_profile": {
              "id": "8_3",
@@ -805,7 +810,7 @@
           "grand_cru_17_aromatic_profile_with_milk": {
              "id": "8_14",
             "label":"grand_cru_17_aromatic_profile_with_milk",
-            "texte":"Muy tostado, a cereales tostados"
+            "texte":"A cereales tostados"
           },
           "grand_cru_18_aromatic_profile": {
              "id": "8_15",
@@ -855,7 +860,7 @@
           "grand_cru_15_aromatic_profile_with_milk": {
              "id": "8_23",
             "label":"grand_cru_15_aromatic_profile_with_milk",
-            "texte":"Muy ligero, dulce, suave"
+            "texte":"Muy equilibrado, dulce, suave"
           },
           "grand_cru_20_aromatic_profile": {
              "id": "8_21",

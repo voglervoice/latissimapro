@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Store Locator"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/sg/en/store_locator/"
+          },
           "share": {
              "id": "1_11",
             "label":"share",

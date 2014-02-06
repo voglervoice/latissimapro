@@ -4,8 +4,8 @@
 			<span class="home_promotion_receive"><?php echo $jsonLangHomePromo->receive->texte; ?></span>
 			<div class="home_promotion_price">
 				<span class="home_promotion_price_value"><?php echo $jsonLangHomePromo->price->texte ?></span>
-				<span class="home_promotion_price_currency"><?php echo $jsonLangHomePromo->currency->texte; ?></span>
 			</div>
+			<span class="home_promotion_price_currency"><?php echo $jsonLangHomePromo->currency->texte; ?></span>
 			<span class="home_promotion_date"><?php echo $jsonLangHomePromo->range_date->texte; ?></span>
 			<span class="home_promotion_cta"><?php echo $jsonLangHomePromo->cta->texte; ?></span>
 		</a>

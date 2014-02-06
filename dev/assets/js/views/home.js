@@ -30,7 +30,15 @@ define([
         };
 
         this.initOpen = function(){
-            promoW = 20+$('.home_promotion_price').width()+$('.home_promotion_cta').width() + 60;
+            promoW = 20+$('.home_promotion_price').width()+Math.max($('.home_promotion_date').width(), $('.home_promotion_cta').width() +15) + 40;
+
+            $('.home_promotion_price_currency').css('left', $('.home_promotion_price').width()+20);
+
+            if($('.home_promotion_price_currency').width() === 0)
+                $('.home_promotion_cta').css('left', $('.home_promotion_price').width()+20);
+            else
+                $('.home_promotion_cta').css('left', $('.home_promotion_price').width()+20 +$('.home_promotion_price_currency').width()+20);
+            
             $('.home_promotion').width(promoW);
             $('.home_promotion_border').width(promoW-10);
             $('.home_promotion').css('right', "-"+promoW+"px");

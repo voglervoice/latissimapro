@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Punti vendita"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/ch/it/pages/store-locator"
+          },
           "share": {
              "id": "1_11",
             "label":"share",
@@ -115,7 +120,7 @@
           "order": {
              "id": "2_19",
             "label":"order",
-            "texte":"Caricamento"
+            "texte":"Ordinare"
           },
           "order_by_phone_": {
              "id": "2_20",
@@ -400,7 +405,7 @@
           "a_wide_range_of_grands_crus": {
              "id": "12_4",
             "label":"a_wide_range_of_grands_crus",
-            "texte":"Gamma caffè"
+            "texte":"I Grand Cru"
           },
           "delicious_coffee_and_milk_recipes": {
              "id": "12_5",
@@ -480,7 +485,7 @@
           "bloc_1__info_3": {
              "id": "10_19",
             "label":"bloc_1__info_3",
-            "texte":"Pronta all'uso in 25 secondi"
+            "texte":"Pronta all'uso in <br>25 secondi"
           },
           "bloc_1__info_4": {
              "id": "10_24",
@@ -505,7 +510,7 @@
           "bloc_3_•_optimal_milk_froth_quality": {
              "id": "10_11",
             "label":"bloc_3_•_optimal_milk_froth_quality",
-            "texte":"Qualità ottimale della schiuma di latte"
+            "texte":"Qualità schiuma latte ottimale"
           },
           "bloc_3__info_1": {
              "id": "10_10",
@@ -515,7 +520,7 @@
           "bloc_3__info_2": {
              "id": "10_1",
             "label":"bloc_3__info_2",
-            "texte":"Contenitore del latte da 0.3 L., conservabile in frigorifero"
+            "texte":"Contenitore del latte da 0.3 L, conservabile in frigorifero"
           },
           "bloc_4_•_auto_clean_system": {
              "id": "10_3",

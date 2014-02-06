@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Üzleteink"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/#/hu/hu/store_locator/"
+          },
           "share": {
              "id": "1_11",
             "label":"share",
@@ -145,7 +150,7 @@
           "play": {
              "id": "2_10",
             "label":"play",
-            "texte":""
+            "texte":"Lejátszás"
           },
           "close": {
              "id": "2_17",
@@ -160,7 +165,7 @@
           "scroll": {
              "id": "2_15",
             "label":"scroll",
-            "texte":""
+            "texte":"Görgetés"
           },
           "scroll_to_explore": {
              "id": "2_13",
@@ -220,32 +225,32 @@
           "form_subheading": {
              "id": "4_1",
             "label":"form_subheading",
-            "texte":""
+            "texte":"Kérjük, töltse ki az alábbi mezőket"
           },
           "form_senders_name": {
              "id": "4_2",
             "label":"form_senders_name",
-            "texte":""
+            "texte":"Az Ön neve"
           },
           "form_senders_email": {
              "id": "4_3",
             "label":"form_senders_email",
-            "texte":""
+            "texte":"Az Ön e-mail címe"
           },
           "form_receivers_email": {
              "id": "4_4",
             "label":"form_receivers_email",
-            "texte":""
+            "texte":"Ismerőse e-mail címe"
           },
           "form_send": {
              "id": "4_5",
             "label":"form_send",
-            "texte":""
+            "texte":"Küldés"
           },
           "success_message": {
              "id": "4_10",
             "label":"success_message",
-            "texte":""
+            "texte":"Meghívása elküldésre került"
           },
           "error_message": {
              "id": "4_9",
@@ -255,12 +260,12 @@
           "email_template_subject": {
              "id": "4_8",
             "label":"email_template_subject",
-            "texte":""
+            "texte":"{senderName} meghívja, hogy Ön is megismerhesse a Nespresso legújabb kávégépét: Lattissima Pro"
           },
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":""
+            "texte":"Az új Latissima Pro kávégép egyesíti a magas minőségű professzionálitást a könnyen kezelhető érintőképernyővel. Egyetlen mozdulattal elkészítheti otthonában egyedülálló tejes receptjét."
           },
           "email_template_call_to_action": {
              "id": "4_6",
@@ -325,7 +330,7 @@
           "twitter_text": {
              "id": "3_7",
             "label":"twitter_text",
-            "texte":""
+            "texte":"A Lattissima Pro segítségével egyetlen mozdulattal elkészítheti otthonában egyedülálló tejes receptjét."
           }
         }
       },
@@ -340,7 +345,7 @@
           "text": {
              "id": "5_6",
             "label":"text",
-            "texte":""
+            "texte":"A kávékészítés művészete még sosem volt ennyire egyszerű és örömteli. Az intuitív érintőképernyő lehetőséget nyújt a kávégép programozására és számtalan kávé- és tejes recept készítésére."
           },
           "touchscreen_cta": {
              "id": "5_7",
@@ -395,7 +400,7 @@
           "one_touch_is_all": {
              "id": "12_2",
             "label":"one_touch_is_all",
-            "texte":"Intuitív érintő képernhyő"
+            "texte":"Intuitív érintőképernyő"
           },
           "a_wide_range_of_grands_crus": {
              "id": "12_4",
@@ -430,7 +435,7 @@
           "description_text": {
              "id": "6_8",
             "label":"description_text",
-            "texte":""
+            "texte":"A Nespresso kapszulák tökéletesen megőrzik a frissen pörkölt kávé aromáit.<br>Egy ellenállhatatlan Espresso és Tej recept mindig egy tökéletes espresso-val kezdődik.<br>Válasszon 22 Grand Cru kávéőrleményünk közül, és készüljön fel egy különleges utazásra az ízek világában."
           },
           "intensity": {
              "id": "6_11",
@@ -455,12 +460,12 @@
           "title": {
              "id": "10_15",
             "label":"title",
-            "texte":""
+            "texte":"Erőteljes kívül és belül"
           },
           "text": {
              "id": "10_14",
             "label":"text",
-            "texte":""
+            "texte":"Az új Lattissima Pro kávégépet a professzionális gépek inspirálták, kiegészítve az egyszerű kezelhetőség magas fokával, melyet a sima, letisztult design és a cziszolt aluminium borítás tesz még tökéletesebbé."
           },
           "bloc_1_•_characteristics": {
              "id": "10_13",
@@ -530,7 +535,7 @@
           "bloc_4__info_2": {
              "id": "10_5",
             "label":"bloc_4__info_2",
-            "texte":"A kávégép tejesrendszereének elemei mosogatógépben tisztíthatóak"
+            "texte":"A kávégép tejesrendszerének elemei mosogatógépben tisztíthatóak"
           },
           "download_user_guide": {
              "id": "10_9",
@@ -545,12 +550,12 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":""
+            "texte":"Nézze meg segítsgényújtó videóinkat"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
             "label":"youtube_video_playlist_url",
-            "texte":""
+            "texte":"http://www.youtube.com/user/nespresso"
           }
         }
       },
@@ -770,52 +775,52 @@
           "grand_cru_12_aromatic_profile": {
              "id": "8_7",
             "label":"grand_cru_12_aromatic_profile",
-            "texte":""
+            "texte":"Édes, gabonás"
           },
           "grand_cru_12_aromatic_profile_with_milk": {
              "id": "8_6",
             "label":"grand_cru_12_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Könnyed, édes és kekszes"
           },
           "grand_cru_11_aromatic_profile": {
              "id": "8_5",
             "label":"grand_cru_11_aromatic_profile",
-            "texte":""
+            "texte":"Gyümölcsös, boros, kekeszes"
           },
           "grand_cru_11_aromatic_profile_with_milk": {
              "id": "8_4",
             "label":"grand_cru_11_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Könnyed, édes és kekszes"
           },
           "grand_cru_13_aromatic_profile": {
              "id": "8_3",
             "label":"grand_cru_13_aromatic_profile",
-            "texte":""
+            "texte":"Gyengéd, friss és virágos"
           },
           "grand_cru_13_aromatic_profile_with_milk": {
              "id": "8_2",
             "label":"grand_cru_13_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Virágos, telt, karamelles"
           },
           "grand_cru_17_aromatic_profile": {
              "id": "8_1",
             "label":"grand_cru_17_aromatic_profile",
-            "texte":""
+            "texte":"Erősen pörkölt, gabonás"
           },
           "grand_cru_17_aromatic_profile_with_milk": {
              "id": "8_14",
             "label":"grand_cru_17_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Erősen pörkölt-pirított gabonás"
           },
           "grand_cru_18_aromatic_profile": {
              "id": "8_15",
             "label":"grand_cru_18_aromatic_profile",
-            "texte":""
+            "texte":"Pörkölt, virágos"
           },
           "grand_cru_18_aromatic_profile_with_milk": {
              "id": "8_16",
             "label":"grand_cru_18_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Pirított,gyümölcsös, pörkölt mogyorós"
           },
           "grand_cru_19_aromatic_profile": {
              "id": "8_30",
@@ -825,7 +830,7 @@
           "grand_cru_19_aromatic_profile_with_milk": {
              "id": "8_29",
             "label":"grand_cru_19_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Pirított gabonás,gyümölcsös"
           },
           "grand_cru_14_aromatic_profile": {
              "id": "8_28",
@@ -845,7 +850,7 @@
           "grand_cru_15_lungo_aromatic_profile_with_milk": {
              "id": "8_25",
             "label":"grand_cru_15_lungo_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Pirított gabonás,zöld gyümölcsös"
           },
           "grand_cru_15_aromatic_profile": {
              "id": "8_24",
@@ -895,22 +900,22 @@
           "title": {
              "id": "9_5",
             "label":"title",
-            "texte":"Ellenállhatatlan kávé és tejes receptek"
+            "texte":"Ellenállhatatlan kávé és tejes receptek. Állítsa be a tejhab mennyiség szabályozó gombot ízlésének megfelelően."
           },
           "text_paragraph_1_milk_frothtext_paragraph_1_milk_froth": {
              "id": "9_4",
             "label":"text_paragraph_1_milk_frothtext_paragraph_1_milk_froth",
-            "texte":""
+            "texte":"Tökéletes tejhab Cappuccino vagy Latte Macchiato készítéséhez."
           },
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
             "label":"text_paragraph_2_auto_clean",
-            "texte":""
+            "texte":"Csak tekerje a tejhab szabályozó gombot a \" Clean \" állásba. A kávégép higiéniája  külső laboratórium által tesztelt, mely biztosítja amagasfokú tisztaságot."
           },
           "schema_milk_froth_text_": {
              "id": "9_2",
             "label":"schema_milk_froth_text_",
-            "texte":""
+            "texte":"Tejhab erősség szabályozó"
           }
         }
       },

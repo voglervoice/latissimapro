@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Points de vente"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/be/fr/pages/store-locator"
+          },
           "share": {
              "id": "1_11",
             "label":"share",

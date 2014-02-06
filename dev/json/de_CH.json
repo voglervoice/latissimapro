@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Verkaufsstellen"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/ch/de/pages/store-locator"
+          },
           "share": {
              "id": "1_11",
             "label":"share",
@@ -400,7 +405,7 @@
           "a_wide_range_of_grands_crus": {
              "id": "12_4",
             "label":"a_wide_range_of_grands_crus",
-            "texte":"Die Kaffees"
+            "texte":"Die Grands Crus"
           },
           "delicious_coffee_and_milk_recipes": {
              "id": "12_5",
@@ -430,7 +435,7 @@
           "description_text": {
              "id": "6_8",
             "label":"description_text",
-            "texte":"Die Nespresso Kapseln konservieren die Aromen des frisch gemahlenen Kaffees. Ein feines Espresso und Milchrezept beginnt stets mit einem feinen Espresso. Wählen Sie aus 22 Grands Crus und freuen Sie sich auf ein unvergessliches sensorisches Erlebnis."
+            "texte":"Die Nespresso Kapseln konservieren die Aromen des frisch gemahlenen Kaffees. Wählen Sie aus 22 Grands Crus und freuen Sie sich auf ein unvergessliches sensorisches Erlebnis."
           },
           "intensity": {
              "id": "6_11",
@@ -480,7 +485,7 @@
           "bloc_1__info_3": {
              "id": "10_19",
             "label":"bloc_1__info_3",
-            "texte":"Betriebsbereit in 25 Sekunden"
+            "texte":"Betriebsbereit in <br>25 Sekunden"
           },
           "bloc_1__info_4": {
              "id": "10_24",

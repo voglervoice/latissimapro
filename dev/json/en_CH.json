@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Store Locator"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/ch/en/pages/store-locator"
+          },
           "share": {
              "id": "1_11",
             "label":"share",
@@ -400,7 +405,7 @@
           "a_wide_range_of_grands_crus": {
              "id": "12_4",
             "label":"a_wide_range_of_grands_crus",
-            "texte":"Coffee range"
+            "texte":"The Grands Crus"
           },
           "delicious_coffee_and_milk_recipes": {
              "id": "12_5",
@@ -465,7 +470,7 @@
           "bloc_1_•_characteristics": {
              "id": "10_13",
             "label":"bloc_1_•_characteristics",
-            "texte":"Characteristics"
+            "texte":"Features"
           },
           "bloc_1__info_1": {
              "id": "10_17",
@@ -480,7 +485,7 @@
           "bloc_1__info_3": {
              "id": "10_19",
             "label":"bloc_1__info_3",
-            "texte":"Machine ready in 25 seconds"
+            "texte":"Machine ready in <br>25 seconds"
           },
           "bloc_1__info_4": {
              "id": "10_24",

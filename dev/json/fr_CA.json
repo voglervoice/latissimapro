@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Points de vente"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/ca/fr/pages/StoreLocator"
+          },
           "share": {
              "id": "1_11",
             "label":"share",
@@ -335,7 +340,7 @@
           "title": {
              "id": "5_5",
             "label":"title",
-            "texte":"Sure simple pression d'une touche"
+            "texte":"Une pression, et c'est tout !"
           },
           "text": {
              "id": "5_6",
@@ -395,17 +400,17 @@
           "one_touch_is_all": {
              "id": "12_2",
             "label":"one_touch_is_all",
-            "texte":"Écran tactile intuitif"
+            "texte":"Écran tactile<br>intuitif"
           },
           "a_wide_range_of_grands_crus": {
              "id": "12_4",
             "label":"a_wide_range_of_grands_crus",
-            "texte":"Gamme de cafés"
+            "texte":"Gamme<br>de cafés"
           },
           "delicious_coffee_and_milk_recipes": {
              "id": "12_5",
             "label":"delicious_coffee_and_milk_recipes",
-            "texte":"Système pour le lait"
+            "texte":"Système<br>pour le lait"
           },
           "powerful__inside_andamp;_out": {
              "id": "12_6",
@@ -535,7 +540,7 @@
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":"Télécharger le guide utilisateur"
+            "texte":"Télécharger <br>le guide utilisateur"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -545,7 +550,7 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Regarder nos vidéos d'assistance"
+            "texte":"Regarder nos vidéos <br>d'assistance"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
@@ -905,7 +910,7 @@
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
             "label":"text_paragraph_2_auto_clean",
-            "texte":"Tournez le bouton de réglage du lait sur la position Clean. L'hygiène de l'appareil est évaluée par un organisme international de certification, garantissant un niveau élevé de propreté"
+            "texte":"Tournez le bouton de réglage du lait sur la position Clean. L'hygiène de l'appareil est évaluée par un organisme international de certification, garantissant un niveau élevé de propreté."
           },
           "schema_milk_froth_text_": {
              "id": "9_2",

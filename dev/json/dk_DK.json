@@ -37,6 +37,11 @@
             "label":"store_locator",
             "texte":"Butiksplacering"
           },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/dk/dk/store_locator/"
+          },
           "share": {
              "id": "1_11",
             "label":"share",
@@ -535,7 +540,7 @@
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":"Download brugsvejledning"
+            "texte":"Download<br>brugsvejledning"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -545,7 +550,7 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Se vores assistance videoer her"
+            "texte":"Se vores assistance<br>videoer her"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
@@ -605,22 +610,22 @@
           "grand_cru_10": {
              "id": "8_38",
             "label":"grand_cru_10",
-            "texte":"Indriya from India"
+            "texte":"Indriya <i>from India</i>"
           },
           "grand_cru_11": {
              "id": "8_37",
             "label":"grand_cru_11",
-            "texte":"Rosabaya de Colombia"
+            "texte":"Rosabaya <i>de Colombia</i>"
           },
           "grand_cru_12": {
              "id": "8_36",
             "label":"grand_cru_12",
-            "texte":"Dulsão do Brasil"
+            "texte":"Dulsão <i>do Brasil</i>"
           },
           "grand_cru_13": {
              "id": "8_32",
             "label":"grand_cru_13",
-            "texte":"Bukeela ka Ethiopia"
+            "texte":"Bukeela <i>ka Ethiopia</i>"
           },
           "grand_cru_14": {
              "id": "8_33",

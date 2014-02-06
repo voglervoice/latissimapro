@@ -9,7 +9,7 @@ define([
 ], function($, TweenMax, Events, publisher, Raphael, BackgroundSection, ImageElem) {
 
     var CoffeeRange = function() {
-        var self = this;
+        var self = this, windowW;
         var sets = [];
       
         // ******************* public ******************* 
@@ -20,6 +20,7 @@ define([
         var ct = $(".range_content", this.elem);
 
         this.resize = function(w, h){
+            windowW = w
             this.bg.resize(w, h);
             var ratio = h/863;
             var offsetCt = 115;
@@ -102,6 +103,18 @@ define([
                 var roll = $(".range_roll[data-id='"+$(this).attr('data-id')+"']");
                 var leftRoll = $(this).offset().left - 57;
                 var topRoll = $(this).offset().top - roll.height();
+                var maxW = Math.max(316, Math.max($('.range_roll_arom', roll).width(), $('.range_roll_milk', roll).width()));
+   
+                if(leftRoll > windowW-(maxW+60)-170){
+                    leftRoll = windowW-(maxW+60)-170;
+                    $('.range_roll_pic', roll).css('left', $(this).offset().left-leftRoll+24);
+                }else
+                    $('.range_roll_pic', roll).css('left', 81);
+
+                //roll.width(376);
+               // $('.range_roll_bg').width(362);
+               roll.width(maxW+60);
+               $('.range_roll_bg').width(maxW+54);
                 roll.css({'left':leftRoll, 'top':topRoll});
                 //TweenMax.killDelayedCallsTo(animateIntensity);
                 /*var set = sets[$(this).attr('data-id')];

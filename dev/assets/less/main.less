@@ -211,10 +211,10 @@ nav{
         .home_promotion_receive{display: block; position: absolute; top:15px; left:17px; font-size: 12px; .light;}
         .home_promotion_price{position: absolute; top:20px; left:14px; .bold;
             .home_promotion_price_value{font-size:60px; }
-            .home_promotion_price_currency{font-size:24px; }
         }
+        .home_promotion_price_currency{position: absolute; top:22px; left:50px; font-size:24px; .bold}
         .home_promotion_date{ display: block; position: absolute; top:50px; left:120px; font-size:13px; .light;}
-        .home_promotion_cta{ display: block; position: absolute; top:66px; left:120px; font-size:13px; .regular;}
+        .home_promotion_cta{ display: block; position: absolute; top:27px; left:120px; font-size:14px; .regular;}
     }
 }
 
@@ -258,24 +258,45 @@ nav{
     position: absolute; z-index: 20;
     .range_roll{
         visibility: hidden;
-        left:200px;
+        left:400px;
         top:200px;
         position: absolute;
-        width:376px;
+        width:600px;
         height:173px;
-        background-image:url(../imgs/sections/range_roll.png); background-repeat: no-repeat;
+        /*background-image:url(../imgs/sections/range_roll.png); background-repeat: no-repeat;
         @media @highdensity {
-            background-image: url("../imgs/sections/retina/range_roll.png"); background-size: 376px 173px;
-        }
-        div, span{ position:absolute; left:32px;
-            strong{.bold;}
-        }
+            background-image: url("../imgs/sections/retina/range_roll@2x.png"); background-size: 376px 173px;
+        }*/
+       span{ position:absolute; left:32px;
+        strong{.bold;}
+    }
+        .range_roll_intensity_value{position:absolute; left:32px;}
         .range_roll_title{ font-size: 14px; .bold; text-transform: uppercase; top:12px; }
         .range_roll_intensity{ font-size: 13px; .light; top:52px; }
         .range_roll_intensity_value_num{ font-size: 13px; .bold; top:52px; color:#cbaa58;}
         .range_roll_intensity_value{ top:52px; width:140px; height:18px;}
         .range_roll_arom{ font-size: 13px; .light; top:93px; }
         .range_roll_milk{ font-size: 13px; .light; top:131px; }
+        .range_roll_bg_line{position: absolute; height:1px; background-color: #7a7a7a; left:32px; top:38px; width:315px;}
+        .range_roll_bg{position: absolute; left:5px; width: 362px; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);}
+        .range_roll_bg1{top:4px; height:78px;
+            .background-vertical-gradient(#434343, #3a3a3a, #3e3e3e);
+            .rounded-corners(6px 6px 0 0);
+        }
+        .range_roll_bg2{top:82px; height:38px;
+            .background-vertical-gradient(#525252, #4f4f4f, #505050);
+        }
+        .range_roll_bg3{top:120px; height:39px;
+            .background-vertical-gradient(#878787, #868686, #868686);
+            .rounded-corners(0 0 6px 6px);
+        }
+        .range_roll_pic{position: absolute; top:159px; left:81px;
+            width:14px; height:14px;
+            background-image:url(../imgs/sections/range_roll_pict.png); background-repeat: no-repeat;
+            @media @highdensity {
+                background-image: url("../imgs/sections/range_roll_pict@2x.png"); background-size: 14px 14px;
+            }
+        }
     }
 };
 .range_content{

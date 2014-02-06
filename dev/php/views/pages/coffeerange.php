@@ -29,6 +29,12 @@ function getCapsules($datas, $start, $nbCaps){
 				$milkJsonId = $aromJsonId.'_with_milk';
 				//echo ' -> '.$aromJsonId.' ///// '.$milkJsonId;
 				echo '<div data-id="'.$key.'" class="range_roll">';
+					echo '<div class="range_roll_bg range_roll_bg1"></div>';
+					echo '<div class="range_roll_bg range_roll_bg2"></div>';
+					echo '<div class="range_roll_bg range_roll_bg3"></div>';
+					echo '<div class="range_roll_bg_line"></div>';
+					echo '<div class="range_roll_pic"></div>';
+
 					echo '<span class="range_roll_title">'.proccedText($value->texte).'</span>';
 					echo '<span class="range_roll_intensity"><strong>'.$jsonLangRangeGlobals->intensity->texte.'</strong></span>';
 					echo '<span class="range_roll_intensity_value_num">'.$force.'</span>';

@@ -10,97 +10,102 @@
           "nespresso_link": {
              "id": "1_19",
             "label":"nespresso_link",
-            "texte":""
+            "texte":"www.nespresso.com/es/ca/home"
           },
           "contact": {
              "id": "1_6",
             "label":"contact",
-            "texte":""
+            "texte":"Contacte"
           },
           "contact_link": {
              "id": "1_7",
             "label":"contact_link",
-            "texte":""
+            "texte":"www.nespresso.com/es/ca/contactus"
           },
           "legals": {
              "id": "1_8",
             "label":"legals",
-            "texte":""
+            "texte":"Termes i condicions"
           },
           "legals_link": {
              "id": "1_9",
             "label":"legals_link",
-            "texte":""
+            "texte":"www.nespresso.com/es/ca/pages/legal"
           },
           "store_locator": {
              "id": "1_10",
             "label":"store_locator",
-            "texte":""
+            "texte":"Punts de venda"
+          },
+          "store_locator_link": {
+             "id": "1_20",
+            "label":"store_locator_link",
+            "texte":"http://www.nespresso.com/es/es/store_locator/"
           },
           "share": {
              "id": "1_11",
             "label":"share",
-            "texte":""
+            "texte":"Comparteixi-ho"
           },
           "facebook": {
              "id": "1_12",
             "label":"facebook",
-            "texte":""
+            "texte":"Comparteixi-ho al Facebook"
           },
           "twitter": {
              "id": "1_13",
             "label":"twitter",
-            "texte":""
+            "texte":"Comparteixi-ho al Twitter"
           },
           "pinterest": {
              "id": "1_14",
             "label":"pinterest",
-            "texte":""
+            "texte":"Comparteixi-ho al Pinterest"
           },
           "send_to_a_friend": {
              "id": "1_15",
             "label":"send_to_a_friend",
-            "texte":""
+            "texte":"Enviar a un amic"
           },
           "full_screen": {
              "id": "1_16",
             "label":"full_screen",
-            "texte":""
+            "texte":"Pantalla completa"
           },
           "exit_full_screen": {
              "id": "1_17",
             "label":"exit_full_screen",
-            "texte":""
+            "texte":"Sortir de la pantalla completa"
           },
           "sound_on": {
              "id": "1_18",
             "label":"sound_on",
-            "texte":""
+            "texte":"So activat"
           },
           "sound_off": {
              "id": "1_5",
             "label":"sound_off",
-            "texte":""
+            "texte":"So desactivat"
           },
           "order": {
              "id": "1_4",
             "label":"order",
-            "texte":""
+            "texte":"Fer una comanda"
           },
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":""
+            "texte":"www.nespresso.com/es/ca/login"
           },
           "country_and_language": {
              "id": "1_2",
             "label":"country_and_language",
-            "texte":""
+            "texte":"País i idioma"
           },
           "country_and_language_text": {
              "id": "1_1",
             "label":"country_and_language_text",
-            "texte":""
+            "texte":"Seleccioni el seu país i l'idioma"
           }
         }
       },
@@ -110,12 +115,12 @@
           "loading": {
              "id": "2_1",
             "label":"loading",
-            "texte":""
+            "texte":"Carregant"
           },
           "order": {
              "id": "2_19",
             "label":"order",
-            "texte":""
+            "texte":"Faci una comanda"
           },
           "order_by_phone_": {
              "id": "2_20",
@@ -130,82 +135,82 @@
           "order_now": {
              "id": "2_8",
             "label":"order_now",
-            "texte":""
+            "texte":"Fer una comanda"
           },
           "watch": {
              "id": "2_7",
             "label":"watch",
-            "texte":""
+            "texte":"Miri"
           },
           "watch_the_video": {
              "id": "2_18",
             "label":"watch_the_video",
-            "texte":""
+            "texte":"Miri el vídeo"
           },
           "play": {
              "id": "2_10",
             "label":"play",
-            "texte":""
+            "texte":"Reprodueix-lo"
           },
           "close": {
              "id": "2_17",
             "label":"close",
-            "texte":""
+            "texte":"Tanca"
           },
           "to": {
              "id": "2_16",
             "label":"to",
-            "texte":""
+            "texte":"Vés a"
           },
           "scroll": {
              "id": "2_15",
             "label":"scroll",
-            "texte":""
+            "texte":"Desplaci's o toqui la pantalla"
           },
           "scroll_to_explore": {
              "id": "2_13",
             "label":"scroll_to_explore",
-            "texte":""
+            "texte":"Desplaci's per explorar"
           },
           "top": {
              "id": "2_12",
             "label":"top",
-            "texte":""
+            "texte":"Amunt"
           },
           "down": {
              "id": "2_11",
             "label":"down",
-            "texte":""
+            "texte":"Avall"
           },
           "menu": {
              "id": "2_6",
             "label":"menu",
-            "texte":""
+            "texte":"Menú"
           },
           "more": {
              "id": "2_5",
             "label":"more",
-            "texte":""
+            "texte":"Més"
           },
           "app": {
              "id": "2_4",
             "label":"app",
-            "texte":""
+            "texte":"Aplicació"
           },
           "application": {
              "id": "2_3",
             "label":"application",
-            "texte":""
+            "texte":"Aplicació"
           },
           "discover": {
              "id": "2_2",
             "label":"discover",
-            "texte":""
+            "texte":"Descobrir"
           },
           "discover_more": {
              "id": "2_14",
             "label":"discover_more",
-            "texte":""
+            "texte":"Més informació"
           }
         }
       },
@@ -215,57 +220,57 @@
           "form_title": {
              "id": "4_11",
             "label":"form_title",
-            "texte":""
+            "texte":"Comparteixi la pàgina web amb un amic"
           },
           "form_subheading": {
              "id": "4_1",
             "label":"form_subheading",
-            "texte":""
+            "texte":"Ompli els camps següents"
           },
           "form_senders_name": {
              "id": "4_2",
             "label":"form_senders_name",
-            "texte":""
+            "texte":"El seu nom"
           },
           "form_senders_email": {
              "id": "4_3",
             "label":"form_senders_email",
-            "texte":""
+            "texte":"La seva adreça de correu electrònic"
           },
           "form_receivers_email": {
              "id": "4_4",
             "label":"form_receivers_email",
-            "texte":""
+            "texte":"L'adreça de correu electrònic del seu amic"
           },
           "form_send": {
              "id": "4_5",
             "label":"form_send",
-            "texte":""
+            "texte":"Enviï-ho"
           },
           "success_message": {
              "id": "4_10",
             "label":"success_message",
-            "texte":""
+            "texte":"La seva invitació s'ha enviat."
           },
           "error_message": {
              "id": "4_9",
             "label":"error_message",
-            "texte":""
+            "texte":"Ho sentim, hi ha hagut un error. Torni-ho a provar."
           },
           "email_template_subject": {
              "id": "4_8",
             "label":"email_template_subject",
-            "texte":""
+            "texte":"{senderName} l'ha convidat a descobrir Lattissima Pro, la NOVA màquina de cafè de Nespresso"
           },
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":""
+            "texte":"La qualitat professional és la font d'inspiració de la NOVA màquina Lattissima Pro, que incorpora la simplicitat d'una pantalla tàctil. Ara es pot preparar a casa les receptes amb cafè més exquisides només pitjant un botó."
           },
           "email_template_call_to_action": {
              "id": "4_6",
             "label":"email_template_call_to_action",
-            "texte":""
+            "texte":"Descobreixi-la"
           }
         }
       },
@@ -275,32 +280,32 @@
           "capsules_category_1": {
              "id": "7_5",
             "label":"capsules_category_1",
-            "texte":""
+            "texte":"Intenso"
           },
           "capsules_category_2": {
              "id": "7_11",
             "label":"capsules_category_2",
-            "texte":""
+            "texte":"Espresso"
           },
           "capsules_category_3": {
              "id": "7_9",
             "label":"capsules_category_3",
-            "texte":""
+            "texte":"Lungo"
           },
           "capsules_category_4": {
              "id": "7_12",
             "label":"capsules_category_4",
-            "texte":""
+            "texte":"Decaffeinato"
           },
           "capsules_category_5": {
              "id": "7_8",
             "label":"capsules_category_5",
-            "texte":""
+            "texte":"Origen Únic"
           },
           "capsules_category_6": {
              "id": "7_4",
             "label":"capsules_category_6",
-            "texte":""
+            "texte":"Variations"
           }
         }
       },
@@ -310,22 +315,22 @@
           "facebook_title": {
              "id": "3_13",
             "label":"facebook_title",
-            "texte":""
+            "texte":"Descobreixi Lattissima Pro, la nova màquina Nespresso"
           },
           "facebook_text": {
              "id": "3_5",
             "label":"facebook_text",
-            "texte":""
+            "texte":"Ara prepari's a casa les receptes amb llet més exquisides només pitjant un botó."
           },
           "pinterest_text": {
              "id": "3_6",
             "label":"pinterest_text",
-            "texte":""
+            "texte":"Ara prepari's a casa les receptes amb llet més exquisides només pitjant un botó."
           },
           "twitter_text": {
              "id": "3_7",
             "label":"twitter_text",
-            "texte":""
+            "texte":"Amb Lattissima Pro, prepari's a casa les receptes amb llet més exquisides només pitjant un botó #LattissimaPro #Nespresso"
           }
         }
       },
@@ -335,52 +340,52 @@
           "title": {
              "id": "5_5",
             "label":"title",
-            "texte":""
+            "texte":"Només cal que pitgi un botó"
           },
           "text": {
              "id": "5_6",
             "label":"text",
-            "texte":""
+            "texte":"L'art del cafè no ha estat mai tan senzill i agradable. La pantalla tàctil intuïtiva li ofereix una manera fàcil de programar la màquina i gaudir de diversos tipus de cafè i receptes amb llet."
           },
           "touchscreen_cta": {
              "id": "5_7",
             "label":"touchscreen_cta",
-            "texte":""
+            "texte":"Explori la pantalla tàctil de la Lattissima Pro"
           },
           "touchscreen_picto_1": {
              "id": "5_8",
             "label":"touchscreen_picto_1",
-            "texte":""
+            "texte":"Lungo"
           },
           "touchscreen_picto_2": {
              "id": "5_9",
             "label":"touchscreen_picto_2",
-            "texte":""
+            "texte":"Espresso"
           },
           "touchscreen_picto_3": {
              "id": "5_10",
             "label":"touchscreen_picto_3",
-            "texte":""
+            "texte":"Ristretto"
           },
           "touchscreen_picto_4": {
              "id": "5_11",
             "label":"touchscreen_picto_4",
-            "texte":""
+            "texte":"Aigua calenta"
           },
           "touchscreen_picto_5": {
              "id": "5_3",
             "label":"touchscreen_picto_5",
-            "texte":""
+            "texte":"Llet calenta"
           },
           "touchscreen_picto_6": {
              "id": "5_2",
             "label":"touchscreen_picto_6",
-            "texte":""
+            "texte":"Cappuccino"
           },
           "touchscreen_picto_7": {
              "id": "5_12",
             "label":"touchscreen_picto_7",
-            "texte":""
+            "texte":"Latte Macchiato"
           }
         }
       },
@@ -390,27 +395,27 @@
           "home": {
              "id": "12_3",
             "label":"home",
-            "texte":""
+            "texte":"Inici"
           },
           "one_touch_is_all": {
              "id": "12_2",
             "label":"one_touch_is_all",
-            "texte":""
+            "texte":"Pantalla tàctil <br>intuïtiva"
           },
           "a_wide_range_of_grands_crus": {
              "id": "12_4",
             "label":"a_wide_range_of_grands_crus",
-            "texte":""
+            "texte":"Gamma de cafès"
           },
           "delicious_coffee_and_milk_recipes": {
              "id": "12_5",
             "label":"delicious_coffee_and_milk_recipes",
-            "texte":""
+            "texte":"Sistema de llet"
           },
           "powerful__inside_andamp;_out": {
              "id": "12_6",
             "label":"powerful__inside_andamp;_out",
-            "texte":""
+            "texte":"Característiques"
           }
         }
       },
@@ -420,32 +425,32 @@
           "_discover_range": {
              "id": "6_14",
             "label":"_discover_range",
-            "texte":""
+            "texte":"Descobeixi els nostres Grans Crus"
           },
           "title": {
              "id": "6_7",
             "label":"title",
-            "texte":""
+            "texte":"Una àmplia gamma de Grands Crus"
           },
           "description_text": {
              "id": "6_8",
             "label":"description_text",
-            "texte":""
+            "texte":"Les càpsules Nespresso preserven les aromes del cafè acabat de moldre. El fet de saber preparar un bon Espresso amb llet sempre comença amb un gran Espresso. Esculli un dels nostres 22 Grands Crus i prepari's per un viatge d'experiències sensorials."
           },
           "intensity": {
              "id": "6_11",
             "label":"intensity",
-            "texte":""
+            "texte":"Intensitat:"
           },
           "aromatic_notes": {
              "id": "6_13",
             "label":"aromatic_notes",
-            "texte":""
+            "texte":"Notes aromàtiques:"
           },
           "with_milk___": {
              "id": "6_12",
             "label":"with_milk___",
-            "texte":""
+            "texte":"Amb llet:"
           }
         }
       },
@@ -455,87 +460,87 @@
           "title": {
              "id": "10_15",
             "label":"title",
-            "texte":""
+            "texte":"Potència per dins i per fora"
           },
           "text": {
              "id": "10_14",
             "label":"text",
-            "texte":""
+            "texte":"La qualitat professional és la font d'inspiració de la NOVA màquina Lattissima Pro, que incorpora un alt grau de simplicitat i es presenta amb un disseny elegant, subtil i robust i un acabat d'alumini."
           },
           "bloc_1_•_characteristics": {
              "id": "10_13",
             "label":"bloc_1_•_characteristics",
-            "texte":""
+            "texte":"Característiques"
           },
           "bloc_1__info_1": {
              "id": "10_17",
             "label":"bloc_1__info_1",
-            "texte":""
+            "texte":"Acabat d'alumini polit refinat"
           },
           "bloc_1__info_2": {
              "id": "10_18",
             "label":"bloc_1__info_2",
-            "texte":""
+            "texte":"19 bars"
           },
           "bloc_1__info_3": {
              "id": "10_19",
             "label":"bloc_1__info_3",
-            "texte":""
+            "texte":"Màquina llesta en 25 segons"
           },
           "bloc_1__info_4": {
              "id": "10_24",
             "label":"bloc_1__info_4",
-            "texte":""
+            "texte":"Apagada automàtica"
           },
           "bloc_2_•_intuitive_touchscreen": {
              "id": "10_20",
             "label":"bloc_2_•_intuitive_touchscreen",
-            "texte":""
+            "texte":"Pantalla tàctil automàtica"
           },
           "bloc_2__info_1": {
              "id": "10_21",
             "label":"bloc_2__info_1",
-            "texte":""
+            "texte":"Pantalla LCD amb instruccions precises per a un ús intuïtiu"
           },
           "bloc_2__info_2": {
              "id": "10_22",
             "label":"bloc_2__info_2",
-            "texte":""
+            "texte":"Begudes delicioses només pitjant un botó"
           },
           "bloc_3_•_optimal_milk_froth_quality": {
              "id": "10_11",
             "label":"bloc_3_•_optimal_milk_froth_quality",
-            "texte":""
+            "texte":"Escuma de llet de qualitat òptima"
           },
           "bloc_3__info_1": {
              "id": "10_10",
             "label":"bloc_3__info_1",
-            "texte":""
+            "texte":"Tecnologia de vapor avançada"
           },
           "bloc_3__info_2": {
              "id": "10_1",
             "label":"bloc_3__info_2",
-            "texte":""
+            "texte":"Dipòsit de llet de 0,3 l que es pot guardar a la nevera"
           },
           "bloc_4_•_auto_clean_system": {
              "id": "10_3",
             "label":"bloc_4_•_auto_clean_system",
-            "texte":""
+            "texte":"Sistema d'autoneteja"
           },
           "bloc_4__info_1": {
              "id": "10_4",
             "label":"bloc_4__info_1",
-            "texte":""
+            "texte":"Avaluada per un organisme de certificació internacional"
           },
           "bloc_4__info_2": {
              "id": "10_5",
             "label":"bloc_4__info_2",
-            "texte":""
+            "texte":"Els components del sistema de llet són aptes per al rentaplats"
           },
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":""
+            "texte":"Descarregui's el manual de l'usuari"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -545,12 +550,12 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":""
+            "texte":"Miri els vídeos del nostre Servei d'Assistència Tècnica"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
             "label":"youtube_video_playlist_url",
-            "texte":""
+            "texte":"http://www.youtube.com/watch?v=sk1ro_zQLlE&list=PLQ2eIUsAVWUwvKh3kBxoG0O8-DOb60o5M"
           }
         }
       },
@@ -560,332 +565,332 @@
           "grand_cru_1": {
              "id": "8_41",
             "label":"grand_cru_1",
-            "texte":""
+            "texte":"Kazaar"
           },
           "grand_cru_2": {
              "id": "8_42",
             "label":"grand_cru_2",
-            "texte":""
+            "texte":"Dharkan"
           },
           "grand_cru_3": {
              "id": "8_43",
             "label":"grand_cru_3",
-            "texte":""
+            "texte":"Ristretto"
           },
           "grand_cru_4": {
              "id": "8_44",
             "label":"grand_cru_4",
-            "texte":""
+            "texte":"Arpeggio"
           },
           "grand_cru_5": {
              "id": "8_45",
             "label":"grand_cru_5",
-            "texte":""
+            "texte":"Roma"
           },
           "grand_cru_6": {
              "id": "8_46",
             "label":"grand_cru_6",
-            "texte":""
+            "texte":"Livanto"
           },
           "grand_cru_7": {
              "id": "8_47",
             "label":"grand_cru_7",
-            "texte":""
+            "texte":"Capriccio"
           },
           "grand_cru_8": {
              "id": "8_40",
             "label":"grand_cru_8",
-            "texte":""
+            "texte":"Volluto"
           },
           "grand_cru_9": {
              "id": "8_39",
             "label":"grand_cru_9",
-            "texte":""
+            "texte":"Cosi"
           },
           "grand_cru_10": {
              "id": "8_38",
             "label":"grand_cru_10",
-            "texte":""
+            "texte":"Indriya from India"
           },
           "grand_cru_11": {
              "id": "8_37",
             "label":"grand_cru_11",
-            "texte":""
+            "texte":"Rosabaya de Colombia"
           },
           "grand_cru_12": {
              "id": "8_36",
             "label":"grand_cru_12",
-            "texte":""
+            "texte":"Dulsão do Brasil"
           },
           "grand_cru_13": {
              "id": "8_32",
             "label":"grand_cru_13",
-            "texte":""
+            "texte":"Bukeela ka Ethiopia"
           },
           "grand_cru_14": {
              "id": "8_33",
             "label":"grand_cru_14",
-            "texte":""
+            "texte":"Decaffeinato Intenso"
           },
           "grand_cru_15": {
              "id": "8_34",
             "label":"grand_cru_15",
-            "texte":""
+            "texte":"Decaffeinato"
           },
           "grand_cru_16": {
              "id": "8_35",
             "label":"grand_cru_16",
-            "texte":""
+            "texte":"Decaffeinato Lungo"
           },
           "grand_cru_17": {
              "id": "8_48",
             "label":"grand_cru_17",
-            "texte":""
+            "texte":"Fortissio Lungo"
           },
           "grand_cru_18": {
              "id": "8_49",
             "label":"grand_cru_18",
-            "texte":""
+            "texte":"Vivalto Lungo"
           },
           "grand_cru_19": {
              "id": "8_50",
             "label":"grand_cru_19",
-            "texte":""
+            "texte":"Linizio Lungo"
           },
           "grand_cru_20": {
              "id": "8_65",
             "label":"grand_cru_20",
-            "texte":""
+            "texte":"Caramelito"
           },
           "grand_cru_21": {
              "id": "8_64",
             "label":"grand_cru_21",
-            "texte":""
+            "texte":"Vanilio"
           },
           "grand_cru_22": {
              "id": "8_63",
             "label":"grand_cru_22",
-            "texte":""
+            "texte":"Cioccatino"
           },
           "grand_cru_1_aromatic_profile": {
              "id": "8_62",
             "label":"grand_cru_1_aromatic_profile",
-            "texte":""
+            "texte":"De fusta, especiat"
           },
           "grand_cru_1_aromatic_profile_with_milk": {
              "id": "8_61",
             "label":"grand_cru_1_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Torrat, amb una aroma amargant, de xocolata"
           },
           "grand_cru_2_aromatic_profile": {
              "id": "8_60",
             "label":"grand_cru_2_aromatic_profile",
-            "texte":""
+            "texte":"Intensament torrat, de cereals"
           },
           "grand_cru_2_aromatic_profile_with_milk": {
              "id": "8_59",
             "label":"grand_cru_2_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Torrat, intens, de fruits secs"
           },
           "grand_cru_3_aromatic_profile": {
              "id": "8_58",
             "label":"grand_cru_3_aromatic_profile",
-            "texte":""
+            "texte":"Molt torrat, amb un matís afruitat"
           },
           "grand_cru_3_aromatic_profile_with_milk": {
              "id": "8_57",
             "label":"grand_cru_3_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Fort, amb molt de cos, amb una aroma amargant"
           },
           "grand_cru_4_aromatic_profile": {
              "id": "8_56",
             "label":"grand_cru_4_aromatic_profile",
-            "texte":""
+            "texte":"Molt torrat, de cacau"
           },
           "grand_cru_4_aromatic_profile_with_milk": {
              "id": "8_55",
             "label":"grand_cru_4_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Fort, amb molt de cos, amb una aroma amargant"
           },
           "grand_cru_5_aromatic_profile": {
              "id": "8_54",
             "label":"grand_cru_5_aromatic_profile",
-            "texte":""
+            "texte":"De fusta, de cereals"
           },
           "grand_cru_5_aromatic_profile_with_milk": {
              "id": "8_53",
             "label":"grand_cru_5_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Dolç, equilibrat i lleugerament torrat"
           },
           "grand_cru_6_aromatic_profile": {
              "id": "8_52",
             "label":"grand_cru_6_aromatic_profile",
-            "texte":""
+            "texte":"De caramel"
           },
           "grand_cru_6_aromatic_profile_with_milk": {
              "id": "8_51",
             "label":"grand_cru_6_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Lleuger, dolç i de galeta"
           },
           "grand_cru_7_aromatic_profile": {
              "id": "8_66",
             "label":"grand_cru_7_aromatic_profile",
-            "texte":""
+            "texte":"De cereals"
           },
           "grand_cru_7_aromatic_profile_with_milk": {
              "id": "8_31",
             "label":"grand_cru_7_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Dolç, equilibrat i lleugerament torrat"
           },
           "grand_cru_8_aromatic_profile": {
              "id": "8_13",
             "label":"grand_cru_8_aromatic_profile",
-            "texte":""
+            "texte":"De cereals, afruitat"
           },
           "grand_cru_8_aromatic_profile_with_milk": {
              "id": "8_12",
             "label":"grand_cru_8_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Molt lleuger, dolç, suau i lacti"
           },
           "grand_cru_9_aromatic_profile": {
              "id": "8_11",
             "label":"grand_cru_9_aromatic_profile",
-            "texte":""
+            "texte":"De cítrics"
           },
           "grand_cru_9_aromatic_profile_with_milk": {
              "id": "8_10",
             "label":"grand_cru_9_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Molt lleuger, dolç, suau i lacti"
           },
           "grand_cru_10_aromatic_profile": {
              "id": "8_9",
             "label":"grand_cru_10_aromatic_profile",
-            "texte":""
+            "texte":"Especiat"
           },
           "grand_cru_10_aromatic_profile_with_milk": {
              "id": "8_8",
             "label":"grand_cru_10_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Fort, amb molt de cos, amb una aroma amargant"
           },
           "grand_cru_12_aromatic_profile": {
              "id": "8_7",
             "label":"grand_cru_12_aromatic_profile",
-            "texte":""
+            "texte":"De cereals dolços"
           },
           "grand_cru_12_aromatic_profile_with_milk": {
              "id": "8_6",
             "label":"grand_cru_12_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Lleuger, dolç i de galeta"
           },
           "grand_cru_11_aromatic_profile": {
              "id": "8_5",
             "label":"grand_cru_11_aromatic_profile",
-            "texte":""
+            "texte":"Afruitat, de vi, torrat"
           },
           "grand_cru_11_aromatic_profile_with_milk": {
              "id": "8_4",
             "label":"grand_cru_11_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Lleuger, dolç i de galeta"
           },
           "grand_cru_13_aromatic_profile": {
              "id": "8_3",
             "label":"grand_cru_13_aromatic_profile",
-            "texte":""
+            "texte":"Delicat, fresc i afruitat"
           },
           "grand_cru_13_aromatic_profile_with_milk": {
              "id": "8_2",
             "label":"grand_cru_13_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Floral, amb molt de cos, de caramel"
           },
           "grand_cru_17_aromatic_profile": {
              "id": "8_1",
             "label":"grand_cru_17_aromatic_profile",
-            "texte":""
+            "texte":"Molt torrat, de cereals"
           },
           "grand_cru_17_aromatic_profile_with_milk": {
              "id": "8_14",
             "label":"grand_cru_17_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Molt torrat, de cereals torrats"
           },
           "grand_cru_18_aromatic_profile": {
              "id": "8_15",
             "label":"grand_cru_18_aromatic_profile",
-            "texte":""
+            "texte":"Torrat, floral"
           },
           "grand_cru_18_aromatic_profile_with_milk": {
              "id": "8_16",
             "label":"grand_cru_18_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Torrat, afruitat, de fruits secs torrats"
           },
           "grand_cru_19_aromatic_profile": {
              "id": "8_30",
             "label":"grand_cru_19_aromatic_profile",
-            "texte":""
+            "texte":"De cereals amb malta"
           },
           "grand_cru_19_aromatic_profile_with_milk": {
              "id": "8_29",
             "label":"grand_cru_19_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"De cereals torrats, afruitat"
           },
           "grand_cru_14_aromatic_profile": {
              "id": "8_28",
             "label":"grand_cru_14_aromatic_profile",
-            "texte":""
+            "texte":"De cacau torrat, de cereals"
           },
           "grand_cru_14_aromatic_profile_with_milk": {
              "id": "8_27",
             "label":"grand_cru_14_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Dolç, equilibrat i lleugerament torrat"
           },
           "grand_cru_15_lungo_aromatic_profile": {
              "id": "8_26",
             "label":"grand_cru_15_lungo_aromatic_profile",
-            "texte":""
+            "texte":"De cereals torrats"
           },
           "grand_cru_15_lungo_aromatic_profile_with_milk": {
              "id": "8_25",
             "label":"grand_cru_15_lungo_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"De cereals torrats, de fruites verdes"
           },
           "grand_cru_15_aromatic_profile": {
              "id": "8_24",
             "label":"grand_cru_15_aromatic_profile",
-            "texte":""
+            "texte":"Afruitat, de vi"
           },
           "grand_cru_15_aromatic_profile_with_milk": {
              "id": "8_23",
             "label":"grand_cru_15_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Molt lleuger, dolç, suau i lacti"
           },
           "grand_cru_20_aromatic_profile": {
              "id": "8_21",
             "label":"grand_cru_20_aromatic_profile",
-            "texte":""
+            "texte":"De caramel"
           },
           "grand_cru_20_aromatic_profile_with_milk": {
              "id": "8_22",
             "label":"grand_cru_20_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Amargor del caramel torrat"
           },
           "grand_cru_21_aromatic_profile": {
              "id": "8_19",
             "label":"grand_cru_21_aromatic_profile",
-            "texte":""
+            "texte":"Vainilla"
           },
           "grand_cru_21_aromatic_profile_with_milk": {
              "id": "8_20",
             "label":"grand_cru_21_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Caramel"
           },
           "grand_cru_22_aromatic_profile": {
              "id": "8_17",
             "label":"grand_cru_22_aromatic_profile",
-            "texte":""
+            "texte":"De xocolata negra"
           },
           "grand_cru_22_aromatic_profile_with_milk": {
              "id": "8_18",
             "label":"grand_cru_22_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Amb tocs d'amargor i xocolata negra"
           }
         }
       },
@@ -895,22 +900,22 @@
           "title": {
              "id": "9_5",
             "label":"title",
-            "texte":""
+            "texte":"Receptes delicioses de cafè amb llet"
           },
           "text_paragraph_1_milk_frothtext_paragraph_1_milk_froth": {
              "id": "9_4",
             "label":"text_paragraph_1_milk_frothtext_paragraph_1_milk_froth",
-            "texte":""
+            "texte":"Sempre s'obté una escuma de llet perfecta per preparar els Cappuccinos i Latte Macchiatos més exquisits. Ajusti el regulador de la textura de l'escuma de llet segons els seus gustos."
           },
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
             "label":"text_paragraph_2_auto_clean",
-            "texte":""
+            "texte":"Només cal que giri el regulador de la llet fins a la posició \"Netejar\". La higiene de la màquina és avaluada per un organisme de certificació internacional per garantir un alt grau de neteja."
           },
           "schema_milk_froth_text_": {
              "id": "9_2",
             "label":"schema_milk_froth_text_",
-            "texte":""
+            "texte":"Regulador de la textura de l'escuma de llet"
           }
         }
       },
@@ -920,12 +925,12 @@
           "receive": {
              "id": "11_5",
             "label":"receive",
-            "texte":""
+            "texte":"Rebi"
           },
           "currency": {
              "id": "11_4",
             "label":"currency",
-            "texte":""
+            "texte":"xx€"
           },
           "price": {
              "id": "11_3",
@@ -935,17 +940,17 @@
           "cta": {
              "id": "11_2",
             "label":"cta",
-            "texte":""
+            "texte":"Bescanviï la seva oferta"
           },
           "range_date": {
              "id": "11_1",
             "label":"range_date",
-            "texte":""
+            "texte":"Fins al 01/06/2014"
           },
           "url": {
              "id": "11_6",
             "label":"url",
-            "texte":""
+            "texte":"www.nespresso.com/es/ca/login"
           }
         }
       }
