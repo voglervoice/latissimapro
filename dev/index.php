@@ -42,7 +42,8 @@
             <div class="nespresso_logo"></div>
             <div class="preloader">
                 <div class="logo_preload"></div>
-                <a class="machine_preload" href="<?php echo $jsonLangGlobals->order_online_shop_link->texte; ?>" target="_blank">
+                <a class="machine_preload" href="<?php echo $jsonLangFooter->order_online_shop_link->texte; ?>" target="_blank">
+                    <img src="assets/imgs/intro_machine_btn.png" />
                     <span><?php echo $jsonLangGlobals->order->texte; ?></span>
                 </a>
                 <span class="loader_pct">00<sup>%</sup></span>

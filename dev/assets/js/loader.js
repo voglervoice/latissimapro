@@ -80,8 +80,12 @@ define([
 			TweenMax.to($('.logo_preload'), 0.7, {width:300, marginLeft:-150, ease:Expo.easeInOut});
 		}});
 
-		
-
+		var btnWidth = Math.max(108, $('.machine_preload span').width()+20);
+		$('.machine_preload img').width(btnWidth);
+		$('.machine_preload img').height(29);
+		$('.machine_preload img').css('margin-left', -btnWidth*0.5-4);
+		$('.machine_preload span').css('left', '50%');
+		$('.machine_preload span').css('margin-left', -$('.machine_preload span').width()*0.5-4);
 		loadingAnimation();
 
 		if(images.length > 0){
