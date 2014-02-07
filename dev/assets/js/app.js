@@ -39,7 +39,6 @@ define([
 		milksystem = new MilkSystem();
 		touchscreen = new Touchscreen();
 		coffeerange = new CoffeeRange();
-		//popins = new Popins();
 
 		$('section').css('visibility', 'hidden');
 		TweenMax.to($('.content'), 0, {autoAlpha:0});
@@ -61,7 +60,7 @@ define([
 			});
 
 			if(typeof mainMenu != "undefined"){
-				mainMenu.resize();
+				mainMenu.resize(windowW, windowH);
 
 				if(currentSection !== null){
 					currentSection.resize(windowW, windowHContent);

@@ -47,12 +47,15 @@ function getCapsules($datas, $start, $nbCaps){
 		?>
 	</div>
 	<div class="range_content">
-		<h2><?php echo $jsonLangRangeGlobals->title->texte; ?></h2>
+		<h2 class="h2_n"><?php echo $jsonLangRangeGlobals->title->texte; ?></h2>
 		<div class="content_line_sep"></div>
-		<span class="range_description"><?php echo proccedText($jsonLangRangeGlobals->description_text->texte); ?></span>
+		<span class="range_description range_description_n"><?php echo proccedText($jsonLangRangeGlobals->description_text->texte); ?></span>
 		<div class="range_coffees">
 			<div class="range_cat">
-				<div class="range_cat_title"><span>Intenso</span><div></div></div>
+				<div class="range_cat_title">
+					<span><?php echo $jsonLang->range__capsules->blockText->capsules_category_1->texte; ?></span>
+					<div></div>
+				</div>
 				<div class="range_cat_caps">
 					<?php
 						echo getCapsules($jsonLangRangeCapsules, $index, 5);
@@ -61,7 +64,10 @@ function getCapsules($datas, $start, $nbCaps){
 				</div>
 			</div>
 			<div class="range_cat">
-				<div class="range_cat_title"><span>Espresso</span><div></div></div>
+				<div class="range_cat_title">
+					<span><?php echo $jsonLang->range__capsules->blockText->capsules_category_2->texte; ?></span>
+					<div></div>
+				</div>
 				<div class="range_cat_caps">
 					<?php
 						echo getCapsules($jsonLangRangeCapsules, $index, 4);
@@ -70,7 +76,10 @@ function getCapsules($datas, $start, $nbCaps){
 				</div>
 			</div>
 			<div class="range_cat">
-				<div class="range_cat_title"><span>Pure Origin</span><div></div></div>
+				<div class="range_cat_title">
+					<span><?php echo $jsonLang->range__capsules->blockText->capsules_category_5->texte; ?></span>
+					<div></div>
+				</div>
 				<div class="range_cat_caps">
 					<?php
 						echo getCapsules($jsonLangRangeCapsules, $index, 4);
@@ -79,7 +88,10 @@ function getCapsules($datas, $start, $nbCaps){
 				</div>
 			</div>
 			<div class="range_cat">
-				<div class="range_cat_title"><span>Decaffeinato</span><div></div></div>
+				<div class="range_cat_title">
+					<span><?php echo $jsonLang->range__capsules->blockText->capsules_category_4->texte; ?></span>
+					<div></div>
+				</div>
 				<div class="range_cat_caps">
 					<?php
 						echo getCapsules($jsonLangRangeCapsules, $index, 3);
@@ -88,7 +100,10 @@ function getCapsules($datas, $start, $nbCaps){
 				</div>
 			</div>
 			<div class="range_cat">
-				<div class="range_cat_title"><span>Lungo</span><div></div></div>
+				<div class="range_cat_title">
+					<span><?php echo $jsonLang->range__capsules->blockText->capsules_category_3->texte; ?></span>
+					<div></div>
+				</div>
 				<div class="range_cat_caps">
 					<?php
 						echo getCapsules($jsonLangRangeCapsules, $index, 3);
@@ -97,7 +112,10 @@ function getCapsules($datas, $start, $nbCaps){
 				</div>
 			</div>
 			<div class="range_cat">
-				<div class="range_cat_title"><span>Variations</span><div></div></div>
+				<div class="range_cat_title">
+					<span><?php echo $jsonLang->range__capsules->blockText->capsules_category_6->texte; ?></span>
+					<div></div>
+				</div>
 				<div class="range_cat_caps">
 					<?php
 						echo getCapsules($jsonLangRangeCapsules, $index, 3);

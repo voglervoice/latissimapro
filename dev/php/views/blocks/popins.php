@@ -50,6 +50,7 @@
 			<input type="text" value="" name="senderName" />
 			<span><?php echo $jsonLangMail->form_senders_email->texte; ?></span>
 			<input type="text" value="" name="senderMail" />
+			<input type="text" value="<?php echo $languagesite."_".$territory; ?>" name="code" style="display:none;" />
 			<span><?php echo $jsonLangMail->form_receivers_email->texte; ?></span>
 			<input type="text" value="" name="emailFriends" />
 			<div></div>

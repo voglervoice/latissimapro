@@ -20,13 +20,31 @@ define([
     formats: [ "mp3"], preload: true
 });
         // ******************* public ******************* 
-        this.resize = function(){
+        this.resize = function(w, h){
             $('.scroll_to_explore').css('margin-left', -$('.scroll_to_explore').width()*0.5);
             $('nav ul li').each(function(index) {
                 $(this).css({'top':($('a span', this).height() > 22)? menuSpace*index -1 :  menuSpace*index+9});
                 $('a', this).height($('a span', this).height()+2);
             });
             $('.order_footer_btn_visual').css('right', $('.order_footer_btn span').width()+50);
+             var pct = 1, latiOffset = 0, latiOffset2 = 0;
+            if(w < 1050 || h < 725){
+                pct = 0.75;
+                latiOffset =5;
+                /*$('h1').css('background-image', "url(assets/imgs/ui/lattissima.png)");
+                $('.nespresso_logo').css('background-image', "url(assets/imgs/ui/logo.png)");*/
+            }else if(w > 1400 && h > 1200){
+                pct = 1.4;
+                latiOffset =-10;
+                latiOffset2 = -5;
+                $('h1').css('background-image', "url(assets/imgs/ui/retina/lattissima@2x.png)");
+                $('.nespresso_logo').css('background-image', "url(assets/imgs/ui/retina/logo@2x.png)");
+            }
+            $('.nespresso_logo').width(Math.round(38*pct));
+            $('.nespresso_logo').height(Math.round(38*pct));
+            $('h1').width(Math.round(166*pct));
+            $('h1').height(Math.round(38*pct));
+            $('h1').css({'left':Math.round(89*pct)+latiOffset2, 'top':Math.round(25*pct)+latiOffset});
         };
 
         this.update = function(id) {

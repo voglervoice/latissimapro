@@ -1,7 +1,7 @@
 <section id="milksystem">
 	<div class="milk_zoom"><div class="milk_zoom_inner"></div></div>
 	<div class="milk_content">
-		<h2><?php echo $jsonLangMilk->title->texte; ?></h2>
+		<h2 class="h2_n"><?php echo $jsonLangMilk->title->texte; ?></h2>
 		<div class="content_line_milk_sep"></div>
 		<span class="milk_description"><?php echo proccedText($jsonLangMilk->text_paragraph_1_milk_frothtext_paragraph_1_milk_froth->texte); ?></span>
 		<div class="visual_fig">

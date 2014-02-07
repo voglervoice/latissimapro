@@ -106,7 +106,7 @@ module.exports = function(grunt){
 				options: {
 					event: ['all']
 				}
-			},
+			}/*,
 			js: {
 				files: "dev/assets/js/**",
 				tasks: "copy:js",
@@ -152,7 +152,7 @@ module.exports = function(grunt){
 				options: {
 					event: ['all']
 				}
-			}
+			}*/
 		}
 	});
 

@@ -1,7 +1,7 @@
 <section id="design">
 	<div class="design_content">
 		<div class="design_content_title">
-			<h2><?php echo $jsonLangDesign->title->texte; ?></h2>
+			<h2 class="h2_n"><?php echo $jsonLangDesign->title->texte; ?></h2>
 			<div class="content_line_design_sep"></div>
 			<span class="design_description"><?php echo proccedText($jsonLangDesign->text->texte); ?></span>
 		</div>

@@ -9,7 +9,8 @@ define([
 ], function($, TweenMax, Events, publisher, Raphael, BackgroundSection, ImageElem) {
 
     var Touchscreen = function() {
-        var self = this;
+        var bulleScale = 1, ctaOn = true, windowW;
+        var self = this, opened = false;
         var resizeRatio = 1;
          var positionInPaper = {x:0, y:0};
          var buttonWidth = $('.touchscreen_roll').first().width(), buttonInnerWidth = $('.touchscreen_roll_inner').first().width();
@@ -45,6 +46,7 @@ define([
         var paper2 = Raphael("touchscreen_puces", 1000, 1000);
 
         this.resize = function(w, h){
+            windowW = w;
             var dresize = this.bg.resize(w, h);
             $('.touch_vignettage').css({'left':dresize.left+'px', 'top':dresize.top+'px', 'width':dresize.width+'px', 'height':dresize.height+'px'});
             /*$('.touch_vignettage').width(w);
@@ -71,7 +73,7 @@ define([
 
             $('.touchscreen_roll').each(function(index) {
                 var xRoll = positionInPaper.x + rollPosition[index].x*resizeRatio + rollOffset.x;
-                var yRoll = positionInPaper.y + rollPosition[index].y*resizeRatio + rollOffset.y;
+                var yRoll = positionInPaper.y + rollPosition[index].y*resizeRatio + rollOffset.y + 20;
                 $(this).css({'left':xRoll, 'top': yRoll });
             });
             var i;
@@ -82,9 +84,28 @@ define([
                 puces[i].data('b2').attr({'cx':rollPosition[i].x*resizeRatio, 'cy':rollPosition[i].y*resizeRatio});
             }
 
+            $('.touchscreen_cta').css({'left': offsetLeft + 842*resizeRatio*0.5 - 70, 'top': topVal+50*resizeRatio});
+
             $('.screen_rolls').css({'top':screenPos.y*resizeRatio+topVal, 'left':screenPos.x*resizeRatio+offsetLeft});
             $('.screen_rolls img').width(639*resizeRatio);
             $('.screen_rolls img').height(517*resizeRatio);
+
+            if(h<725 || w <1170){
+                $('span', ct).removeClass('touch_description_n');
+                $('span', ct).addClass('content_span_text_smaller');
+                $('h2', ct).removeClass('h2_n');
+                $('h2', ct).addClass('h2_smaller');
+                $('.content_line_sep', ct).css({'margin-top': 11, 'margin-bottom': 13});
+            }else{
+                $('span', ct).removeClass('content_span_text_smaller');
+                $('span', ct).addClass('touch_description_n');
+                $('h2', ct).removeClass('h2_smaller');
+                $('h2', ct).addClass('h2_n');
+                $('.content_line_sep', ct).css({'margin-top': 18, 'margin-bottom': 22});
+            }
+
+            bulleScale = (w > 1500 && h > 1200)? 1 : 0.8 ;
+            if(h < 650) bulleScale = 0.7;
         };
 
         this.initOpen = function(){
@@ -94,8 +115,11 @@ define([
                 puces[i].data('b2').attr({'r':0});
             }
 
+            ctaOn = true;
+
             TweenMax.to($('.screen_rolls img'), 0, {alpha:0});
-            TweenMax.to($('.touchscreen_roll'), 0, {scale:0.8, alpha:0});
+            TweenMax.to($('.touchscreen_roll'), 0, {scale:bulleScale-0.2, alpha:0});
+            TweenMax.to($('.touchscreen_cta'), 0, {alpha:0, scale:bulleScale-0.3});
 
             this.bg.open();
             TweenMax.killTweensOf(ct);
@@ -107,19 +131,37 @@ define([
         };
         
         this.open = function(){
+            opened = true;
             $('#touchscreen_puces').css('display', "block");
             for (var i = 0; i < puces.length; i++){
                 TweenMax.delayedCall(i*0.3, openPuce, [puces[i]]);
             }
+
+            TweenMax.to($('.touchscreen_cta'), 0.3, {alpha:0.75, scale:bulleScale-0.04, ease:Circ.easeOut, delay:0.8});
+
+            this.elem.off("mousemove");
+            this.elem.on("mousemove", function( event ) {
+                  console.log(event.pageX);
+                  if(event.pageX > windowW*0.55 && !ctaOn){
+                    ctaOn = true;
+                    TweenMax.to($('.touchscreen_cta'), 0.3, {alpha:0.75, scale:bulleScale-0.04, ease:Circ.easeOut});
+                  }
+            });
         };
 
         this.close = function(){
+            opened = false;
+            this.elem.off("mousemove");
             this.bg.close();
             TweenMax.killDelayedCallsTo(openPuce);
             TweenMax.killDelayedCallsTo(pulseCircle);
             TweenMax.killDelayedCallsTo(pulseC);
             TweenMax.killTweensOf(ct);
+            
             $('#touchscreen_puces').css('display', "none");
+
+            TweenMax.killTweensOf($('.touchscreen_cta'));
+            TweenMax.to($('.touchscreen_cta'), 0.3, {alpha:0, scale:bulleScale-0.3, ease:Circ.easeIn});
             /*for (var i = 0; i < puces.length; i++){
                 puces[i].animate({ r : 0, easing:'backIn', 'cx':rollPosition[i].x*resizeRatio - 30},100);
                 puces[i].data('b').animate({ r : 0, easing:'backIn', 'cx':rollPosition[i].x*resizeRatio - 30},150);
@@ -134,23 +176,25 @@ define([
 
         // ******************* private *******************
         var pulseCircle = function(el){
-            var baseDelay = 5;
-            TweenMax.delayedCall(baseDelay, pulseC, [el.data('b2'), 10, 13]);
-            TweenMax.delayedCall(baseDelay+0.1, pulseC, [el.data('b'), 7, 9]);
-            TweenMax.delayedCall(baseDelay+0.3, pulseC, [el, 3, 5]);
+            if(opened){
+                var baseDelay = 5;
+                TweenMax.delayedCall(baseDelay, pulseC, [el.data('b2'), 10, 13]);
+                TweenMax.delayedCall(baseDelay+0.1, pulseC, [el.data('b'), 7, 9]);
+                TweenMax.delayedCall(baseDelay+0.3, pulseC, [el, 3, 5]);
 
-            TweenMax.delayedCall(baseDelay, pulseCircle, [el]);
+                TweenMax.delayedCall(baseDelay, pulseCircle, [el]);
+            }
         };
 
         var pulseC = function(c, baseR, newR){
             c.animate({ r : newR, easing:'>', callback:function(){
-                c.animate({ r : baseR, easing:'<>'},250);
+                if(opened) c.animate({ r : baseR, easing:'<>'},250);
             }},250);
         };
 
         var openPuce = function(el){
             el.data('b2').animate({ r : 10, easing:'backOut', callback:function(){
-                el.data('b').animate({ r : 7, easing:'backOut', callback:function(){
+                if(opened) el.data('b').animate({ r : 7, easing:'backOut', callback:function(){
                     el.animate({ r : 3, easing:'backOut', callback:function(){
                      pulseCircle(el);
                     }},250);
@@ -203,8 +247,11 @@ define([
            /* TweenMax.killTweensOf(innerDiv);
             TweenMax.killTweensOf(innerDivImg);*/
 
-            TweenMax.to(rollDiv, motionTime, {scale:1, alpha:1});
+            TweenMax.to(rollDiv, motionTime, {scale:bulleScale, alpha:1, ease:motionEase});
 
+            TweenMax.killTweensOf($('.touchscreen_cta'));
+            TweenMax.to($('.touchscreen_cta'), 0.2, {alpha:0, scale:bulleScale-0.3, ease:Circ.easeOut});
+            ctaOn = false;
             /*
             TweenMax.to(rollDiv, motionTime, {
                 left:parseInt(rollDiv.attr('data-left'), 10),
@@ -268,7 +315,7 @@ define([
                 top:(-buttonInnerWidth*0.5),
                 ease:motionEase});*/
 
-            TweenMax.to(rollDiv, motionTime, {scale:0.8, alpha:0});
+            TweenMax.to(rollDiv, motionTime, {scale:bulleScale-0.2, alpha:0});
 /*
             TweenMax.to(innerDivImg, motionTime*0.5, {alpha:0});*/
             TweenMax.to($('.screen_rolls img'), 0.5, {alpha:0});

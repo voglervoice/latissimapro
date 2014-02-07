@@ -1,59 +1,48 @@
 <section id="touchscreen">
 	<div id="touchscreen_buttons"></div>
+	<div class="touchscreen_cta">
+		<span><?php echo proccedText($jsonLangTouch->touchscreen_cta->texte); ?></span>
+	</div>
 	<div class="touchscreen_rolls">
 		<div class="touchscreen_roll">
-			<div class="touchscreen_roll_inner">
-				<div class="touchscreen_manifier_lungo">
-					<span><?php echo $jsonLangTouch->touchscreen_picto_1->texte; ?></span>
-				</div>
+			<div class="touchscreen_roll_inner touchscreen_manifier_lungo">
+				<span><?php echo $jsonLangTouch->touchscreen_picto_1->texte; ?></span>
 			</div>
 		</div>
 		<div class="touchscreen_roll">
-			<div class="touchscreen_roll_inner">
-				<div class="touchscreen_manifier_espresso">
-					<span><?php echo $jsonLangTouch->touchscreen_picto_2->texte; ?></span>
-				</div>
+			<div class="touchscreen_roll_inner touchscreen_manifier_espresso">
+				<span><?php echo $jsonLangTouch->touchscreen_picto_2->texte; ?></span>
 			</div>
 		</div>
 		<div class="touchscreen_roll">
-			<div class="touchscreen_roll_inner">
-				<div class="touchscreen_manifier_ristretto">
-					<span><?php echo $jsonLangTouch->touchscreen_picto_3->texte; ?></span>
-				</div>
+			<div class="touchscreen_roll_inner touchscreen_manifier_ristretto">
+				<span><?php echo $jsonLangTouch->touchscreen_picto_3->texte; ?></span>
 			</div>
 		</div>
 		<div class="touchscreen_roll">
-			<div class="touchscreen_roll_inner">
-				<div class="touchscreen_manifier_hotwater">
-					<span><?php echo $jsonLangTouch->touchscreen_picto_4->texte; ?></span>
-				</div>
+			<div class="touchscreen_roll_inner touchscreen_manifier_hotwater">
+				<span><?php echo $jsonLangTouch->touchscreen_picto_4->texte; ?></span>
 			</div>
 		</div>
 		<div class="touchscreen_roll">
-			<div class="touchscreen_roll_inner">
-				<div class="touchscreen_manifier_milk">
-					<span><?php echo $jsonLangTouch->touchscreen_picto_5->texte; ?></span>
-				</div>
+			<div class="touchscreen_roll_inner touchscreen_manifier_milk">
+				<span><?php echo $jsonLangTouch->touchscreen_picto_5->texte; ?></span>
 			</div>
 		</div>
 		<div class="touchscreen_roll">
-			<div class="touchscreen_roll_inner">
-				<div class="touchscreen_manifier_cappuccino">
-					<span><?php echo $jsonLangTouch->touchscreen_picto_6->texte; ?></span>
-				</div>
+			<div class="touchscreen_roll_inner touchscreen_manifier_cappuccino">
+				<span><?php echo $jsonLangTouch->touchscreen_picto_6->texte; ?></span>
 			</div>
 		</div>
 		<div class="touchscreen_roll">
-			<div class="touchscreen_roll_inner">
-				<div class="touchscreen_manifier_machiatto">
-					<span><?php echo $jsonLangTouch->touchscreen_picto_7->texte; ?></span>
-				</div>
+			<div class="touchscreen_roll_inner touchscreen_manifier_machiatto">
+				<span><?php echo $jsonLangTouch->touchscreen_picto_7->texte; ?></span>
 			</div>
 		</div>
 	</div>
 	<div id="touchscreen_puces"></div>
 	<div class="touch_content">
-		<h2><?php echo $jsonLangTouch->title->texte; ?></h2>
+		<h2 class="h2_n"><?php echo $jsonLangTouch->title->texte; ?></h2>
 		<div class="content_line_sep"></div>
 		<span><?php echo proccedText($jsonLangTouch->text->texte); ?></span>
 	</div>

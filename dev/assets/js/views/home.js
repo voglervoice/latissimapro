@@ -9,7 +9,9 @@ define([
 ], function($, TweenMax, Events, publisher, Raphael, BackgroundSection, ImageElem) {
 
     var Home = function() {
-        var self = this;
+        var btnRectH = 33, windowW, windowH;
+        var radius = Math.floor(btnRectH*0.5) - 5;
+        var self = this, ratio = 1;
         var raphaW = $('#raphael_home_anchors').width(), promoW;
         var raphaH = $('#raphael_home_anchors').height();
         var paper = Raphael("raphael_home_anchors", raphaW, raphaH);
@@ -22,11 +24,14 @@ define([
         var homeElement = homeMachine.getElement();
 
         this.resize = function(w, h){
+            windowW = w; windowH = h;
             this.bg.resize(w,h);
-            homeElement.css({'left':'50%', 'top':'50%'});
-            /*var ratio = Math.min(Math.min(h/864, w/1440), 1);
+            //homeElement.css({'left':'50%', 'top':'50%'});
+            ratio = Math.min(Math.min(h/864, w/1440), 1.4);
             homeMachine.setSize(574*ratio,567*ratio);
-            homeElement.css({'left':(w-574*ratio)*0.5, 'top':(h-567*ratio)*0.5});*/
+            homeElement.css({'left':(w-574*ratio)*0.5, 'top':(h-567*ratio)*0.5});
+
+            $('.home_anchors a').each(function(index){ reposiBtn($(this), index);});
         };
 
         this.initOpen = function(){
@@ -106,83 +111,134 @@ define([
         };
 
         // ******************* private *******************
+        var reposiBtn = function(btn, index){
+            var dataBaseX = parseInt(btn.attr('data-centerx'), 10);
+            var posiX = raphaW*0.5 + dataBaseX*ratio +4;
+            var posiY = raphaH* 0.5 + parseInt(btn.attr('data-centery'), 10)*ratio+ 100;
+            var menuSpace = 170;
+            //var btnTextWidth = $('span', btn).width()+parseInt($('span', btn).css('padding-left'), 10)+parseInt($('span', btn).css('padding-right'), 10);
+            var btnTextWidth = $('span', btn).width();
+            var lineYLength = - 69;
+            var lineXLength = 85;
+            var lastStroke = 30;
+
+            if(index == 3 && (posiX+btnTextWidth+lineXLength > windowW-menuSpace)){
+                posiX = raphaW*0.5 + (dataBaseX - 104)*ratio + 4;
+                posiY = raphaH* 0.5 + (dataBaseX -2)*ratio+ 100;
+            }
+
+            if(posiX+btnTextWidth+lineXLength > windowW-menuSpace && dataBaseX > 0){
+                lineXLength = windowW-menuSpace - posiX - btnTextWidth;
+                lastStroke = 5;
+                if(index == 3 && lineXLength < 82){
+                    lineYLength = 40;
+                }
+            }else if(dataBaseX < 0 && posiX-btnTextWidth-lineXLength < 5){
+                lineXLength = posiX-btnTextWidth-5;
+                lastStroke = 5;
+            }
+
+            circleBase[index].attr({'cx':posiX, 'cy':posiY});
+            circlePulse1[index].attr({'cx':posiX, 'cy':posiY});
+            circlePulse2[index].attr({'cx':posiX, 'cy':posiY});
+
+            
+            var posiEndX = 0, posiCurbX = 0, posiEndY = 0, posiCurbY = 0, offsetLink = 0;
+            //if(parseInt(btn.attr('data-centerx'), 10) > 0 && (posiX+btnTextWidth+5 < windowW-menuSpace)){
+            if(dataBaseX > 0){
+                posiCurbX = Math.max(posiX+5, posiX + lineXLength);
+                posiCurbY = posiY +lineYLength;
+                posiEndX = posiCurbX + lastStroke;
+                posiEndY = posiCurbY;
+            }else{
+                posiCurbX = posiX - lineXLength;
+                posiCurbY = posiY +lineYLength;
+                posiEndX = posiCurbX - lastStroke;
+                posiEndY = posiCurbY;
+                offsetLink = -btnTextWidth;
+            }
+
+            lines[index].data('initPath',  "M"+posiX+" "+posiY)
+                    .data('resultPath', "M"+posiX+" "+posiY+"L"+posiCurbX+" "+posiCurbY+"L"+posiEndX+" "+posiEndY)
+                    .data('midPath', "M"+posiX+" "+posiY+"L"+posiCurbX+" "+posiCurbY+"L"+posiCurbX+" "+posiCurbY);
+
+            // rectangle with rounded corners
+            var baseX = posiEndX+offsetLink;
+            rects[index].attr({'x':baseX, 'y':posiEndY-btnRectH*0.5});
+
+            rects[index].data("w", btnTextWidth)
+                    .data("h", btnRectH)
+                    .data("xInit", posiEndX)
+                    .data("x", baseX)
+                    .data("yInit", posiEndY)
+                    .data("y", posiEndY-btnRectH*0.5);
+
+            puces[index].attr({'cx':(baseX + radius + 6), 'cy':posiEndY});
+
+            var arrowPosXInit = baseX + radius+4;
+            var arrowSize = 4;
+            var arrowInitIntroPath = "M"+arrowPosXInit+" "+posiEndY+"L"+(arrowPosXInit+arrowSize)+" "+posiEndY+"L"+arrowPosXInit+" "+posiEndY;
+            var arrowInitPath = "M"+arrowPosXInit+" "+(posiEndY-arrowSize)+"L"+(arrowPosXInit+arrowSize)+" "+posiEndY+"L"+arrowPosXInit+" "+(posiEndY+arrowSize);
+            var xRoll1 = arrowPosXInit + 5;
+            var xRoll2 = arrowPosXInit - 5;
+            var arrowInitRollPath1 = "M"+xRoll1+" "+(posiEndY-arrowSize)+"L"+(xRoll1+arrowSize)+" "+posiEndY+"L"+xRoll1+" "+(posiEndY+arrowSize);
+            var arrowInitRollPath2 = "M"+xRoll2+" "+(posiEndY-arrowSize)+"L"+(xRoll2+arrowSize)+" "+posiEndY+"L"+xRoll2+" "+(posiEndY+arrowSize);
+            
+            arrows[index].data('startPath', arrowInitPath)
+                .data('introPath', arrowInitIntroPath)
+                .data('rollPath1', arrowInitRollPath1)
+                .data('rollPath2', arrowInitRollPath2);
+
+            arrows[index].attr({'path':arrowInitPath});
+            lines[index].attr({'path':lines[index].data('resultPath')});
+
+            var introOff = (offsetLink < 0)? 50 : -50;
+            btn.attr('data-initl', (posiEndX+offsetLink+introOff));
+            btn.css({'top':posiEndY-19, 'left':(posiEndX+offsetLink)});
+
+            aXEnd[index] = posiEndX+offsetLink;
+        };
+
          var init = function(index){
             $('.home_anchors a').each(function(index) {
-                var btnRectH = 33;
+
                 var btnTextWidth = $('span', this).width()+parseInt($('span', this).css('padding-left'), 10)+parseInt($('span', this).css('padding-right'), 10);
                 $(this).width(btnTextWidth);
                 $('span', this).css({'width': btnTextWidth, 'display':'block', 'height':$(this).height()});
                 $('.home_anchors_roll', this).css('left', -btnTextWidth);
                 $(this).attr('data-index', index);
 
-                var posiX = raphaW*0.5 + parseInt($(this).attr('data-centerx'), 10);
-                var posiY = raphaH* 0.5 + parseInt($(this).attr('data-centery'), 10)+ 100;
                 var set= paper.set();
-                var c = paper.circle(posiX, posiY, 0).attr({
+                var c = paper.circle(0, 0, 0).attr({
                     fill: "rgb(255,255,255)",
                     "stroke": "#fff",
                     "stroke-width": "1"});
-                var c2 = paper.circle(posiX, posiY, 0).attr({
+                var c2 = paper.circle(0, 0, 0).attr({
                     "stroke": "#fff",
                     "stroke-width": "1"});
-                var c3 = paper.circle(posiX, posiY, 0).attr({
+                var c3 = paper.circle(0, 0, 0).attr({
                     "stroke": "#fff",
                     "stroke-width": "1"});
 
-                var lastStroke = 30;
-                var posiEndX = 0, posiCurbX = 0, posiEndY = 0, posiCurbY = 0, offsetLink = 0;
-                if(parseInt($(this).attr('data-centerx'), 10) > 0){
-                    posiCurbX = posiX + 85;
-                    posiCurbY = posiY - 69;
-                    posiEndX = posiCurbX + lastStroke;
-                    posiEndY = posiCurbY;
-                }else{
-                    posiCurbX = posiX - 85;
-                    posiCurbY = posiY - 69;
-                    posiEndX = posiCurbX - lastStroke;
-                    posiEndY = posiCurbY;
-                    offsetLink = -btnTextWidth;
-                }
-
-                var p = paper.path("M"+posiX+" "+posiY)
+                var p = paper.path("M0 0")
                     .attr({
                     "stroke": "#fff",
-                    "stroke-width": "1.5"})
-                    .data('initPath',  "M"+posiX+" "+posiY)
-                    .data('resultPath', "M"+posiX+" "+posiY+"L"+posiCurbX+" "+posiCurbY+"L"+posiEndX+" "+posiEndY)
-                    .data('midPath', "M"+posiX+" "+posiY+"L"+posiCurbX+" "+posiCurbY+"L"+posiCurbX+" "+posiCurbY);
+                    "stroke-width": "1.5"});
 
-                // rectangle with rounded corners
-                var baseX = posiEndX+offsetLink;
-                var r = paper.rect(posiEndX, posiEndY, 0, 0, btnRectH*0.5).attr({
+                var r = paper.rect(0, 0, 0, 0, btnRectH*0.5).attr({
                     fill: "rgb(208,208,208)",
                     'fill-opacity': 0,
                     "stroke": "#fff",
-                    "stroke-width": "1.5"})
-                    .data("w", btnTextWidth)
-                    .data("h", btnRectH)
-                    .data("xInit", posiEndX)
-                    .data("x", baseX)
-                    .data("yInit", posiEndY)
-                    .data("y", posiEndY-btnRectH*0.5);
-                var radius = Math.floor(btnRectH*0.5) - 5;
-                var puce = paper.circle((baseX + radius + 6), posiEndY, 0).attr({
+                    "stroke-width": "1.5"});
+
+                var puce = paper.circle(0, 0, 0).attr({
                     fill: "rgb(132,131,128)",
                     "stroke" : "rgb(132,131,128)",
                     "stroke-width": "1.5"}).data("r", radius);
-                var arrowPosXInit = baseX + radius+4;
-                var arrowSize = 4;
-                var arrowInitIntroPath = "M"+arrowPosXInit+" "+posiEndY+"L"+(arrowPosXInit+arrowSize)+" "+posiEndY+"L"+arrowPosXInit+" "+posiEndY;
-                var arrowInitPath = "M"+arrowPosXInit+" "+(posiEndY-arrowSize)+"L"+(arrowPosXInit+arrowSize)+" "+posiEndY+"L"+arrowPosXInit+" "+(posiEndY+arrowSize);
-                var xRoll1 = arrowPosXInit + 5;
-                var xRoll2 = arrowPosXInit - 5;
-                var arrowInitRollPath1 = "M"+xRoll1+" "+(posiEndY-arrowSize)+"L"+(xRoll1+arrowSize)+" "+posiEndY+"L"+xRoll1+" "+(posiEndY+arrowSize);
-                var arrowInitRollPath2 = "M"+xRoll2+" "+(posiEndY-arrowSize)+"L"+(xRoll2+arrowSize)+" "+posiEndY+"L"+xRoll2+" "+(posiEndY+arrowSize);
-                var arrow = paper.path(arrowInitIntroPath).attr({
+                
+                var arrow = paper.path('M0 0').attr({
                     "stroke": "#fff",
-                    "stroke-width": "0"})
-                .data('startPath', arrowInitPath)
-                .data('introPath', arrowInitIntroPath);
+                    "stroke-width": "0"});
 
                 lines.push(p);
                 circleBase.push(c);
@@ -199,39 +255,32 @@ define([
                 set.push(r);
                 set.push(arrow);
 
-                aXEnd.push(posiEndX+offsetLink);
-                var introOff = (offsetLink < 0)? 50 : -50;
-                $(this).attr('data-initl', (posiEndX+offsetLink+introOff));
-                $(this).css({'top':posiEndY-19, 'left':(posiEndX+offsetLink+introOff)});
+                reposiBtn($(this), index);
+
+                // init path =>
+                arrow.attr({'path':arrow.data('introPath')});
+                p.attr({'path':arrow.data('initPath')});
+                r.attr({'x':r.data('xInit'), 'y':r.data('yInit')});
 
                 TweenMax.to($('.home_anchors_roll', this), 0, {alpha:0});
                 TweenMax.to($(this), 0, {alpha:0});
+
                 $(this).on('click', function(event){
                     event.preventDefault();
                     publisher.publish(Events.navigate, $(this).attr('data-link'));
                 }).on('mouseenter', function(event){
                     TweenMax.to($('span', this), 0.2, {color:"#121212"});
-                    /*TweenMax.to($('.home_anchors_roll', this), 0.3, {left:-25, alpha:1, ease:Circ.easeInOut});
-                    TweenMax.to($('.home_anchors_off', this), 0.3, {left:$(this).width(), alpha:0, ease:Circ.easeInOut});*/
                     r.animate({'fill-opacity': 1}, 210);
-                    //puce.animate({cx: baseX + btnTextWidth - radius - 5}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
-                    //arrow.animate({path: arrowInitRollPath}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
                     puce.animate({fill: "rgb(255,255,255)"}, 200);
-                    arrow.animate({path: arrowInitRollPath1, callback:function(){
-                        arrow.attr({'path': arrowInitRollPath2});
-                        arrow.animate({path: arrowInitPath, "stroke": "#000000"}, 250, "cubic-bezier(0.9,0.5,0.5,1)");
+                    arrow.animate({path: arrow.data('rollPath1'), callback:function(){
+                        arrow.attr({'path':  arrow.data('rollPath2')});
+                        arrow.animate({path: arrow.data('startPath'), "stroke": "#000000"}, 250, "cubic-bezier(0.9,0.5,0.5,1)");
                     }}, 100, "cubic-bezier(0.9,0.5,0.5,1)");
-                    //arrow.animate({"stroke": "#000000", "stroke-width": "1.5"}, 250);
                 }).on('mouseleave', function(event){
                     r.animate({'fill-opacity': 0}, 200);
                     TweenMax.to($('span', this), 0.2, {color:"#ffffff"});
                     puce.animate({fill: "rgb(132,131,128)"}, 200);
                     arrow.animate({"stroke": "#fff", "stroke-width": "1.5"}, 250);
-                    /*
-                    TweenMax.to($('.home_anchors_roll', this), 0.3, {left:-$(this).width()+10, alpha:0, ease:Expo.easeInOut});
-                    TweenMax.to($('.home_anchors_off', this), 0.3, {left:0, alpha:1, ease:Expo.easeInOut});*/
-                    //puce.animate({cx: baseX + radius + 5}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
-                    //arrow.animate({path: arrowInitPath}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
                 });
             });
 
