@@ -165,18 +165,24 @@ define([
                     .data("x", baseX)
                     .data("yInit", posiEndY)
                     .data("y", posiEndY-btnRectH*0.5);
-                var radius = Math.floor(btnRectH*0.5) - 4;
-                var puce = paper.circle((baseX + radius + 5), posiEndY, 0).attr({
+                var radius = Math.floor(btnRectH*0.5) - 5;
+                var puce = paper.circle((baseX + radius + 6), posiEndY, 0).attr({
                     fill: "rgb(132,131,128)",
-                    "stroke-width": "0"}).data("r", radius);
-                var arrowPosXInit = baseX + radius+3;
-                var arrowInitIntroPath = "M"+arrowPosXInit+" "+posiEndY+"L"+(arrowPosXInit+5)+" "+posiEndY+"L"+arrowPosXInit+" "+posiEndY;
-                var arrowInitPath = "M"+arrowPosXInit+" "+(posiEndY-5)+"L"+(arrowPosXInit+5)+" "+posiEndY+"L"+arrowPosXInit+" "+(posiEndY+5);
-                arrowPosXInit += btnTextWidth - radius*2 - 10;
-                var arrowInitRollPath = "M"+arrowPosXInit+" "+(posiEndY-5)+"L"+(arrowPosXInit+5)+" "+posiEndY+"L"+arrowPosXInit+" "+(posiEndY+5);
+                    "stroke" : "rgb(132,131,128)",
+                    "stroke-width": "1.5"}).data("r", radius);
+                var arrowPosXInit = baseX + radius+4;
+                var arrowSize = 4;
+                var arrowInitIntroPath = "M"+arrowPosXInit+" "+posiEndY+"L"+(arrowPosXInit+arrowSize)+" "+posiEndY+"L"+arrowPosXInit+" "+posiEndY;
+                var arrowInitPath = "M"+arrowPosXInit+" "+(posiEndY-arrowSize)+"L"+(arrowPosXInit+arrowSize)+" "+posiEndY+"L"+arrowPosXInit+" "+(posiEndY+arrowSize);
+                var xRoll1 = arrowPosXInit + 5;
+                var xRoll2 = arrowPosXInit - 5;
+                var arrowInitRollPath1 = "M"+xRoll1+" "+(posiEndY-arrowSize)+"L"+(xRoll1+arrowSize)+" "+posiEndY+"L"+xRoll1+" "+(posiEndY+arrowSize);
+                var arrowInitRollPath2 = "M"+xRoll2+" "+(posiEndY-arrowSize)+"L"+(xRoll2+arrowSize)+" "+posiEndY+"L"+xRoll2+" "+(posiEndY+arrowSize);
                 var arrow = paper.path(arrowInitIntroPath).attr({
                     "stroke": "#fff",
-                    "stroke-width": "0"}).data('startPath', arrowInitPath).data('introPath', arrowInitIntroPath);
+                    "stroke-width": "0"})
+                .data('startPath', arrowInitPath)
+                .data('introPath', arrowInitIntroPath);
 
                 lines.push(p);
                 circleBase.push(c);
@@ -204,17 +210,28 @@ define([
                     event.preventDefault();
                     publisher.publish(Events.navigate, $(this).attr('data-link'));
                 }).on('mouseenter', function(event){
-                    TweenMax.to($('.home_anchors_roll', this), 0.3, {left:-25, alpha:1, ease:Circ.easeInOut});
-                    TweenMax.to($('.home_anchors_off', this), 0.3, {left:$(this).width(), alpha:0, ease:Circ.easeInOut});
-                    r.animate({'fill-opacity': 1}, 200);
-                    puce.animate({cx: baseX + btnTextWidth - radius - 5}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
-                    arrow.animate({path: arrowInitRollPath}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
+                    TweenMax.to($('span', this), 0.2, {color:"#121212"});
+                    /*TweenMax.to($('.home_anchors_roll', this), 0.3, {left:-25, alpha:1, ease:Circ.easeInOut});
+                    TweenMax.to($('.home_anchors_off', this), 0.3, {left:$(this).width(), alpha:0, ease:Circ.easeInOut});*/
+                    r.animate({'fill-opacity': 1}, 210);
+                    //puce.animate({cx: baseX + btnTextWidth - radius - 5}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
+                    //arrow.animate({path: arrowInitRollPath}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
+                    puce.animate({fill: "rgb(255,255,255)"}, 200);
+                    arrow.animate({path: arrowInitRollPath1, callback:function(){
+                        arrow.attr({'path': arrowInitRollPath2});
+                        arrow.animate({path: arrowInitPath, "stroke": "#000000"}, 250, "cubic-bezier(0.9,0.5,0.5,1)");
+                    }}, 100, "cubic-bezier(0.9,0.5,0.5,1)");
+                    //arrow.animate({"stroke": "#000000", "stroke-width": "1.5"}, 250);
                 }).on('mouseleave', function(event){
                     r.animate({'fill-opacity': 0}, 200);
+                    TweenMax.to($('span', this), 0.2, {color:"#ffffff"});
+                    puce.animate({fill: "rgb(132,131,128)"}, 200);
+                    arrow.animate({"stroke": "#fff", "stroke-width": "1.5"}, 250);
+                    /*
                     TweenMax.to($('.home_anchors_roll', this), 0.3, {left:-$(this).width()+10, alpha:0, ease:Expo.easeInOut});
-                    TweenMax.to($('.home_anchors_off', this), 0.3, {left:0, alpha:1, ease:Expo.easeInOut});
-                    puce.animate({cx: baseX + radius + 5}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
-                    arrow.animate({path: arrowInitPath}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
+                    TweenMax.to($('.home_anchors_off', this), 0.3, {left:0, alpha:1, ease:Expo.easeInOut});*/
+                    //puce.animate({cx: baseX + radius + 5}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
+                    //arrow.animate({path: arrowInitPath}, 300, "cubic-bezier(0.9,0.5,0.5,1)");
                 });
             });
 

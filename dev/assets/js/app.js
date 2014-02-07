@@ -35,10 +35,10 @@ define([
 		var tracker = new SiteTracker($('body').attr('data-lang'), $('body').attr('data-country'));
 		mainMenu = new MainMenu();
 		home = new Home();
-		/*design = new Design();
+		design = new Design();
 		milksystem = new MilkSystem();
 		touchscreen = new Touchscreen();
-		coffeerange = new CoffeeRange();*/
+		coffeerange = new CoffeeRange();
 		//popins = new Popins();
 
 		$('section').css('visibility', 'hidden');
@@ -132,7 +132,7 @@ define([
 			goToId = value;
 			if(currentId == value || !transitionComplete) return;
 
-			TweenMax.killDelayedCallsTo(createOtherPage);
+			//TweenMax.killDelayedCallsTo(createOtherPage);
 			transitionComplete = false;
 			currentId = value;
 
@@ -211,11 +211,11 @@ define([
 				}
 				tracker.trackPage(pageName, subPageName, subsubPageName, prop4);
 
-				if(typeof touchscreen == "undefined" || typeof coffeerange == "undefined" || typeof milksystem == "undefined" || typeof design == "undefined")
-				TweenMax.delayedCall(2.5, createOtherPage, [currentId]);
+				/*if(typeof touchscreen == "undefined" || typeof coffeerange == "undefined" || typeof milksystem == "undefined" || typeof design == "undefined")
+				TweenMax.delayedCall(2.5, createOtherPage, [currentId]);*/
 			}
 		};
-
+/*
 		var createOtherPage = function(id){
 			switch(id){
 				case Globals.PAGE_HOME :
@@ -243,7 +243,7 @@ define([
 					}
 					break;
 			}
-		};
+		};*/
 		var toggleFullScreen = function() {
 			if (    (document.fullScreenElement && document.fullScreenElement !== null) ||
 				(!document.mozFullScreen && !document.webkitIsFullScreen)) {

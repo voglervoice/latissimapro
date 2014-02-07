@@ -72,8 +72,6 @@ define([
             $('.touchscreen_roll').each(function(index) {
                 var xRoll = positionInPaper.x + rollPosition[index].x*resizeRatio + rollOffset.x;
                 var yRoll = positionInPaper.y + rollPosition[index].y*resizeRatio + rollOffset.y;
-                $(this).attr('data-left', xRoll);
-                $(this).attr('data-top', yRoll);
                 $(this).css({'left':xRoll, 'top': yRoll });
             });
             var i;
@@ -97,13 +95,8 @@ define([
             }
 
             TweenMax.to($('.screen_rolls img'), 0, {alpha:0});
-            TweenMax.to($('.touchscreen_roll'), 0, {borderRadius:0, width:0, height:0, alpha:0});
-            TweenMax.to($('.touchscreen_roll_inner'), 0, {borderRadius:0, width:0, height:0, left:0, top:0});
-            TweenMax.to($('.touchscreen_roll_inner div'), 0, {left:(-buttonInnerWidth*0.5), top:(-buttonInnerWidth*0.5), alpha:0});
+            TweenMax.to($('.touchscreen_roll'), 0, {scale:0.8, alpha:0});
 
-            $('.touchscreen_roll').each(function(index) {
-                $(this).css({'left':parseInt($(this).attr('data-left'), 10)+buttonWidth*0.5, 'top': parseInt($(this).attr('data-top'), 10)+buttonWidth*0.5 });
-            });
             this.bg.open();
             TweenMax.killTweensOf(ct);
             TweenMax.to(ct, 1.2, {alpha:1, delay:1.3});
@@ -167,7 +160,7 @@ define([
 
          var init = function(index){
             TweenMax.to(ct, 0, {alpha:0});
-            TweenMax.to($('.touchscreen_roll'), 0, {borderRadius:0, width:0, height:0, alpha:0});
+            //TweenMax.to($('.touchscreen_roll'), 0, {scale:0.8, alpha:0});
             TweenMax.to($('.content_line_sep', ct), 0, {alpha:0.15});
 
             for (var i = 0; i < unvisibleButtons.length; i++) {
@@ -186,7 +179,6 @@ define([
 
                         btns.push(p);
                         
-                        console.log(rollPosition[i].x, rollPosition[i].y, resizeRatio);
                     var c = paper2.circle(rollPosition[i].x*resizeRatio, rollPosition[i].y*resizeRatio, 6).attr({
                     "stroke-width": "1.5", "stroke": "#ffffff", "fill-opacity": "0", "stroke-opacity": "0.3"});
                     var c2 = paper2.circle(rollPosition[i].x*resizeRatio, rollPosition[i].y*resizeRatio, 9).attr({
@@ -204,15 +196,16 @@ define([
             var elem = this;
             var id = parseInt(elem.data('index'), 10);
             var rollDiv = $('.touchscreen_roll:eq( '+elem.data('index')+' )');
-            var innerDiv = $('.touchscreen_roll_inner', rollDiv);
-            var innerDivImg = $('div', innerDiv);
-            var motionTime = 0.35, motionEase = Circ.easeOut;
+            var motionTime = 0.3, motionEase = Circ.easeOut;
             //console.log("ON --> "+elem.data('index'));
             
             TweenMax.killTweensOf(rollDiv);
-            TweenMax.killTweensOf(innerDiv);
-            TweenMax.killTweensOf(innerDivImg);
+           /* TweenMax.killTweensOf(innerDiv);
+            TweenMax.killTweensOf(innerDivImg);*/
 
+            TweenMax.to(rollDiv, motionTime, {scale:1, alpha:1});
+
+            /*
             TweenMax.to(rollDiv, motionTime, {
                 left:parseInt(rollDiv.attr('data-left'), 10),
                 top:parseInt(rollDiv.attr('data-top'), 10),
@@ -232,11 +225,11 @@ define([
             TweenMax.to(innerDivImg, motionTime, {
                 left:0,
                 top:0,
-                ease:motionEase});
+                ease:motionEase});*/
 
-            TweenMax.to(innerDivImg, 0.7, {alpha:1, delay:0.1});
+            /*TweenMax.to(innerDivImg, 0.7, {alpha:1, delay:0.1});
             TweenMax.to(rollDiv, motionTime*0.5, {alpha:1, delay:0.05});
-
+*/
             $('.screen_rolls img').each(function(index) {
                 TweenMax.to($(this), 0.5, {alpha:(index == id)? 1 : 0});
             });
@@ -245,15 +238,15 @@ define([
         var outButton = function(){
             var elem = this;
             var rollDiv = $('.touchscreen_roll:eq( '+elem.data('index')+' )');
-            var innerDiv = $('.touchscreen_roll_inner', rollDiv);
-            var innerDivImg = $('div', innerDiv);
-            var motionTime = 0.3, motionEase = Circ.easeInOut;
+            /*var innerDiv = $('.touchscreen_roll_inner', rollDiv);
+            var innerDivImg = $('div', innerDiv);*/
+            var motionTime = 0.27, motionEase = Circ.easeInOut;
 
             TweenMax.killTweensOf(rollDiv);
-            TweenMax.killTweensOf(innerDiv);
-            TweenMax.killTweensOf(innerDivImg);
+            /*TweenMax.killTweensOf(innerDiv);
+            TweenMax.killTweensOf(innerDivImg);*/
 
-            TweenMax.to(rollDiv, motionTime, {
+            /*TweenMax.to(rollDiv, motionTime, {
                 left:parseInt(rollDiv.attr('data-left'), 10) + buttonWidth*0.5,
                 top:parseInt(rollDiv.attr('data-top'), 10) + buttonWidth*0.5,
                 borderRadius:0,
@@ -273,9 +266,11 @@ define([
             TweenMax.to(innerDivImg, motionTime, {
                 left:(-buttonInnerWidth*0.5),
                 top:(-buttonInnerWidth*0.5),
-                ease:motionEase});
+                ease:motionEase});*/
 
-            TweenMax.to(innerDivImg, motionTime*0.5, {alpha:0});
+            TweenMax.to(rollDiv, motionTime, {scale:0.8, alpha:0});
+/*
+            TweenMax.to(innerDivImg, motionTime*0.5, {alpha:0});*/
             TweenMax.to($('.screen_rolls img'), 0.5, {alpha:0});
         };
 

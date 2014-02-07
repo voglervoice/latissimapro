@@ -34,8 +34,8 @@ define([
             var zoomLeft = machineLeft+618*ratio-110;
             var zoomTop = h - 687*ratio-100;
 
-            $('.milk_zoom').attr('data-left', zoomLeft);
-            $('.milk_zoom').attr('data-top', zoomTop);
+            /*$('.milk_zoom').attr('data-left', zoomLeft);
+            $('.milk_zoom').attr('data-top', zoomTop);*/
             $('.milk_zoom').css({'left':zoomLeft, 'top':zoomTop});
 
             $('.visual_fig').css('margin-left', (ctWidth-275)*0.5);
@@ -43,9 +43,10 @@ define([
 
         this.initOpen = function(){
             this.bg.open();
-            TweenMax.to($('.milk_zoom'), 0, {width:0, height:0, borderRadius:0, alpha:0});
+            TweenMax.to($('.milk_zoom'), 0, {scale:0.8, alpha:0});
+            /*TweenMax.to($('.milk_zoom'), 0, {width:0, height:0, borderRadius:0, alpha:0});
             TweenMax.to($('.milk_zoom_inner'), 0, {width:0, height:0, borderRadius:0, left:0, top:0, borderColor:"#ffffff"});
-            TweenMax.to($('.milk_zoom_img'), 0, {alpha:0});
+            TweenMax.to($('.milk_zoom_img'), 0, {alpha:0});*/
             milkElement.css('bottom', "-200px");
             milkMachine.show(1.2,1.2);
             TweenMax.to(milkElement, 0.8, {bottom:0, delay:0.8, ease:Circ.easeOut});
@@ -59,11 +60,12 @@ define([
             TweenMax.killTweensOf($('.visual_pot'));
             animPot();
 
-            $('.milk_zoom').css({'left':parseInt($('.milk_zoom').attr('data-left'),10)+zoomW*0.5, 'top':parseInt($('.milk_zoom').attr('data-top'), 10)+zoomW*0.5});
+            //$('.milk_zoom').css({'left':parseInt($('.milk_zoom').attr('data-left'),10)+zoomW*0.5, 'top':parseInt($('.milk_zoom').attr('data-top'), 10)+zoomW*0.5});
             
-            var motionTime = 0.5, motionEase = Circ.easeOut, delay = 1.5;
+            var motionTime = 0.4, motionEase = Circ.easeOut, delay = 1.5;
             TweenMax.killTweensOf($('.milk_zoom'));
-            TweenMax.killTweensOf($('.milk_zoom_inner'));
+             TweenMax.to($('.milk_zoom'), motionTime, {alpha:1,scale:1, ease:motionEase, delay:delay});
+            /*TweenMax.killTweensOf($('.milk_zoom_inner'));
             TweenMax.killTweensOf($('.milk_zoom_img'));
 
             TweenMax.to($('.milk_zoom'), motionTime, {
@@ -84,7 +86,7 @@ define([
 
             TweenMax.to($('.milk_zoom_img'), 0.8, {
                 alpha:1,
-                delay:delay+motionTime-0.2});
+                delay:delay+motionTime-0.2});*/
         };
 
         this.close = function(){
@@ -96,10 +98,11 @@ define([
 
             var motionTime = 0.4, motionEase = Circ.easeInOut;
             TweenMax.killTweensOf($('.milk_zoom'));
-            TweenMax.killTweensOf($('.milk_zoom_inner'));
-            TweenMax.killTweensOf($('.milk_zoom_img'));
+            TweenMax.to($('.milk_zoom'), motionTime, {scale:0.8, alpha:0, ease:motionEase});
+            /*TweenMax.killTweensOf($('.milk_zoom_inner'));
+            TweenMax.killTweensOf($('.milk_zoom_img'));*/
 
-            TweenMax.to($('.milk_zoom_img'), motionTime*0.6, {alpha:0});
+           /* TweenMax.to($('.milk_zoom_img'), motionTime*0.6, {alpha:0});
             TweenMax.to($('.milk_zoom'), motionTime, {
                 left:parseInt($('.milk_zoom').attr('data-left'), 10)+zoomW*0.5,
                 top:parseInt($('.milk_zoom').attr('data-top'), 10)+zoomW*0.5,
@@ -115,7 +118,7 @@ define([
                 height:0,
                 borderRadius:0,
                 borderColor:"#000000",
-                ease:motionEase});
+                ease:motionEase});*/
 
         };
 
@@ -123,7 +126,8 @@ define([
          var init = function(index){
             TweenMax.to($('.content_line_milk_sep', ct), 0, {alpha:0.15});
             TweenMax.to(ct, 0, {alpha:0});
-            TweenMax.to($('.milk_zoom'), 0, {width:0, height:0, borderRadius:0, alpha:0});
+            //TweenMax.to($('.milk_zoom'), 0, {width:0, height:0, borderRadius:0, alpha:0});
+            TweenMax.to($('.milk_zoom'), 0, {alpha:0});
         };
 
         var animPot =function(){
