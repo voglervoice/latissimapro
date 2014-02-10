@@ -185,30 +185,34 @@ define([
 			else if(currentSection!==null){
 				currentSection.open();
 				// track page :
-				var pageName = "", subPageName = "", subsubPageName = "", prop4 = "";
+				var pageName = "", subPageName = "", prop4 = "";
 				switch(currentId){
 					case Globals.PAGE_HOME :
 						pageName = "homepage";
+						prop4 = "homepage";
 						break;
 					case Globals.PAGE_TOUCHSCREEN :
-						pageName = "one-touch-is-all";
+						pageName = "touchscreen";
+						subPageName = "hub";
+						prop4 = "hub";
 						break;
 					case Globals.PAGE_COFFEE_RANGE :
-						pageName = "coffee";
-						subPageName = "palette-of-taste";
+						pageName = "coffee-range";
+						subPageName = "hub";
 						prop4 = "hub";
 						break;
 					case Globals.PAGE_MILKSYSTEM :
-						pageName = "milk";
-						subPageName = "milk-to-your-taste";
+						pageName = "milk-system";
+						subPageName = "hub";
 						prop4 = "hub";
 						break;
 					case Globals.PAGE_DESIGN :
-						pageName = "machine";
-						subPageName = "powerful-inside-out";
+						pageName = "features";
+						subPageName = "hub";
+						prop4 = "hub";
 						break;
 				}
-				tracker.trackPage(pageName, subPageName, subsubPageName, prop4);
+				tracker.trackPage(pageName, subPageName, prop4);
 
 				/*if(typeof touchscreen == "undefined" || typeof coffeerange == "undefined" || typeof milksystem == "undefined" || typeof design == "undefined")
 				TweenMax.delayedCall(2.5, createOtherPage, [currentId]);*/

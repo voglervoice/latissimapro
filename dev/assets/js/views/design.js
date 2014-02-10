@@ -62,11 +62,22 @@ define([
                 }
                 $('.design_content_infos_col').width(150);
                 $('.design_content_infos').width(630);
+
+                $('.design_description').removeClass('design_description_n');
+                $('.design_description').addClass('content_span_text_smaller');
+                $('h2', ct).removeClass('h2_n');
+                $('h2', ct).addClass('h2_smaller');
+
             }else{
                 $('.design_content_infos_col h3').css('font-size', '16px');
                 $('.design_content_infos_col li').css('font-size', '13px');
                 $('.design_content_infos_col').width(190);
                 $('.design_content_infos').width(810);
+
+                $('.design_description').addClass('design_description_n');
+                $('.design_description').removeClass('content_span_text_smaller');
+                $('h2', ct).addClass('h2_n');
+                $('h2', ct).removeClass('h2_smaller');
             }
 
             var titleW = Math.min(w - 432*ratioH-180, Math.max(500, $("h2", this.elem).width()+10));

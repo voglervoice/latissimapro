@@ -25,7 +25,7 @@ define([
             var ratio = h/863;
             var offsetCt = 115;
             var contentW = Math.max(744, w - (433*ratio+115)-200);
-
+            contentW = Math.min(contentW, 900);
             if(w < 1165){
                 ratio = w /1440;
                 rangeElement.css('display', 'none');
@@ -33,10 +33,10 @@ define([
             }else{
                 rangeElement.css('display', 'block');
 
-                if(w < 1190){
+                if(w < 1220){
                     offsetCt = -10;
                     rangeElement.css('left', -45);
-                }else if(w < 1280){
+                }else if(w < 1315){
                     offsetCt = 25;
                     rangeElement.css('left', -30);
                 }else{
@@ -49,9 +49,6 @@ define([
             ct.width(contentW);
 
             $('.content_line_sep', ct).width($('.range_description').width());
-            $('.range_cat_title').each(function(event){
-                $('div', this).width($(this).width()-$('span', this).width()-50);
-            });
             /*var diff = h - $('.range_content').height();
             if(diff < 90) $('.range_coffees').css('margin-top', 5);
             else if(diff > 200) $('.range_coffees').css('margin-top', 50);
@@ -112,8 +109,15 @@ define([
                 if(diff > 200) $('.range_coffees').css('margin-top', 50);
                 else $('.range_coffees').css('margin-top', 15);
             }
-
             ct.css('top', Math.max(75, (h-80-ct.height())*0.5)+offsetTop);
+
+            $('.range_cat').each(function(index){
+                //$(this).width($('a', this).length*aW);
+                $(this).width($('.range_cat_caps', this).width());
+            });
+            $('.range_cat_title').each(function(event){
+                $('div', this).width($(this).width()-$('span', this).width()-50);
+            });
         };
 
         this.initOpen = function(){
@@ -156,6 +160,7 @@ define([
                 TweenMax.to($('.range_cat_caps a'), 0.5, {alpha:1});
             });
 
+
             $('.range_cat_caps a').on('click', function(event){ event.preventDefault();
             }).on('mouseenter', function(event){
                 if(opened){
@@ -175,14 +180,17 @@ define([
                    roll.width(maxW+60);
                    $('.range_roll_bg').width(maxW+54);
                     roll.css({'left':leftRoll, 'top':topRoll});
+                    TweenMax.to(roll, 0, {scale:0.9, transformOrigin:'center bottom'});
                     TweenMax.to(roll, 0.2, {autoAlpha:1, ease:Linear.easeNone});
+                    TweenMax.to(roll, 0.25, {scale:1, transformOrigin:'center bottom', ease:Expo.easeOut});
                     TweenMax.to($(this), 0.2, {autoAlpha:1, ease:Linear.easeNone});
                 }
             }).on('mouseleave', function(event){
+                var roll =$(".range_roll[data-id='"+$(this).attr('data-id')+"']");
                 /*TweenMax.to($('.range_cat_title'), 0.5, {alpha:1});
                 TweenMax.to($('.range_cat_caps a'), 0.5, {alpha:1});*/
                 TweenMax.to($(this), 0.3, {autoAlpha:0.2, ease:Linear.easeNone});
-                TweenMax.to($(".range_roll[data-id='"+$(this).attr('data-id')+"']"), 0.15, {autoAlpha:0, ease:Linear.easeNone});
+                TweenMax.to(roll, 0.15, {autoAlpha:0, ease:Linear.easeNone});
             });
 
             $('.range_roll').each(function(index) {

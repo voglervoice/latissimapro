@@ -1,5 +1,8 @@
 <!--FOOTER-->
-<a href="<?php echo $jsonLangFooter->order_online_shop_link->texte; ?>" class="order_footer_btn_visual" target="_blank"><img src="assets/imgs/ui/machine.png" /></a>
+<a href="<?php echo $jsonLangFooter->order_online_shop_link->texte; ?>" class="order_footer_btn_visual" target="_blank">
+	<img src="assets/imgs/ui/machine.png" class="order_footer_btn_machine" />
+	<img src="assets/imgs/ui/machine_arrow.png" class="order_footer_btn_arrow" height="12" width="8"/>
+</a>
 <a href="<?php echo $jsonLangFooter->order_online_shop_link->texte; ?>" class="order_footer_btn"  target="_blank"><span><?php echo $jsonLangGlobals->order->texte; ?></span></a>
 <footer>
         <a href="<?php echo $jsonLangFooter->nespresso_link->texte; ?>" target="_blank" class="logo"></a>

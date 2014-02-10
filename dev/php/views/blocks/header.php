@@ -10,8 +10,8 @@ $pinterest_image = "";
 <header>
     <ul class="white">
         <li id="select_country" class="border flag"><a class="<?php echo '_'.$territory; ?> flags" href="#"></a><!--img src="<?php echo IMG_DIR;?>flags/<?php echo strtolower($code_country); ?>.png" alt="flag" /--></li>
-        <li class="apple"><a target="_blank" href="#" class="qrcode"><div class="apple_sprit"></div></a></li>
-        <li class="border android"><a target="_blank" href="#" class="qrcode"><div class="android_sprit"></div></a></li>
+        <li class="apple"><a target="_blank" href="https://itunes.apple.com/app/nespresso/id342879434" class="qrcode appleapp"><div class="apple_sprit"></div></a></li>
+        <li class="border android"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.nespresso.activities" class="qrcode androidapp"><div class="android_sprit"></div></a></li>
         <li class="mail"><a class="mail_sprit" href="#"></a></li>
         <?php if(isset($pinterest) && $pinterest != "" ){ ?>
         <li class="pinterest">

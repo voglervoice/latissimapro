@@ -8,34 +8,30 @@ define([
         var self = this;
         var lang = lang_, countryCode = countryCode_;
         var account = "nesp-preprod";
-        var channel = "UCE:latissimapro";
+        var channel = "UCE:lattissima-pro";
       
 
         // ******************* public ******************* 
-        this.trackPage = function(pageName, subPageName, subsubPageName, prop4){
+        this.trackPage = function(pageName, subPageName, prop4){
             if(pageName === "" || typeof s == "undefined") return;
             reinit();
 
             var pageNameTrack =  channel+":"+pageName;
             if(typeof subPageName == "undefined") subPageName = "";
-            if(typeof subsubPageName == "undefined") subsubPageName = "";
             if(typeof prop4 == "undefined") prop4 = "";
 
             if(subPageName !== ""){
                 pageNameTrack += ":"+subPageName;
-                if(subsubPageName !== "")
-                    pageNameTrack += ":"+subsubPageName;
             }
 
             if(prop4 !== "") pageNameTrack += ":"+prop4;
 
             s = s_gi(account);
             s.currencyCode  =   "CHF";
+            s.ch               =   channel;
             s.channel      =   channel;
             s.pageName  =   pageNameTrack;
             s.prop1         =   pageName;
-            s.prop2         =   subPageName;
-            s.prop3         =   subsubPageName;
             s.prop4         =   prop4;
             s.prop5         =   countryCode+":"+lang+":"+pageNameTrack;
             s.prop8         =   lang;
@@ -49,10 +45,13 @@ define([
             s.eVar15        =   pageNameTrack;
             s.eVar18        =   "D=prop18";
 
-            s.t();
+            s.event14        =   "set";
+            s.event16        =   "set";
+
+            s.track();
         };
 
-        this.trackEvent = function(pe, pev2, eVar30, eVar20, eVar41, event18, event30, event47){
+        this.trackEvent = function(eVar20, eVar30, eVar41, event18, event30, event47, pe, pev2){
             if(typeof s == "undefined") return;
             reinit();
 
@@ -73,7 +72,7 @@ define([
             s.pe               =   pe;
             s.pev2           =   pev2;
 
-            s.t();
+            s.trackLink();
         };
 
         // ******************* private *******************
@@ -119,30 +118,41 @@ define([
             var link_open = "lnk_o", link_dll = "lnk_d";
 
             // HEADER share
+            $('.mail_sprit').on('click', function(event){
+                self.trackEvent("", channel+":header:share:email:click", "", "", "set", "", link_open, channel+":header:share:email:click");
+            });
             $('.share_pinterest').on('click', function(event){
-                self.trackEvent(link_open, channel+":footer:share:pinterest:click", channel+":footer:share:pinterest:click", "", "", "set", "");
+                self.trackEvent("", channel+":header:share:pinterest:click", "", "", "set", "", link_open, channel+":header:share:pinterest:click");
             });
             $('.share_twitter').on('click', function(event){
-                self.trackEvent(link_open, channel+":footer:share:twitter:click", channel+":footer:share:twitter:click", "", "", "set", "");
+                self.trackEvent("", channel+":header:share:twitter:click", "", "", "set", "", link_open, channel+":header:share:twitter:click");
             });
             $('.share_facebook').on('click', function(event){
-                self.trackEvent(link_open, channel+":footer:share:facebook:click", channel+":footer:share:facebook:click", "", "", "set", "");
+                self.trackEvent("", channel+":header:share:facebook:click", "", "", "set", "", link_open, channel+":header:share:facebook:click");
             });
             // HEADER
             $('#select_country a').on('click', function(event){
-                self.trackEvent(link_open, channel+":footer:function-selection:country-language-change:click");
+                self.trackEvent("", "", "", "", "", "", link_open, channel+":header:market-selector:click");
             });
+            // QRCODE
+            $('.appleapp').on('click', function(event){
+                self.trackEvent("", "", "", "", "", "", link_open, channel+":header:app-store:ios:click");
+            });
+            $('.androidapp').on('click', function(event){
+                self.trackEvent("", "", "", "", "", "", link_open, channel+":header:app-store:android:click");
+            });
+            // FOOTER
             $('.store_locator_link').on('click', function(event){
-                self.trackEvent(link_open, channel+":footer:function-selection:store-locator:click");
+                self.trackEvent("", "", "", "", "", "", link_open, channel+":footer:function-selection:store-locator:click");
             });
             $('.contact_link').on('click', function(event){
-                self.trackEvent(link_open, channel+":footer:function-selection:contacts:click");
+                self.trackEvent("", "", "", "", "", "", link_open, channel+":footer:function-selection:contacts:click");
             });
             $('.legals_link').on('click', function(event){
-                self.trackEvent(link_open, channel+":footer:function-selection:legal-terms:click");
+                self.trackEvent("", "", "", "", "", "", link_open, channel+":footer:function-selection:legal:click");
             });
             $('.logo').on('click', function(event){
-                self.trackEvent(link_open, channel+":footer:function-selection:nespresso-logo:click");
+                self.trackEvent("", "", "", "", "", "", link_open, channel+":footer:function-selection:nespresso-logo:click");
             });
             /*
             $('.apple a').on('click', function(event){
@@ -154,18 +164,18 @@ define([
             */
             // ORDER
             $('.order_footer_btn_visual').on('click', function(event){
-                self.trackEvent(link_open, channel+":order:click", "", channel+":order:click", "", "set");
+                self.trackEvent(channel+":footer:order:click", "", "", "set", "", "", link_open, channel+":footer:order:click");
             });
             $('.order_footer_btn').on('click', function(event){
-                self.trackEvent(link_open, channel+":order:click", "", channel+":order:click", "", "set");
+                self.trackEvent(channel+":footer:order:click", "", "", "set", "", "", link_open, channel+":footer:order:click");
             });
 
             // DESIGN
             $('.design_pdf').on('click', function(event){
-                self.trackEvent(link_dll, channel+":machine:latissimapro-user-guide:download:click", "", "", channel+":machine:latissimapro-user-guide:download:click", "", "", "set");
+                self.trackEvent("", "", channel+":features:download:user-guide:click", "", "", "set", link_dll, channel+":features:download:user-guide:click");
             });
             $('.design_youtube').on('click', function(event){
-                self.trackEvent(link_open, channel+":machine:video-view:youtube:click");
+                self.trackEvent("", "", "", "", "", "", link_open, channel+":features:watch-video:youtube:click");
             });
         };
 

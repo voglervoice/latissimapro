@@ -115,19 +115,19 @@ define([
             var dataBaseX = parseInt(btn.attr('data-centerx'), 10);
             var posiX = raphaW*0.5 + dataBaseX*ratio +4;
             var posiY = raphaH* 0.5 + parseInt(btn.attr('data-centery'), 10)*ratio+ 100;
-            var menuSpace = 170;
+            var menuSpace = 240;
             //var btnTextWidth = $('span', btn).width()+parseInt($('span', btn).css('padding-left'), 10)+parseInt($('span', btn).css('padding-right'), 10);
             var btnTextWidth = $('span', btn).width();
             var lineYLength = - 69;
             var lineXLength = 85;
             var lastStroke = 30;
 
-            if(index == 3 && (posiX+btnTextWidth+lineXLength > windowW-menuSpace)){
+            if(index == 3 && (posiX+btnTextWidth+lineXLength+lastStroke+80 > windowW-menuSpace)){
                 posiX = raphaW*0.5 + (dataBaseX - 104)*ratio + 4;
                 posiY = raphaH* 0.5 + (dataBaseX -2)*ratio+ 100;
             }
 
-            if(posiX+btnTextWidth+lineXLength > windowW-menuSpace && dataBaseX > 0){
+            if(posiX+btnTextWidth+lineXLength+lastStroke > windowW-menuSpace && dataBaseX > 0){
                 lineXLength = windowW-menuSpace - posiX - btnTextWidth;
                 lastStroke = 5;
                 if(index == 3 && lineXLength < 82){
@@ -201,7 +201,7 @@ define([
 
          var init = function(index){
             $('.home_anchors a').each(function(index) {
-
+                windowW = $('.container').width();
                 var btnTextWidth = $('span', this).width()+parseInt($('span', this).css('padding-left'), 10)+parseInt($('span', this).css('padding-right'), 10);
                 $(this).width(btnTextWidth);
                 $('span', this).css({'width': btnTextWidth, 'display':'block', 'height':$(this).height()});
@@ -238,7 +238,7 @@ define([
                 
                 var arrow = paper.path('M0 0').attr({
                     "stroke": "#fff",
-                    "stroke-width": "0"});
+                    "stroke-width": "0"}).data('over', false);
 
                 lines.push(p);
                 circleBase.push(c);
@@ -272,14 +272,17 @@ define([
                     TweenMax.to($('span', this), 0.2, {color:"#121212"});
                     r.animate({'fill-opacity': 1}, 210);
                     puce.animate({fill: "rgb(255,255,255)"}, 200);
+                    arrow.data("over", true);
                     arrow.animate({path: arrow.data('rollPath1'), callback:function(){
                         arrow.attr({'path':  arrow.data('rollPath2')});
                         arrow.animate({path: arrow.data('startPath'), "stroke": "#000000"}, 250, "cubic-bezier(0.9,0.5,0.5,1)");
+                        if(!arrow.data("over")) arrow.animate({"stroke": "#fff", "stroke-width": "1.5"}, 250);
                     }}, 100, "cubic-bezier(0.9,0.5,0.5,1)");
                 }).on('mouseleave', function(event){
                     r.animate({'fill-opacity': 0}, 200);
                     TweenMax.to($('span', this), 0.2, {color:"#ffffff"});
                     puce.animate({fill: "rgb(132,131,128)"}, 200);
+                    arrow.data("over", false);
                     arrow.animate({"stroke": "#fff", "stroke-width": "1.5"}, 250);
                 });
             });

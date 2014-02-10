@@ -54,8 +54,9 @@ require([
         "publisher",
         "events",
         "html5shiv",
-        "preloader"
+        "preloader", "requestanimationframe"
     ], function($, App, Loader, publisher, Events) {
+         if ( ! window.console || typeof console =="undefined" ) console = { log: function(){} };
         var app;
         var loader;
         $(function() {

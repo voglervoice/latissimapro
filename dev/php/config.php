@@ -159,7 +159,10 @@ if($launchingDate > $now && !$previewMode){
 }*/
 
 // JSON CAPSULES ::
-$jsonCapsulesContent = file_get_contents($jsonFolderPath.'capsules.json');
+if (file_exists($dirname.'admin/cms/capsules.json'))
+    $jsonCapsulesContent = file_get_contents($dirname.'admin/cms/capsules.json');
+else 
+    $jsonCapsulesContent = file_get_contents($jsonFolderPath.'capsules.json');
 $jsonCapsulesList = json_decode($jsonCapsulesContent)->capsules;
 
 // italic

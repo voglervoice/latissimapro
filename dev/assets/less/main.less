@@ -21,7 +21,7 @@
 // Base
 html, body { background: #000000; color: #fff; .text_regular; width: 100%; height: 100%; }
 .container{position: absolute; width: 100%; height: 100%; min-height: 580px; min-width:900px; overflow: hidden;}
-a { text-decoration: none; color: #fff; }
+a { text-decoration: none; color: #fff; background-image:url(../imgs/ui/a.gif);}
 
 .preloader{ width:100%; height:100%; overflow: hidden; position: absolute; z-index: 500;
     .logo_preload{
@@ -380,11 +380,15 @@ nav{
         }*/
     }
 }
+.milk_figdescription_smaller{font-size: 12px; top:130px; width:160px; margin-left: -80px; line-height:12px; }
+.milk_figdescription{font-size: 14px; top:142px; line-height:14px; width:166px; margin-left: -83px;}
+.milk_description_n{.content_span_text;}
 .milk_machine{position: absolute; z-index: 10; left:50%; bottom:0;}
 .milk_content{
     position: absolute; z-index: 15; top:50%; margin-top: -235px;
     .content_line_milk_sep{margin-top: 17px; margin-bottom: 12px; height:1px; width:100%; background-color: #ffffff;}
-    .milk_description{.content_span_text;float:left;}
+    .milk_description{float:left; width:100%;}
+    .visual_fig_ct{position:relative;width:100%;height:235px;float:left;}
     .visual_fig{
         position:relative;
         background-image:url(../imgs/sections/milk_fig_bg.png); background-repeat: no-repeat;
@@ -397,24 +401,20 @@ nav{
             background-image: url("../imgs/sections/retina/milk_fig_bg@2x.png"); background-size: 197px 129px;
         }
         .visual_pot{
-            background-image:url(../imgs/sections/milk_fig_pot.png); background-repeat: no-repeat;
+            background-image:url(../imgs/sections/milk_fig_pot.png); background-repeat: no-repeat; background-size: contain;
             width:66px;
             height:66px;
             margin-left: 65px;
             @media @highdensity {
-                background-image: url("../imgs/sections/retina/milk_fig_pot@2x.png"); background-size: 66px 66px;
+                background-image: url("../imgs/sections/retina/milk_fig_pot@2x.png"); background-size: contain;
             }
         }
         span{
             display: block;
             position: absolute;
-            top:142px;
             text-align: center;
-            .bold;
-            font-size: 14px;
-            width:166px;
             left:50%;
-            margin-left: -83px;
+            .bold;
         }
     }
     .logo_clean{
@@ -521,10 +521,11 @@ nav{
 .design_machine{position: absolute; z-index: 10; left:0; bottom:0; }
 .design_pdf{background-image: url(../imgs/sections/design_pdf_pict.png); padding-left: 45px;}
 .design_youtube{background-image: url(../imgs/sections/design_youtube_pict.png); padding-left: 39px;}
+.design_description_n{ .content_span_text;}
 .design_content{
     position: absolute; z-index: 15; left:506px; top:50%; margin-top: -230px; width:100%;
     .content_line_design_sep{margin-top: 4px; margin-bottom: 14px; height:1px; width:100%; background-color: #ffffff;}
-    .design_description{ .content_span_text;}
+    .design_description{ width:100%;}
     .design_footer{
         width:100%;
         clear: both;
@@ -916,11 +917,11 @@ footer{
 footer .logo{
     position: relative;
     float: left;
-    width: 93px;
-    height: 17px;
+    width: 101px;
+    height: 19px;
     cursor: pointer;
-    margin-top: 11px;
-    margin-left: 22px;
+    margin-top: 9px;
+    margin-left: 21px;
     margin-right: 26px;
     .picts_all;
     background-position: 0px -30px;
@@ -964,10 +965,13 @@ footer .sep {width:22px; height: 7px; border-left: 1px solid #5f5f5f;}
             display: block;
             position:absolute;
             right: 0;
-            bottom:-126px;
+            bottom:-120px;
             z-index: 513;
-            width:119px;
-            height:123px;
+            width:130px;
+            height:120px;
+            img{ display: block; position: absolute;}
+            .order_footer_btn_machine{ left:16px; }
+            .order_footer_btn_arrow{ right:15px; bottom:12px; }
 }
 
 /** TOOLS **/
@@ -1155,7 +1159,7 @@ footer .sep {width:22px; height: 7px; border-left: 1px solid #5f5f5f;}
     }
     footer .logo{
         background:url("../imgs/ui/retina/logo_footer_nespresso_white@2x.png");
-        background-size:93px 17px; background-repeat: no-repeat;
+        background-size:101px 19px; background-repeat: no-repeat;
         height: 17px;
         width: 93px;
     }

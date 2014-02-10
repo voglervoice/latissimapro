@@ -26,7 +26,8 @@ define([
                 $(this).css({'top':($('a span', this).height() > 22)? menuSpace*index -1 :  menuSpace*index+9});
                 $('a', this).height($('a span', this).height()+2);
             });
-            $('.order_footer_btn_visual').css('right', $('.order_footer_btn span').width()+50);
+            $('.order_footer_btn_visual').css('width', ($('.order_footer_btn span').width()+70+124)+"px");
+            //$('.order_footer_btn_visual').css('right', ($('.order_footer_btn span').width()+50)+"px");
              var pct = 1, latiOffset = 0, latiOffset2 = 0;
             if(w < 1050 || h < 725){
                 pct = 0.75;
@@ -94,8 +95,6 @@ define([
                 }else if($(this).hasClass('mail_sprit')){
                     event.preventDefault();
                     publisher.publish(Events.openPopin, "share_mail");
-                }else if($(this).hasClass('mail_sprit')){
-                    event.preventDefault();
                 }else if($(this).hasClass('share_facebook')){
                     event.preventDefault();
                     window.open($(this).attr('href'),'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,top='+Math.max(0,top-200)+', left='+Math.max(0,left-400)+',height=350,width=800');
@@ -105,8 +104,6 @@ define([
                 }else if($(this).hasClass('share_pinterest')){
                     event.preventDefault();
                     window.open($(this).attr('href'),'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,top='+Math.max(0,top-180)+', left='+Math.max(0,left-350)+',height=350,width=700');
-                }else if($(this).hasClass('qrcode')){
-                    event.preventDefault();
                 }
             });
 
@@ -160,6 +157,17 @@ define([
             TweenMax.to($('header'), 0.5, {autoAlpha:1, delay:delayOpen});
             TweenMax.to($('.scroll_to_explore'), 0.4, {autoAlpha:1, delay:delayOpen+0.5});
             // header
+
+            TweenMax.to($('.order_footer_btn_arrow'), 0, {right:55, alpha:0});
+            $('.order_footer_btn_visual').on('mouseenter', function(event){
+                TweenMax.to($('.order_footer_btn_visual .order_footer_btn_machine'), 0.28, {left:0, ease:Circ.easeInOut});
+                TweenMax.to($('.order_footer_btn span'), 0.2, {right:16, ease:Circ.easeInOut, color:"#ffffff"});
+                TweenMax.to($('.order_footer_btn_arrow'), 0.3, {right:31, ease:Circ.easeInOut, alpha:1});
+            }).on('mouseleave', function(event){
+                TweenMax.to($('.order_footer_btn_visual .order_footer_btn_machine'), 0.25, {left:20, ease:Circ.easeInOut});
+                TweenMax.to($('.order_footer_btn span'), 0.25, {right:0, ease:Circ.easeInOut, color:"#1b1b1b"});
+                TweenMax.to($('.order_footer_btn_arrow'), 0.25, {right:55, ease:Circ.easeInOut, alpha:0});
+            });
         };
 
         //  ******************* PRIVATE ******************* 
