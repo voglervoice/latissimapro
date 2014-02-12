@@ -58,7 +58,7 @@ define([
 
             var totWidth = 0;
             $('.lang_zones li a').each(function(index){ totWidth += $(this).width(); });
-            var wBtn = ($('.lang_zones').width()-totWidth)/($('.lang_zones li a').length-1);
+            var wBtn = ($('.lang_zones').width()-totWidth)/($('.lang_zones li a').length-1)-1;
             $('.lang_zones li a').each(function(index){ if(index > 0) $(this).css('margin-left', wBtn);});
 
             $('.popin_close').each(function(index){

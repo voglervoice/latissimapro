@@ -15,6 +15,7 @@ require.config({
         raphaeljs:'vendors/raphael-min',
         glfx:'vendors/glfx',
         buzz:'vendors/buzz.min',
+        iefix:'vendors/ie',
         requestanimationframe: "vendors/polyfill.requestAnimationFrame"
     },
     shim: {
@@ -22,6 +23,9 @@ require.config({
             exports: 'jQuery'
         },
         'preloader': {
+            deps: ['jquery']
+        },
+        'iefix': {
             deps: ['jquery']
         },
         'history': {
@@ -54,7 +58,7 @@ require([
         "publisher",
         "events",
         "html5shiv",
-        "preloader", "requestanimationframe"
+        "preloader", "requestanimationframe", "iefix"
     ], function($, App, Loader, publisher, Events) {
          if ( ! window.console || typeof console =="undefined" ) console = { log: function(){} };
         var app;

@@ -154,14 +154,10 @@ define([
             $('.logo').on('click', function(event){
                 self.trackEvent("", "", "", "", "", "", link_open, channel+":footer:function-selection:nespresso-logo:click");
             });
-            /*
-            $('.apple a').on('click', function(event){
-                self.trackEvent(link_open, channel+":footer:function-selection:ios-app-store:click");
+            // HOME PROMO !! 
+            $('.home_promotion a').on('click', function(event){
+                self.trackEvent("", "", "", "", "", "", link_open, channel+":homepage:activation:click");
             });
-            $('.android a').on('click', function(event){
-                self.trackEvent(link_open, channel+":footer:function-selection:droid-app-store:click");
-            });
-            */
             // ORDER
             $('.order_footer_btn_visual').on('click', function(event){
                 self.trackEvent(channel+":footer:order:click", "", "", "set", "", "", link_open, channel+":footer:order:click");

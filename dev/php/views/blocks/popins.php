@@ -10,6 +10,7 @@
 		</ul>
 		<div class="select_langs">
 		<?php
+			$now = new DateTime("now");
 			foreach ($jsonCountries->continents as $key => $value) {
 				echo "<div data-type='".$key."' class='lang_zone'>";
 				$i = 0;
@@ -18,22 +19,25 @@
 				if($nbCountries > 18) $limitNum = 6;
 				else if($nbCountries > 8) $limitNum = 5;
 				foreach ($value->countries as $country_id => $country) {
-					if($i == 0) echo "<ul>";
-            				echo "<li><div class='country_title'>";
-            				echo "<div class='country_flag _".$country_id."'></div><span>".$country->title."</span></div>";
-            				echo "<div class='country_langs'>";
-            				$l = 0;
-            				foreach ($country->languages as $lang_infos) {
-            					$classPlus = ($l > 0)? "class='country_lang_sep'" : "";
-            					echo "<a href='".$baseurl.$lang_infos->code."' ".$classPlus.">".$lang_infos->name."</a>";
-            					$l++;
-            				}
-            				echo "</div>";
-            				echo "</li>";
-					$i++;
-					if($i == $limitNum){
-						echo "</ul>";
-						$i = 0;	
+					$launchingDate = date_create($country->publish_date);
+					if(($staging || ($launchingDate <= $now)) && !is_null($country->title)){
+						if($i == 0) echo "<ul>";
+	            				echo "<li><div class='country_title'>";
+	            				echo "<div class='country_flag _".$country_id."'></div><span>".$country->title."</span></div>";
+	            				echo "<div class='country_langs'>";
+	            				$l = 0;
+	            				foreach ($country->languages as $lang_infos) {
+	            					$classPlus = ($l > 0)? "class='country_lang_sep'" : "";
+	            					echo "<a href='".$baseurl.$lang_infos->code."' ".$classPlus.">".$lang_infos->name."</a>";
+	            					$l++;
+	            				}
+	            				echo "</div>";
+	            				echo "</li>";
+						$i++;
+						if($i == $limitNum){
+							echo "</ul>";
+							$i = 0;	
+						}
 					}
 				}
 				echo "</div>";

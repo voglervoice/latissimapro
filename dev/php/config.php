@@ -52,12 +52,13 @@ if(empty($territory)){
 }
 
 // Handle special cases
+/*
 if(strtoupper($territory) == 'LU'){
     $territory = 'BE';
 }else if(strtoupper($territory) == 'GB'){
     $territory = 'UK';
 }
-
+*/
 // Check if it's available and published in DB
 if(file_exists('admin/loc/includes/db_connect.php')){
     include_once('admin/loc/includes/db_connect.php');

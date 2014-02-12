@@ -2,7 +2,7 @@
 $twitter = $jsonLangShare->twitter_text->texte;
 $pinterest = $jsonLangShare->pinterest_text->texte;
 $facebook = $jsonLangShare->facebook_text->texte;
-$pinterest_image = "";
+$pinterest_image = $baseurl.'assets/imgs/share.jpg';
 ?>
 <!--HEADER-->
 <h1>Lattissima Pro</h1>

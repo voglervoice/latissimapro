@@ -80,6 +80,8 @@ define([
 			TweenMax.to($('.logo_preload'), 0.7, {width:300, marginLeft:-150, ease:Expo.easeInOut});
 		}});
 
+		if($('html').hasClass('oldie')) $('.machine_preload').pngFix();
+
 		var btnWidth = Math.max(108, $('.machine_preload span').width()+20);
 		$('.machine_preload img').width(btnWidth);
 		$('.machine_preload img').height(29);

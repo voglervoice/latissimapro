@@ -945,7 +945,7 @@
           "range_date": {
              "id": "11_1",
             "label":"range_date",
-            "texte":"beim Kauf einer Nespresso Maschine*<br>Bis zum 31.05.2014"
+            "texte":"beim Kauf einer<br>Nespresso Maschine*<br>Bis zum 31.05.2014"
           },
           "url": {
              "id": "11_6",
