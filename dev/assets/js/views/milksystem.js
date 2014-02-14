@@ -4,8 +4,8 @@ define([
     "events",
     "publisher",
     "views/backgroundsection",
-    "views/imageelem"
-], function($, TweenMax, Events, publisher, BackgroundSection, ImageElem) {
+    "views/imageelem", "globals"
+], function($, TweenMax, Events, publisher, BackgroundSection, ImageElem, Globals) {
 
     var MilkSystem = function() {
         var self = this, scaleBase = 1;
@@ -94,7 +94,10 @@ define([
 
         this.initOpen = function(){
             this.bg.open();
-            TweenMax.to($('.milk_zoom'), 0, {scale:scaleBase-0.2, alpha:0});
+			if(Globals.oldie){
+				$('.milk_zoom').css('display', 'none');
+			}else
+				TweenMax.to($('.milk_zoom'), 0, {scale:scaleBase-0.2, alpha:0});
             /*TweenMax.to($('.milk_zoom'), 0, {width:0, height:0, borderRadius:0, alpha:0});
             TweenMax.to($('.milk_zoom_inner'), 0, {width:0, height:0, borderRadius:0, left:0, top:0, borderColor:"#ffffff"});
             TweenMax.to($('.milk_zoom_img'), 0, {alpha:0});*/
@@ -115,7 +118,10 @@ define([
             
             var motionTime = 0.4, motionEase = Circ.easeOut, delay = 1.5;
             TweenMax.killTweensOf($('.milk_zoom'));
-             TweenMax.to($('.milk_zoom'), motionTime, {alpha:1,scale:scaleBase, ease:motionEase, delay:delay});
+			if(Globals.oldie){
+				$('.milk_zoom').css('display', 'block');
+			}else
+				TweenMax.to($('.milk_zoom'), motionTime, {alpha:1,scale:scaleBase, ease:motionEase, delay:delay});
             /*TweenMax.killTweensOf($('.milk_zoom_inner'));
             TweenMax.killTweensOf($('.milk_zoom_img'));
 
@@ -149,7 +155,10 @@ define([
 
             var motionTime = 0.4, motionEase = Circ.easeInOut;
             TweenMax.killTweensOf($('.milk_zoom'));
-            TweenMax.to($('.milk_zoom'), motionTime, {scale:scaleBase-0.2, alpha:0, ease:motionEase});
+			if(Globals.oldie){
+				$('.milk_zoom').css('display', 'none');
+			}else
+				TweenMax.to($('.milk_zoom'), motionTime, {scale:scaleBase-0.2, alpha:0, ease:motionEase});
             /*TweenMax.killTweensOf($('.milk_zoom_inner'));
             TweenMax.killTweensOf($('.milk_zoom_img'));*/
 
@@ -178,7 +187,10 @@ define([
             TweenMax.to($('.content_line_milk_sep', ct), 0, {alpha:0.15});
             TweenMax.to(ct, 0, {alpha:0});
             //TweenMax.to($('.milk_zoom'), 0, {width:0, height:0, borderRadius:0, alpha:0});
-            TweenMax.to($('.milk_zoom'), 0, {alpha:0});
+			if(Globals.oldie)
+				$('.milk_zoom').css('display', 'none');
+			else
+				TweenMax.to($('.milk_zoom'), 0, {alpha:0});
         };
 
         var animPot =function(){

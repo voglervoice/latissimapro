@@ -193,8 +193,10 @@ define([
             // init states
             TweenMax.to($('footer ul li a'), 0, {alpha:0.3});
             TweenMax.to($('header'), 0, {autoAlpha:0});
-            TweenMax.to($('.scroll_to_explore'), 0, {autoAlpha:0});
-            TweenMax.to($('nav'), 0, {autoAlpha:0});
+			if(!Globals.oldie){
+				TweenMax.to($('.scroll_to_explore'), 0, {autoAlpha:0});
+				TweenMax.to($('nav'), 0, {autoAlpha:0});
+			}
             TweenMax.to($('nav ul li a span'), 0, {autoAlpha:0});
 
             // create raphael circles
@@ -203,11 +205,11 @@ define([
             $('nav ul li').each(function(index) {
                 $('a', this).attr('data-index', index);
                 $('a', this).attr('data-selected', "0");
-                var c = paper.circle($('nav').width()-32, index*menuSpace+20, 0).attr({
+                var c = paper.circle($('nav').width()-32, index*menuSpace+20, (Globals.oldie)? 4 : 0).attr({
                     fill: "rgb(255,255,255)",
                     'fill-opacity': 0,
                     "stroke": "#fff",
-                    "stroke-width": "1"});
+                    "stroke-width": (Globals.oldie)? 1.5 : "1"});
                 circles.push(c);
             });
 
@@ -216,12 +218,12 @@ define([
                     fill: "rgb(255,255,255)",
                     'fill-opacity': 1,
                     "stroke": "#fff",
-                    "stroke-width": "1.5"});
+                    "stroke-width": (Globals.oldie)? 1.5 : "1.5"});
 
             var arrowSizeY = 8, arrowSizeX = 12, arrowPointY = centerY+arrowSizeY*0.5, arrowTopY = centerY-arrowSizeY*0.5, arrowStartX = centerX-arrowSizeX*0.5, arrowEndX = centerX+arrowSizeX*0.5;
             arrowScroll = paperScroll.path("M"+arrowStartX+" "+arrowTopY+"L"+centerX+" "+arrowPointY+"L"+arrowEndX+" "+arrowTopY).attr({
                     "stroke": "#525150",
-                    "stroke-width": "1.5"});
+                    "stroke-width": (Globals.oldie)? 1.5 : "1.5"});
         };
 
         init();

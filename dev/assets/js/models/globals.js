@@ -6,6 +6,7 @@ define([ ], function () {
           // vars
           Globals.lang = "en";
           Globals.is_animated = true;
+          Globals.oldie = false;
           Globals.canvas_enabled = true;
 
           // const

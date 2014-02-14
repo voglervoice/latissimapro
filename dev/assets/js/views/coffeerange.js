@@ -5,8 +5,8 @@ define([
     "publisher",
     "raphaeljs",
     "views/backgroundsection",
-    "views/imageelem"
-], function($, TweenMax, Events, publisher, Raphael, BackgroundSection, ImageElem) {
+    "views/imageelem", "globals"
+], function($, TweenMax, Events, publisher, Raphael, BackgroundSection, ImageElem, Globals) {
 
     var CoffeeRange = function() {
         var self = this, windowW, opened = false;
@@ -47,8 +47,9 @@ define([
 
             rangeMachine.setSize(433*ratio, 523*ratio);
             ct.width(contentW);
+			if(Globals.oldie) $('.range_coffees').width(contentW);
 
-            $('.content_line_sep', ct).width($('.range_description').width());
+            $('.content_line_sep', ct).width((Globals.oldie)? $('.range_description').width()-30 : $('.range_description').width());
             /*var diff = h - $('.range_content').height();
             if(diff < 90) $('.range_coffees').css('margin-top', 5);
             else if(diff > 200) $('.range_coffees').css('margin-top', 50);
@@ -110,14 +111,19 @@ define([
                 else $('.range_coffees').css('margin-top', 15);
             }
             ct.css('top', Math.max(75, (h-80-ct.height())*0.5)+offsetTop);
-
-            $('.range_cat').each(function(index){
-                //$(this).width($('a', this).length*aW);
-                $(this).width($('.range_cat_caps', this).width());
-            });
+			var aW = $('.range_cat_caps a').width()+parseInt($('.range_cat_caps a').css('margin-right').replace('px', ''), 10);
+			//if(Globals.oldie)
+			if($('html').hasClass('ie')){
+				$('.range_cat').each(function(index){
+					$(this).width($('a', this).length*aW);
+					/* $(this).width($('.range_cat_caps', this).width()); */
+				});
+			}
+			
             $('.range_cat_title').each(function(event){
                 $('div', this).width($(this).width()-$('span', this).width()-50);
             });
+			
         };
 
         this.initOpen = function(){
@@ -150,6 +156,11 @@ define([
         //var animateIntensity = function(elem){ elem.animate({'fill-opacity': 1, 'stroke-opacity': 0}, 250); };
 
          var init = function(index){
+		 
+			if(Globals.oldie){
+				$('.range_cat').css('margin-right', '25');
+			}
+		 
             TweenMax.to($('.content_line_sep', ct), 0, {alpha:0.15});
             TweenMax.to($('.range_cat_title div'), 0, {alpha:0.2});
             TweenMax.to($('.range_roll'), 0, {autoAlpha:0});

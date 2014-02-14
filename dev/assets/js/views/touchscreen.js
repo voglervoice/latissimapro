@@ -5,8 +5,8 @@ define([
     "publisher",
     "raphaeljs",
     "views/backgroundsection",
-    "views/imageelem"
-], function($, TweenMax, Events, publisher, Raphael, BackgroundSection, ImageElem) {
+    "views/imageelem", "globals"
+], function($, TweenMax, Events, publisher, Raphael, BackgroundSection, ImageElem, Globals) {
 
     var Touchscreen = function() {
         var bulleScale = 1, ctaOn = true, windowW;
@@ -116,10 +116,15 @@ define([
             }
 
             ctaOn = true;
-
+			
             TweenMax.to($('.screen_rolls img'), 0, {alpha:0});
-            TweenMax.to($('.touchscreen_roll'), 0, {scale:bulleScale-0.2, alpha:0});
-            TweenMax.to($('.touchscreen_cta'), 0, {alpha:0, scale:bulleScale-0.3});
+			if(Globals.oldie){
+				$('.touchscreen_roll').css('display', 'none');
+				$('.touchscreen_cta').css('display', 'none');
+			}else{
+				TweenMax.to($('.touchscreen_roll'), 0, {scale:bulleScale-0.2, alpha:0});
+				TweenMax.to($('.touchscreen_cta'), 0, {alpha:0, scale:bulleScale-0.3});
+			}
 
             this.bg.open();
             TweenMax.killTweensOf(ct);
@@ -136,15 +141,21 @@ define([
             for (var i = 0; i < puces.length; i++){
                 TweenMax.delayedCall(i*0.3, openPuce, [puces[i]]);
             }
-
-            TweenMax.to($('.touchscreen_cta'), 0.3, {alpha:0.75, scale:bulleScale-0.04, ease:Circ.easeOut, delay:0.8});
+			
+			if(Globals.oldie)
+				$('.touchscreen_cta').css('display', 'block');
+			else
+				TweenMax.to($('.touchscreen_cta'), 0.3, {alpha:0.75, scale:bulleScale-0.04, ease:Circ.easeOut, delay:0.8});
 
             this.elem.off("mousemove");
             this.elem.on("mousemove", function( event ) {
                   console.log(event.pageX);
                   if(event.pageX > windowW*0.55 && !ctaOn){
                     ctaOn = true;
-                    TweenMax.to($('.touchscreen_cta'), 0.3, {alpha:0.75, scale:bulleScale-0.04, ease:Circ.easeOut});
+					if(Globals.oldie)
+						$('.touchscreen_cta').css('display', 'block');
+					else
+						TweenMax.to($('.touchscreen_cta'), 0.3, {alpha:0.75, scale:bulleScale-0.04, ease:Circ.easeOut});
                   }
             });
         };
@@ -161,7 +172,10 @@ define([
             $('#touchscreen_puces').css('display', "none");
 
             TweenMax.killTweensOf($('.touchscreen_cta'));
-            TweenMax.to($('.touchscreen_cta'), 0.3, {alpha:0, scale:bulleScale-0.3, ease:Circ.easeIn});
+			if(Globals.oldie)
+				$('.touchscreen_cta').css('display', 'none');
+			else
+				TweenMax.to($('.touchscreen_cta'), 0.3, {alpha:0, scale:bulleScale-0.3, ease:Circ.easeIn});
             /*for (var i = 0; i < puces.length; i++){
                 puces[i].animate({ r : 0, easing:'backIn', 'cx':rollPosition[i].x*resizeRatio - 30},100);
                 puces[i].data('b').animate({ r : 0, easing:'backIn', 'cx':rollPosition[i].x*resizeRatio - 30},150);
@@ -246,11 +260,17 @@ define([
             TweenMax.killTweensOf(rollDiv);
            /* TweenMax.killTweensOf(innerDiv);
             TweenMax.killTweensOf(innerDivImg);*/
-
-            TweenMax.to(rollDiv, motionTime, {scale:bulleScale, alpha:1, ease:motionEase});
+			
+			if(Globals.oldie)
+				rollDiv.css('display', 'block');
+			else
+				TweenMax.to(rollDiv, motionTime, {scale:bulleScale, alpha:1, ease:motionEase});
 
             TweenMax.killTweensOf($('.touchscreen_cta'));
-            TweenMax.to($('.touchscreen_cta'), 0.2, {alpha:0, scale:bulleScale-0.3, ease:Circ.easeOut});
+			if(Globals.oldie)
+				$('.touchscreen_cta').css('display', 'none');
+			else
+				TweenMax.to($('.touchscreen_cta'), 0.2, {alpha:0, scale:bulleScale-0.3, ease:Circ.easeOut});
             ctaOn = false;
             /*
             TweenMax.to(rollDiv, motionTime, {
@@ -314,8 +334,11 @@ define([
                 left:(-buttonInnerWidth*0.5),
                 top:(-buttonInnerWidth*0.5),
                 ease:motionEase});*/
-
-            TweenMax.to(rollDiv, motionTime, {scale:bulleScale-0.2, alpha:0});
+			
+			if(Globals.oldie)
+				rollDiv.css('display', 'none');
+			else
+				TweenMax.to(rollDiv, motionTime, {scale:bulleScale-0.2, alpha:0});
 /*
             TweenMax.to(innerDivImg, motionTime*0.5, {alpha:0});*/
             TweenMax.to($('.screen_rolls img'), 0.5, {alpha:0});

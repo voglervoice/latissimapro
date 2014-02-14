@@ -60,9 +60,15 @@ module.exports = function(grunt){
 				files: [{
 					src: "dev/assets/js/vendors/require.min.js",
 					dest: "web/assets/js/vendors/require.min.js"
-				}, {
+				},{
 					src: "dev/assets/js/vendors/jquery-1.10.2.min.map",
 					dest: "web/assets/js/vendors/jquery-1.10.2.min.map"
+				},{
+					src: "dev/assets/js/vendors/json2.js",
+					dest: "web/assets/js/vendors/json2.js"
+				},{
+					src: "dev/assets/js/vendors/history.html4.js",
+					dest: "web/assets/js/vendors/history.html4.js"
 				}]
 			},
 			js: {

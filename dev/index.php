@@ -1,8 +1,9 @@
 <?php include_once('php/config.php'); ?>
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie ie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie ie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie ie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 ie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
@@ -23,7 +24,13 @@
         <meta property="og:url" content="<?php echo $baseurl; ?>"/>
         <meta property="og:image" content="<?php echo $baseurl; ?>assets/imgs/share.jpg"/>
         <meta property="og:description" content="<?php echo $jsonLangShare->facebook_text->texte; ?>"/>
-
+		<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="assets/js/vendors/history.html4.js"></script>
+	<script src="assets/js/vendors/json2.js"></script>
+	<![endif]-->
+	<!--[if IE 9]>    <script src="assets/js/vendors/history.html4.js"></script> <![endif]-->
+		
         <!-- Css -->
         <link rel="stylesheet" href="<?php echo $baseurl; ?>assets/css/main.css">
 

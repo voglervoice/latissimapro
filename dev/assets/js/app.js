@@ -18,7 +18,9 @@ define([
 	var App = function() {
 		var self = this;
 		var isFullscreen = false;
-		
+		var oldie_version = $('html').hasClass('oldie');
+		Globals.oldie = oldie_version;
+		//if(oldie_version) alert("OLDIE!");
 		Globals.lang = $('body').attr('data-lang');
 		Globals.canvas_enabled = (Modernizr.canvas && Modernizr.webgl)? true : false;
 		//Globals.canvas_enabled = false;
@@ -101,6 +103,10 @@ define([
 			var pageTitle = "Lattissima Pro";
 			//var url = (id !== "")? id : " ";
 			var url = baseLangUrl+id;
+			if($('html').hasClass('ie') && id !== ""){
+				url = id;
+			}
+			//if(oldie_version) alert("NAVIGATE : "+id);
 			if(isFullscreen)		onAddressChange(id);
 			else{
 				History.pushState({value:id}, pageTitle, url);
@@ -265,6 +271,7 @@ define([
 				isFullscreen = false;
 				var pageTitle = "Lattissima Pro";
 				var url = baseLangUrl+currentId;
+				if($('html').hasClass('ie') && id !== "") url = id;
 				History.pushState({value:'none'}, pageTitle, url);
 			}
 		};
