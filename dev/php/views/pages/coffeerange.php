@@ -126,5 +126,6 @@ function getCapsules($datas, $start, $nbCaps){
 		</div>
 	</div>
 	<img src="assets/imgs/sections/range_machine.png" class="range_machine" />
-    	<img src="assets/imgs/sections/range_bg.jpg" class="section_background" data-w="1440" data-h="864" />
+	<div class="bg_gradient"></div>
+    	<!--<img src="assets/imgs/sections/range_bg.jpg" class="section_background" data-w="1440" data-h="864" />-->
 </section>

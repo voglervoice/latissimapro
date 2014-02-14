@@ -38,7 +38,8 @@ define([
 
         // ******************* public ******************* 
         this.elem = $('#touchscreen');
-        this.bg = new BackgroundSection(this.elem);
+        //this.bg = new BackgroundSection(this.elem);
+        var bg = $('.bg_gradient', this.elem);
         var touchMachine = new ImageElem($(".touch_machine", this.elem));
         var touchElement = touchMachine.getElement();
         var ct = $('.touch_content', this.elem);
@@ -47,7 +48,8 @@ define([
 
         this.resize = function(w, h){
             windowW = w;
-            var dresize = this.bg.resize(w, h);
+            //var dresize = this.bg.resize(w, h);
+            var dresize = {left:0, top:0, width:w, height:h};
             $('.touch_vignettage').css({'left':dresize.left+'px', 'top':dresize.top+'px', 'width':dresize.width+'px', 'height':dresize.height+'px'});
             /*$('.touch_vignettage').width(w);
             $('.touch_vignettage').height(h);*/
@@ -126,7 +128,9 @@ define([
 				TweenMax.to($('.touchscreen_cta'), 0, {alpha:0, scale:bulleScale-0.3});
 			}
 
-            this.bg.open();
+            //this.bg.open();
+            TweenMax.to(bg, 2, {alpha:1, delay:0.8, ease:Linear.easeNone});
+            
             TweenMax.killTweensOf(ct);
             TweenMax.to(ct, 1.2, {alpha:1, delay:1.3});
 
@@ -137,6 +141,7 @@ define([
         
         this.open = function(){
             opened = true;
+            
             $('#touchscreen_puces').css('display', "block");
             for (var i = 0; i < puces.length; i++){
                 TweenMax.delayedCall(i*0.3, openPuce, [puces[i]]);
@@ -163,7 +168,9 @@ define([
         this.close = function(){
             opened = false;
             this.elem.off("mousemove");
-            this.bg.close();
+            //this.bg.close();
+            TweenMax.killTweensOf(bg);
+            TweenMax.to(bg, 2, {alpha:0});
             TweenMax.killDelayedCallsTo(openPuce);
             TweenMax.killDelayedCallsTo(pulseCircle);
             TweenMax.killDelayedCallsTo(pulseC);
@@ -217,6 +224,7 @@ define([
         };
 
          var init = function(index){
+            TweenMax.to(bg, 0, {alpha:0});
             TweenMax.to(ct, 0, {alpha:0});
             //TweenMax.to($('.touchscreen_roll'), 0, {scale:0.8, alpha:0});
             TweenMax.to($('.content_line_sep', ct), 0, {alpha:0.15});

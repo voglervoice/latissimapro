@@ -40,6 +40,7 @@
         .milk_content .visual_fig span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
         .order_footer_btn span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif; font-weight: bold; padding-top: 2px;}
         .preloader .machine_preload span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif; font-weight: bold;}
+        .range_content .range_coffees .range_cat .range_cat_title span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
         </style>
         <?php } ?>
     </head>

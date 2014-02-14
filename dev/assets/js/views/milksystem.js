@@ -14,13 +14,14 @@ define([
 
         // ******************* public ******************* 
         this.elem = $('#milksystem');
-        this.bg = new BackgroundSection(this.elem);
+        //this.bg = new BackgroundSection(this.elem);
+        var bg = $('.bg_gradient', this.elem);
         var milkMachine = new ImageElem($(".milk_machine", this.elem));
         var milkElement = milkMachine.getElement();
         var ct = $('.milk_content', this.elem);
 
         this.resize = function(w, h){
-            this.bg.resize(w, h);
+            //this.bg.resize(w, h);
             var marginLeftCt = 150;
             var marginImgRight = 95;
             if(w > 1400) marginImgRight = 160;
@@ -93,7 +94,7 @@ define([
         };
 
         this.initOpen = function(){
-            this.bg.open();
+            //this.bg.open();
 			if(Globals.oldie){
 				$('.milk_zoom').css('display', 'none');
 			}else
@@ -101,6 +102,7 @@ define([
             /*TweenMax.to($('.milk_zoom'), 0, {width:0, height:0, borderRadius:0, alpha:0});
             TweenMax.to($('.milk_zoom_inner'), 0, {width:0, height:0, borderRadius:0, left:0, top:0, borderColor:"#ffffff"});
             TweenMax.to($('.milk_zoom_img'), 0, {alpha:0});*/
+            TweenMax.to(bg, 2, {alpha:1, delay:0.8, ease:Linear.easeNone});
             milkElement.css('bottom', "-200px");
             milkMachine.show(1.2,1.2);
             TweenMax.to(milkElement, 0.8, {bottom:0, delay:0.8, ease:Circ.easeOut});
@@ -147,7 +149,9 @@ define([
         };
 
         this.close = function(){
-            this.bg.close();
+            //this.bg.close();
+            TweenMax.killTweensOf(bg);
+            TweenMax.to(bg, 2, {alpha:0, ease:Linear.easeNone});
             milkMachine.hide(1);
             TweenMax.to(milkElement, 0.9, {bottom:-200, ease:Circ.easeIn});
             TweenMax.killTweensOf(ct);
@@ -184,6 +188,7 @@ define([
 
         // ******************* private *******************
          var init = function(index){
+            TweenMax.to(bg, 0, {alpha:0});
             TweenMax.to($('.content_line_milk_sep', ct), 0, {alpha:0.15});
             TweenMax.to(ct, 0, {alpha:0});
             //TweenMax.to($('.milk_zoom'), 0, {width:0, height:0, borderRadius:0, alpha:0});

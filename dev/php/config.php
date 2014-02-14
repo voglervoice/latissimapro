@@ -150,7 +150,7 @@ $jsonCountriesContent = file_get_contents($jsonFolderPath.'countries.json');
 $jsonCountries = json_decode($jsonCountriesContent);
 $arialVersion = false;
 
-if(strtoupper($territory) == 'PL' || strtoupper($territory) == 'HU')
+if(strtoupper($territory) == 'PL' || strtoupper($territory) == 'HU' || strtoupper($territory) == 'RU')
     $arialVersion  = true;
 
 // test date from json

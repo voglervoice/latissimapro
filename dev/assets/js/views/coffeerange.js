@@ -14,14 +14,15 @@ define([
       
         // ******************* public ******************* 
         this.elem = $('#coffeerange');
-        this.bg = new BackgroundSection(this.elem);
+        //this.bg = new BackgroundSection(this.elem);
+        var bg = $('.bg_gradient', this.elem);
         var rangeMachine = new ImageElem($(".range_machine", this.elem));
         var rangeElement = rangeMachine.getElement();
         var ct = $(".range_content", this.elem);
 
         this.resize = function(w, h){
             windowW = w;
-            this.bg.resize(w, h);
+           // this.bg.resize(w, h);
             var ratio = h/863;
             var offsetCt = 115;
             var contentW = Math.max(744, w - (433*ratio+115)-200);
@@ -127,7 +128,9 @@ define([
         };
 
         this.initOpen = function(){
-            this.bg.open();
+            //this.bg.open();
+            
+            TweenMax.to(bg, 2, {alpha:1, delay:0.8, ease:Linear.easeNone});
             rangeMachine.show(1.2,1.2);
             rangeElement.css('bottom', '-200px');
             TweenMax.to(rangeElement, 0.8, {bottom:0, delay:0.8, ease:Circ.easeOut});
@@ -137,11 +140,14 @@ define([
         
         this.open = function(){
             opened = true;
+            
         };
 
         this.close = function(){
             opened = false;
-            this.bg.close();
+             TweenMax.killTweensOf(bg);
+            TweenMax.to(bg, 2, {alpha:0});
+            //this.bg.close();
             rangeMachine.hide(1);
             TweenMax.to(rangeElement, 0.9, {bottom:"-200", ease:Circ.easeIn});
             TweenMax.killTweensOf(ct);
@@ -156,7 +162,7 @@ define([
         //var animateIntensity = function(elem){ elem.animate({'fill-opacity': 1, 'stroke-opacity': 0}, 250); };
 
          var init = function(index){
-		 
+		 TweenMax.to(bg, 0, {alpha:0});
 			if(Globals.oldie){
 				$('.range_cat').css('margin-right', '25');
 			}

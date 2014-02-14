@@ -13,13 +13,14 @@ define([
 
         // ******************* public ******************* 
         this.elem = $('#design');
-        this.bg = new BackgroundSection(this.elem);
+        //this.bg = new BackgroundSection(this.elem);
+        var bg = $('.bg_gradient', this.elem);
         var designMachine = new ImageElem($(".design_machine", this.elem));
         var designElement = designMachine.getElement();
         var ct = $(".design_content", this.elem), wFooterBtn;
 
         this.resize = function(w, h){
-            this.bg.resize(w, h);
+            //this.bg.resize(w, h);
             var ratioH = h/864;
             var ratioW = w/1440;
             var offsetCt =77, offsetCtPlus = 0;
@@ -98,7 +99,8 @@ define([
         };
 
         this.initOpen = function(){
-            this.bg.open();
+            //this.bg.open();
+            TweenMax.to(bg, 2, {alpha:1, delay:0.8, ease:Linear.easeNone});
             designElement.css('bottom', "-200px");
             designMachine.show(1.2,1.2);
             TweenMax.to(designElement, 0.8, {bottom:0, delay:0.8, ease:Circ.easeOut});
@@ -110,7 +112,9 @@ define([
         };
 
         this.close = function(){
-            this.bg.close();
+            //this.bg.close();
+            TweenMax.killTweensOf(bg);
+            TweenMax.to(bg, 2, {alpha:0, ease:Linear.easeNone});
             designMachine.hide(1);
             TweenMax.to(designElement, 0.9, {bottom:-200, ease:Circ.easeIn});
             TweenMax.killTweensOf(ct);
@@ -119,6 +123,7 @@ define([
 
         // ******************* private *******************
          var init = function(index){
+            TweenMax.to(bg, 0, {alpha:0});
             TweenMax.to(ct, 0, {alpha:0});
             TweenMax.to($('.content_line_design_sep', ct), 0, {alpha:0.15});
             TweenMax.to($('.design_content_infos_col div', ct), 0, {alpha:0.28});

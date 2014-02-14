@@ -126,6 +126,13 @@ define([
             var lineXLength = 85;
             var lastStroke = 30;
 
+            if(index == 2 && $('.home_promotion').attr('data-on') == '1'){
+                dataBaseX = -90;
+                posiX = raphaW*0.5 + dataBaseX*ratio + 4;
+                posiY = raphaH* 0.5 + (-45)*ratio+ 100;
+                lineYLength = 69;
+            }
+
             if(index == 3 && (posiX+btnTextWidth+lineXLength+lastStroke+80 > windowW-menuSpace)){
                 posiX = raphaW*0.5 + (dataBaseX - 104)*ratio + 4;
                 posiY = raphaH* 0.5 + (dataBaseX -2)*ratio+ 100;
