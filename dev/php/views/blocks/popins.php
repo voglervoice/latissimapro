@@ -1,7 +1,7 @@
 <div class="popins">
 	<div class="select_lang popin">
 		<a href="#" class="popin_close"></a>
-		<h4>Select your country</h4>
+		<h4><?php echo $jsonLangFooter->country_and_language_text->texte; ?></h4>
 		<ul class="lang_zones">
 		<?php
 			foreach ($jsonCountries->continents as $key => $value)

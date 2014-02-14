@@ -1,6 +1,6 @@
 {
   "code_pays":"DE",
-  "launching":"2013-03-03",
+  "launching":"2014-04-21",
   "rosabaya_de_colombia":0,
   "dulsao_do_brasil":0,
   "vivalto_lungo":0,
@@ -24,5 +24,18 @@
   "vanilio":0,
   "bukeela_ka_ethopia":0,
   "promocoupon1":1,
-  "doCMS_type":0
+  "promo_localactivation":0,
+  "promo_socialmedia":0,
+  "classical_color1":1,
+  "classical_color2":1,
+  "classical_color3":1,
+  "classical_color4":1,
+  "limited_color1":0,
+  "limited_color2":0,
+  "pureplayer_color1":0,
+  "pureplayer_color2":0,
+  "aeroccino":0,
+  "nointro":1,
+  "lightintro":0,
+  "fullintro":0
 }

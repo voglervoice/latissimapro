@@ -211,6 +211,11 @@
              "id": "2_14",
             "label":"discover_more",
             "texte":"Más información"
+          },
+          "back": {
+             "id": "2_21",
+            "label":"back",
+            "texte":""
           }
         }
       },
@@ -265,7 +270,7 @@
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":"La calidad profesional es la fuente de inspiración de la NUEVA máquina Lattissima Pro, que incorpora la simplicidad de una pantalla táctil. Ahora puede preparar en casa las recetas con leche más exquisitas con solo apretar un botón."
+            "texte":"La calidad profesional es la fuente de inspiración de la NUEVA máquina <i>Lattissima Pro</i>, que incorpora la simplicidad de una pantalla táctil. Ahora puede preparar en casa las recetas con leche más exquisitas con solo apretar un botón."
           },
           "email_template_call_to_action": {
              "id": "4_6",
@@ -562,6 +567,11 @@
       "range__grand_cru":{
         "section":"range__grand_cru",
         "blockText":{
+          "grand_cru_14": {
+             "id": "8_33",
+            "label":"grand_cru_14",
+            "texte":"Decaffeinato Intenso"
+          },
           "grand_cru_1": {
              "id": "8_41",
             "label":"grand_cru_1",
@@ -572,15 +582,35 @@
             "label":"grand_cru_2",
             "texte":"Dharkan"
           },
+          "grand_cru_15": {
+             "id": "8_34",
+            "label":"grand_cru_15",
+            "texte":"Decaffeinato"
+          },
+          "grand_cru_16": {
+             "id": "8_35",
+            "label":"grand_cru_16",
+            "texte":"Decaffeinato Lungo"
+          },
           "grand_cru_3": {
              "id": "8_43",
             "label":"grand_cru_3",
             "texte":"Ristretto"
           },
+          "grand_cru_14_aromatic_profile": {
+             "id": "8_28",
+            "label":"grand_cru_14_aromatic_profile",
+            "texte":"A cacao tostado, a cereales"
+          },
           "grand_cru_4": {
              "id": "8_44",
             "label":"grand_cru_4",
             "texte":"Arpeggio"
+          },
+          "grand_cru_14_aromatic_profile_with_milk": {
+             "id": "8_27",
+            "label":"grand_cru_14_aromatic_profile_with_milk",
+            "texte":"Dulce, equilibrado y ligeramente tostado"
           },
           "grand_cru_5": {
              "id": "8_45",
@@ -592,10 +622,25 @@
             "label":"grand_cru_6",
             "texte":"Livanto"
           },
+          "grand_cru_16_aromatic_profile_with_milk": {
+             "id": "8_25",
+            "label":"grand_cru_16_aromatic_profile_with_milk",
+            "texte":"A cereales tostados, frutal"
+          },
+          "grand_cru_16_aromatic_profile": {
+             "id": "8_26",
+            "label":"grand_cru_16_aromatic_profile",
+            "texte":"A cereales tostados"
+          },
           "grand_cru_7": {
              "id": "8_47",
             "label":"grand_cru_7",
             "texte":"Capriccio"
+          },
+          "grand_cru_15_aromatic_profile": {
+             "id": "8_24",
+            "label":"grand_cru_15_aromatic_profile",
+            "texte":"Frutal, vinoso"
           },
           "grand_cru_8": {
              "id": "8_40",
@@ -606,6 +651,11 @@
              "id": "8_39",
             "label":"grand_cru_9",
             "texte":"Cosi"
+          },
+          "grand_cru_15_aromatic_profile_with_milk": {
+             "id": "8_23",
+            "label":"grand_cru_15_aromatic_profile_with_milk",
+            "texte":"Muy equilibrado, dulce, suave"
           },
           "grand_cru_10": {
              "id": "8_38",
@@ -626,21 +676,6 @@
              "id": "8_32",
             "label":"grand_cru_13",
             "texte":"Bukeela <i>ka Ethiopia</i>"
-          },
-          "grand_cru_14": {
-             "id": "8_33",
-            "label":"grand_cru_14",
-            "texte":"Decaffeinato Intenso"
-          },
-          "grand_cru_15": {
-             "id": "8_34",
-            "label":"grand_cru_15",
-            "texte":"Decaffeinato"
-          },
-          "grand_cru_16": {
-             "id": "8_35",
-            "label":"grand_cru_16",
-            "texte":"Decaffeinato Lungo"
           },
           "grand_cru_17": {
              "id": "8_48",
@@ -831,36 +866,6 @@
              "id": "8_29",
             "label":"grand_cru_19_aromatic_profile_with_milk",
             "texte":"A cereales tostados, frutal"
-          },
-          "grand_cru_14_aromatic_profile": {
-             "id": "8_28",
-            "label":"grand_cru_14_aromatic_profile",
-            "texte":"A cacao tostado, a cereales"
-          },
-          "grand_cru_14_aromatic_profile_with_milk": {
-             "id": "8_27",
-            "label":"grand_cru_14_aromatic_profile_with_milk",
-            "texte":"Dulce, equilibrado y ligeramente tostado"
-          },
-          "grand_cru_15_lungo_aromatic_profile": {
-             "id": "8_26",
-            "label":"grand_cru_15_lungo_aromatic_profile",
-            "texte":"A cereales tostados"
-          },
-          "grand_cru_15_lungo_aromatic_profile_with_milk": {
-             "id": "8_25",
-            "label":"grand_cru_15_lungo_aromatic_profile_with_milk",
-            "texte":"A cereales tostados, frutal"
-          },
-          "grand_cru_15_aromatic_profile": {
-             "id": "8_24",
-            "label":"grand_cru_15_aromatic_profile",
-            "texte":"Frutal, vinoso"
-          },
-          "grand_cru_15_aromatic_profile_with_milk": {
-             "id": "8_23",
-            "label":"grand_cru_15_aromatic_profile_with_milk",
-            "texte":"Muy equilibrado, dulce, suave"
           },
           "grand_cru_20_aromatic_profile": {
              "id": "8_21",

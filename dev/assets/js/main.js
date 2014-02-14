@@ -2,7 +2,6 @@ require.config({
     name: "main",
     baseUrl: 'assets/js/',
     paths: {
-        html5shiv: 'vendors/html5shiv',
         jquery: 'vendors/jquery-1.10.2.min',
         preloader: 'vendors/jquery.preload',
         mousewheel: 'vendors/jquery.mousewheel',
@@ -57,7 +56,6 @@ require([
         "loader",
         "publisher",
         "events",
-        "html5shiv",
         "preloader", "requestanimationframe", "iefix"
     ], function($, App, Loader, publisher, Events) {
          if ( ! window.console || typeof console =="undefined" ) console = { log: function(){} };

@@ -211,6 +211,11 @@
              "id": "2_14",
             "label":"discover_more",
             "texte":"Oppdag mer"
+          },
+          "back": {
+             "id": "2_21",
+            "label":"back",
+            "texte":""
           }
         }
       },
@@ -265,7 +270,7 @@
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":"Den nye Lattissima Pro maskinen kombinerer den høye kvaliteten til en profesjonell maskin med brukervennlighet gjennom sin berøringsskjerm. Men en enkel bevegelse, kan du lage perfekte melkebaserte kaffedrikker hjemme."
+            "texte":"Den nye <i>Lattissima Pro</i> maskinen kombinerer den høye kvaliteten til en profesjonell maskin med brukervennlighet gjennom sin berøringsskjerm. Med en enkel bevegelse, kan du lage perfekte melkebaserte kaffedrikker hjemme."
           },
           "email_template_call_to_action": {
              "id": "4_6",
@@ -465,7 +470,7 @@
           "text": {
              "id": "10_14",
             "label":"text",
-            "texte":"Den nye Lattissima Pro maskinen kombinerer den høye kvaliteten til en profesjonell maskin med brukervennlighet, og er presentert i en elegant, ren og robust design med en finish i børstet aluminium."
+            "texte":"Den nye Lattissima Pro maskinen kombinerer den høye kvaliteten til en profesjonell maskin med brukervennlighet, og er presentert i en elegant, ren og robust design i børstet aluminium."
           },
           "bloc_1_•_characteristics": {
              "id": "10_13",
@@ -540,7 +545,7 @@
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":"Last ned brukerveiledning"
+            "texte":"Last ned <br>brukerveiledning"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -550,7 +555,7 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Se vår assistanse video"
+            "texte":"Se vår <br>assistanse video"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
@@ -562,6 +567,11 @@
       "range__grand_cru":{
         "section":"range__grand_cru",
         "blockText":{
+          "grand_cru_14": {
+             "id": "8_33",
+            "label":"grand_cru_14",
+            "texte":"Decaffeinato Intenso"
+          },
           "grand_cru_1": {
              "id": "8_41",
             "label":"grand_cru_1",
@@ -572,15 +582,35 @@
             "label":"grand_cru_2",
             "texte":"Dharkan"
           },
+          "grand_cru_15": {
+             "id": "8_34",
+            "label":"grand_cru_15",
+            "texte":"Decaffeinato"
+          },
+          "grand_cru_16": {
+             "id": "8_35",
+            "label":"grand_cru_16",
+            "texte":"Decaffeinato Lungo"
+          },
           "grand_cru_3": {
              "id": "8_43",
             "label":"grand_cru_3",
             "texte":"Ristretto"
           },
+          "grand_cru_14_aromatic_profile": {
+             "id": "8_28",
+            "label":"grand_cru_14_aromatic_profile",
+            "texte":"Fyldig og kraftig"
+          },
           "grand_cru_4": {
              "id": "8_44",
             "label":"grand_cru_4",
             "texte":"Arpeggio"
+          },
+          "grand_cru_14_aromatic_profile_with_milk": {
+             "id": "8_27",
+            "label":"grand_cru_14_aromatic_profile_with_milk",
+            "texte":"Søt, velbalansert, lett brent"
           },
           "grand_cru_5": {
              "id": "8_45",
@@ -592,10 +622,25 @@
             "label":"grand_cru_6",
             "texte":"Livanto"
           },
+          "grand_cru_16_aromatic_profile_with_milk": {
+             "id": "8_25",
+            "label":"grand_cru_16_aromatic_profile_with_milk",
+            "texte":"Ristet kornaktig, grønne frukter"
+          },
+          "grand_cru_16_aromatic_profile": {
+             "id": "8_26",
+            "label":"grand_cru_16_aromatic_profile",
+            "texte":"Lett og smaksrik"
+          },
           "grand_cru_7": {
              "id": "8_47",
             "label":"grand_cru_7",
             "texte":"Capriccio"
+          },
+          "grand_cru_15_aromatic_profile": {
+             "id": "8_24",
+            "label":"grand_cru_15_aromatic_profile",
+            "texte":"Fruktig og mild"
           },
           "grand_cru_8": {
              "id": "8_40",
@@ -606,6 +651,11 @@
              "id": "8_39",
             "label":"grand_cru_9",
             "texte":"Cosi"
+          },
+          "grand_cru_15_aromatic_profile_with_milk": {
+             "id": "8_23",
+            "label":"grand_cru_15_aromatic_profile_with_milk",
+            "texte":"Svært lett, søt, melkeaktig"
           },
           "grand_cru_10": {
              "id": "8_38",
@@ -626,21 +676,6 @@
              "id": "8_32",
             "label":"grand_cru_13",
             "texte":"Bukeela ka Ethiopia"
-          },
-          "grand_cru_14": {
-             "id": "8_33",
-            "label":"grand_cru_14",
-            "texte":"Decaffeinato Intenso"
-          },
-          "grand_cru_15": {
-             "id": "8_34",
-            "label":"grand_cru_15",
-            "texte":"Decaffeinato"
-          },
-          "grand_cru_16": {
-             "id": "8_35",
-            "label":"grand_cru_16",
-            "texte":"Decaffeinato Lungo"
           },
           "grand_cru_17": {
              "id": "8_48",
@@ -832,36 +867,6 @@
             "label":"grand_cru_19_aromatic_profile_with_milk",
             "texte":"Ristet kornaktig, fruktig"
           },
-          "grand_cru_14_aromatic_profile": {
-             "id": "8_28",
-            "label":"grand_cru_14_aromatic_profile",
-            "texte":"Fyldig og kraftig"
-          },
-          "grand_cru_14_aromatic_profile_with_milk": {
-             "id": "8_27",
-            "label":"grand_cru_14_aromatic_profile_with_milk",
-            "texte":"Søt, velbalansert, lett brent"
-          },
-          "grand_cru_15_lungo_aromatic_profile": {
-             "id": "8_26",
-            "label":"grand_cru_15_lungo_aromatic_profile",
-            "texte":"Lett og smaksrik"
-          },
-          "grand_cru_15_lungo_aromatic_profile_with_milk": {
-             "id": "8_25",
-            "label":"grand_cru_15_lungo_aromatic_profile_with_milk",
-            "texte":"Ristet kornaktig, grønne frukter"
-          },
-          "grand_cru_15_aromatic_profile": {
-             "id": "8_24",
-            "label":"grand_cru_15_aromatic_profile",
-            "texte":"Fruktig og mild"
-          },
-          "grand_cru_15_aromatic_profile_with_milk": {
-             "id": "8_23",
-            "label":"grand_cru_15_aromatic_profile_with_milk",
-            "texte":"Svært lett, søt, melkeaktig"
-          },
           "grand_cru_20_aromatic_profile": {
              "id": "8_21",
             "label":"grand_cru_20_aromatic_profile",
@@ -905,7 +910,7 @@
           "text_paragraph_1_milk_frothtext_paragraph_1_milk_froth": {
              "id": "9_4",
             "label":"text_paragraph_1_milk_frothtext_paragraph_1_milk_froth",
-            "texte":"Melken blir alltid skummet til perfeksjon for å lage den lekreste Cappuccino eller Latte Macchiato. Tilpass teksturen i melkeskummet med det justerbare hjulet i henhold til din smak."
+            "texte":"Melken blir alltid skummet til perfeksjon for å lage den lekreste Cappuccino eller Latte Macchiato. Tilpass tykkelsen på melkeskummet med det justerbare hjulet i henhold til din smak."
           },
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
@@ -915,7 +920,7 @@
           "schema_milk_froth_text_": {
              "id": "9_2",
             "label":"schema_milk_froth_text_",
-            "texte":"Justerbart hjul for melkeskumtekstur"
+            "texte":"Tilpass tykkelsen på melkeskummet"
           }
         }
       },

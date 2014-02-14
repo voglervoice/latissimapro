@@ -10,7 +10,7 @@
           "nespresso_link": {
              "id": "1_19",
             "label":"nespresso_link",
-            "texte":"www.nespresso.com/es/ca/home"
+            "texte":"http://www.nespresso.com/es/es"
           },
           "contact": {
              "id": "1_6",
@@ -20,7 +20,7 @@
           "contact_link": {
              "id": "1_7",
             "label":"contact_link",
-            "texte":"www.nespresso.com/es/ca/contactus"
+            "texte":"http://www.nespresso.com/es/es/contact_nespresso/"
           },
           "legals": {
              "id": "1_8",
@@ -30,7 +30,7 @@
           "legals_link": {
              "id": "1_9",
             "label":"legals_link",
-            "texte":"www.nespresso.com/es/ca/pages/legal"
+            "texte":"http://www.nespresso.com/es/es/terms_and_conditions/"
           },
           "store_locator": {
              "id": "1_10",
@@ -40,7 +40,7 @@
           "store_locator_link": {
              "id": "1_20",
             "label":"store_locator_link",
-            "texte":"http://www.nespresso.com/es/es/store_locator/"
+            "texte":"http://www.nespresso.com/es/es/store_locator"
           },
           "share": {
              "id": "1_11",
@@ -95,7 +95,7 @@
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":"www.nespresso.com/es/ca/login"
+            "texte":"http://www.nespresso.com/r/order/ES"
           },
           "country_and_language": {
              "id": "1_2",
@@ -211,6 +211,11 @@
              "id": "2_14",
             "label":"discover_more",
             "texte":"Més informació"
+          },
+          "back": {
+             "id": "2_21",
+            "label":"back",
+            "texte":""
           }
         }
       },
@@ -265,7 +270,7 @@
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":"La qualitat professional és la font d'inspiració de la NOVA màquina Lattissima Pro, que incorpora la simplicitat d'una pantalla tàctil. Ara es pot preparar a casa les receptes amb cafè més exquisides només pitjant un botó."
+            "texte":"La qualitat professional és la font d'inspiració de la NOVA màquina <i>Lattissima Pro</i>, que incorpora la simplicitat d'una pantalla tàctil. Ara es pot preparar a casa les receptes amb cafè més exquisides només pitjant un botó."
           },
           "email_template_call_to_action": {
              "id": "4_6",
@@ -540,7 +545,7 @@
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":"Descarregui's el manual de l'usuari"
+            "texte":"Descarregui's el<br>manual de l'usuari"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -550,7 +555,7 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Miri els vídeos del nostre Servei d'Assistència Tècnica"
+            "texte":"Miri els vídeos del nostre<br>Servei d'Assistència Tècnica"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
@@ -562,6 +567,11 @@
       "range__grand_cru":{
         "section":"range__grand_cru",
         "blockText":{
+          "grand_cru_14": {
+             "id": "8_33",
+            "label":"grand_cru_14",
+            "texte":"Decaffeinato Intenso"
+          },
           "grand_cru_1": {
              "id": "8_41",
             "label":"grand_cru_1",
@@ -572,15 +582,35 @@
             "label":"grand_cru_2",
             "texte":"Dharkan"
           },
+          "grand_cru_15": {
+             "id": "8_34",
+            "label":"grand_cru_15",
+            "texte":"Decaffeinato"
+          },
+          "grand_cru_16": {
+             "id": "8_35",
+            "label":"grand_cru_16",
+            "texte":"Decaffeinato Lungo"
+          },
           "grand_cru_3": {
              "id": "8_43",
             "label":"grand_cru_3",
             "texte":"Ristretto"
           },
+          "grand_cru_14_aromatic_profile": {
+             "id": "8_28",
+            "label":"grand_cru_14_aromatic_profile",
+            "texte":"De cacau torrat, de cereals"
+          },
           "grand_cru_4": {
              "id": "8_44",
             "label":"grand_cru_4",
             "texte":"Arpeggio"
+          },
+          "grand_cru_14_aromatic_profile_with_milk": {
+             "id": "8_27",
+            "label":"grand_cru_14_aromatic_profile_with_milk",
+            "texte":"Dolç, equilibrat i lleugerament torrat"
           },
           "grand_cru_5": {
              "id": "8_45",
@@ -592,10 +622,25 @@
             "label":"grand_cru_6",
             "texte":"Livanto"
           },
+          "grand_cru_16_aromatic_profile_with_milk": {
+             "id": "8_25",
+            "label":"grand_cru_16_aromatic_profile_with_milk",
+            "texte":"De cereals torrats, de fruites verdes"
+          },
+          "grand_cru_16_aromatic_profile": {
+             "id": "8_26",
+            "label":"grand_cru_16_aromatic_profile",
+            "texte":"De cereals torrats"
+          },
           "grand_cru_7": {
              "id": "8_47",
             "label":"grand_cru_7",
             "texte":"Capriccio"
+          },
+          "grand_cru_15_aromatic_profile": {
+             "id": "8_24",
+            "label":"grand_cru_15_aromatic_profile",
+            "texte":"Afruitat, de vi"
           },
           "grand_cru_8": {
              "id": "8_40",
@@ -606,6 +651,11 @@
              "id": "8_39",
             "label":"grand_cru_9",
             "texte":"Cosi"
+          },
+          "grand_cru_15_aromatic_profile_with_milk": {
+             "id": "8_23",
+            "label":"grand_cru_15_aromatic_profile_with_milk",
+            "texte":"Molt lleuger, dolç, suau i lacti"
           },
           "grand_cru_10": {
              "id": "8_38",
@@ -626,21 +676,6 @@
              "id": "8_32",
             "label":"grand_cru_13",
             "texte":"Bukeela ka Ethiopia"
-          },
-          "grand_cru_14": {
-             "id": "8_33",
-            "label":"grand_cru_14",
-            "texte":"Decaffeinato Intenso"
-          },
-          "grand_cru_15": {
-             "id": "8_34",
-            "label":"grand_cru_15",
-            "texte":"Decaffeinato"
-          },
-          "grand_cru_16": {
-             "id": "8_35",
-            "label":"grand_cru_16",
-            "texte":"Decaffeinato Lungo"
           },
           "grand_cru_17": {
              "id": "8_48",
@@ -831,36 +866,6 @@
              "id": "8_29",
             "label":"grand_cru_19_aromatic_profile_with_milk",
             "texte":"De cereals torrats, afruitat"
-          },
-          "grand_cru_14_aromatic_profile": {
-             "id": "8_28",
-            "label":"grand_cru_14_aromatic_profile",
-            "texte":"De cacau torrat, de cereals"
-          },
-          "grand_cru_14_aromatic_profile_with_milk": {
-             "id": "8_27",
-            "label":"grand_cru_14_aromatic_profile_with_milk",
-            "texte":"Dolç, equilibrat i lleugerament torrat"
-          },
-          "grand_cru_15_lungo_aromatic_profile": {
-             "id": "8_26",
-            "label":"grand_cru_15_lungo_aromatic_profile",
-            "texte":"De cereals torrats"
-          },
-          "grand_cru_15_lungo_aromatic_profile_with_milk": {
-             "id": "8_25",
-            "label":"grand_cru_15_lungo_aromatic_profile_with_milk",
-            "texte":"De cereals torrats, de fruites verdes"
-          },
-          "grand_cru_15_aromatic_profile": {
-             "id": "8_24",
-            "label":"grand_cru_15_aromatic_profile",
-            "texte":"Afruitat, de vi"
-          },
-          "grand_cru_15_aromatic_profile_with_milk": {
-             "id": "8_23",
-            "label":"grand_cru_15_aromatic_profile_with_milk",
-            "texte":"Molt lleuger, dolç, suau i lacti"
           },
           "grand_cru_20_aromatic_profile": {
              "id": "8_21",

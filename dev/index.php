@@ -33,7 +33,15 @@
 		
         <!-- Css -->
         <link rel="stylesheet" href="<?php echo $baseurl; ?>assets/css/main.css">
-
+        <?php
+        if($arialVersion){ ?>
+        <style type="text/css">
+        h2{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .milk_content .visual_fig span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .order_footer_btn span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif; font-weight: bold; padding-top: 2px;}
+        .preloader .machine_preload span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif; font-weight: bold;}
+        </style>
+        <?php } ?>
     </head>
     <body
     data-prodmode="<?php echo (!$prodMode)?'0':'1'; ?>"

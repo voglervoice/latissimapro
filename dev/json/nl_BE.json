@@ -95,7 +95,7 @@
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":"https://www.nespresso.com/nl/nl/login"
+            "texte":"http://www.nespresso.com/be/nl/home"
           },
           "country_and_language": {
              "id": "1_2",
@@ -211,6 +211,11 @@
              "id": "2_14",
             "label":"discover_more",
             "texte":"Ontdek nog veel meer"
+          },
+          "back": {
+             "id": "2_21",
+            "label":"back",
+            "texte":""
           }
         }
       },
@@ -345,7 +350,7 @@
           "text": {
              "id": "5_6",
             "label":"text",
-            "texte":"De kunst van het bereiden van een kopje koffie  is nog  nooit zo eenvoudig en plezierig geweest. Met het intuïtieve touchscreenkunt u de machine eenvoudig programmeren en genieten van verschillende soorten koffie enmelkrecepten."
+            "texte":"De kunst van het bereiden van een kopje koffie  is nog  nooit zo eenvoudig en plezierig geweest. Met het intuïtieve touchscreen kunt u de machine eenvoudig programmeren en genieten van verschillende soorten koffie- en melkrecepten."
           },
           "touchscreen_cta": {
              "id": "5_7",
@@ -562,6 +567,11 @@
       "range__grand_cru":{
         "section":"range__grand_cru",
         "blockText":{
+          "grand_cru_14": {
+             "id": "8_33",
+            "label":"grand_cru_14",
+            "texte":"Decaffeinato Intenso"
+          },
           "grand_cru_1": {
              "id": "8_41",
             "label":"grand_cru_1",
@@ -572,15 +582,35 @@
             "label":"grand_cru_2",
             "texte":"Dharkan"
           },
+          "grand_cru_15": {
+             "id": "8_34",
+            "label":"grand_cru_15",
+            "texte":"Decaffeinato"
+          },
+          "grand_cru_16": {
+             "id": "8_35",
+            "label":"grand_cru_16",
+            "texte":"Decaffeinato Lungo"
+          },
           "grand_cru_3": {
              "id": "8_43",
             "label":"grand_cru_3",
             "texte":"Ristretto"
           },
+          "grand_cru_14_aromatic_profile": {
+             "id": "8_28",
+            "label":"grand_cru_14_aromatic_profile",
+            "texte":"Gebrande cacao, granen"
+          },
           "grand_cru_4": {
              "id": "8_44",
             "label":"grand_cru_4",
             "texte":"Arpeggio"
+          },
+          "grand_cru_14_aromatic_profile_with_milk": {
+             "id": "8_27",
+            "label":"grand_cru_14_aromatic_profile_with_milk",
+            "texte":"Zoet, evenwichtig en licht gebrand"
           },
           "grand_cru_5": {
              "id": "8_45",
@@ -592,10 +622,25 @@
             "label":"grand_cru_6",
             "texte":"Livanto"
           },
+          "grand_cru_16_aromatic_profile_with_milk": {
+             "id": "8_25",
+            "label":"grand_cru_16_aromatic_profile_with_milk",
+            "texte":"Geroosterde granen, groen fruitachtig"
+          },
+          "grand_cru_16_aromatic_profile": {
+             "id": "8_26",
+            "label":"grand_cru_16_aromatic_profile",
+            "texte":"Gebrande granen"
+          },
           "grand_cru_7": {
              "id": "8_47",
             "label":"grand_cru_7",
             "texte":"Capriccio"
+          },
+          "grand_cru_15_aromatic_profile": {
+             "id": "8_24",
+            "label":"grand_cru_15_aromatic_profile",
+            "texte":"Fruitachtig, wijnachtig"
           },
           "grand_cru_8": {
              "id": "8_40",
@@ -606,6 +651,11 @@
              "id": "8_39",
             "label":"grand_cru_9",
             "texte":"Cosi"
+          },
+          "grand_cru_15_aromatic_profile_with_milk": {
+             "id": "8_23",
+            "label":"grand_cru_15_aromatic_profile_with_milk",
+            "texte":"Heel licht, zoet, zacht en melkachtig"
           },
           "grand_cru_10": {
              "id": "8_38",
@@ -626,21 +676,6 @@
              "id": "8_32",
             "label":"grand_cru_13",
             "texte":"Bukeela ka Ethiopia"
-          },
-          "grand_cru_14": {
-             "id": "8_33",
-            "label":"grand_cru_14",
-            "texte":"Decaffeinato Intenso"
-          },
-          "grand_cru_15": {
-             "id": "8_34",
-            "label":"grand_cru_15",
-            "texte":"Decaffeinato"
-          },
-          "grand_cru_16": {
-             "id": "8_35",
-            "label":"grand_cru_16",
-            "texte":"Decaffeinato Lungo"
           },
           "grand_cru_17": {
              "id": "8_48",
@@ -831,36 +866,6 @@
              "id": "8_29",
             "label":"grand_cru_19_aromatic_profile_with_milk",
             "texte":"Geroosterde granen, fruitachtig"
-          },
-          "grand_cru_14_aromatic_profile": {
-             "id": "8_28",
-            "label":"grand_cru_14_aromatic_profile",
-            "texte":"Gebrande cacao, granen"
-          },
-          "grand_cru_14_aromatic_profile_with_milk": {
-             "id": "8_27",
-            "label":"grand_cru_14_aromatic_profile_with_milk",
-            "texte":"Zoet, evenwichtig en licht gebrand"
-          },
-          "grand_cru_15_lungo_aromatic_profile": {
-             "id": "8_26",
-            "label":"grand_cru_15_lungo_aromatic_profile",
-            "texte":"Gebrande granen"
-          },
-          "grand_cru_15_lungo_aromatic_profile_with_milk": {
-             "id": "8_25",
-            "label":"grand_cru_15_lungo_aromatic_profile_with_milk",
-            "texte":"Geroosterde granen, groen fruitachtig"
-          },
-          "grand_cru_15_aromatic_profile": {
-             "id": "8_24",
-            "label":"grand_cru_15_aromatic_profile",
-            "texte":"Fruitachtig, wijnachtig"
-          },
-          "grand_cru_15_aromatic_profile_with_milk": {
-             "id": "8_23",
-            "label":"grand_cru_15_aromatic_profile_with_milk",
-            "texte":"Heel licht, zoet, zacht en melkachtig"
           },
           "grand_cru_20_aromatic_profile": {
              "id": "8_21",

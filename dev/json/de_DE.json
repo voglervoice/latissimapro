@@ -25,12 +25,12 @@
           "legals": {
              "id": "1_8",
             "label":"legals",
-            "texte":"Impressum"
+            "texte":"AGBs"
           },
           "legals_link": {
              "id": "1_9",
             "label":"legals_link",
-            "texte":"http://www.nespresso.com/de/de/pages/legal"
+            "texte":"http://www.nespresso.com/de/de/pages/impressum"
           },
           "store_locator": {
              "id": "1_10",
@@ -170,7 +170,7 @@
           "scroll_to_explore": {
              "id": "2_13",
             "label":"scroll_to_explore",
-            "texte":"Scrollen für weitere Infos"
+            "texte":"Nach unten scrollen"
           },
           "top": {
              "id": "2_12",
@@ -211,6 +211,11 @@
              "id": "2_14",
             "label":"discover_more",
             "texte":"Mehr erfahren"
+          },
+          "back": {
+             "id": "2_21",
+            "label":"back",
+            "texte":""
           }
         }
       },
@@ -265,7 +270,7 @@
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":"Die neue Lattissima Pro vereint leistungsstarke Technologie mit der Einfachheit eines Touchscreens. Bereiten Sie jetzt mit nur einer Berührung auch zu Hause exzellente Kaffee-Kreationen mit frischer Milch zu."
+            "texte":"Die neue <i>Lattissima Pro</i> vereint leistungsstarke Technologie mit der Einfachheit eines Touchscreens. Bereiten Sie jetzt mit nur einer Berührung auch zu Hause exzellente Kaffee-Kreationen mit frischer Milch zu."
           },
           "email_template_call_to_action": {
              "id": "4_6",
@@ -540,7 +545,7 @@
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":"Bedienungsanleitung herunterladen"
+            "texte":"Bedienungsanleitung <br>herunterladen"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -550,7 +555,7 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Anleitungsvideos ansehen"
+            "texte":"Anleitungsvideos<br>ansehen"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
@@ -562,6 +567,11 @@
       "range__grand_cru":{
         "section":"range__grand_cru",
         "blockText":{
+          "grand_cru_14": {
+             "id": "8_33",
+            "label":"grand_cru_14",
+            "texte":"Decaffeinato Intenso"
+          },
           "grand_cru_1": {
              "id": "8_41",
             "label":"grand_cru_1",
@@ -572,15 +582,35 @@
             "label":"grand_cru_2",
             "texte":"Dharkan"
           },
+          "grand_cru_15": {
+             "id": "8_34",
+            "label":"grand_cru_15",
+            "texte":"Decaffeinato"
+          },
+          "grand_cru_16": {
+             "id": "8_35",
+            "label":"grand_cru_16",
+            "texte":"Decaffeinato Lungo"
+          },
           "grand_cru_3": {
              "id": "8_43",
             "label":"grand_cru_3",
             "texte":"Ristretto"
           },
+          "grand_cru_14_aromatic_profile": {
+             "id": "8_28",
+            "label":"grand_cru_14_aromatic_profile",
+            "texte":"Gerösteter Kakao, Getreide"
+          },
           "grand_cru_4": {
              "id": "8_44",
             "label":"grand_cru_4",
             "texte":"Arpeggio"
+          },
+          "grand_cru_14_aromatic_profile_with_milk": {
+             "id": "8_27",
+            "label":"grand_cru_14_aromatic_profile_with_milk",
+            "texte":"Süß, ausgewogen und leicht geröstet"
           },
           "grand_cru_5": {
              "id": "8_45",
@@ -592,10 +622,25 @@
             "label":"grand_cru_6",
             "texte":"Livanto"
           },
+          "grand_cru_16_aromatic_profile_with_milk": {
+             "id": "8_25",
+            "label":"grand_cru_16_aromatic_profile_with_milk",
+            "texte":"Geröstetes Getreide, fruchtig"
+          },
+          "grand_cru_16_aromatic_profile": {
+             "id": "8_26",
+            "label":"grand_cru_16_aromatic_profile",
+            "texte":"Geröstetes Getreide"
+          },
           "grand_cru_7": {
              "id": "8_47",
             "label":"grand_cru_7",
             "texte":"Capriccio"
+          },
+          "grand_cru_15_aromatic_profile": {
+             "id": "8_24",
+            "label":"grand_cru_15_aromatic_profile",
+            "texte":"Fruchtig, weinig"
           },
           "grand_cru_8": {
              "id": "8_40",
@@ -606,6 +651,11 @@
              "id": "8_39",
             "label":"grand_cru_9",
             "texte":"Cosi"
+          },
+          "grand_cru_15_aromatic_profile_with_milk": {
+             "id": "8_23",
+            "label":"grand_cru_15_aromatic_profile_with_milk",
+            "texte":"Sehr leicht, süß, cremig und milchig"
           },
           "grand_cru_10": {
              "id": "8_38",
@@ -626,21 +676,6 @@
              "id": "8_32",
             "label":"grand_cru_13",
             "texte":"Bukeela ka Ethiopia"
-          },
-          "grand_cru_14": {
-             "id": "8_33",
-            "label":"grand_cru_14",
-            "texte":"Decaffeinato do Brasil"
-          },
-          "grand_cru_15": {
-             "id": "8_34",
-            "label":"grand_cru_15",
-            "texte":"Decaffeinato"
-          },
-          "grand_cru_16": {
-             "id": "8_35",
-            "label":"grand_cru_16",
-            "texte":"Decaffeinato Lungo"
           },
           "grand_cru_17": {
              "id": "8_48",
@@ -832,36 +867,6 @@
             "label":"grand_cru_19_aromatic_profile_with_milk",
             "texte":"Geröstetes Getreide, fruchtig"
           },
-          "grand_cru_14_aromatic_profile": {
-             "id": "8_28",
-            "label":"grand_cru_14_aromatic_profile",
-            "texte":"Gerösteter Kakao, Getreide"
-          },
-          "grand_cru_14_aromatic_profile_with_milk": {
-             "id": "8_27",
-            "label":"grand_cru_14_aromatic_profile_with_milk",
-            "texte":"Süß, ausgewogen und leicht geröstet"
-          },
-          "grand_cru_15_lungo_aromatic_profile": {
-             "id": "8_26",
-            "label":"grand_cru_15_lungo_aromatic_profile",
-            "texte":"Geröstetes Getreide"
-          },
-          "grand_cru_15_lungo_aromatic_profile_with_milk": {
-             "id": "8_25",
-            "label":"grand_cru_15_lungo_aromatic_profile_with_milk",
-            "texte":"Geröstetes Getreide, fruchtig"
-          },
-          "grand_cru_15_aromatic_profile": {
-             "id": "8_24",
-            "label":"grand_cru_15_aromatic_profile",
-            "texte":"Fruchtig, weinig"
-          },
-          "grand_cru_15_aromatic_profile_with_milk": {
-             "id": "8_23",
-            "label":"grand_cru_15_aromatic_profile_with_milk",
-            "texte":"Sehr leicht, süß, cremig und milchig"
-          },
           "grand_cru_20_aromatic_profile": {
              "id": "8_21",
             "label":"grand_cru_20_aromatic_profile",
@@ -910,12 +915,12 @@
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
             "label":"text_paragraph_2_auto_clean",
-            "texte":"Drehen Sie den Milchschaumregler in die Position «Clean». Maschinenhygiene und höchste Sauberkeit sind dank automatischer Reinigungsfunktion gewährleistet."
+            "texte":"Drehen Sie den Milchregulator in die Position «Clean». Maschinenhygiene und höchste Sauberkeit sind dank automatischer Reinigungsfunktion gewährleistet."
           },
           "schema_milk_froth_text_": {
              "id": "9_2",
             "label":"schema_milk_froth_text_",
-            "texte":"Milchschaumregler"
+            "texte":"Milchregulator"
           }
         }
       },
@@ -940,12 +945,12 @@
           "cta": {
              "id": "11_2",
             "label":"cta",
-            "texte":"Vom Angebot profitieren"
+            "texte":"ZUM ANGEBOT"
           },
           "range_date": {
              "id": "11_1",
             "label":"range_date",
-            "texte":"beim Kauf einer<br>Nespresso Maschine*<br>Bis zum 31.05.2014"
+            "texte":"beim Kauf einer Nespresso Maschine*<br>bis zum 31.05.2014"
           },
           "url": {
              "id": "11_6",

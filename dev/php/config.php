@@ -148,6 +148,10 @@ $jsonLangHomePromo = $jsonLang->spring_activation->blockText;
 // JSON COUNTRIES ::
 $jsonCountriesContent = file_get_contents($jsonFolderPath.'countries.json');
 $jsonCountries = json_decode($jsonCountriesContent);
+$arialVersion = false;
+
+if(strtoupper($territory) == 'PL' || strtoupper($territory) == 'HU')
+    $arialVersion  = true;
 
 // test date from json
 /*$now = new DateTime("now");

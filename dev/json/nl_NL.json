@@ -10,102 +10,102 @@
           "nespresso_link": {
              "id": "1_19",
             "label":"nespresso_link",
-            "texte":""
+            "texte":"http://www.nespresso.com/nl/nl"
           },
           "contact": {
              "id": "1_6",
             "label":"contact",
-            "texte":""
+            "texte":"Contact"
           },
           "contact_link": {
              "id": "1_7",
             "label":"contact_link",
-            "texte":""
+            "texte":"https://www.nespresso.com/nl/nl/contactus"
           },
           "legals": {
              "id": "1_8",
             "label":"legals",
-            "texte":""
+            "texte":"Disclaimer"
           },
           "legals_link": {
              "id": "1_9",
             "label":"legals_link",
-            "texte":""
+            "texte":"https://www.nespresso.com/nl/nl/pages/legal"
           },
           "store_locator": {
              "id": "1_10",
             "label":"store_locator",
-            "texte":""
+            "texte":"Zoek een winkel"
           },
           "store_locator_link": {
              "id": "1_20",
             "label":"store_locator_link",
-            "texte":""
+            "texte":"http://www.nespresso.com/nl/nl/pages/store-locator"
           },
           "share": {
              "id": "1_11",
             "label":"share",
-            "texte":""
+            "texte":"Delen"
           },
           "facebook": {
              "id": "1_12",
             "label":"facebook",
-            "texte":""
+            "texte":"Delen via Facebook"
           },
           "twitter": {
              "id": "1_13",
             "label":"twitter",
-            "texte":""
+            "texte":"Delen via Twitter"
           },
           "pinterest": {
              "id": "1_14",
             "label":"pinterest",
-            "texte":""
+            "texte":"Delen via Pinterest"
           },
           "send_to_a_friend": {
              "id": "1_15",
             "label":"send_to_a_friend",
-            "texte":""
+            "texte":"Doorsturen naar een vriend(in)"
           },
           "full_screen": {
              "id": "1_16",
             "label":"full_screen",
-            "texte":""
+            "texte":"Volledig scherm"
           },
           "exit_full_screen": {
              "id": "1_17",
             "label":"exit_full_screen",
-            "texte":""
+            "texte":"Volledig scherm afsluiten"
           },
           "sound_on": {
              "id": "1_18",
             "label":"sound_on",
-            "texte":""
+            "texte":"Geluid AAN"
           },
           "sound_off": {
              "id": "1_5",
             "label":"sound_off",
-            "texte":""
+            "texte":"Geluid UIT"
           },
           "order": {
              "id": "1_4",
             "label":"order",
-            "texte":""
+            "texte":"Bestellen"
           },
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":""
+            "texte":"https://www.nespresso.com/nl/nl/login"
           },
           "country_and_language": {
              "id": "1_2",
             "label":"country_and_language",
-            "texte":""
+            "texte":"Land en talen"
           },
           "country_and_language_text": {
              "id": "1_1",
             "label":"country_and_language_text",
-            "texte":""
+            "texte":"Selecteer uw land en taal"
           }
         }
       },
@@ -115,12 +115,12 @@
           "loading": {
              "id": "2_1",
             "label":"loading",
-            "texte":""
+            "texte":"Laden..."
           },
           "order": {
              "id": "2_19",
             "label":"order",
-            "texte":""
+            "texte":"Bestellen"
           },
           "order_by_phone_": {
              "id": "2_20",
@@ -135,81 +135,86 @@
           "order_now": {
              "id": "2_8",
             "label":"order_now",
-            "texte":""
+            "texte":"Bestel nu"
           },
           "watch": {
              "id": "2_7",
             "label":"watch",
-            "texte":""
+            "texte":"Bekijken"
           },
           "watch_the_video": {
              "id": "2_18",
             "label":"watch_the_video",
-            "texte":""
+            "texte":"Bekijk de video"
           },
           "play": {
              "id": "2_10",
             "label":"play",
-            "texte":""
+            "texte":"Afspelen"
           },
           "close": {
              "id": "2_17",
             "label":"close",
-            "texte":""
+            "texte":"Sluiten"
           },
           "to": {
              "id": "2_16",
             "label":"to",
-            "texte":""
+            "texte":"Naar"
           },
           "scroll": {
              "id": "2_15",
             "label":"scroll",
-            "texte":""
+            "texte":"Bladeren of tikken"
           },
           "scroll_to_explore": {
              "id": "2_13",
             "label":"scroll_to_explore",
-            "texte":""
+            "texte":"Blader om te ontdekken"
           },
           "top": {
              "id": "2_12",
             "label":"top",
-            "texte":""
+            "texte":"Boven"
           },
           "down": {
              "id": "2_11",
             "label":"down",
-            "texte":""
+            "texte":"Onder"
           },
           "menu": {
              "id": "2_6",
             "label":"menu",
-            "texte":""
+            "texte":"Menu"
           },
           "more": {
              "id": "2_5",
             "label":"more",
-            "texte":""
+            "texte":"Meer"
           },
           "app": {
              "id": "2_4",
             "label":"app",
-            "texte":""
+            "texte":"App"
           },
           "application": {
              "id": "2_3",
             "label":"application",
-            "texte":""
+            "texte":"Applicatie"
           },
           "discover": {
              "id": "2_2",
             "label":"discover",
-            "texte":""
+            "texte":"Ontdekken"
           },
           "discover_more": {
              "id": "2_14",
             "label":"discover_more",
+            "texte":"Ontdek nog veel meer"
+          },
+          "back": {
+             "id": "2_21",
+            "label":"back",
             "texte":""
           }
         }
@@ -220,57 +225,57 @@
           "form_title": {
              "id": "4_11",
             "label":"form_title",
-            "texte":""
+            "texte":"Deel de site met een vriend(in)"
           },
           "form_subheading": {
              "id": "4_1",
             "label":"form_subheading",
-            "texte":""
+            "texte":"Vul de onderstaande velden in"
           },
           "form_senders_name": {
              "id": "4_2",
             "label":"form_senders_name",
-            "texte":""
+            "texte":"Uw naam"
           },
           "form_senders_email": {
              "id": "4_3",
             "label":"form_senders_email",
-            "texte":""
+            "texte":"Uw e-mailadres"
           },
           "form_receivers_email": {
              "id": "4_4",
             "label":"form_receivers_email",
-            "texte":""
+            "texte":"Het e-mailadres van uw vriend(in)"
           },
           "form_send": {
              "id": "4_5",
             "label":"form_send",
-            "texte":""
+            "texte":"Send"
           },
           "success_message": {
              "id": "4_10",
             "label":"success_message",
-            "texte":""
+            "texte":"Your invitation has been sent."
           },
           "error_message": {
              "id": "4_9",
             "label":"error_message",
-            "texte":""
+            "texte":"Sorry, an error occured. Please try again later."
           },
           "email_template_subject": {
              "id": "4_8",
             "label":"email_template_subject",
-            "texte":""
+            "texte":"{senderName} heeft u uitgenodigd om de Lattissima Pro, de nieuwe koffiemachine van Nespresso, te ontdekken"
           },
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":""
+            "texte":"De nieuwe <i>Lattissima Pro</i> machine is geïnspireerd door professionele kwaliteit met de eenvoud van een touchscreen. Nu kunt u thuis sensationeel lekkere melkrecepten bereiden met één druk op de knop."
           },
           "email_template_call_to_action": {
              "id": "4_6",
             "label":"email_template_call_to_action",
-            "texte":""
+            "texte":"Ontdekken"
           }
         }
       },
@@ -280,32 +285,32 @@
           "capsules_category_1": {
              "id": "7_5",
             "label":"capsules_category_1",
-            "texte":""
+            "texte":"Intenso"
           },
           "capsules_category_2": {
              "id": "7_11",
             "label":"capsules_category_2",
-            "texte":""
+            "texte":"Espresso"
           },
           "capsules_category_3": {
              "id": "7_9",
             "label":"capsules_category_3",
-            "texte":""
+            "texte":"Lungo"
           },
           "capsules_category_4": {
              "id": "7_12",
             "label":"capsules_category_4",
-            "texte":""
+            "texte":"Decaffeinato"
           },
           "capsules_category_5": {
              "id": "7_8",
             "label":"capsules_category_5",
-            "texte":""
+            "texte":"Pure origin"
           },
           "capsules_category_6": {
              "id": "7_4",
             "label":"capsules_category_6",
-            "texte":""
+            "texte":"Variations"
           }
         }
       },
@@ -315,22 +320,22 @@
           "facebook_title": {
              "id": "3_13",
             "label":"facebook_title",
-            "texte":""
+            "texte":"Ontdek de nieuwe Lattissima Pro machine van Nespresso"
           },
           "facebook_text": {
              "id": "3_5",
             "label":"facebook_text",
-            "texte":""
+            "texte":"Bereid nu thuis sensationeel lekkere melkrecepten met één druk op de knop."
           },
           "pinterest_text": {
              "id": "3_6",
             "label":"pinterest_text",
-            "texte":""
+            "texte":"Bereid nu thuis sensationeel lekkere melkrecepten met één druk op de knop."
           },
           "twitter_text": {
              "id": "3_7",
             "label":"twitter_text",
-            "texte":""
+            "texte":"Met de Lattissima Pro bereidt u nu thuis sensationeel lekkere melkrecepten met één druk op de knop#LattissimaPro #Nespresso"
           }
         }
       },
@@ -340,52 +345,52 @@
           "title": {
              "id": "5_5",
             "label":"title",
-            "texte":""
+            "texte":"Slechts één druk op de knop"
           },
           "text": {
              "id": "5_6",
             "label":"text",
-            "texte":""
+            "texte":"De kunst van het bereiden van een kopje koffie  is nog  nooit zo eenvoudig en plezierig geweest. Met het intuïtieve touchscreenkunt u de machine eenvoudig programmeren en genieten van verschillende soorten koffie enmelkrecepten."
           },
           "touchscreen_cta": {
              "id": "5_7",
             "label":"touchscreen_cta",
-            "texte":""
+            "texte":"Ontdek het touchscreenvan de Lattissima Pro"
           },
           "touchscreen_picto_1": {
              "id": "5_8",
             "label":"touchscreen_picto_1",
-            "texte":""
+            "texte":"Lungo"
           },
           "touchscreen_picto_2": {
              "id": "5_9",
             "label":"touchscreen_picto_2",
-            "texte":""
+            "texte":"Espresso"
           },
           "touchscreen_picto_3": {
              "id": "5_10",
             "label":"touchscreen_picto_3",
-            "texte":""
+            "texte":"Ristretto"
           },
           "touchscreen_picto_4": {
              "id": "5_11",
             "label":"touchscreen_picto_4",
-            "texte":""
+            "texte":"Heet water"
           },
           "touchscreen_picto_5": {
              "id": "5_3",
             "label":"touchscreen_picto_5",
-            "texte":""
+            "texte":"Warme melk"
           },
           "touchscreen_picto_6": {
              "id": "5_2",
             "label":"touchscreen_picto_6",
-            "texte":""
+            "texte":"Cappuccino"
           },
           "touchscreen_picto_7": {
              "id": "5_12",
             "label":"touchscreen_picto_7",
-            "texte":""
+            "texte":"Latte Macchiato"
           }
         }
       },
@@ -395,27 +400,27 @@
           "home": {
              "id": "12_3",
             "label":"home",
-            "texte":""
+            "texte":"Home"
           },
           "one_touch_is_all": {
              "id": "12_2",
             "label":"one_touch_is_all",
-            "texte":""
+            "texte":"Intuïtief touchscreen"
           },
           "a_wide_range_of_grands_crus": {
              "id": "12_4",
             "label":"a_wide_range_of_grands_crus",
-            "texte":""
+            "texte":"Koffie-assortiment"
           },
           "delicious_coffee_and_milk_recipes": {
              "id": "12_5",
             "label":"delicious_coffee_and_milk_recipes",
-            "texte":""
+            "texte":"Melksysteem"
           },
           "powerful__inside_andamp;_out": {
              "id": "12_6",
             "label":"powerful__inside_andamp;_out",
-            "texte":""
+            "texte":"Functionaliteit"
           }
         }
       },
@@ -425,32 +430,32 @@
           "_discover_range": {
              "id": "6_14",
             "label":"_discover_range",
-            "texte":""
+            "texte":"Ontdek al onze Grands Crus"
           },
           "title": {
              "id": "6_7",
             "label":"title",
-            "texte":""
+            "texte":"Een uitgebreid  Grands Crus assortiment"
           },
           "description_text": {
              "id": "6_8",
             "label":"description_text",
-            "texte":""
+            "texte":"Nespresso capsules zorgen ervoor dat de aroma's van versgemalen koffie behouden blijven. Een fantastisch kopje espresso met melk begint altijd met een fantastische espresso. Maak een keuze uit de 22 Grands Crus van Nespresso"
           },
           "intensity": {
              "id": "6_11",
             "label":"intensity",
-            "texte":""
+            "texte":"Intensiteit:"
           },
           "aromatic_notes": {
              "id": "6_13",
             "label":"aromatic_notes",
-            "texte":""
+            "texte":"Aromatische tonen:"
           },
           "with_milk___": {
              "id": "6_12",
             "label":"with_milk___",
-            "texte":""
+            "texte":"Met melk:"
           }
         }
       },
@@ -460,87 +465,87 @@
           "title": {
              "id": "10_15",
             "label":"title",
-            "texte":""
+            "texte":"Krachtig <br>van binnen en van buiten"
           },
           "text": {
              "id": "10_14",
             "label":"text",
-            "texte":""
+            "texte":"De nieuwe Lattissima Pro is geïnspireerd door de kwaliteit van professionele machines, maar dan zeer eenvoudig, met een strak, puur en robuust ontwerp met een aluminium afwerking."
           },
           "bloc_1_•_characteristics": {
              "id": "10_13",
             "label":"bloc_1_•_characteristics",
-            "texte":""
+            "texte":"Kenmerken"
           },
           "bloc_1__info_1": {
              "id": "10_17",
             "label":"bloc_1__info_1",
-            "texte":""
+            "texte":"Afwerking van verfijnd geborsteld aluminium"
           },
           "bloc_1__info_2": {
              "id": "10_18",
             "label":"bloc_1__info_2",
-            "texte":""
+            "texte":"19 bar"
           },
           "bloc_1__info_3": {
              "id": "10_19",
             "label":"bloc_1__info_3",
-            "texte":""
+            "texte":"Klaar voor gebruik in 25 seconden"
           },
           "bloc_1__info_4": {
              "id": "10_24",
             "label":"bloc_1__info_4",
-            "texte":""
+            "texte":"Automatisch uitschakelen"
           },
           "bloc_2_•_intuitive_touchscreen": {
              "id": "10_20",
             "label":"bloc_2_•_intuitive_touchscreen",
-            "texte":""
+            "texte":"Intuïtief touchscreen"
           },
           "bloc_2__info_1": {
              "id": "10_21",
             "label":"bloc_2__info_1",
-            "texte":""
+            "texte":"LCD-display met duidelijke teksten voor intuïtief gebruik"
           },
           "bloc_2__info_2": {
              "id": "10_22",
             "label":"bloc_2__info_2",
-            "texte":""
+            "texte":"Heerlijke dranken met één druk op de knop"
           },
           "bloc_3_•_optimal_milk_froth_quality": {
              "id": "10_11",
             "label":"bloc_3_•_optimal_milk_froth_quality",
-            "texte":""
+            "texte":"Optimale melkschuimkwaliteit"
           },
           "bloc_3__info_1": {
              "id": "10_10",
             "label":"bloc_3__info_1",
-            "texte":""
+            "texte":"Geavanceerde stoomtechnologie"
           },
           "bloc_3__info_2": {
              "id": "10_1",
             "label":"bloc_3__info_2",
-            "texte":""
+            "texte":"Melkreservoir van 300 ml dat kan worden bewaard in de koelkast"
           },
           "bloc_4_•_auto_clean_system": {
              "id": "10_3",
             "label":"bloc_4_•_auto_clean_system",
-            "texte":""
+            "texte":"Automatisch reinigingssysteem"
           },
           "bloc_4__info_1": {
              "id": "10_4",
             "label":"bloc_4__info_1",
-            "texte":""
+            "texte":"Beoordeeld door een internationale certificatie-instelling"
           },
           "bloc_4__info_2": {
              "id": "10_5",
             "label":"bloc_4__info_2",
-            "texte":""
+            "texte":"Componenten melksysteem zijn vaatwasmachinebestendig"
           },
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":""
+            "texte":"Download <br>de handleiding"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -550,7 +555,7 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":""
+            "texte":"Bekijk onze <br>ondersteuningsvideo's"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
@@ -562,335 +567,335 @@
       "range__grand_cru":{
         "section":"range__grand_cru",
         "blockText":{
+          "grand_cru_14": {
+             "id": "8_33",
+            "label":"grand_cru_14",
+            "texte":"Decaffeinato Intenso"
+          },
           "grand_cru_1": {
              "id": "8_41",
             "label":"grand_cru_1",
-            "texte":""
+            "texte":"Kazaar"
           },
           "grand_cru_2": {
              "id": "8_42",
             "label":"grand_cru_2",
-            "texte":""
-          },
-          "grand_cru_3": {
-             "id": "8_43",
-            "label":"grand_cru_3",
-            "texte":""
-          },
-          "grand_cru_4": {
-             "id": "8_44",
-            "label":"grand_cru_4",
-            "texte":""
-          },
-          "grand_cru_5": {
-             "id": "8_45",
-            "label":"grand_cru_5",
-            "texte":""
-          },
-          "grand_cru_6": {
-             "id": "8_46",
-            "label":"grand_cru_6",
-            "texte":""
-          },
-          "grand_cru_7": {
-             "id": "8_47",
-            "label":"grand_cru_7",
-            "texte":""
-          },
-          "grand_cru_8": {
-             "id": "8_40",
-            "label":"grand_cru_8",
-            "texte":""
-          },
-          "grand_cru_9": {
-             "id": "8_39",
-            "label":"grand_cru_9",
-            "texte":""
-          },
-          "grand_cru_10": {
-             "id": "8_38",
-            "label":"grand_cru_10",
-            "texte":""
-          },
-          "grand_cru_11": {
-             "id": "8_37",
-            "label":"grand_cru_11",
-            "texte":""
-          },
-          "grand_cru_12": {
-             "id": "8_36",
-            "label":"grand_cru_12",
-            "texte":""
-          },
-          "grand_cru_13": {
-             "id": "8_32",
-            "label":"grand_cru_13",
-            "texte":""
-          },
-          "grand_cru_14": {
-             "id": "8_33",
-            "label":"grand_cru_14",
-            "texte":""
+            "texte":"Dharkan"
           },
           "grand_cru_15": {
              "id": "8_34",
             "label":"grand_cru_15",
-            "texte":""
+            "texte":"Decaffeinato"
           },
           "grand_cru_16": {
              "id": "8_35",
             "label":"grand_cru_16",
-            "texte":""
+            "texte":"Decaffeinato Lungo"
           },
-          "grand_cru_17": {
-             "id": "8_48",
-            "label":"grand_cru_17",
-            "texte":""
-          },
-          "grand_cru_18": {
-             "id": "8_49",
-            "label":"grand_cru_18",
-            "texte":""
-          },
-          "grand_cru_19": {
-             "id": "8_50",
-            "label":"grand_cru_19",
-            "texte":""
-          },
-          "grand_cru_20": {
-             "id": "8_65",
-            "label":"grand_cru_20",
-            "texte":""
-          },
-          "grand_cru_21": {
-             "id": "8_64",
-            "label":"grand_cru_21",
-            "texte":""
-          },
-          "grand_cru_22": {
-             "id": "8_63",
-            "label":"grand_cru_22",
-            "texte":""
-          },
-          "grand_cru_1_aromatic_profile": {
-             "id": "8_62",
-            "label":"grand_cru_1_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_1_aromatic_profile_with_milk": {
-             "id": "8_61",
-            "label":"grand_cru_1_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_2_aromatic_profile": {
-             "id": "8_60",
-            "label":"grand_cru_2_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_2_aromatic_profile_with_milk": {
-             "id": "8_59",
-            "label":"grand_cru_2_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_3_aromatic_profile": {
-             "id": "8_58",
-            "label":"grand_cru_3_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_3_aromatic_profile_with_milk": {
-             "id": "8_57",
-            "label":"grand_cru_3_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_4_aromatic_profile": {
-             "id": "8_56",
-            "label":"grand_cru_4_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_4_aromatic_profile_with_milk": {
-             "id": "8_55",
-            "label":"grand_cru_4_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_5_aromatic_profile": {
-             "id": "8_54",
-            "label":"grand_cru_5_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_5_aromatic_profile_with_milk": {
-             "id": "8_53",
-            "label":"grand_cru_5_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_6_aromatic_profile": {
-             "id": "8_52",
-            "label":"grand_cru_6_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_6_aromatic_profile_with_milk": {
-             "id": "8_51",
-            "label":"grand_cru_6_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_7_aromatic_profile": {
-             "id": "8_66",
-            "label":"grand_cru_7_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_7_aromatic_profile_with_milk": {
-             "id": "8_31",
-            "label":"grand_cru_7_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_8_aromatic_profile": {
-             "id": "8_13",
-            "label":"grand_cru_8_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_8_aromatic_profile_with_milk": {
-             "id": "8_12",
-            "label":"grand_cru_8_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_9_aromatic_profile": {
-             "id": "8_11",
-            "label":"grand_cru_9_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_9_aromatic_profile_with_milk": {
-             "id": "8_10",
-            "label":"grand_cru_9_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_10_aromatic_profile": {
-             "id": "8_9",
-            "label":"grand_cru_10_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_10_aromatic_profile_with_milk": {
-             "id": "8_8",
-            "label":"grand_cru_10_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_12_aromatic_profile": {
-             "id": "8_7",
-            "label":"grand_cru_12_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_12_aromatic_profile_with_milk": {
-             "id": "8_6",
-            "label":"grand_cru_12_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_11_aromatic_profile": {
-             "id": "8_5",
-            "label":"grand_cru_11_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_11_aromatic_profile_with_milk": {
-             "id": "8_4",
-            "label":"grand_cru_11_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_13_aromatic_profile": {
-             "id": "8_3",
-            "label":"grand_cru_13_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_13_aromatic_profile_with_milk": {
-             "id": "8_2",
-            "label":"grand_cru_13_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_17_aromatic_profile": {
-             "id": "8_1",
-            "label":"grand_cru_17_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_17_aromatic_profile_with_milk": {
-             "id": "8_14",
-            "label":"grand_cru_17_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_18_aromatic_profile": {
-             "id": "8_15",
-            "label":"grand_cru_18_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_18_aromatic_profile_with_milk": {
-             "id": "8_16",
-            "label":"grand_cru_18_aromatic_profile_with_milk",
-            "texte":""
-          },
-          "grand_cru_19_aromatic_profile": {
-             "id": "8_30",
-            "label":"grand_cru_19_aromatic_profile",
-            "texte":""
-          },
-          "grand_cru_19_aromatic_profile_with_milk": {
-             "id": "8_29",
-            "label":"grand_cru_19_aromatic_profile_with_milk",
-            "texte":""
+          "grand_cru_3": {
+             "id": "8_43",
+            "label":"grand_cru_3",
+            "texte":"Ristretto"
           },
           "grand_cru_14_aromatic_profile": {
              "id": "8_28",
             "label":"grand_cru_14_aromatic_profile",
-            "texte":""
+            "texte":"Gebrande cacao, granen"
+          },
+          "grand_cru_4": {
+             "id": "8_44",
+            "label":"grand_cru_4",
+            "texte":"Arpeggio"
           },
           "grand_cru_14_aromatic_profile_with_milk": {
              "id": "8_27",
             "label":"grand_cru_14_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Zoet, evenwichtig en licht gebrand"
           },
-          "grand_cru_15_lungo_aromatic_profile": {
-             "id": "8_26",
-            "label":"grand_cru_15_lungo_aromatic_profile",
-            "texte":""
+          "grand_cru_5": {
+             "id": "8_45",
+            "label":"grand_cru_5",
+            "texte":"Roma"
           },
-          "grand_cru_15_lungo_aromatic_profile_with_milk": {
+          "grand_cru_6": {
+             "id": "8_46",
+            "label":"grand_cru_6",
+            "texte":"Livanto"
+          },
+          "grand_cru_16_aromatic_profile_with_milk": {
              "id": "8_25",
-            "label":"grand_cru_15_lungo_aromatic_profile_with_milk",
-            "texte":""
+            "label":"grand_cru_16_aromatic_profile_with_milk",
+            "texte":"Geroosterde granen, groen fruitachtig"
+          },
+          "grand_cru_16_aromatic_profile": {
+             "id": "8_26",
+            "label":"grand_cru_16_aromatic_profile",
+            "texte":"Gebrande granen"
+          },
+          "grand_cru_7": {
+             "id": "8_47",
+            "label":"grand_cru_7",
+            "texte":"Capriccio"
           },
           "grand_cru_15_aromatic_profile": {
              "id": "8_24",
             "label":"grand_cru_15_aromatic_profile",
-            "texte":""
+            "texte":"Fruitachtig, wijnachtig"
+          },
+          "grand_cru_8": {
+             "id": "8_40",
+            "label":"grand_cru_8",
+            "texte":"Volluto"
+          },
+          "grand_cru_9": {
+             "id": "8_39",
+            "label":"grand_cru_9",
+            "texte":"Cosi"
           },
           "grand_cru_15_aromatic_profile_with_milk": {
              "id": "8_23",
             "label":"grand_cru_15_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Heel licht, zoet, zacht en melkachtig"
+          },
+          "grand_cru_10": {
+             "id": "8_38",
+            "label":"grand_cru_10",
+            "texte":"Indriya from India"
+          },
+          "grand_cru_11": {
+             "id": "8_37",
+            "label":"grand_cru_11",
+            "texte":"Rosabaya de Colombia"
+          },
+          "grand_cru_12": {
+             "id": "8_36",
+            "label":"grand_cru_12",
+            "texte":"Dulsão do Brasil"
+          },
+          "grand_cru_13": {
+             "id": "8_32",
+            "label":"grand_cru_13",
+            "texte":"Bukeela ka Ethiopia"
+          },
+          "grand_cru_17": {
+             "id": "8_48",
+            "label":"grand_cru_17",
+            "texte":"Fortissio Lungo"
+          },
+          "grand_cru_18": {
+             "id": "8_49",
+            "label":"grand_cru_18",
+            "texte":"Vivalto Lungo"
+          },
+          "grand_cru_19": {
+             "id": "8_50",
+            "label":"grand_cru_19",
+            "texte":"Linizio Lungo"
+          },
+          "grand_cru_20": {
+             "id": "8_65",
+            "label":"grand_cru_20",
+            "texte":"Caramelito"
+          },
+          "grand_cru_21": {
+             "id": "8_64",
+            "label":"grand_cru_21",
+            "texte":"Vanilio"
+          },
+          "grand_cru_22": {
+             "id": "8_63",
+            "label":"grand_cru_22",
+            "texte":"Cioccatino"
+          },
+          "grand_cru_1_aromatic_profile": {
+             "id": "8_62",
+            "label":"grand_cru_1_aromatic_profile",
+            "texte":"Houtachtig, kruidig"
+          },
+          "grand_cru_1_aromatic_profile_with_milk": {
+             "id": "8_61",
+            "label":"grand_cru_1_aromatic_profile_with_milk",
+            "texte":"Gebrand, bitter aroma, chocolade"
+          },
+          "grand_cru_2_aromatic_profile": {
+             "id": "8_60",
+            "label":"grand_cru_2_aromatic_profile",
+            "texte":"Lang gebrand, granen"
+          },
+          "grand_cru_2_aromatic_profile_with_milk": {
+             "id": "8_59",
+            "label":"grand_cru_2_aromatic_profile_with_milk",
+            "texte":"Gebrand, rijk, nootachtig"
+          },
+          "grand_cru_3_aromatic_profile": {
+             "id": "8_58",
+            "label":"grand_cru_3_aromatic_profile",
+            "texte":"Intens gebrand, fruitachtige tonen"
+          },
+          "grand_cru_3_aromatic_profile_with_milk": {
+             "id": "8_57",
+            "label":"grand_cru_3_aromatic_profile_with_milk",
+            "texte":"Sterk, volle body, bitter aroma"
+          },
+          "grand_cru_4_aromatic_profile": {
+             "id": "8_56",
+            "label":"grand_cru_4_aromatic_profile",
+            "texte":"Intens gebrand, cacao"
+          },
+          "grand_cru_4_aromatic_profile_with_milk": {
+             "id": "8_55",
+            "label":"grand_cru_4_aromatic_profile_with_milk",
+            "texte":"Sterk, volle body, bitter aroma"
+          },
+          "grand_cru_5_aromatic_profile": {
+             "id": "8_54",
+            "label":"grand_cru_5_aromatic_profile",
+            "texte":"Houtachtig, granen"
+          },
+          "grand_cru_5_aromatic_profile_with_milk": {
+             "id": "8_53",
+            "label":"grand_cru_5_aromatic_profile_with_milk",
+            "texte":"Zoet, evenwichtig en licht gebrand"
+          },
+          "grand_cru_6_aromatic_profile": {
+             "id": "8_52",
+            "label":"grand_cru_6_aromatic_profile",
+            "texte":"Karamel"
+          },
+          "grand_cru_6_aromatic_profile_with_milk": {
+             "id": "8_51",
+            "label":"grand_cru_6_aromatic_profile_with_milk",
+            "texte":"Licht, zoet en koekjesachtig"
+          },
+          "grand_cru_7_aromatic_profile": {
+             "id": "8_66",
+            "label":"grand_cru_7_aromatic_profile",
+            "texte":"Granen"
+          },
+          "grand_cru_7_aromatic_profile_with_milk": {
+             "id": "8_31",
+            "label":"grand_cru_7_aromatic_profile_with_milk",
+            "texte":"Zoet, evenwichtig en licht gebrand"
+          },
+          "grand_cru_8_aromatic_profile": {
+             "id": "8_13",
+            "label":"grand_cru_8_aromatic_profile",
+            "texte":"Granen, fruitachtig"
+          },
+          "grand_cru_8_aromatic_profile_with_milk": {
+             "id": "8_12",
+            "label":"grand_cru_8_aromatic_profile_with_milk",
+            "texte":"Heel licht, zoet, zacht en melkachtig"
+          },
+          "grand_cru_9_aromatic_profile": {
+             "id": "8_11",
+            "label":"grand_cru_9_aromatic_profile",
+            "texte":"Citrus"
+          },
+          "grand_cru_9_aromatic_profile_with_milk": {
+             "id": "8_10",
+            "label":"grand_cru_9_aromatic_profile_with_milk",
+            "texte":"Heel licht, zoet, zacht en melkachtig"
+          },
+          "grand_cru_10_aromatic_profile": {
+             "id": "8_9",
+            "label":"grand_cru_10_aromatic_profile",
+            "texte":"Kruidig"
+          },
+          "grand_cru_10_aromatic_profile_with_milk": {
+             "id": "8_8",
+            "label":"grand_cru_10_aromatic_profile_with_milk",
+            "texte":"Sterk, volle body, bitter aroma"
+          },
+          "grand_cru_12_aromatic_profile": {
+             "id": "8_7",
+            "label":"grand_cru_12_aromatic_profile",
+            "texte":"Zoete granen"
+          },
+          "grand_cru_12_aromatic_profile_with_milk": {
+             "id": "8_6",
+            "label":"grand_cru_12_aromatic_profile_with_milk",
+            "texte":"Licht, zoet en koekjesachtig"
+          },
+          "grand_cru_11_aromatic_profile": {
+             "id": "8_5",
+            "label":"grand_cru_11_aromatic_profile",
+            "texte":"Fruit, wijn, gebrand"
+          },
+          "grand_cru_11_aromatic_profile_with_milk": {
+             "id": "8_4",
+            "label":"grand_cru_11_aromatic_profile_with_milk",
+            "texte":"Licht, zoet en koekjesachtig"
+          },
+          "grand_cru_13_aromatic_profile": {
+             "id": "8_3",
+            "label":"grand_cru_13_aromatic_profile",
+            "texte":"Delicaat, fris en bloemachtig"
+          },
+          "grand_cru_13_aromatic_profile_with_milk": {
+             "id": "8_2",
+            "label":"grand_cru_13_aromatic_profile_with_milk",
+            "texte":"Bloemachtig, volle body, karameltonen"
+          },
+          "grand_cru_17_aromatic_profile": {
+             "id": "8_1",
+            "label":"grand_cru_17_aromatic_profile",
+            "texte":"Intens gebrand, granen"
+          },
+          "grand_cru_17_aromatic_profile_with_milk": {
+             "id": "8_14",
+            "label":"grand_cru_17_aromatic_profile_with_milk",
+            "texte":"Intens geroosterde en gebrande granen"
+          },
+          "grand_cru_18_aromatic_profile": {
+             "id": "8_15",
+            "label":"grand_cru_18_aromatic_profile",
+            "texte":"Gebrand, bloemachtig"
+          },
+          "grand_cru_18_aromatic_profile_with_milk": {
+             "id": "8_16",
+            "label":"grand_cru_18_aromatic_profile_with_milk",
+            "texte":"Geroosterd, fruitachtige tonen, gebrande noten"
+          },
+          "grand_cru_19_aromatic_profile": {
+             "id": "8_30",
+            "label":"grand_cru_19_aromatic_profile",
+            "texte":"Gemoute granen"
+          },
+          "grand_cru_19_aromatic_profile_with_milk": {
+             "id": "8_29",
+            "label":"grand_cru_19_aromatic_profile_with_milk",
+            "texte":"Geroosterde granen, fruitachtig"
           },
           "grand_cru_20_aromatic_profile": {
              "id": "8_21",
             "label":"grand_cru_20_aromatic_profile",
-            "texte":""
+            "texte":"Karamel"
           },
           "grand_cru_20_aromatic_profile_with_milk": {
              "id": "8_22",
             "label":"grand_cru_20_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Zachte bruine karamel"
           },
           "grand_cru_21_aromatic_profile": {
              "id": "8_19",
             "label":"grand_cru_21_aromatic_profile",
-            "texte":""
+            "texte":"Vanille"
           },
           "grand_cru_21_aromatic_profile_with_milk": {
              "id": "8_20",
             "label":"grand_cru_21_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Karamel"
           },
           "grand_cru_22_aromatic_profile": {
              "id": "8_17",
             "label":"grand_cru_22_aromatic_profile",
-            "texte":""
+            "texte":"Pure chocolade"
           },
           "grand_cru_22_aromatic_profile_with_milk": {
              "id": "8_18",
             "label":"grand_cru_22_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Vleugje bitterheid en pure chocolade"
           }
         }
       },
@@ -900,22 +905,22 @@
           "title": {
              "id": "9_5",
             "label":"title",
-            "texte":""
+            "texte":"Heerlijke koffie en-melkrecepten"
           },
           "text_paragraph_1_milk_frothtext_paragraph_1_milk_froth": {
              "id": "9_4",
             "label":"text_paragraph_1_milk_frothtext_paragraph_1_milk_froth",
-            "texte":""
+            "texte":"De melk wordt altijd perfect opgeschuimd voor een overheerlijke Cappuccino of Latte Macchiato. Pas de regelknop voor de melkschuimtextuur aan naar wat u lekker vindt."
           },
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
             "label":"text_paragraph_2_auto_clean",
-            "texte":""
+            "texte":"Draai de melkschuimregelknop naar de stand Reinigen. De machinehygiëne wordt beoordeeld door een internationale certificatie-instelling, zodat de hygiëne voldoet aan de hoogste normen."
           },
           "schema_milk_froth_text_": {
              "id": "9_2",
             "label":"schema_milk_froth_text_",
-            "texte":""
+            "texte":"Regelknop melkschuimtextuur"
           }
         }
       },

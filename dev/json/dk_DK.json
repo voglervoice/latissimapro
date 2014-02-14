@@ -95,7 +95,7 @@
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":"http://www.nespresso.com/dk/dk"
+            "texte":"https://nesclub.nespresso.com/id/login/"
           },
           "country_and_language": {
              "id": "1_2",
@@ -211,6 +211,11 @@
              "id": "2_14",
             "label":"discover_more",
             "texte":"Se mere"
+          },
+          "back": {
+             "id": "2_21",
+            "label":"back",
+            "texte":""
           }
         }
       },
@@ -235,12 +240,12 @@
           "form_senders_email": {
              "id": "4_3",
             "label":"form_senders_email",
-            "texte":"Din email"
+            "texte":"Din e-mail"
           },
           "form_receivers_email": {
              "id": "4_4",
             "label":"form_receivers_email",
-            "texte":"Din vens email"
+            "texte":"Din vens e-mail"
           },
           "form_send": {
              "id": "4_5",
@@ -265,7 +270,7 @@
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":"Den nye Lattissima Pro maskine er inspireret af professionel kvalitet og enkelheden ved et tryk på en skærm. Nu kan du tilberede de lækreste mælkeopskrifter derhjemme ved et enkelt tryk."
+            "texte":"Den nye <i>Lattissima Pro</i> maskine er inspireret af professionel kvalitet og enkelheden ved et tryk på en skærm. Nu kan du tilberede de lækreste mælkeopskrifter derhjemme ved et enkelt tryk."
           },
           "email_template_call_to_action": {
              "id": "4_6",
@@ -395,27 +400,27 @@
           "home": {
              "id": "12_3",
             "label":"home",
-            "texte":""
+            "texte":"Hjem"
           },
           "one_touch_is_all": {
              "id": "12_2",
             "label":"one_touch_is_all",
-            "texte":""
+            "texte":"Intuitiv touch skærm"
           },
           "a_wide_range_of_grands_crus": {
              "id": "12_4",
             "label":"a_wide_range_of_grands_crus",
-            "texte":""
+            "texte":"Kaffesortiment"
           },
           "delicious_coffee_and_milk_recipes": {
              "id": "12_5",
             "label":"delicious_coffee_and_milk_recipes",
-            "texte":""
+            "texte":"Mælkesystem"
           },
           "powerful__inside_andamp;_out": {
              "id": "12_6",
             "label":"powerful__inside_andamp;_out",
-            "texte":""
+            "texte":"Funktioner"
           }
         }
       },
@@ -435,7 +440,7 @@
           "description_text": {
              "id": "6_8",
             "label":"description_text",
-            "texte":"Nespresso kapsler bevarer aromaerne i friskmalet kaffe.<br>En suveræn opskrift med Espresso og mælk starter altid med en suveræn Espresso.<br>Vælg mellem vores 22 Grands Crus og forbered dig på en rejse fyldt med sensoriske oplevelser."
+            "texte":"Nespresso kapslerne bevarer aromaerne i den friskmalede kaffe.<br>En suveræn opskrift med Espresso og mælk starter altid med en suveræn Espresso.<br>Vælg mellem vores 22 Grands Crus og forbered dig på en rejse fyldt med sensoriske oplevelser."
           },
           "intensity": {
              "id": "6_11",
@@ -550,18 +555,23 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Se vores assistance<br>videoer her"
+            "texte":"Se vores <br>servicevideoer her"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
             "label":"youtube_video_playlist_url",
-            "texte":"http://www.youtube.com/Playlist"
+            "texte":"http://www.youtube.com/watch?v=sk1ro_zQLlE&list=PLQ2eIUsAVWUwvKh3kBxoG0O8-DOb60o5M"
           }
         }
       },
       "range__grand_cru":{
         "section":"range__grand_cru",
         "blockText":{
+          "grand_cru_14": {
+             "id": "8_33",
+            "label":"grand_cru_14",
+            "texte":"Decaffeinato Intenso"
+          },
           "grand_cru_1": {
              "id": "8_41",
             "label":"grand_cru_1",
@@ -572,15 +582,35 @@
             "label":"grand_cru_2",
             "texte":"Dharkan"
           },
+          "grand_cru_15": {
+             "id": "8_34",
+            "label":"grand_cru_15",
+            "texte":"Decaffeinato"
+          },
+          "grand_cru_16": {
+             "id": "8_35",
+            "label":"grand_cru_16",
+            "texte":"Decaffeinato Lungo"
+          },
           "grand_cru_3": {
              "id": "8_43",
             "label":"grand_cru_3",
             "texte":"Ristretto"
           },
+          "grand_cru_14_aromatic_profile": {
+             "id": "8_28",
+            "label":"grand_cru_14_aromatic_profile",
+            "texte":"Ristet, kakao, korn"
+          },
           "grand_cru_4": {
              "id": "8_44",
             "label":"grand_cru_4",
             "texte":"Arpeggio"
+          },
+          "grand_cru_14_aromatic_profile_with_milk": {
+             "id": "8_27",
+            "label":"grand_cru_14_aromatic_profile_with_milk",
+            "texte":"Sød, afbalanceret og let ristet"
           },
           "grand_cru_5": {
              "id": "8_45",
@@ -592,10 +622,25 @@
             "label":"grand_cru_6",
             "texte":"Livanto"
           },
+          "grand_cru_16_aromatic_profile_with_milk": {
+             "id": "8_25",
+            "label":"grand_cru_16_aromatic_profile_with_milk",
+            "texte":"Ristet korn, grønt frugtig"
+          },
+          "grand_cru_16_aromatic_profile": {
+             "id": "8_26",
+            "label":"grand_cru_16_aromatic_profile",
+            "texte":"Ristet korn"
+          },
           "grand_cru_7": {
              "id": "8_47",
             "label":"grand_cru_7",
             "texte":"Cappriccio"
+          },
+          "grand_cru_15_aromatic_profile": {
+             "id": "8_24",
+            "label":"grand_cru_15_aromatic_profile",
+            "texte":"Frugtig, vinagtig"
           },
           "grand_cru_8": {
              "id": "8_40",
@@ -606,6 +651,11 @@
              "id": "8_39",
             "label":"grand_cru_9",
             "texte":"Cosi"
+          },
+          "grand_cru_15_aromatic_profile_with_milk": {
+             "id": "8_23",
+            "label":"grand_cru_15_aromatic_profile_with_milk",
+            "texte":"Meget let, sød, mælkeagtig og blød"
           },
           "grand_cru_10": {
              "id": "8_38",
@@ -626,21 +676,6 @@
              "id": "8_32",
             "label":"grand_cru_13",
             "texte":"Bukeela <i>ka Ethiopia</i>"
-          },
-          "grand_cru_14": {
-             "id": "8_33",
-            "label":"grand_cru_14",
-            "texte":"Decaffeinato Intenso"
-          },
-          "grand_cru_15": {
-             "id": "8_34",
-            "label":"grand_cru_15",
-            "texte":"Decaffeinato"
-          },
-          "grand_cru_16": {
-             "id": "8_35",
-            "label":"grand_cru_16",
-            "texte":"Decaffeinato Lungo"
           },
           "grand_cru_17": {
              "id": "8_48",
@@ -831,36 +866,6 @@
              "id": "8_29",
             "label":"grand_cru_19_aromatic_profile_with_milk",
             "texte":"Ristet korn, frugtig"
-          },
-          "grand_cru_14_aromatic_profile": {
-             "id": "8_28",
-            "label":"grand_cru_14_aromatic_profile",
-            "texte":"Ristet, kakao, korn"
-          },
-          "grand_cru_14_aromatic_profile_with_milk": {
-             "id": "8_27",
-            "label":"grand_cru_14_aromatic_profile_with_milk",
-            "texte":"Sød, afbalanceret og let ristet"
-          },
-          "grand_cru_15_lungo_aromatic_profile": {
-             "id": "8_26",
-            "label":"grand_cru_15_lungo_aromatic_profile",
-            "texte":"Ristet korn"
-          },
-          "grand_cru_15_lungo_aromatic_profile_with_milk": {
-             "id": "8_25",
-            "label":"grand_cru_15_lungo_aromatic_profile_with_milk",
-            "texte":"Ristet korn, grønt frugtig"
-          },
-          "grand_cru_15_aromatic_profile": {
-             "id": "8_24",
-            "label":"grand_cru_15_aromatic_profile",
-            "texte":"Frugtig, vinagtig"
-          },
-          "grand_cru_15_aromatic_profile_with_milk": {
-             "id": "8_23",
-            "label":"grand_cru_15_aromatic_profile_with_milk",
-            "texte":"Meget let, sød, mælkeagtig og blød"
           },
           "grand_cru_20_aromatic_profile": {
              "id": "8_21",
