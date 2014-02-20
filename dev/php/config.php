@@ -150,8 +150,27 @@ $jsonCountriesContent = file_get_contents($jsonFolderPath.'countries.json');
 $jsonCountries = json_decode($jsonCountriesContent);
 $arialVersion = false;
 
-if(strtoupper($territory) == 'PL' || strtoupper($territory) == 'HU' || strtoupper($territory) == 'RU')
+if(strtoupper($languagesite) == 'PL' ||
+    strtoupper($languagesite) == 'HU' ||
+    strtoupper($languagesite) == 'RU' ||
+    strtoupper($languagesite) == 'JP' ||
+    strtoupper($languagesite) == 'CN' ||
+    strtoupper($languagesite) == 'KR' ||
+    strtoupper($languagesite) == 'GR')
     $arialVersion  = true;
+
+$RSID = "XX";
+foreach ($jsonCountries->continents as $key => $value) {
+    foreach ($value->countries as $country_id => $country) {
+        if( $country_id == $territory ){
+            $RSID = $country->rsid;
+            break;
+        }
+    }
+}
+
+$s_account_type = ($prodMode && !$staging)? "prod" : "preprod";
+$s_account = "nesp-".$s_account_type.",nesp-".$RSID."-".$s_account_type;
 
 // test date from json
 /*$now = new DateTime("now");

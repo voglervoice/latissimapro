@@ -57,6 +57,6 @@
 		<img src="assets/imgs/sections/touch_screen6.png" />
 	</div>
 	<img src="assets/imgs/sections/touch_machine.png" class="touch_machine" />
-	<div class="bg_gradient"></div>
+	<div class="bg_gradient"><img src="assets/imgs/sections/bg_touchscreen.jpg" /></div>
     	<!--<img src="assets/imgs/sections/touch_bg.jpg" class="section_background" data-w="1440" data-h="864" />-->
 </section>

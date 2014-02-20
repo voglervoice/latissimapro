@@ -126,6 +126,11 @@ define([
             var lineXLength = 85;
             var lastStroke = 30;
 
+            if(index === 0 && btnTextWidth> 165 && windowH< 780 && windowW < 1300 ){
+                lineYLength = -25;
+            }
+             //if(index == 1 && $('.home_promotion').attr('data-on') == '1'){
+
             if(index == 2 && $('.home_promotion').attr('data-on') == '1'){
                 dataBaseX = -90;
                 posiX = raphaW*0.5 + dataBaseX*ratio + 4;

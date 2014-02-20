@@ -14,6 +14,6 @@
 		<span class="milk_description milk_description_n milk_description2"><?php echo proccedText($jsonLangMilk->text_paragraph_2_auto_clean->texte); ?></span>
 	</div>
 	<img src="assets/imgs/sections/milk_machine.png" class="milk_machine" />
-	<div class="bg_gradient"></div>
+	<div class="bg_gradient"><img src="assets/imgs/sections/bg_milk.jpg" /></div>
     	<!--<img src="assets/imgs/sections/milk_bg.jpg" class="section_background" data-w="1440" data-h="864" />-->
 </section>

@@ -21,10 +21,12 @@
 // Base
 html, body { background: #000000; color: #fff; .text_regular; width: 100%; height: 100%; }
 .container{position: absolute; width: 100%; height: 100%; min-height: 580px; min-width:900px; overflow: hidden;}
-a { text-decoration: none; color: #fff; background-image:url(../imgs/ui/a.gif);}
-
+a { text-decoration: none; color: #fff; background-image:url(../imgs/ui/a.gif); background-color: transparent;outline: 0;}
+a:active{ background-color: transparent; outline: 0;}
+a:focus { background-color: transparent; outline: 0;}
 .preloader{ width:100%; height:100%; overflow: hidden; position: absolute; z-index: 500;
     .logo_preload{
+        visibility: hidden;
         position: absolute;
         left:50%; top:50%; width:0px; height:84px; margin-top: -242px;
         background-image:url(../imgs/logo_intro.png); background-repeat: no-repeat;
@@ -32,6 +34,7 @@ a { text-decoration: none; color: #fff; background-image:url(../imgs/ui/a.gif);}
         @media @highdensity {background-image: url("../imgs/logo_intro@2x.png"); background-size: 293px 84px;}
     }
     .machine_preload{
+        visibility: hidden;
         display: block;
         position: absolute;
         background-image:url(../imgs/intro_machine.png); background-repeat: no-repeat; background-position: center top;
@@ -76,6 +79,7 @@ h1{
     z-index: 900;
     top:25px;
     left:89px;
+    cursor: pointer;
     @media @highdensity {
         background-image: url("../imgs/ui/retina/lattissima@2x.png"); background-size: contain;
     }
@@ -89,6 +93,7 @@ h1{
     z-index: 899;
     top:25px;
     left:25px;
+    cursor: pointer;
     @media @highdensity {
         background-image: url("../imgs/ui/retina/logo@2x.png"); background-size: contain;
     }
@@ -169,7 +174,9 @@ nav{
     height: 100%;
 }
 
-.bg_gradient{position: absolute; width:100%; height:100%; z-index: 1;}
+.bg_gradient{position: absolute; width:100%; height:100%; z-index: 1;
+    img{position: absolute; }
+}
 
 // ***** HOME ******
 
@@ -247,7 +254,7 @@ nav{
 
 .content_line_sep{margin-top: 18px; margin-bottom: 22px; height:1px; width:100%; background-color: #ffffff;}
 .content_span_text{ .light; display: block; font-size: 13px; width:100%; line-height: 22px; letter-spacing: 1px; }
-.content_span_text_smaller{ .light; font-size: 12px; line-height: 8px; letter-spacing: 1px; }
+.content_span_text_smaller{ .light; font-size: 12px; line-height: 21px; letter-spacing: 1px; }
 .h2_smaller{font-size: 20px; letter-spacing: 1px;}
 
 // ***** COFFEE RANGE ***** //
@@ -319,7 +326,7 @@ nav{
                     font-size: 15px;
                 }
                 div{
-                    margin-top: 8px;
+                    margin-top: 10px;
                     margin-left: 19px;
                     float: left;
                     height: 1px;
@@ -332,9 +339,9 @@ nav{
                 a{
                     display: block;
                     float: left;
-                    width:55px;
+                    width:75px;
                     height:100px;
-                    margin-right: 20px;
+                    //margin-right: 0px;
                     span{
                         display: block;
                         width:100%;
@@ -354,7 +361,7 @@ nav{
         }
     }
 }
-
+/*
 #coffeerange .bg_gradient{
     background: #948f8a;
 background: -moz-linear-gradient(45deg,  #948f8a 26%, #4a4239 66%, #2a251f 100%);
@@ -364,7 +371,7 @@ background: -o-linear-gradient(45deg,  #948f8a 26%,#4a4239 66%,#2a251f 100%);
 background: -ms-linear-gradient(45deg,  #948f8a 26%,#4a4239 66%,#2a251f 100%);
 background: linear-gradient(45deg,  #948f8a 26%,#4a4239 66%,#2a251f 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#948f8a', endColorstr='#2a251f',GradientType=1 );
-}
+}*/
 
 // ***** MILK ****** //
 .milk_zoom{
@@ -427,21 +434,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#948f8a', end
             position: absolute;
             text-align: center;
             left:50%;
+            line-height: 20px;
             .bold;
         }
     }
     .logo_clean{
         margin-top: 22px;
         background-image:url(../imgs/sections/milk_pict_clean.png); background-repeat: no-repeat;
-        width:60px;
-        height:99px;
+        width:82px;
+        height:136px;
         float:left;
         margin-left: 12px;
         @media @highdensity {
-                background-image: url("../imgs/sections/retina/milk_pict_clean@2x.png"); background-size: 60px 99px;
+                background-image: url("../imgs/sections/retina/milk_pict_clean@2x.png"); background-size: 82px 136px;
             }
     }
 }
+/*
 #milksystem .bg_gradient{
     background: #514a41;
     background: radial-gradient(left bottom, ellipse cover, #948f8a 15%,#3c342b 60%,#27221b 100%);
@@ -450,7 +459,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#948f8a', end
     background: -moz-radial-gradient(left bottom, ellipse cover, #948f8a 15%,#3c342b 60%,#27221b 100%);
     background: -webkit-radial-gradient(left bottom, ellipse cover, #948f8a 15%,#3c342b 60%,#27221b 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#948f8a', endColorstr='#27221b',GradientType=1 );
-}
+}*/
 // ***** TOUCH ***** //
 .touch_vignettage{ position: absolute; left:0; top:0; z-index: 10; }
 .touch_machine{ position: absolute; left:0; top:0; z-index: 3; }
@@ -536,14 +545,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#948f8a', end
 .touchscreen_manifier_cappuccino{ background-image:url(../imgs/sections/touchscreen_manifier_cappuccino.jpg); }
 .touchscreen_manifier_hotwater{ background-image:url(../imgs/sections/touchscreen_manifier_hotwater.jpg); }
 .touchscreen_manifier_machiatto{ background-image:url(../imgs/sections/touchscreen_manifier_machiatto.jpg); }
-
+/*
 #touchscreen .bg_gradient{
     background: #948f8a;
     background: radial-gradient(left bottom, ellipse cover, #948f8a 15%,#3c342b 60%,#27221b 100%);
     background: -o-radial-gradient(left bottom, ellipse cover, #948f8a 15%,#3c342b 60%,#27221b 100%);
     background: -ms-radial-gradient(left bottom, ellipse cover, #948f8a 15%,#3c342b 60%,#27221b 100%);
     background: -moz-radial-gradient(left bottom, ellipse cover, #948f8a 15%,#3c342b 60%,#27221b 100%);
-    background: -webkit-radial-gradient(left bottom, ellipse cover, #948f8a 15%,#3c342b 60%,#27221b 100%);
+    background: -webkit-radial-gradient(left bottom, ellipse cover, #948f8a 15%,#3c342b 60%,#27221b 100%);*/
     /*
 background: -moz-radial-gradient(left bottom, ellipse cover,  #948f8a 32%, #3c342b 80%, #27221b 100%);
 background: -webkit-gradient(radial, left bottom, 0px, center center, 100%, color-stop(32%,#948f8a), color-stop(80%,#3c342b), color-stop(100%,#27221b));
@@ -551,9 +560,9 @@ background: -webkit-radial-gradient(left bottom, ellipse cover,  #948f8a 32%,#3c
 background: -o-radial-gradient(left bottom, ellipse cover,  #948f8a 32%,#3c342b 80%,#27221b 100%);
 background: -ms-radial-gradient(left bottom, ellipse cover,  #948f8a 32%,#3c342b 80%,#27221b 100%);
 background: radial-gradient(left bottom,  #948f8a 32%,#3c342b 80%,#27221b 100%);*/
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#948f8a', endColorstr='#27221b',GradientType=1 );
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#948f8a', endColorstr='#27221b',GradientType=1 );
 
-}
+}*/
 
 // ***** DESIGN ***** //
 
@@ -589,8 +598,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#948f8a', end
             margin-top: 60px;
             margin-bottom: 40px;
             h3{
-                display: inline-block;
-                height:50px;
+                display: block;
+                overflow: hidden;
+                //width:100%;
+                height:58px;
                 padding-right: 50px;
                 .regular;
                 font-size: 16px;
@@ -616,7 +627,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#948f8a', end
         }
     }
 }
-
+/*
 #design .bg_gradient{
     background: #8a847f;
 background: -moz-linear-gradient(45deg,  #8a847f 4%, #463e34 64%, #2c261f 100%);
@@ -627,7 +638,7 @@ background: -ms-linear-gradient(45deg,  #8a847f 4%,#463e34 64%,#2c261f 100%);
 background: linear-gradient(45deg,  #8a847f 4%,#463e34 64%,#2c261f 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a847f', endColorstr='#2c261f',GradientType=1 );
 
-}
+}*/
 
 // POPINS
 .popins{
@@ -668,9 +679,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a847f', end
         visibility: hidden;
     }
     .share_mail, .select_lang{
-        width:842px;
+        width:840px;
         height:530px;
-        margin-left: -421px;
+        margin-left: -420px;
         margin-top: -250px;
     }
     .select_lang{
@@ -797,9 +808,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a847f', end
             input[type=text] {
                 background-color: #000000;
                 .rounded-corners(5px);
-                height: 40px;
-                width:230px;
+                height: 20px;
+                width:210px;
                 color:#ffffff;
+                padding: 10px;
+                font-size: 12px;
                 .regular;
             }
             .errorfield{
@@ -865,9 +878,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a847f', end
 header{
     position: absolute;
     top: 17px;
-    right: 0;
+    right: 15px;
     height: 20px;
-    width: 285px;
     z-index: 500;
     visibility: hidden;
 }

@@ -94,8 +94,8 @@ define([
 
 			$('.content').mousewheel(function(event, delta, deltaX, deltaY) {
 				//console.log(deltaY);
-				if(transitionComplete && (deltaX > 0 || deltaY > 0)) openPrevPage();
-				else if(transitionComplete && (deltaX < 0 || deltaY < 0)) openNextPage();
+				if(transitionComplete && (deltaX > 0 || deltaY > 0) && currentIndex > 0) openPrevPage();
+				else if(transitionComplete && (deltaX < 0 || deltaY < 0) && currentIndex < 4) openNextPage();
 			});
 		};
 		// private      

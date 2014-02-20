@@ -15,17 +15,19 @@ define([
         // ******************* public ******************* 
         this.elem = $('#coffeerange');
         //this.bg = new BackgroundSection(this.elem);
-        var bg = $('.bg_gradient', this.elem);
+        var bg = $('.bg_gradient img', this.elem);
         var rangeMachine = new ImageElem($(".range_machine", this.elem));
         var rangeElement = rangeMachine.getElement();
         var ct = $(".range_content", this.elem);
 
         this.resize = function(w, h){
             windowW = w;
+            bg.width(w);
+            bg.height(h);
            // this.bg.resize(w, h);
             var ratio = h/863;
             var offsetCt = 115;
-            var contentW = Math.max(744, w - (433*ratio+115)-200);
+            var contentW = Math.max(755, w - (433*ratio+115)-200);
             contentW = Math.min(contentW, 900);
             if(w < 1165){
                 ratio = w /1440;
@@ -75,7 +77,6 @@ define([
                 $('.content_line_sep', ct).css({'margin-top': 5, 'margin-bottom': 7});
                 $('.range_cat_caps a div').width(37);
                 $('.range_cat_caps a div').height(34);
-                $('.range_cat_caps a div').css('margin-left', '9px');
                 $('.range_cat_caps a').height(82);
                 $('.range_cat_caps').height(96);
                 $('.range_cat_caps a span').css('padding-top', '7px');
@@ -92,7 +93,6 @@ define([
                 $('.content_line_sep', ct).css({'margin-top': 8, 'margin-bottom': 10});
                 $('.range_cat_caps a div').width(44);
                 $('.range_cat_caps a div').height(42);
-                $('.range_cat_caps a div').css('margin-left', '4px');
                 $('.range_cat_caps a').height(90);
                 $('.range_cat_caps').height(104);
                 $('.range_cat_caps a span').css('padding-top', '7px');
@@ -111,18 +111,21 @@ define([
                 if(diff > 200) $('.range_coffees').css('margin-top', 50);
                 else $('.range_coffees').css('margin-top', 15);
             }
+
+            $('.range_cat_caps a div').css('margin-left', (((75-$('.range_cat_caps a div').width())*0.5))+'px');
+
             ct.css('top', Math.max(75, (h-80-ct.height())*0.5)+offsetTop);
-			var aW = $('.range_cat_caps a').width()+parseInt($('.range_cat_caps a').css('margin-right').replace('px', ''), 10);
-			//if(Globals.oldie)
-			if($('html').hasClass('ie')){
-				$('.range_cat').each(function(index){
-					$(this).width($('a', this).length*aW);
-					/* $(this).width($('.range_cat_caps', this).width()); */
-				});
-			}
+	//var aW = $('.range_cat_caps a').width()+parseInt($('.range_cat_caps a').css('margin-right').replace('px', ''), 10);
+	//if(Globals.oldie)
+	//if($('html').hasClass('ie')){
+	$('.range_cat').each(function(index){
+		$(this).width($('a', this).length*75);
+		/* $(this).width($('.range_cat_caps', this).width()); */
+	});
+	//}
 			
             $('.range_cat_title').each(function(event){
-                $('div', this).width($(this).width()-$('span', this).width()-50);
+                $('div', this).width($(this).width()-$('span', this).width()-30);
             });
 			
         };
@@ -162,7 +165,7 @@ define([
         //var animateIntensity = function(elem){ elem.animate({'fill-opacity': 1, 'stroke-opacity': 0}, 250); };
 
          var init = function(index){
-		 TweenMax.to(bg, 0, {alpha:0});
+	TweenMax.to(bg, 0, {alpha:0});
 			if(Globals.oldie){
 				$('.range_cat').css('margin-right', '25');
 			}
@@ -187,19 +190,24 @@ define([
                     var leftRoll = $(this).offset().left - 57;
                     var topRoll = $(this).offset().top - roll.height();
                     var maxW = Math.max(316, Math.max($('.range_roll_arom', roll).width(), $('.range_roll_milk', roll).width()));
-       
+                    
+                    var picPosiX = 81;
+
                     if(leftRoll > windowW-(maxW+60)-150){
                         leftRoll = windowW-(maxW+60)-150;
-                        $('.range_roll_pic', roll).css('left', Math.min($(this).offset().left-leftRoll+24, maxW+40));
-                    }else
-                        $('.range_roll_pic', roll).css('left', 81);
+                        picPosiX = Math.min($(this).offset().left-leftRoll+24, maxW+40);
+                    }
+
+                    picPosiX = picPosiX+((75-$('.range_cat_caps a div').width())*0.5);
+
+                    $('.range_roll_pic', roll).css('left', picPosiX);
 
                    roll.width(maxW+60);
                    $('.range_roll_bg').width(maxW+54);
                     roll.css({'left':leftRoll, 'top':topRoll});
                     TweenMax.to(roll, 0, {scale:0.9, transformOrigin:'center bottom'});
                     TweenMax.to(roll, 0.2, {autoAlpha:1, ease:Linear.easeNone});
-                    TweenMax.to(roll, 0.25, {scale:1, transformOrigin:'center bottom', ease:Expo.easeOut});
+                    TweenMax.to(roll, 0.25, {scale:1, transformOrigin:picPosiX+'px bottom', ease:Expo.easeOut});
                     TweenMax.to($(this), 0.2, {autoAlpha:1, ease:Linear.easeNone});
                 }
             }).on('mouseleave', function(event){

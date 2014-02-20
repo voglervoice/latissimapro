@@ -90,6 +90,9 @@ define([
 		$('.machine_preload span').css('margin-left', -$('.machine_preload span').width()*0.5-4);
 		loadingAnimation();
 
+		$('.machine_preload').css('visibility', 'visible');
+		$('.logo_preload').css('visibility', 'visible');
+
 		if(images.length > 0){
 			//console.log("loader  -> images loaded "+container);
 			$.preload( images, {onFinish:onLoadComplete, onComplete:function(data){

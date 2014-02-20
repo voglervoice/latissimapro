@@ -39,7 +39,7 @@ define([
         // ******************* public ******************* 
         this.elem = $('#touchscreen');
         //this.bg = new BackgroundSection(this.elem);
-        var bg = $('.bg_gradient', this.elem);
+        var bg = $('.bg_gradient img', this.elem);
         var touchMachine = new ImageElem($(".touch_machine", this.elem));
         var touchElement = touchMachine.getElement();
         var ct = $('.touch_content', this.elem);
@@ -47,6 +47,9 @@ define([
         var paper2 = Raphael("touchscreen_puces", 1000, 1000);
 
         this.resize = function(w, h){
+            bg.width(w);
+            bg.height(h);
+
             windowW = w;
             //var dresize = this.bg.resize(w, h);
             var dresize = {left:0, top:0, width:w, height:h};

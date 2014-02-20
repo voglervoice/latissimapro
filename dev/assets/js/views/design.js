@@ -14,13 +14,16 @@ define([
         // ******************* public ******************* 
         this.elem = $('#design');
         //this.bg = new BackgroundSection(this.elem);
-        var bg = $('.bg_gradient', this.elem);
+        var bg = $('.bg_gradient img', this.elem);
         var designMachine = new ImageElem($(".design_machine", this.elem));
         var designElement = designMachine.getElement();
         var ct = $(".design_content", this.elem), wFooterBtn;
 
         this.resize = function(w, h){
             //this.bg.resize(w, h);
+            bg.width(w);
+            bg.height(h);
+
             var ratioH = h/864;
             var ratioW = w/1440;
             var offsetCt =77, offsetCtPlus = 0;
@@ -63,18 +66,19 @@ define([
                 }
                 $('.design_content_infos_col').width(150);
                 $('.design_content_infos').width(630);
-
-                $('.design_description').removeClass('design_description_n');
-                $('.design_description').addClass('content_span_text_smaller');
-                $('h2', ct).removeClass('h2_n');
-                $('h2', ct).addClass('h2_smaller');
-
             }else{
                 $('.design_content_infos_col h3').css('font-size', '16px');
                 $('.design_content_infos_col li').css('font-size', '13px');
                 $('.design_content_infos_col').width(190);
                 $('.design_content_infos').width(810);
+            }
 
+            if(h<705 || w < 1160){
+                $('.design_description').removeClass('design_description_n');
+                $('.design_description').addClass('content_span_text_smaller');
+                $('h2', ct).removeClass('h2_n');
+                $('h2', ct).addClass('h2_smaller');
+            }else{
                 $('.design_description').addClass('design_description_n');
                 $('.design_description').removeClass('content_span_text_smaller');
                 $('h2', ct).addClass('h2_n');
@@ -128,6 +132,11 @@ define([
             TweenMax.to($('.content_line_design_sep', ct), 0, {alpha:0.15});
             TweenMax.to($('.design_content_infos_col div', ct), 0, {alpha:0.28});
             TweenMax.to($('.design_content_infos ul li', ct), 0, {alpha:0.6});
+
+            if($('html').hasClass('oldie')){
+                $('.design_pdf').pngFix();
+                $('.design_youtube').pngFix();
+            }
 
             wFooterBtn = 90;
             $('.design_footer a').each(function(index){ wFooterBtn += $(this).width()+50; });

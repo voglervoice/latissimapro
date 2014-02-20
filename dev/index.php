@@ -36,11 +36,38 @@
         <?php
         if($arialVersion){ ?>
         <style type="text/css">
+        a{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
         h2{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
-        .milk_content .visual_fig span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .touch_description_n {font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .milk_description_n {font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .range_content .range_description_n {font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .design_content .design_description_n {font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .content_span_text {font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .content_span_text_smaller {font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .home_anchors a span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        nav ul li a span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        footer ul li a{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .milk_content .visual_fig span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif; font-weight: bold; }
         .order_footer_btn span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif; font-weight: bold; padding-top: 2px;}
         .preloader .machine_preload span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif; font-weight: bold;}
         .range_content .range_coffees .range_cat .range_cat_title span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .design_content .design_content_infos .design_content_infos_col h3{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .design_content .design_content_infos .design_content_infos_col ul li{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .design_content .design_footer a{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .popins .popin h4{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .popins .share_mail span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .popins .share_mail form span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .popins .share_mail form input[type=submit]{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .touchscreen_cta span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .touchscreen_rolls .touchscreen_roll .touchscreen_roll_inner span{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .range_rolls .range_roll .range_roll_arom{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .range_rolls .range_roll .range_roll_milk{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .range_rolls .range_roll .range_roll_intensity{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .range_rolls .range_roll .range_roll_title{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .home_promotion a .home_promotion_date{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .home_promotion a .home_promotion_price_currency{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .home_promotion a .home_promotion_receive{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .home_promotion a .home_promotion_cta{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
         </style>
         <?php } ?>
     </head>
@@ -79,7 +106,7 @@
                 </div>
             </div>
         </div>
-<script language="JavaScript" type="text/javascript">var s_account="nesp-preprod";</script>
+<script language="JavaScript" type="text/javascript">var s_account="<?php echo $s_account; ?>";</script>
 <script language="JavaScript" type="text/javascript" src="s_code.js"></script>
 <script language="JavaScript" type="text/javascript"><!--var s_code=s.t();if(s_code)document.write(s_code)//--></script>
         <script language="JavaScript" type="text/javascript"><!--

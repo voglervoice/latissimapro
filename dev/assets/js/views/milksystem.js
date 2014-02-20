@@ -15,13 +15,16 @@ define([
         // ******************* public ******************* 
         this.elem = $('#milksystem');
         //this.bg = new BackgroundSection(this.elem);
-        var bg = $('.bg_gradient', this.elem);
+        var bg = $('.bg_gradient img', this.elem);
         var milkMachine = new ImageElem($(".milk_machine", this.elem));
         var milkElement = milkMachine.getElement();
         var ct = $('.milk_content', this.elem);
 
         this.resize = function(w, h){
             //this.bg.resize(w, h);
+            bg.width(w);
+            bg.height(h);
+
             var marginLeftCt = 150;
             var marginImgRight = 95;
             if(w > 1400) marginImgRight = 160;
@@ -39,12 +42,12 @@ define([
             ct.css('left', Math.max(w*0.5, w*0.5 + (w*0.5-ctWidth-marginLeftCt)*0.5));
             ct.width(ctWidth);
 
-            $('.visual_fig').css('margin-left', (ctWidth-275)*0.5);
+            $('.visual_fig').css('margin-left', (ctWidth-292)*0.5);
 
             if(h<705 || w < 1160){
                 scaleBase = 0.6;
-                $('span', ct).removeClass('touch_description_n');
-                $('span', ct).addClass('content_span_text_smaller');
+                $('.milk_description', ct).removeClass('milk_description_n');
+                $('.milk_description', ct).addClass('content_span_text_smaller');
                 $('h2', ct).removeClass('h2_n');
                 $('h2', ct).addClass('h2_smaller');
                 $('.content_line_milk_sep', ct).css({'margin-top': 10, 'margin-bottom': 8});
@@ -63,8 +66,8 @@ define([
                 $('.visual_fig').height(170);*/
             }else{
                 scaleBase = 0.9;
-                $('span', ct).removeClass('content_span_text_smaller');
-                $('span', ct).addClass('touch_description_n');
+                $('.milk_description', ct).addClass('milk_description_n');
+                $('.milk_description', ct).removeClass('content_span_text_smaller');
                 $('h2', ct).removeClass('h2_smaller');
                 $('h2', ct).addClass('h2_n');
                 $('.content_line_milk_sep', ct).css({'margin-top': 17, 'margin-bottom': 12});
@@ -196,6 +199,12 @@ define([
 				$('.milk_zoom').css('display', 'none');
 			else
 				TweenMax.to($('.milk_zoom'), 0, {alpha:0});
+
+            if($('html').hasClass('oldie')){
+                $('.visual_fig').pngFix();
+                $('.logo_clean').pngFix();
+                $('.visual_pot').pngFix();
+            }
         };
 
         var animPot =function(){

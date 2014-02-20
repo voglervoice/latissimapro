@@ -11,6 +11,7 @@ define([
      * @constructor
      */
     var MainMenu = function() {
+        var musicPlaying = false, musicPlayingUser = false;
         var self = this;
         var menuSpace = 35;
         var paper = Raphael("menu_picts", $('nav').width(), $('nav').height());
@@ -68,6 +69,9 @@ define([
             if($('body').attr('data-prodmode') == '0'){
                 $('.sound_sprit').attr('class', 'sound_sprit_off');
                  music.togglePlay();
+            }else{
+                musicPlaying = true;
+                musicPlayingUser = true;
             }
 
             // header
@@ -83,11 +87,15 @@ define([
                     event.preventDefault();
                     $(this).attr('class', 'sound_sprit_off');
                     music.togglePlay();
+                    musicPlaying = false;
+                    musicPlayingUser = false;
                     //publisher.publish(Events.soundOff);
                 }else if($(this).hasClass('sound_sprit_off')){
                     $(this).attr('class', 'sound_sprit');
                     event.preventDefault();
                     music.togglePlay();
+                    musicPlaying = true;
+                    musicPlayingUser = true;
                     //publisher.publish(Events.soundOn);
                 }else if($(this).hasClass('flags')){
                     event.preventDefault();
@@ -122,6 +130,15 @@ define([
                 mainMenuRollOver($(this));
             }).on('mouseleave', function(){
                 if($(this).attr('data-selected') == "0") mainMenuRollOut($(this));
+            });
+
+             $('.nespresso_logo').on('click', function(event){
+                event.preventDefault();
+                publisher.publish(Events.navigate, "");
+            });
+             $('h1').on('click', function(event){
+                event.preventDefault();
+                publisher.publish(Events.navigate, "");
             });
 
             // scroll to explore
@@ -168,6 +185,47 @@ define([
                 TweenMax.to($('.order_footer_btn span'), 0.25, {right:0, ease:Circ.easeInOut, color:"#1b1b1b"});
                 TweenMax.to($('.order_footer_btn_arrow'), 0.25, {right:55, ease:Circ.easeInOut, alpha:0});
             });
+
+
+            // ----------
+            var hidden = "hidden";
+
+    // Standards:
+    if (hidden in document)
+        document.addEventListener("visibilitychange", onchange);
+    else if ((hidden = "mozHidden") in document)
+        document.addEventListener("mozvisibilitychange", onchange);
+    else if ((hidden = "webkitHidden") in document)
+        document.addEventListener("webkitvisibilitychange", onchange);
+    else if ((hidden = "msHidden") in document)
+        document.addEventListener("msvisibilitychange", onchange);
+    // IE 9 and lower:
+    else if ('onfocusin' in document)
+        document.onfocusin = document.onfocusout = onchange;
+    // All others:
+    else
+        window.onpageshow = window.onpagehide = window.onfocus = window.onblur = onchange;
+
+    function onchange (evt) {
+        var v = 'visible', h = 'hidden',
+            evtMap = {focus:v, focusin:v, pageshow:v, blur:h, focusout:h, pagehide:h};
+        evt = evt || window.event;
+        if (evt.type in evtMap)
+            document.body.className = evtMap[evt.type];
+        else
+            document.body.className = this[hidden] ? "hidden" : "visible";
+
+        if($('body').hasClass('hidden') && musicPlaying){
+            $('.sound_sprit').attr('class', 'sound_sprit_off');
+            music.togglePlay();
+            musicPlaying =false;
+        }else if($('body').hasClass('visible') && !musicPlaying && musicPlayingUser){
+            $('.sound_sprit_off').attr('class', 'sound_sprit');
+            music.togglePlay();
+            musicPlaying =true;
+        }
+
+    }
         };
 
         //  ******************* PRIVATE ******************* 
