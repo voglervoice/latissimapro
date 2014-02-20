@@ -39,14 +39,23 @@ define([
                 pct = 1.4;
                 latiOffset =-10;
                 latiOffset2 = -5;
-                $('h1').css('background-image', "url(assets/imgs/ui/retina/lattissima@2x.png)");
-                $('.nespresso_logo').css('background-image', "url(assets/imgs/ui/retina/logo@2x.png)");
+				if(!Globals.oldie){
+					$('h1').css('background-image', "url(assets/imgs/ui/retina/lattissima@2x.png)");
+					$('.nespresso_logo').css('background-image', "url(assets/imgs/ui/retina/logo@2x.png)");
+				}
             }
             $('.nespresso_logo').width(Math.round(38*pct));
             $('.nespresso_logo').height(Math.round(38*pct));
             $('h1').width(Math.round(166*pct));
             $('h1').height(Math.round(38*pct));
             $('h1').css({'left':Math.round(89*pct)+latiOffset2, 'top':Math.round(25*pct)+latiOffset});
+			
+			if(Globals.oldie){
+				$('h1 img').width($('h1').width());
+				$('h1 img').height($('h1').height());
+				$('.nespresso_logo img').width($('.nespresso_logo').width());
+				$('.nespresso_logo img').height($('.nespresso_logo').height());
+			}
         };
 
         this.update = function(id) {
@@ -186,46 +195,47 @@ define([
                 TweenMax.to($('.order_footer_btn_arrow'), 0.25, {right:55, ease:Circ.easeInOut, alpha:0});
             });
 
-
+			if(!Globals.oldie){
             // ----------
             var hidden = "hidden";
 
-    // Standards:
-    if (hidden in document)
-        document.addEventListener("visibilitychange", onchange);
-    else if ((hidden = "mozHidden") in document)
-        document.addEventListener("mozvisibilitychange", onchange);
-    else if ((hidden = "webkitHidden") in document)
-        document.addEventListener("webkitvisibilitychange", onchange);
-    else if ((hidden = "msHidden") in document)
-        document.addEventListener("msvisibilitychange", onchange);
-    // IE 9 and lower:
-    else if ('onfocusin' in document)
-        document.onfocusin = document.onfocusout = onchange;
-    // All others:
-    else
-        window.onpageshow = window.onpagehide = window.onfocus = window.onblur = onchange;
+			// Standards:
+			if (hidden in document)
+				document.addEventListener("visibilitychange", onchange);
+			else if ((hidden = "mozHidden") in document)
+				document.addEventListener("mozvisibilitychange", onchange);
+			else if ((hidden = "webkitHidden") in document)
+				document.addEventListener("webkitvisibilitychange", onchange);
+			else if ((hidden = "msHidden") in document)
+				document.addEventListener("msvisibilitychange", onchange);
+			// IE 9 and lower:
+			else if ('onfocusin' in document)
+				document.onfocusin = document.onfocusout = onchange;
+			// All others:
+			else
+				window.onpageshow = window.onpagehide = window.onfocus = window.onblur = onchange;
 
-    function onchange (evt) {
-        var v = 'visible', h = 'hidden',
-            evtMap = {focus:v, focusin:v, pageshow:v, blur:h, focusout:h, pagehide:h};
-        evt = evt || window.event;
-        if (evt.type in evtMap)
-            document.body.className = evtMap[evt.type];
-        else
-            document.body.className = this[hidden] ? "hidden" : "visible";
+			function onchange (evt) {
+				var v = 'visible', h = 'hidden',
+					evtMap = {focus:v, focusin:v, pageshow:v, blur:h, focusout:h, pagehide:h};
+				evt = evt || window.event;
+				if (evt.type in evtMap)
+					document.body.className = evtMap[evt.type];
+				else
+					document.body.className = this[hidden] ? "hidden" : "visible";
 
-        if($('body').hasClass('hidden') && musicPlaying){
-            $('.sound_sprit').attr('class', 'sound_sprit_off');
-            music.togglePlay();
-            musicPlaying =false;
-        }else if($('body').hasClass('visible') && !musicPlaying && musicPlayingUser){
-            $('.sound_sprit_off').attr('class', 'sound_sprit');
-            music.togglePlay();
-            musicPlaying =true;
-        }
+				if($('body').hasClass('hidden') && musicPlaying){
+					$('.sound_sprit').attr('class', 'sound_sprit_off');
+					music.togglePlay();
+					musicPlaying =false;
+				}else if($('body').hasClass('visible') && !musicPlaying && musicPlayingUser){
+					$('.sound_sprit_off').attr('class', 'sound_sprit');
+					music.togglePlay();
+					musicPlaying =true;
+				}
 
-    }
+			}
+		}
         };
 
         //  ******************* PRIVATE ******************* 
@@ -248,6 +258,22 @@ define([
             target.animate({ r : 4, easing:'backOut'},350);
         };
         var init = function(){
+			if(Globals.oldie){
+				var bg = $('h1').css('background-image');
+				bg = bg.replace('url("','').replace('")','');
+				bg = bg.replace('url(','').replace(')','');
+				bg = bg.replace('..', 'assets');
+				$('h1').html('<img src="'+bg+'" />');
+				$('h1').css('background-image', 'none');
+				$('h1').css('text-indent', '0');
+				
+				bg = $('.nespresso_logo').css('background-image');
+				bg = bg.replace('url("','').replace('")','');
+				bg = bg.replace('url(','').replace(')','');
+				bg = bg.replace('..', 'assets');
+				$('.nespresso_logo').html('<img src="'+bg+'" />');
+				$('.nespresso_logo').css('background-image', 'none');
+			}
             // init states
             TweenMax.to($('footer ul li a'), 0, {alpha:0.3});
             TweenMax.to($('header'), 0, {autoAlpha:0});

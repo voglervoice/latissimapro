@@ -263,7 +263,6 @@ nav{
 .range_rolls{
     position: absolute; z-index: 20;
     .range_roll{
-        visibility: hidden;
         left:400px;
         top:200px;
         position: absolute;
@@ -276,11 +275,10 @@ nav{
        span{ position:absolute; left:32px;
         strong{.bold;}
     }
-        .range_roll_intensity_value{position:absolute; left:32px;}
         .range_roll_title{ font-size: 14px; .bold; text-transform: uppercase; top:12px; }
         .range_roll_intensity{ font-size: 13px; .light; top:52px; }
         .range_roll_intensity_value_num{ font-size: 13px; .bold; top:52px; color:#cbaa58;}
-        .range_roll_intensity_value{ top:52px; width:140px; height:18px;}
+        .range_roll_intensity_value{position:absolute; left:32px; top:52px; width:140px; height:18px;}
         .range_roll_arom{ font-size: 13px; .light; top:93px; }
         .range_roll_milk{ font-size: 13px; .light; top:131px; }
         .range_roll_bg_line{position: absolute; height:1px; background-color: #7a7a7a; left:32px; top:38px; width:315px;}
@@ -767,7 +765,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a847f', end
         }
     }
     .share_mail{
-        visibility: hidden;
         text-align: center;
         background-image:url(../imgs/ui/bg_mail_popin.jpg); background-repeat: no-repeat;
         background-position: 0 bottom;

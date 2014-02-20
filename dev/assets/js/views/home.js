@@ -62,8 +62,9 @@ define([
                 arrows[i].attr({path: arrows[i].data("introPath"), "stroke-width":"0"});
                 lines[i].attr({path: lines[i].data("initPath")});
                 rects[i].attr({x: rects[i].data("xInit"), y:rects[i].data("yInit"), width:0, height:0});
+				rects[i].hide();
                 var linkElem = $(".home_anchors a[data-index='"+i+"']");
-                TweenMax.to(linkElem, 0, {alpha:0, left:parseInt(linkElem.attr('data-initl'), 10)});
+                TweenMax.to(linkElem, 0, {autoAlpha:0, left:parseInt(linkElem.attr('data-initl'), 10)});
             }
 
             homeMachine.show(1.2,1.2);
@@ -333,7 +334,7 @@ define([
         var openRect = function(index){
             var target = rects[index];
             var linkElem =$(".home_anchors a[data-index='"+index+"']");
-            
+            target.show();
             target.animate({ width : target.data("w"), x:target.data("x"), easing:'>'},250);
             target.animate({ height : target.data("h"), y:target.data("y"), easing:'>'},80);
             
@@ -343,7 +344,7 @@ define([
                 TweenMax.delayedCall(0.2, openPuce, [index]);
             }
 
-            TweenMax.to(linkElem, 0.3, {alpha:1, left:aXEnd[index], ease:Circ.easeOut});
+            TweenMax.to(linkElem, 0.3, {autoAlpha:1, left:aXEnd[index], ease:Circ.easeOut});
         };
         var openPuce = function(index){
             var puce = puces[index];

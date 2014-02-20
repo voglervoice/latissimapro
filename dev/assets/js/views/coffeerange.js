@@ -10,7 +10,6 @@ define([
 
     var CoffeeRange = function() {
         var self = this, windowW, opened = false;
-        var sets = [];
       
         // ******************* public ******************* 
         this.elem = $('#coffeerange');
@@ -111,7 +110,12 @@ define([
                 if(diff > 200) $('.range_coffees').css('margin-top', 50);
                 else $('.range_coffees').css('margin-top', 15);
             }
-
+			
+			if(Globals.oldie){
+				$('.range_cat_caps a div img').width($('.range_cat_caps a div').width());
+				$('.range_cat_caps a div img').height($('.range_cat_caps a div').height());
+			}
+			
             $('.range_cat_caps a div').css('margin-left', (((75-$('.range_cat_caps a div').width())*0.5))+'px');
 
             ct.css('top', Math.max(75, (h-80-ct.height())*0.5)+offsetTop);
@@ -165,15 +169,18 @@ define([
         //var animateIntensity = function(elem){ elem.animate({'fill-opacity': 1, 'stroke-opacity': 0}, 250); };
 
          var init = function(index){
-	TweenMax.to(bg, 0, {alpha:0});
+	
 			if(Globals.oldie){
 				$('.range_cat').css('margin-right', '25');
+				$('.range_cat_caps a div').each(function(index) {
+					var bg = $(this).css('background-image');
+					bg = bg.replace('url("','').replace('")','');
+					bg = bg.replace('url(','').replace(')','');
+					bg = bg.replace('..', 'assets');
+					$(this).html('<img src="'+bg+'" />');
+					$(this).css('background-image', 'none');
+				});
 			}
-		 
-            TweenMax.to($('.content_line_sep', ct), 0, {alpha:0.15});
-            TweenMax.to($('.range_cat_title div'), 0, {alpha:0.2});
-            TweenMax.to($('.range_roll'), 0, {autoAlpha:0});
-            TweenMax.to(ct, 0, {alpha:0});
 
             $('.range_coffees').on('mouseleave', function(event){
                 TweenMax.to($('.range_cat_title'), 0.5, {alpha:1});
@@ -223,20 +230,27 @@ define([
                 var positionLeft = $('.range_roll_intensity', this).position().left + $('.range_roll_intensity', this).width() + 5;
                 var container = $('.range_roll_intensity_value', this);
                 container.css({'left':positionLeft});
+				var id_paper = 'range_roll_rapha_'+index;
+                container.attr('id', id_paper);
                 $('.range_roll_intensity_value_num', this).css({'left':positionLeft + container.width()});
-                var paper = Raphael(container[0], container.width(), container.height());
-                var set= paper.set(), radius = 3, posiX = 6, posiY = 8;
+                var paper = Raphael(id_paper, container.width(), container.height());
+                var radius = 3, posiX = 6, posiY = 8;
+				var strokeW = (Globals.oldie)? 1 : "1";
                 for (var i = 0; i <12; i++) {
                     var c = paper.circle(posiX, posiY, radius).attr({
                         fill: "rgb(255,255,255)",
-                        "stroke": "#fff",
-                        "fill-opacity":(i<force)? '1':"0",
-                        "stroke-width": (i<force)? '0':"1"});
-                    set.push(c);
+                        "stroke": "#ffffff",
+                        "fill-opacity":(i<force)? 1:0,
+                        "stroke-width": (i<force)? 0:strokeW});
                     posiX += radius*2 + 5;
                 }
-                sets[$(this).attr('data-id')] = set;
             });
+			
+			TweenMax.to(bg, 0, {alpha:0});
+            TweenMax.to($('.content_line_sep', ct), 0, {alpha:0.15});
+            TweenMax.to($('.range_cat_title div'), 0, {alpha:0.2});
+            TweenMax.to($('.range_roll'), 0, {autoAlpha:0});
+            TweenMax.to(ct, 0, {alpha:0});
         };
 
         init();

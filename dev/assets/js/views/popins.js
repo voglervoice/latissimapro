@@ -3,8 +3,8 @@ define([
     "tweenmax",
     "events",
     "publisher",
-    "raphaeljs"
-], function($, TweenMax, Events, publisher, Raphael) {
+    "raphaeljs", "globals"
+], function($, TweenMax, Events, publisher, Raphael, Globals) {
 
     var Popins = function() {
         var self = this;
@@ -69,11 +69,11 @@ define([
                 var l1 = paper.path("M"+(centerX-crossSize)+" "+(centerY-crossSize)+"L"+(centerX+crossSize)+" "+(centerY+crossSize))
                     .attr({
                     "stroke": "#0c0c0c",
-                    "stroke-width": "1.5"});
+                    "stroke-width": (Globals.oldie)? 1.5 : "1.5"});
                 var l2 = paper.path("M"+(centerX-crossSize)+" "+(centerY+crossSize)+"L"+(centerX+crossSize)+" "+(centerY-crossSize))
                     .attr({
                     "stroke": "#0c0c0c",
-                    "stroke-width": "1.5"});
+                    "stroke-width": (Globals.oldie)? 1.5 : "1.5"});
 
                 $(this).on('click', function(event){
                     event.preventDefault();
