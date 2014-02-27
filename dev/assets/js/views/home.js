@@ -35,20 +35,27 @@ define([
         };
 
         this.initOpen = function(){
-            promoW = 20+$('.home_promotion_price').width()+Math.max($('.home_promotion_date').width(), $('.home_promotion_cta').width() +15) + 40;
+            
+            
+            var txtLeft = $('.home_promotion_price').width()+15;
+            var dateTop = $('.home_promotion_cta').height()+32;
 
-            $('.home_promotion_price_currency').css('left', $('.home_promotion_price').width()+20);
+            if($('.home_promotion_price_currency').width() > 0){
+                $('.home_promotion_price_currency').css('left', $('.home_promotion_price').width()+20);
+                txtLeft = $('.home_promotion_price').width()+15+$('.home_promotion_price_currency').width()+12;
+            }
 
-            if($('.home_promotion_price_currency').width() === 0)
-                $('.home_promotion_cta').css('left', $('.home_promotion_price').width()+15);
-            else
-                $('.home_promotion_cta').css('left', $('.home_promotion_price').width()+15 +$('.home_promotion_price_currency').width()+20);
+            $('.home_promotion_cta').css('left', txtLeft);
+            $('.home_promotion_date').css('left', txtLeft);
+            $('.home_promotion_date').css('top', dateTop);
+
+            promoW = txtLeft + Math.max($('.home_promotion_date').width(), $('.home_promotion_cta').width()) + 40;
             
             $('.home_promotion').width(promoW);
             $('.home_promotion_border').width(promoW-10);
             $('.home_promotion').css('right', "-"+promoW+"px");
 
-            var pH = Math.max(96, $('.home_promotion_date').height()+65);
+            var pH = Math.max(96, $('.home_promotion_date').height()+dateTop+12);
             $(".home_promotion").height(pH);
             $(".home_promotion_border").height(pH-8);
 

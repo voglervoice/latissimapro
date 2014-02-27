@@ -17,9 +17,11 @@ define([
         var paper = Raphael("menu_picts", $('nav').width(), $('nav').height());
         var paperScroll = Raphael("scroll_arrow", $('#scroll_arrow').width(), $('#scroll_arrow').height());
         var circles = [], cScroll, arrowScroll;
+        if(buzz.isSupported()){
         var music = new buzz.sound($('body').attr("data-baseurl")+"assets/music/nespressoU_lead_loop", {
     formats: [ "mp3"], preload: true
 });
+        }
         // ******************* public ******************* 
         this.resize = function(w, h){
             $('.scroll_to_explore').css('margin-left', -$('.scroll_to_explore').width()*0.5);
@@ -73,14 +75,16 @@ define([
 
         this.start = function() {
 
-            music.loop().play().fadeIn();
+            if(typeof music !== "undefined") {
+                music.loop().play().fadeIn();
 
-            if($('body').attr('data-prodmode') == '0'){
-                $('.sound_sprit').attr('class', 'sound_sprit_off');
-                 music.togglePlay();
-            }else{
-                musicPlaying = true;
-                musicPlayingUser = true;
+                if($('body').attr('data-prodmode') == '0'){
+                    $('.sound_sprit').attr('class', 'sound_sprit_off');
+                     music.togglePlay();
+                }else{
+                    musicPlaying = true;
+                    musicPlayingUser = true;
+                }
             }
 
             // header
@@ -95,14 +99,14 @@ define([
                 }else if($(this).hasClass('sound_sprit')){
                     event.preventDefault();
                     $(this).attr('class', 'sound_sprit_off');
-                    music.togglePlay();
+                   if(typeof music !== "undefined") music.togglePlay();
                     musicPlaying = false;
                     musicPlayingUser = false;
                     //publisher.publish(Events.soundOff);
                 }else if($(this).hasClass('sound_sprit_off')){
                     $(this).attr('class', 'sound_sprit');
                     event.preventDefault();
-                    music.togglePlay();
+                    if(typeof music !== "undefined") music.togglePlay();
                     musicPlaying = true;
                     musicPlayingUser = true;
                     //publisher.publish(Events.soundOn);
@@ -224,11 +228,11 @@ define([
 				else
 					document.body.className = this[hidden] ? "hidden" : "visible";
 
-				if($('body').hasClass('hidden') && musicPlaying){
+				if($('body').hasClass('hidden') && musicPlaying && typeof music !== "undefined"){
 					$('.sound_sprit').attr('class', 'sound_sprit_off');
 					music.togglePlay();
 					musicPlaying =false;
-				}else if($('body').hasClass('visible') && !musicPlaying && musicPlayingUser){
+				}else if($('body').hasClass('visible') && !musicPlaying && musicPlayingUser && typeof music !== "undefined"){
 					$('.sound_sprit_off').attr('class', 'sound_sprit');
 					music.togglePlay();
 					musicPlaying =true;
@@ -258,6 +262,13 @@ define([
             target.animate({ r : 4, easing:'backOut'},350);
         };
         var init = function(){
+
+            if (!document.cancelFullScreen && !document.mozCancelFullScreen &&!document.webkitCancelFullScreen && !document.msExitFullscreen)
+                $('.fullscreen').remove();
+            if(typeof music == "undefined")
+                $('.sound').remove();
+
+
 			if(Globals.oldie){
 				var bg = $('h1').css('background-image');
 				bg = bg.replace('url("','').replace('")','');

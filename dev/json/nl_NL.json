@@ -112,6 +112,26 @@
       "global__utils":{
         "section":"global__utils",
         "blockText":{
+          "google_play_url": {
+             "id": "2_24",
+            "label":"google_play_url",
+            "texte":"https://play.google.com/store/apps/details?id=com.nespresso.activities"
+          },
+          "apple_store_url": {
+             "id": "2_23",
+            "label":"apple_store_url",
+            "texte":"https://itunes.apple.com/nl/app/nespresso/id342879434?mt=8"
+          },
+          "flip_mobile": {
+             "id": "2_25",
+            "label":"flip_mobile",
+            "texte":"DRAAI UW TELEFOON<br>IN PORTRETMODUS"
+          },
+          "flip_tablet": {
+             "id": "2_22",
+            "label":"flip_tablet",
+            "texte":"DRAAI UW TABLET<br>IN LANDSCHAPSMODUS"
+          },
           "loading": {
              "id": "2_1",
             "label":"loading",
@@ -170,7 +190,7 @@
           "scroll_to_explore": {
              "id": "2_13",
             "label":"scroll_to_explore",
-            "texte":"Blader om te ontdekken"
+            "texte":"Ontdek meer"
           },
           "top": {
              "id": "2_12",
@@ -215,7 +235,7 @@
           "back": {
              "id": "2_21",
             "label":"back",
-            "texte":""
+            "texte":"Terug"
           }
         }
       },
@@ -250,12 +270,12 @@
           "form_send": {
              "id": "4_5",
             "label":"form_send",
-            "texte":"Send"
+            "texte":"Verzenden"
           },
           "success_message": {
              "id": "4_10",
             "label":"success_message",
-            "texte":"Your invitation has been sent."
+            "texte":"Uw uitnodiging werd verstuurd."
           },
           "error_message": {
              "id": "4_9",
@@ -397,14 +417,19 @@
       "navigation_menu":{
         "section":"navigation_menu",
         "blockText":{
+          "": {
+             "id": "12_7",
+            "label":"",
+            "texte":""
+          },
           "home": {
              "id": "12_3",
             "label":"home",
             "texte":"Home"
           },
-          "one_touch_is_all": {
+          "one_touch": {
              "id": "12_2",
-            "label":"one_touch_is_all",
+            "label":"one_touch",
             "texte":"Intuïtief touchscreen"
           },
           "a_wide_range_of_grands_crus": {
@@ -465,7 +490,7 @@
           "title": {
              "id": "10_15",
             "label":"title",
-            "texte":"Krachtig <br>van binnen en van buiten"
+            "texte":"Krachtig van binnen en van buiten"
           },
           "text": {
              "id": "10_14",

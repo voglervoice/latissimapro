@@ -25,7 +25,7 @@
           "legals": {
              "id": "1_8",
             "label":"legals",
-            "texte":"AGBs"
+            "texte":"Impressum"
           },
           "legals_link": {
              "id": "1_9",
@@ -112,6 +112,26 @@
       "global__utils":{
         "section":"global__utils",
         "blockText":{
+          "google_play_url": {
+             "id": "2_24",
+            "label":"google_play_url",
+            "texte":"https://play.google.com/store/apps/details?id=com.nespresso.activities"
+          },
+          "apple_store_url": {
+             "id": "2_23",
+            "label":"apple_store_url",
+            "texte":"https://itunes.apple.com/de/app/nespresso/id342879434?mt=8"
+          },
+          "flip_mobile": {
+             "id": "2_25",
+            "label":"flip_mobile",
+            "texte":"Smartphone in den hochformatigen<br>Anzeigemodus drehen"
+          },
+          "flip_tablet": {
+             "id": "2_22",
+            "label":"flip_tablet",
+            "texte":"Tablet in den hochformatigen <br>Anzeigemodus drehen"
+          },
           "loading": {
              "id": "2_1",
             "label":"loading",
@@ -215,7 +235,7 @@
           "back": {
              "id": "2_21",
             "label":"back",
-            "texte":""
+            "texte":"Zurück"
           }
         }
       },
@@ -265,12 +285,12 @@
           "email_template_subject": {
              "id": "4_8",
             "label":"email_template_subject",
-            "texte":"{senderName} lädt Sie ein, Lattissima Pro, die neue Kaffeemaschine von Nespresso zu entdecken."
+            "texte":"{senderName} lädt Sie ein die neue Kaffeemaschine von Nespresso zu entdecken: Lattissima Pro"
           },
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":"Die neue <i>Lattissima Pro</i> vereint leistungsstarke Technologie mit der Einfachheit eines Touchscreens. Bereiten Sie jetzt mit nur einer Berührung auch zu Hause exzellente Kaffee-Kreationen mit frischer Milch zu."
+            "texte":"Die neue <i>Lattissima Pro</i> vereint leistungsstarke Technologie mit der Einfachheit eines Touchscreens. Bereiten Sie jetzt mit nur einer Berührung auch zu Hause exzellente Kaffeekreationen mit frischer Milch zu."
           },
           "email_template_call_to_action": {
              "id": "4_6",
@@ -325,17 +345,17 @@
           "facebook_text": {
              "id": "3_5",
             "label":"facebook_text",
-            "texte":"Dank integriertem Touchscreen jetzt mit nur einer Berührung auch zu Hause exzellente Kaffee-Kreationen zubereiten."
+            "texte":"Dank integriertem Touchscreen jetzt mit nur einer Berührung auch zu Hause exzellente Kaffeekreationen zubereiten."
           },
           "pinterest_text": {
              "id": "3_6",
             "label":"pinterest_text",
-            "texte":"Dank integriertem Touchscreen jetzt mit nur einer Berührung auch zu Hause exzellente Kaffee-Kreationen zubereiten."
+            "texte":"Dank integriertem Touchscreen jetzt mit nur einer Berührung auch zu Hause exzellente Kaffeekreationen zubereiten."
           },
           "twitter_text": {
              "id": "3_7",
             "label":"twitter_text",
-            "texte":"Dank integriertem Touchscreen jetzt mit nur einer Berührung auch zu Hause exzellente Kaffee-Kreationen zubereiten. #LattissimaPro #Nespresso"
+            "texte":"Dank integriertem Touchscreen jetzt mit nur einer Berührung auch zu Hause exzellente Kaffeekreationen zubereiten. #LattissimaPro #Nespresso"
           }
         }
       },
@@ -350,12 +370,12 @@
           "text": {
              "id": "5_6",
             "label":"text",
-            "texte":"Die Kunst der Kaffeezubereitung war noch nie so simpel und komfortabel. Dank des intuitiv zu bedienenden Touchscreens können Sie mit nur einer Berührung unvergleichliche Kaffee-Kreationen auf Milchbasis genießen."
+            "texte":"Die Kunst der Kaffeezubereitung war noch nie so simpel und komfortabel. Dank des intuitiv zu bedienenden Touchscreens können Sie mit nur einer Berührung unvergleichliche Kaffeekreationen auf Milchbasis genießen."
           },
           "touchscreen_cta": {
              "id": "5_7",
             "label":"touchscreen_cta",
-            "texte":"Den Lattissima Pro Touchscreen entdecken"
+            "texte":"Den Touchscreen der Lattissima Pro entdecken"
           },
           "touchscreen_picto_1": {
              "id": "5_8",
@@ -397,14 +417,19 @@
       "navigation_menu":{
         "section":"navigation_menu",
         "blockText":{
+          "": {
+             "id": "12_7",
+            "label":"",
+            "texte":""
+          },
           "home": {
              "id": "12_3",
             "label":"home",
             "texte":"Start"
           },
-          "one_touch_is_all": {
+          "one_touch": {
              "id": "12_2",
-            "label":"one_touch_is_all",
+            "label":"one_touch",
             "texte":"Intuitiver Touchscreen"
           },
           "a_wide_range_of_grands_crus": {
@@ -465,7 +490,7 @@
           "title": {
              "id": "10_15",
             "label":"title",
-            "texte":"Hochwertige Verarbeitung innen und außen"
+            "texte":"Hochwertige Verarbeitung & modernste Technologie"
           },
           "text": {
              "id": "10_14",
@@ -530,7 +555,7 @@
           "bloc_4_•_auto_clean_system": {
              "id": "10_3",
             "label":"bloc_4_•_auto_clean_system",
-            "texte":"Selbstreinigungsfunktion der Milchaufschäumdüse"
+            "texte":"Automatische Reinigungsfunktion"
           },
           "bloc_4__info_1": {
              "id": "10_4",
@@ -675,7 +700,7 @@
           "grand_cru_13": {
              "id": "8_32",
             "label":"grand_cru_13",
-            "texte":"Bukeela ka Ethiopia"
+            "texte":"Bukeela ka Ethiopia Lungo"
           },
           "grand_cru_17": {
              "id": "8_48",
@@ -710,17 +735,17 @@
           "grand_cru_1_aromatic_profile": {
              "id": "8_62",
             "label":"grand_cru_1_aromatic_profile",
-            "texte":"Holznote, würzig"
+            "texte":"Holzig, würzig"
           },
           "grand_cru_1_aromatic_profile_with_milk": {
              "id": "8_61",
             "label":"grand_cru_1_aromatic_profile_with_milk",
-            "texte":"Geröstet, Bitternote, Schokolade"
+            "texte":"Geröstet, leichte Bitterkeit, Schokolade"
           },
           "grand_cru_2_aromatic_profile": {
              "id": "8_60",
             "label":"grand_cru_2_aromatic_profile",
-            "texte":"Lange geröstet, Getreide"
+            "texte":"Lang geröstet, Getreide"
           },
           "grand_cru_2_aromatic_profile_with_milk": {
              "id": "8_59",
@@ -730,12 +755,12 @@
           "grand_cru_3_aromatic_profile": {
              "id": "8_58",
             "label":"grand_cru_3_aromatic_profile",
-            "texte":"Stark geröstet, fruchtige Nuancen"
+            "texte":"Stark geröstet, leicht fruchtig"
           },
           "grand_cru_3_aromatic_profile_with_milk": {
              "id": "8_57",
             "label":"grand_cru_3_aromatic_profile_with_milk",
-            "texte":"Kräftig, voller Körper, leichte Bitternote"
+            "texte":"Kräftig, vollmundig, leichte Bitterkeit"
           },
           "grand_cru_4_aromatic_profile": {
              "id": "8_56",
@@ -745,12 +770,12 @@
           "grand_cru_4_aromatic_profile_with_milk": {
              "id": "8_55",
             "label":"grand_cru_4_aromatic_profile_with_milk",
-            "texte":"Kräftig, voller Körper, leichte Bitternote"
+            "texte":"Kräftig, vollmundig, leichte Bitterkeit"
           },
           "grand_cru_5_aromatic_profile": {
              "id": "8_54",
             "label":"grand_cru_5_aromatic_profile",
-            "texte":"Noten von Holz und Getreide"
+            "texte":"Holzig, Getreide"
           },
           "grand_cru_5_aromatic_profile_with_milk": {
              "id": "8_53",
@@ -765,7 +790,7 @@
           "grand_cru_6_aromatic_profile_with_milk": {
              "id": "8_51",
             "label":"grand_cru_6_aromatic_profile_with_milk",
-            "texte":"Leicht, süß, Biskuitnote"
+            "texte":"Leicht, süßes Gebäck"
           },
           "grand_cru_7_aromatic_profile": {
              "id": "8_66",
@@ -785,7 +810,7 @@
           "grand_cru_8_aromatic_profile_with_milk": {
              "id": "8_12",
             "label":"grand_cru_8_aromatic_profile_with_milk",
-            "texte":"Sehr leicht, süß, cremig und milchig"
+            "texte":"Sehr leicht, süß, rund und milchig"
           },
           "grand_cru_9_aromatic_profile": {
              "id": "8_11",
@@ -795,7 +820,7 @@
           "grand_cru_9_aromatic_profile_with_milk": {
              "id": "8_10",
             "label":"grand_cru_9_aromatic_profile_with_milk",
-            "texte":"Sehr leicht, süß, cremig und milchig"
+            "texte":"Sehr leicht, süß, rund und milchig"
           },
           "grand_cru_10_aromatic_profile": {
              "id": "8_9",
@@ -805,17 +830,17 @@
           "grand_cru_10_aromatic_profile_with_milk": {
              "id": "8_8",
             "label":"grand_cru_10_aromatic_profile_with_milk",
-            "texte":"Kräftig, voller Körper, leichte Bitternote"
+            "texte":"Kräftig, vollmundig, leichte Bitterkeit"
           },
           "grand_cru_12_aromatic_profile": {
              "id": "8_7",
             "label":"grand_cru_12_aromatic_profile",
-            "texte":"Süße Getreidenoten"
+            "texte":"Süß, Getreide"
           },
           "grand_cru_12_aromatic_profile_with_milk": {
              "id": "8_6",
             "label":"grand_cru_12_aromatic_profile_with_milk",
-            "texte":"Leicht, süß, Biskuitnote"
+            "texte":"Leicht, süßes Gebäck"
           },
           "grand_cru_11_aromatic_profile": {
              "id": "8_5",
@@ -825,17 +850,17 @@
           "grand_cru_11_aromatic_profile_with_milk": {
              "id": "8_4",
             "label":"grand_cru_11_aromatic_profile_with_milk",
-            "texte":"Leicht, süß, Biskuitnote"
+            "texte":"Leicht, süßes Gebäck"
           },
           "grand_cru_13_aromatic_profile": {
              "id": "8_3",
             "label":"grand_cru_13_aromatic_profile",
-            "texte":"Fein, frisch und blumig"
+            "texte":"Fein, blumig und frisch"
           },
           "grand_cru_13_aromatic_profile_with_milk": {
              "id": "8_2",
             "label":"grand_cru_13_aromatic_profile_with_milk",
-            "texte":"Blumig, voller Körper, Noten von Karamell"
+            "texte":"Blumig, vollmundig, Noten von Karamell"
           },
           "grand_cru_17_aromatic_profile": {
              "id": "8_1",
@@ -845,7 +870,7 @@
           "grand_cru_17_aromatic_profile_with_milk": {
              "id": "8_14",
             "label":"grand_cru_17_aromatic_profile_with_milk",
-            "texte":"Stark geröstete Noten von Getreide"
+            "texte":"Dunkel geröstet, Getreide"
           },
           "grand_cru_18_aromatic_profile": {
              "id": "8_15",
@@ -860,7 +885,7 @@
           "grand_cru_19_aromatic_profile": {
              "id": "8_30",
             "label":"grand_cru_19_aromatic_profile",
-            "texte":"Malzige Getreidenoten"
+            "texte":"Malziges Getreide"
           },
           "grand_cru_19_aromatic_profile_with_milk": {
              "id": "8_29",
@@ -875,7 +900,7 @@
           "grand_cru_20_aromatic_profile_with_milk": {
              "id": "8_22",
             "label":"grand_cru_20_aromatic_profile_with_milk",
-            "texte":"Noten von Karamell"
+            "texte":"Cremig braunes Karamell"
           },
           "grand_cru_21_aromatic_profile": {
              "id": "8_19",
@@ -895,7 +920,7 @@
           "grand_cru_22_aromatic_profile_with_milk": {
              "id": "8_18",
             "label":"grand_cru_22_aromatic_profile_with_milk",
-            "texte":"Leicht bitter, dunkle Schokolade"
+            "texte":"Leichte Bitterkeit, Schokolade, Kakao"
           }
         }
       },
@@ -905,7 +930,7 @@
           "title": {
              "id": "9_5",
             "label":"title",
-            "texte":"Köstliche Kaffee- und Milchrezepte"
+            "texte":"Köstliche Kaffee-Kreationen mit Milch"
           },
           "text_paragraph_1_milk_frothtext_paragraph_1_milk_froth": {
              "id": "9_4",
@@ -945,7 +970,7 @@
           "cta": {
              "id": "11_2",
             "label":"cta",
-            "texte":"ZUM ANGEBOT"
+            "texte":"VOM ANGEBOT PROFITIEREN"
           },
           "range_date": {
              "id": "11_1",

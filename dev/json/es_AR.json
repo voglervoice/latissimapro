@@ -112,6 +112,26 @@
       "global__utils":{
         "section":"global__utils",
         "blockText":{
+          "google_play_url": {
+             "id": "2_24",
+            "label":"google_play_url",
+            "texte":""
+          },
+          "apple_store_url": {
+             "id": "2_23",
+            "label":"apple_store_url",
+            "texte":""
+          },
+          "flip_mobile": {
+             "id": "2_25",
+            "label":"flip_mobile",
+            "texte":"PONGA SU TELÉFONO<br>EN POSICIÓN VERTICAL"
+          },
+          "flip_tablet": {
+             "id": "2_22",
+            "label":"flip_tablet",
+            "texte":"PONGA SU TABLET <br>EN POSICIÓN VERTICAL"
+          },
           "loading": {
              "id": "2_1",
             "label":"loading",
@@ -215,7 +235,7 @@
           "back": {
              "id": "2_21",
             "label":"back",
-            "texte":""
+            "texte":"Atrás"
           }
         }
       },
@@ -397,14 +417,19 @@
       "navigation_menu":{
         "section":"navigation_menu",
         "blockText":{
+          "": {
+             "id": "12_7",
+            "label":"",
+            "texte":""
+          },
           "home": {
              "id": "12_3",
             "label":"home",
             "texte":"Inicio"
           },
-          "one_touch_is_all": {
+          "one_touch": {
              "id": "12_2",
-            "label":"one_touch_is_all",
+            "label":"one_touch",
             "texte":"Pantalla táctil <br>intuitiva"
           },
           "a_wide_range_of_grands_crus": {
@@ -655,7 +680,7 @@
           "grand_cru_15_aromatic_profile_with_milk": {
              "id": "8_23",
             "label":"grand_cru_15_aromatic_profile_with_milk",
-            "texte":"Muy equilibrado, dulce, suave"
+            "texte":"Muy equilibrado, dulce, equilibrado"
           },
           "grand_cru_10": {
              "id": "8_38",
@@ -795,7 +820,7 @@
           "grand_cru_9_aromatic_profile_with_milk": {
              "id": "8_10",
             "label":"grand_cru_9_aromatic_profile_with_milk",
-            "texte":"Muy equilibrado, dulce, suave y lácteo"
+            "texte":"Muy equilibrado, dulce y equilibrado"
           },
           "grand_cru_10_aromatic_profile": {
              "id": "8_9",
@@ -885,7 +910,7 @@
           "grand_cru_21_aromatic_profile_with_milk": {
              "id": "8_20",
             "label":"grand_cru_21_aromatic_profile_with_milk",
-            "texte":"A caramelo"
+            "texte":"A vainilla"
           },
           "grand_cru_22_aromatic_profile": {
              "id": "8_17",
@@ -910,7 +935,7 @@
           "text_paragraph_1_milk_frothtext_paragraph_1_milk_froth": {
              "id": "9_4",
             "label":"text_paragraph_1_milk_frothtext_paragraph_1_milk_froth",
-            "texte":"Disfrute de una espuma de leche perfecta para preparar los Cappuccinos y Latte Macchiatos más exquisitos. Ajuste el regulador de la textura de la espuma de leche según sus gustos."
+            "texte":"Disfrute de una espuma de leche perfecta para preparar los Cappuccinos y Latte Macchiatos más exquisitos. Ajuste el regulador de la espuma de leche según sus gustos."
           },
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
@@ -920,7 +945,7 @@
           "schema_milk_froth_text_": {
              "id": "9_2",
             "label":"schema_milk_froth_text_",
-            "texte":"Regulador de la textura de la espuma de leche"
+            "texte":"Regulador de la espuma de leche"
           }
         }
       },
@@ -945,7 +970,7 @@
           "cta": {
              "id": "11_2",
             "label":"cta",
-            "texte":"Como crédito para cápsulas y accesorios"
+            "texte":"Como crédito para<br>cápsulas y accesorios"
           },
           "range_date": {
              "id": "11_1",

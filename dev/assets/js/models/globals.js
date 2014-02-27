@@ -14,7 +14,7 @@ define([ ], function () {
           Globals.PAGE_TOUCHSCREEN = "touchscreen";
           Globals.PAGE_COFFEE_RANGE = "coffeerange";
           Globals.PAGE_MILKSYSTEM = "milksystem";
-          Globals.PAGE_DESIGN = "design";
+          Globals.PAGE_DESIGN = "features";
 
           return Globals;
 });

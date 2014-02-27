@@ -112,6 +112,26 @@
       "global__utils":{
         "section":"global__utils",
         "blockText":{
+          "google_play_url": {
+             "id": "2_24",
+            "label":"google_play_url",
+            "texte":"https://play.google.com/store/apps/details?id=com.nespresso.activities"
+          },
+          "apple_store_url": {
+             "id": "2_23",
+            "label":"apple_store_url",
+            "texte":"https://itunes.apple.com/ca/app/nespresso/id342879434?mt=8"
+          },
+          "flip_mobile": {
+             "id": "2_25",
+            "label":"flip_mobile",
+            "texte":"FLIP YOUR PHONE <br>IN PORTRAIT MODE"
+          },
+          "flip_tablet": {
+             "id": "2_22",
+            "label":"flip_tablet",
+            "texte":"FLIP YOUR TABLET <br>IN PORTRAIT MODE"
+          },
           "loading": {
              "id": "2_1",
             "label":"loading",
@@ -215,7 +235,7 @@
           "back": {
              "id": "2_21",
             "label":"back",
-            "texte":""
+            "texte":"Back"
           }
         }
       },
@@ -265,12 +285,12 @@
           "email_template_subject": {
              "id": "4_8",
             "label":"email_template_subject",
-            "texte":"{senderName} invites you to discover Lattissima Pro, the new coffee machine by Nespresso"
+            "texte":"{senderName} invites you to discover <i>Lattissima Pro</i>, the new coffee machine by <i>Nespresso</i>"
           },
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":"The new Lattissima Pro machine is inspired by professional quality with the simplicity of a touch screen. Now you can prepare the most indulgent milk recipes at home in a single touch."
+            "texte":"The new <i>Lattissima Pro</i> machine is inspired by professional quality with the simplicity of a touch screen. Now you can prepare the most indulgent milk recipes at home in a single touch."
           },
           "email_template_call_to_action": {
              "id": "4_6",
@@ -305,7 +325,7 @@
           "capsules_category_5": {
              "id": "7_8",
             "label":"capsules_category_5",
-            "texte":"Pure origin"
+            "texte":"Pure Origin"
           },
           "capsules_category_6": {
              "id": "7_4",
@@ -320,7 +340,7 @@
           "facebook_title": {
              "id": "3_13",
             "label":"facebook_title",
-            "texte":"Discover Lattissima Pro, the new machine by Nespresso"
+            "texte":"Discover <i>Lattissima Pro</i>, the new machine by <i>Nespresso</i>"
           },
           "facebook_text": {
              "id": "3_5",
@@ -355,7 +375,7 @@
           "touchscreen_cta": {
              "id": "5_7",
             "label":"touchscreen_cta",
-            "texte":"Explore the Lattissima Pro touchscreen"
+            "texte":"Explore the <i>Lattissima Pro</i> touchscreen"
           },
           "touchscreen_picto_1": {
              "id": "5_8",
@@ -397,14 +417,19 @@
       "navigation_menu":{
         "section":"navigation_menu",
         "blockText":{
+          "": {
+             "id": "12_7",
+            "label":"",
+            "texte":""
+          },
           "home": {
              "id": "12_3",
             "label":"home",
             "texte":"Home"
           },
-          "one_touch_is_all": {
+          "one_touch": {
              "id": "12_2",
-            "label":"one_touch_is_all",
+            "label":"one_touch",
             "texte":"Intuitive<br>touchscreen"
           },
           "a_wide_range_of_grands_crus": {
@@ -440,7 +465,7 @@
           "description_text": {
              "id": "6_8",
             "label":"description_text",
-            "texte":"Nespresso Capsules preserve the aromas of freshly ground coffee. <br>A great Espresso and Milk specialty always starts with a great Espresso.<br>Choose from 22 Grands Crus and prepare for a voyage of sensorial experiences."
+            "texte":"Nespresso Capsules preserve the aromas of freshly ground coffee. <br>A great espresso and milk specialty always starts with a great espresso.<br>Choose from 22 Grands Crus and prepare for a voyage of sensorial experiences."
           },
           "intensity": {
              "id": "6_11",
@@ -470,7 +495,7 @@
           "text": {
              "id": "10_14",
             "label":"text",
-            "texte":"The new Lattissima Pro is inspired by the quality of professional machines with a high level of simplicity, presented in a sleek, pure and robust design with aluminium finish."
+            "texte":"The new <i>Lattissima Pro</i> is inspired by the quality of professional machines with a high level of simplicity, presented in a sleek, pure and robust design with aluminium finish."
           },
           "bloc_1_•_characteristics": {
              "id": "10_13",
@@ -525,7 +550,7 @@
           "bloc_3__info_2": {
              "id": "10_1",
             "label":"bloc_3__info_2",
-            "texte":"10 oz. milk container storable in fridge"
+            "texte":"0.5 l/16.9 oz milk container storable in fridge"
           },
           "bloc_4_•_auto_clean_system": {
              "id": "10_3",
@@ -545,7 +570,7 @@
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":"Download user guide"
+            "texte":"Download<br>user guide"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -555,7 +580,7 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Watch our assistance videos"
+            "texte":"Watch our <br>assistance videos"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",

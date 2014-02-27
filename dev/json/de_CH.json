@@ -95,7 +95,7 @@
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":"https://www.nespresso.com/ch/de"
+            "texte":"http://www.nespresso.com/ch/de/Order-Machines"
           },
           "country_and_language": {
              "id": "1_2",
@@ -112,6 +112,26 @@
       "global__utils":{
         "section":"global__utils",
         "blockText":{
+          "google_play_url": {
+             "id": "2_24",
+            "label":"google_play_url",
+            "texte":"https://play.google.com/store/apps/details?id=com.nespresso.activities"
+          },
+          "apple_store_url": {
+             "id": "2_23",
+            "label":"apple_store_url",
+            "texte":"https://itunes.apple.com/ch/app/nespresso/id342879434?mt=8"
+          },
+          "flip_mobile": {
+             "id": "2_25",
+            "label":"flip_mobile",
+            "texte":""
+          },
+          "flip_tablet": {
+             "id": "2_22",
+            "label":"flip_tablet",
+            "texte":""
+          },
           "loading": {
              "id": "2_1",
             "label":"loading",
@@ -125,12 +145,12 @@
           "order_by_phone_": {
              "id": "2_20",
             "label":"order_by_phone_",
-            "texte":""
+            "texte":"Drehen Sie Ihr Smartphone auf <br>den hochformatigen Anzeigemodus"
           },
           "order_phone_number_": {
              "id": "2_9",
             "label":"order_phone_number_",
-            "texte":""
+            "texte":"Drehen Sie Ihren Tablet-PC auf <br>den hochformatigen Anzeigemodus"
           },
           "order_now": {
              "id": "2_8",
@@ -170,7 +190,7 @@
           "scroll_to_explore": {
              "id": "2_13",
             "label":"scroll_to_explore",
-            "texte":"Scrollen für weitere Infos"
+            "texte":"Für weitere Infos bitte scrollen"
           },
           "top": {
              "id": "2_12",
@@ -215,7 +235,7 @@
           "back": {
              "id": "2_21",
             "label":"back",
-            "texte":""
+            "texte":"Zurück"
           }
         }
       },
@@ -270,7 +290,7 @@
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":"Die neue Lattissima Pro ist inspiriert von der Qualität der Profi-Maschinen, doch dank des Touchscreen ganz einfach in der Bedienung. Jetzt können Sie zu Hause die köstlichsten Kaffee-Milchgetränke auf Knopfdruck zubereiten."
+            "texte":"Die neue <i>Lattissima Pro</i> ist inspiriert von der Qualität der Profi-Maschinen, doch dank des Touchscreen ganz einfach in der Bedienung. Jetzt können Sie zu Hause die köstlichsten Kaffee-Milchgetränke auf Knopfdruck zubereiten."
           },
           "email_template_call_to_action": {
              "id": "4_6",
@@ -397,14 +417,19 @@
       "navigation_menu":{
         "section":"navigation_menu",
         "blockText":{
+          "": {
+             "id": "12_7",
+            "label":"",
+            "texte":""
+          },
           "home": {
              "id": "12_3",
             "label":"home",
             "texte":"Start"
           },
-          "one_touch_is_all": {
+          "one_touch": {
              "id": "12_2",
-            "label":"one_touch_is_all",
+            "label":"one_touch",
             "texte":"Intuitiver Touchscreen"
           },
           "a_wide_range_of_grands_crus": {
@@ -545,7 +570,7 @@
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":"Anleitung herunterladen"
+            "texte":"Anleitung <br>herunterladen"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -555,7 +580,7 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Anleitungsvideos ansehen"
+            "texte":"Anleitungsvideos <br>ansehen"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
@@ -910,7 +935,7 @@
           "text_paragraph_1_milk_frothtext_paragraph_1_milk_froth": {
              "id": "9_4",
             "label":"text_paragraph_1_milk_frothtext_paragraph_1_milk_froth",
-            "texte":"Die Milch wird jedes Mal perfekt geschäumt, sodass der köstlichste Cappuccino oder Latte Macchiato zustande kommt. Regulieren Sie die Aufschäumfunktion ganz nach Ihrem Geschmack."
+            "texte":"Die Milch wird jedes Mal perfekt geschäumt, sodass ein überaus köstlicher Cappuccino oder Latte Macchiato zustande kommt. Regulieren Sie die Aufschäumfunktion ganz nach Ihrem Geschmack."
           },
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
@@ -955,7 +980,7 @@
           "url": {
              "id": "11_6",
             "label":"url",
-            "texte":""
+            "texte":"www.nespresso.com/promotion"
           }
         }
       }

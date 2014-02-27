@@ -98,7 +98,7 @@ require_once("php/class/Mobile_Detect.php");
 $detectMobile   =   new Mobile_Detect();
 if ( $detectMobile->isMobile() || $detectMobile->isTablet() ) {
     // TODO : good urls
-    $redirection = 'http://www.nespresso.com/lattisima_pro_mobile/';
+    $redirection = 'http://www.staging.nespresso.com/lattissima-pro/mobile/index.html?locale='.$languagesite.'_'.$territory;
     //header('HTTP/1.0 308 Permanent Redirect');
     header('Location: ' . $redirection);
     exit();

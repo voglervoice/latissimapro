@@ -112,6 +112,26 @@
       "global__utils":{
         "section":"global__utils",
         "blockText":{
+          "google_play_url": {
+             "id": "2_24",
+            "label":"google_play_url",
+            "texte":"https://play.google.com/store/apps/details?id=com.nespresso.activities"
+          },
+          "apple_store_url": {
+             "id": "2_23",
+            "label":"apple_store_url",
+            "texte":"https://itunes.apple.com/ca/app/nespresso/id342879434?mt=8"
+          },
+          "flip_mobile": {
+             "id": "2_25",
+            "label":"flip_mobile",
+            "texte":"TOURNEZ VOTRE MOBILE<br>EN MODE \"PORTRAIT\""
+          },
+          "flip_tablet": {
+             "id": "2_22",
+            "label":"flip_tablet",
+            "texte":"TOURNEZ VOTRE TABLETTE<br>EN MODE \"PORTRAIT\""
+          },
           "loading": {
              "id": "2_1",
             "label":"loading",
@@ -215,7 +235,7 @@
           "back": {
              "id": "2_21",
             "label":"back",
-            "texte":""
+            "texte":"Retour"
           }
         }
       },
@@ -265,12 +285,12 @@
           "email_template_subject": {
              "id": "4_8",
             "label":"email_template_subject",
-            "texte":"{senderName} vous invite à découvrir Lattissima Pro, la nouvelle machine Nespresso"
+            "texte":"{senderName} vous invite à découvrir <i>Lattissima Pro</i>, la nouvelle machine Nespresso"
           },
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":"La nouvelle Lattissima Pro s'inspire de la qualité des machines professionnelles, mais offre la simplicité d'un écran tactile. Vous pouvez maintenant préparer chez vous les recettes de lait les plus délicieuses d'une simple pression."
+            "texte":"La nouvelle <i>Lattissima Pro</i> s'inspire de la qualité des machines professionnelles, mais offre la simplicité d'un écran tactile. Vous pouvez maintenant préparer chez vous les recettes de lait les plus délicieuses d'une simple pression."
           },
           "email_template_call_to_action": {
              "id": "4_6",
@@ -285,7 +305,7 @@
           "capsules_category_1": {
              "id": "7_5",
             "label":"capsules_category_1",
-            "texte":"Intense"
+            "texte":"Intenso"
           },
           "capsules_category_2": {
              "id": "7_11",
@@ -320,7 +340,7 @@
           "facebook_title": {
              "id": "3_13",
             "label":"facebook_title",
-            "texte":"Découvrez Lattissima Pro, la nouvelle machine Nespresso"
+            "texte":"Découvrez <i>Lattissima Pro</i>, la nouvelle machine Nespresso"
           },
           "facebook_text": {
              "id": "3_5",
@@ -355,7 +375,7 @@
           "touchscreen_cta": {
              "id": "5_7",
             "label":"touchscreen_cta",
-            "texte":"Découvrez l'écran tactile Lattissima Pro"
+            "texte":"Découvrez <br>l'écran tactile <br><i>Lattissima Pro</i>"
           },
           "touchscreen_picto_1": {
              "id": "5_8",
@@ -397,14 +417,19 @@
       "navigation_menu":{
         "section":"navigation_menu",
         "blockText":{
+          "": {
+             "id": "12_7",
+            "label":"",
+            "texte":""
+          },
           "home": {
              "id": "12_3",
             "label":"home",
             "texte":"Accueil"
           },
-          "one_touch_is_all": {
+          "one_touch": {
              "id": "12_2",
-            "label":"one_touch_is_all",
+            "label":"one_touch",
             "texte":"Écran tactile<br>intuitif"
           },
           "a_wide_range_of_grands_crus": {
@@ -470,7 +495,7 @@
           "text": {
              "id": "10_14",
             "label":"text",
-            "texte":"La nouvelle Lattissima Pro, inspirée par la qualité des machines professionnelles, est extrêmement simple à utiliser. Elle se distingue par sa conception élégante et solide, ses formes épurées et sa finition en aluminium."
+            "texte":"La nouvelle <i>Lattissima Pro</i>, inspirée par la qualité des machines professionnelles, est extrêmement simple à utiliser. Elle se distingue par sa conception élégante et solide, ses formes épurées et sa finition en aluminium."
           },
           "bloc_1_•_characteristics": {
              "id": "10_13",
@@ -525,7 +550,7 @@
           "bloc_3__info_2": {
              "id": "10_1",
             "label":"bloc_3__info_2",
-            "texte":"Réservoir à lait de 300 ml qui peut se ranger dans le frigo"
+            "texte":"Réservoir à lait de 0.5 l/16.9 oz qui peut se ranger dans le frigo"
           },
           "bloc_4_•_auto_clean_system": {
              "id": "10_3",

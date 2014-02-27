@@ -95,7 +95,7 @@
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":"https://www.nespresso.com/ch/en"
+            "texte":"http://www.nespresso.com/ch/en/Order-Machines"
           },
           "country_and_language": {
              "id": "1_2",
@@ -112,6 +112,26 @@
       "global__utils":{
         "section":"global__utils",
         "blockText":{
+          "google_play_url": {
+             "id": "2_24",
+            "label":"google_play_url",
+            "texte":"https://play.google.com/store/apps/details?id=com.nespresso.activities"
+          },
+          "apple_store_url": {
+             "id": "2_23",
+            "label":"apple_store_url",
+            "texte":"https://itunes.apple.com/en/app/nespresso/id342879434?mt=8"
+          },
+          "flip_mobile": {
+             "id": "2_25",
+            "label":"flip_mobile",
+            "texte":"FLIP YOUR PHONE <br>IN PORTRAIT MODE"
+          },
+          "flip_tablet": {
+             "id": "2_22",
+            "label":"flip_tablet",
+            "texte":"FLIP YOUR TABLET <br>IN PORTRAIT MODE"
+          },
           "loading": {
              "id": "2_1",
             "label":"loading",
@@ -215,7 +235,7 @@
           "back": {
              "id": "2_21",
             "label":"back",
-            "texte":""
+            "texte":"Back"
           }
         }
       },
@@ -270,7 +290,7 @@
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":"The new Lattissima Pro machine is inspired by professional quality with the simplicity of a touch screen. Now you can prepare the most indulgent milk recipes at home in a single touch."
+            "texte":"The new <i>Lattissima Pro</i> machine is inspired by professional quality with the simplicity of a touch screen. Now you can prepare the most indulgent milk recipes at home in a single touch."
           },
           "email_template_call_to_action": {
              "id": "4_6",
@@ -397,14 +417,19 @@
       "navigation_menu":{
         "section":"navigation_menu",
         "blockText":{
+          "": {
+             "id": "12_7",
+            "label":"",
+            "texte":""
+          },
           "home": {
              "id": "12_3",
             "label":"home",
             "texte":"Home"
           },
-          "one_touch_is_all": {
+          "one_touch": {
              "id": "12_2",
-            "label":"one_touch_is_all",
+            "label":"one_touch",
             "texte":"Intuitive<br>touchscreen"
           },
           "a_wide_range_of_grands_crus": {
@@ -545,7 +570,7 @@
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":"Download user guide"
+            "texte":"Download<br>user guide"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -555,7 +580,7 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Watch our assistance videos"
+            "texte":"Watch our<br>assistance videos"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
@@ -955,7 +980,7 @@
           "url": {
              "id": "11_6",
             "label":"url",
-            "texte":"http://www.nespresso.com/..."
+            "texte":"www.nespresso.com/promotion"
           }
         }
       }

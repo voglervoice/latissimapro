@@ -112,6 +112,26 @@
       "global__utils":{
         "section":"global__utils",
         "blockText":{
+          "google_play_url": {
+             "id": "2_24",
+            "label":"google_play_url",
+            "texte":"https://play.google.com/store/apps/details?id=com.nespresso.activities"
+          },
+          "apple_store_url": {
+             "id": "2_23",
+            "label":"apple_store_url",
+            "texte":"https://itunes.apple.com/fr/app/nespresso/id342879434?mt=8"
+          },
+          "flip_mobile": {
+             "id": "2_25",
+            "label":"flip_mobile",
+            "texte":"Tournez votre mobile<br>en mode portrait"
+          },
+          "flip_tablet": {
+             "id": "2_22",
+            "label":"flip_tablet",
+            "texte":"Tournez votre tablette<br>en mode portrait"
+          },
           "loading": {
              "id": "2_1",
             "label":"loading",
@@ -170,7 +190,7 @@
           "scroll_to_explore": {
              "id": "2_13",
             "label":"scroll_to_explore",
-            "texte":"Faire défiler pour explorer"
+            "texte":"Faire défiler"
           },
           "top": {
              "id": "2_12",
@@ -397,14 +417,19 @@
       "navigation_menu":{
         "section":"navigation_menu",
         "blockText":{
+          "": {
+             "id": "12_7",
+            "label":"",
+            "texte":""
+          },
           "home": {
              "id": "12_3",
             "label":"home",
             "texte":"Accueil"
           },
-          "one_touch_is_all": {
+          "one_touch": {
              "id": "12_2",
-            "label":"one_touch_is_all",
+            "label":"one_touch",
             "texte":"Écran tactile intuitif"
           },
           "a_wide_range_of_grands_crus": {
@@ -915,7 +940,7 @@
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
             "label":"text_paragraph_2_auto_clean",
-            "texte":"Il vous suffit de tourner le bouton de régulation de la mousse de lait sur la position Clean. L’hygiène de la machine a été évaluée par un organisme international de certification afin de garantir une propreté optimale"
+            "texte":"Il vous suffit de tourner le bouton de régulation de la mousse de lait sur la position Clean. L’hygiène de la machine a été évaluée par un organisme international de certification afin de garantir une propreté optimale."
           },
           "schema_milk_froth_text_": {
              "id": "9_2",
@@ -930,27 +955,27 @@
           "receive": {
              "id": "11_5",
             "label":"receive",
-            "texte":""
+            "texte":"Recevez jusqu'à"
           },
           "currency": {
              "id": "11_4",
             "label":"currency",
-            "texte":""
+            "texte":"€"
           },
           "price": {
              "id": "11_3",
             "label":"price",
-            "texte":""
+            "texte":"80"
           },
           "cta": {
              "id": "11_2",
             "label":"cta",
-            "texte":""
+            "texte":"Profiter de l'offre"
           },
           "range_date": {
              "id": "11_1",
             "label":"range_date",
-            "texte":""
+            "texte":"Jusqu'au 07.07.2014"
           },
           "url": {
              "id": "11_6",

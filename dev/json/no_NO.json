@@ -112,6 +112,26 @@
       "global__utils":{
         "section":"global__utils",
         "blockText":{
+          "google_play_url": {
+             "id": "2_24",
+            "label":"google_play_url",
+            "texte":"https://play.google.com/store/apps/details?id=com.nespresso.activities"
+          },
+          "apple_store_url": {
+             "id": "2_23",
+            "label":"apple_store_url",
+            "texte":"https://itunes.apple.com/no/app/nespresso/id342879434?mt=8"
+          },
+          "flip_mobile": {
+             "id": "2_25",
+            "label":"flip_mobile",
+            "texte":"SNU TELEFONEN"
+          },
+          "flip_tablet": {
+             "id": "2_22",
+            "label":"flip_tablet",
+            "texte":"SNU NETTBRETTET"
+          },
           "loading": {
              "id": "2_1",
             "label":"loading",
@@ -215,7 +235,7 @@
           "back": {
              "id": "2_21",
             "label":"back",
-            "texte":""
+            "texte":"Tilbake"
           }
         }
       },
@@ -265,7 +285,7 @@
           "email_template_subject": {
              "id": "4_8",
             "label":"email_template_subject",
-            "texte":"{avsenders navn} har invitert deg til å oppdage Lattissima Pro, den nye kaffemaskinen fra Nespresso"
+            "texte":"{senderName} har invitert deg til å oppdage Lattissima Pro, den nye kaffemaskinen fra Nespresso"
           },
           "email_template_content": {
              "id": "4_12",
@@ -397,14 +417,19 @@
       "navigation_menu":{
         "section":"navigation_menu",
         "blockText":{
+          "": {
+             "id": "12_7",
+            "label":"",
+            "texte":""
+          },
           "home": {
              "id": "12_3",
             "label":"home",
             "texte":"Hjem"
           },
-          "one_touch_is_all": {
+          "one_touch": {
              "id": "12_2",
-            "label":"one_touch_is_all",
+            "label":"one_touch",
             "texte":"Intuitiv berøringsskjerm"
           },
           "a_wide_range_of_grands_crus": {
@@ -430,12 +455,12 @@
           "_discover_range": {
              "id": "6_14",
             "label":"_discover_range",
-            "texte":"Oppdag alle våre Grands Crus kaffe"
+            "texte":"Oppdag alle våre Grands Crus-kaffevarianter"
           },
           "title": {
              "id": "6_7",
             "label":"title",
-            "texte":"Et stort og spennende sortiment av Grands Crus kaffevarianter"
+            "texte":"Et stort og spennende sortiment av Grands Crus-kaffevarianter"
           },
           "description_text": {
              "id": "6_8",
@@ -550,7 +575,7 @@
           "user_guide_url": {
              "id": "10_23",
             "label":"user_guide_url",
-            "texte":""
+            "texte":"http://www.nespresso.com/khjkhd.pdf"
           },
           "assistance_video": {
              "id": "10_7",
@@ -625,7 +650,7 @@
           "grand_cru_16_aromatic_profile_with_milk": {
              "id": "8_25",
             "label":"grand_cru_16_aromatic_profile_with_milk",
-            "texte":"Ristet kornaktig, grønne frukter"
+            "texte":"Ristet korn, grønne frukter"
           },
           "grand_cru_16_aromatic_profile": {
              "id": "8_26",
@@ -675,7 +700,7 @@
           "grand_cru_13": {
              "id": "8_32",
             "label":"grand_cru_13",
-            "texte":"Bukeela ka Ethiopia"
+            "texte":"Bukeela ka Ethiopia Lungo"
           },
           "grand_cru_17": {
              "id": "8_48",
@@ -715,7 +740,7 @@
           "grand_cru_1_aromatic_profile_with_milk": {
              "id": "8_61",
             "label":"grand_cru_1_aromatic_profile_with_milk",
-            "texte":"Røstet, bitter aroma, sjokolade"
+            "texte":"Røstet, bitre undertoner, sjokolade"
           },
           "grand_cru_2_aromatic_profile": {
              "id": "8_60",
@@ -735,7 +760,7 @@
           "grand_cru_3_aromatic_profile_with_milk": {
              "id": "8_57",
             "label":"grand_cru_3_aromatic_profile_with_milk",
-            "texte":"Sterk, fyldig, bitter aroma"
+            "texte":"Sterk, fyldig, bitre undertoner"
           },
           "grand_cru_4_aromatic_profile": {
              "id": "8_56",
@@ -745,7 +770,7 @@
           "grand_cru_4_aromatic_profile_with_milk": {
              "id": "8_55",
             "label":"grand_cru_4_aromatic_profile_with_milk",
-            "texte":"Sterk, fyldig, bitter aroma"
+            "texte":"Sterk, fyldig, bitre undertoner"
           },
           "grand_cru_5_aromatic_profile": {
              "id": "8_54",
@@ -805,7 +830,7 @@
           "grand_cru_10_aromatic_profile_with_milk": {
              "id": "8_8",
             "label":"grand_cru_10_aromatic_profile_with_milk",
-            "texte":"Sterk, fyldig, bitter aroma"
+            "texte":"Sterk, fyldig, bitre undertoner"
           },
           "grand_cru_12_aromatic_profile": {
              "id": "8_7",
@@ -845,7 +870,7 @@
           "grand_cru_17_aromatic_profile_with_milk": {
              "id": "8_14",
             "label":"grand_cru_17_aromatic_profile_with_milk",
-            "texte":"Kraftig ristet, røstet kornaktig"
+            "texte":"Kraftig ristet korn"
           },
           "grand_cru_18_aromatic_profile": {
              "id": "8_15",
@@ -865,7 +890,7 @@
           "grand_cru_19_aromatic_profile_with_milk": {
              "id": "8_29",
             "label":"grand_cru_19_aromatic_profile_with_milk",
-            "texte":"Ristet kornaktig, fruktig"
+            "texte":"Ristet korn, fruktig"
           },
           "grand_cru_20_aromatic_profile": {
              "id": "8_21",
@@ -905,7 +930,7 @@
           "title": {
              "id": "9_5",
             "label":"title",
-            "texte":"Deilkate melkebaserte kaffeoppskrifter"
+            "texte":"Delikate melkebaserte kaffeoppskrifter"
           },
           "text_paragraph_1_milk_frothtext_paragraph_1_milk_froth": {
              "id": "9_4",
@@ -945,7 +970,7 @@
           "cta": {
              "id": "11_2",
             "label":"cta",
-            "texte":"Motta tilbudet"
+            "texte":"Benytt deg av tilbudet"
           },
           "range_date": {
              "id": "11_1",

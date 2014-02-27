@@ -68,6 +68,7 @@
         .home_promotion a .home_promotion_price_currency{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
         .home_promotion a .home_promotion_receive{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
         .home_promotion a .home_promotion_cta{font-family: 'Arial Unicode', Arial, Helvetica, sans-serif;}
+        .range_content .range_coffees .range_cat .range_cat_caps a span{font-weight: lighter;}
         </style>
         <?php } ?>
     </head>

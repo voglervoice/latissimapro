@@ -112,6 +112,26 @@
       "global__utils":{
         "section":"global__utils",
         "blockText":{
+          "google_play_url": {
+             "id": "2_24",
+            "label":"google_play_url",
+            "texte":""
+          },
+          "apple_store_url": {
+             "id": "2_23",
+            "label":"apple_store_url",
+            "texte":""
+          },
+          "flip_mobile": {
+             "id": "2_25",
+            "label":"flip_mobile",
+            "texte":"Fordítsa el <br>okostelefonját"
+          },
+          "flip_tablet": {
+             "id": "2_22",
+            "label":"flip_tablet",
+            "texte":"Fordítsa el <br>a táblagépét"
+          },
           "loading": {
              "id": "2_1",
             "label":"loading",
@@ -205,7 +225,7 @@
           "discover": {
              "id": "2_2",
             "label":"discover",
-            "texte":""
+            "texte":"Fedezze fel"
           },
           "discover_more": {
              "id": "2_14",
@@ -215,7 +235,7 @@
           "back": {
              "id": "2_21",
             "label":"back",
-            "texte":""
+            "texte":"Vissza"
           }
         }
       },
@@ -305,7 +325,7 @@
           "capsules_category_5": {
              "id": "7_8",
             "label":"capsules_category_5",
-            "texte":"Pure origin"
+            "texte":"Pure Origin"
           },
           "capsules_category_6": {
              "id": "7_4",
@@ -320,7 +340,7 @@
           "facebook_title": {
              "id": "3_13",
             "label":"facebook_title",
-            "texte":"Fedezze fel a Lattissima Pro-t, a legújabb Nespresso kávégépet"
+            "texte":"Fedezd fel a Lattissima Pro-t, a legújabb Nespresso kávégépet"
           },
           "facebook_text": {
              "id": "3_5",
@@ -335,7 +355,7 @@
           "twitter_text": {
              "id": "3_7",
             "label":"twitter_text",
-            "texte":"A Lattissima Pro segítségével egyetlen mozdulattal elkészítheti otthonában egyedülálló tejes receptjét."
+            "texte":"A Lattissima Pro segítségével egyetlen mozdulattal elkészítheted otthonodban egyedülálló tejes receptedet."
           }
         }
       },
@@ -397,25 +417,30 @@
       "navigation_menu":{
         "section":"navigation_menu",
         "blockText":{
+          "": {
+             "id": "12_7",
+            "label":"",
+            "texte":""
+          },
           "home": {
              "id": "12_3",
             "label":"home",
             "texte":"Főoldal"
           },
-          "one_touch_is_all": {
+          "one_touch": {
              "id": "12_2",
-            "label":"one_touch_is_all",
+            "label":"one_touch",
             "texte":"Intuitív érintőképernyő"
           },
           "a_wide_range_of_grands_crus": {
              "id": "12_4",
             "label":"a_wide_range_of_grands_crus",
-            "texte":"Kávé választék"
+            "texte":"Kávéválaszték"
           },
           "delicious_coffee_and_milk_recipes": {
              "id": "12_5",
             "label":"delicious_coffee_and_milk_recipes",
-            "texte":"Tejes rendszer"
+            "texte":"Tejhabosító rendszer"
           },
           "powerful__inside_andamp;_out": {
              "id": "12_6",
@@ -465,12 +490,12 @@
           "title": {
              "id": "10_15",
             "label":"title",
-            "texte":"Erőteljes kívül és belül"
+            "texte":"Erő kívül és belül"
           },
           "text": {
              "id": "10_14",
             "label":"text",
-            "texte":"Az új Lattissima Pro kávégépet a professzionális gépek inspirálták, kiegészítve az egyszerű kezelhetőség magas fokával, melyet a sima, letisztult design és a cziszolt aluminium borítás tesz még tökéletesebbé."
+            "texte":"Az új Lattissima Pro kávégépet a professzionális gépek inspirálták, kiegészülve az egyszerű kezelhetőség magas fokával, melyet a sima, letisztult design és a csiszolt alumínium borítás tesz még tökéletesebbé."
           },
           "bloc_1_•_characteristics": {
              "id": "10_13",
@@ -480,17 +505,17 @@
           "bloc_1__info_1": {
              "id": "10_17",
             "label":"bloc_1__info_1",
-            "texte":"Csiszolt aluminium borítás"
+            "texte":"Csiszolt alumínium borítás"
           },
           "bloc_1__info_2": {
              "id": "10_18",
             "label":"bloc_1__info_2",
-            "texte":"19 bár"
+            "texte":"19 bar"
           },
           "bloc_1__info_3": {
              "id": "10_19",
             "label":"bloc_1__info_3",
-            "texte":"üzemkész állapot 25 másodpercen belül"
+            "texte":"Üzemkész állapot 25 másodpercen belül"
           },
           "bloc_1__info_4": {
              "id": "10_24",
@@ -530,7 +555,7 @@
           "bloc_4_•_auto_clean_system": {
              "id": "10_3",
             "label":"bloc_4_•_auto_clean_system",
-            "texte":"Automatikus tisztító funkicó"
+            "texte":"Automatikus tisztító funkció"
           },
           "bloc_4__info_1": {
              "id": "10_4",
@@ -540,7 +565,7 @@
           "bloc_4__info_2": {
              "id": "10_5",
             "label":"bloc_4__info_2",
-            "texte":"A kávégép tejesrendszerének elemei mosogatógépben tisztíthatóak"
+            "texte":"A kávégép tejhabosító rendszerének elemei mosogatógépben is tisztíthatóak"
           },
           "download_user_guide": {
              "id": "10_9",
@@ -820,7 +845,7 @@
           "grand_cru_11_aromatic_profile": {
              "id": "8_5",
             "label":"grand_cru_11_aromatic_profile",
-            "texte":"Gyümölcsös, boros, kekeszes"
+            "texte":"Gyümölcsös, boros, kekszes"
           },
           "grand_cru_11_aromatic_profile_with_milk": {
              "id": "8_4",
@@ -885,7 +910,7 @@
           "grand_cru_21_aromatic_profile_with_milk": {
              "id": "8_20",
             "label":"grand_cru_21_aromatic_profile_with_milk",
-            "texte":"Karamell"
+            "texte":"Vanília"
           },
           "grand_cru_22_aromatic_profile": {
              "id": "8_17",
@@ -895,7 +920,7 @@
           "grand_cru_22_aromatic_profile_with_milk": {
              "id": "8_18",
             "label":"grand_cru_22_aromatic_profile_with_milk",
-            "texte":"Enyhén kesernyé étcsokoládé"
+            "texte":"Enyhén kesernyés étcsokoládé"
           }
         }
       },
@@ -905,7 +930,7 @@
           "title": {
              "id": "9_5",
             "label":"title",
-            "texte":"Ellenállhatatlan kávé és tejes receptek. Állítsa be a tejhab mennyiség szabályozó gombot ízlésének megfelelően."
+            "texte":"Ellenállhatatlan kávé és tejes receptek. Állítsa be a tejhab textúra szabályozó gombot ízlésének megfelelően."
           },
           "text_paragraph_1_milk_frothtext_paragraph_1_milk_froth": {
              "id": "9_4",
@@ -915,12 +940,12 @@
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
             "label":"text_paragraph_2_auto_clean",
-            "texte":"Csak tekerje a tejhab szabályozó gombot a \" Clean \" állásba. A kávégép higiéniája  külső laboratórium által tesztelt, mely biztosítja amagasfokú tisztaságot."
+            "texte":"Csak tekerje a tejhab textúra szabályozó gombot a \" Clean \" állásba. A kávégép higiéniai rendszere külső laboratórum által tesztelt, amely megfelel a szigorú tisztasági előírásoknak."
           },
           "schema_milk_froth_text_": {
              "id": "9_2",
             "label":"schema_milk_froth_text_",
-            "texte":"Tejhab erősség szabályozó"
+            "texte":"Tejhab textúra szabályozó"
           }
         }
       },

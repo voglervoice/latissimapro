@@ -10,152 +10,172 @@
           "nespresso_link": {
              "id": "1_19",
             "label":"nespresso_link",
-            "texte":""
+            "texte":"http://www.nespresso.com/fi/fi"
           },
           "contact": {
              "id": "1_6",
             "label":"contact",
-            "texte":""
+            "texte":"Ota yhteyttä"
           },
           "contact_link": {
              "id": "1_7",
             "label":"contact_link",
-            "texte":""
+            "texte":"http://www.nespresso.com/#/fi/fi/contact/"
           },
           "legals": {
              "id": "1_8",
             "label":"legals",
-            "texte":""
+            "texte":"Käyttöehdot"
           },
           "legals_link": {
              "id": "1_9",
             "label":"legals_link",
-            "texte":""
+            "texte":"http://www.nespresso.com/#/fi/fi/terms and conditions"
           },
           "store_locator": {
              "id": "1_10",
             "label":"store_locator",
-            "texte":""
+            "texte":"Myymäläsijainti"
           },
           "store_locator_link": {
              "id": "1_20",
             "label":"store_locator_link",
-            "texte":""
+            "texte":"http://www.nespresso.com/#/fi/fi/store locator"
           },
           "share": {
              "id": "1_11",
             "label":"share",
-            "texte":""
+            "texte":"Jaa"
           },
           "facebook": {
              "id": "1_12",
             "label":"facebook",
-            "texte":""
+            "texte":"Facebook"
           },
           "twitter": {
              "id": "1_13",
             "label":"twitter",
-            "texte":""
+            "texte":"Twitter"
           },
           "pinterest": {
              "id": "1_14",
             "label":"pinterest",
-            "texte":""
+            "texte":"Pinterest"
           },
           "send_to_a_friend": {
              "id": "1_15",
             "label":"send_to_a_friend",
-            "texte":""
+            "texte":"Lähetä kaverille"
           },
           "full_screen": {
              "id": "1_16",
             "label":"full_screen",
-            "texte":""
+            "texte":"Koko näyttö"
           },
           "exit_full_screen": {
              "id": "1_17",
             "label":"exit_full_screen",
-            "texte":""
+            "texte":"Pienennä näyttö"
           },
           "sound_on": {
              "id": "1_18",
             "label":"sound_on",
-            "texte":""
+            "texte":"Äänet päällä"
           },
           "sound_off": {
              "id": "1_5",
             "label":"sound_off",
-            "texte":""
+            "texte":"Äänet poissa"
           },
           "order": {
              "id": "1_4",
             "label":"order",
-            "texte":""
+            "texte":"Tilaa"
           },
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":""
+            "texte":"https://nesclub.nespresso.com/id/login/"
           },
           "country_and_language": {
              "id": "1_2",
             "label":"country_and_language",
-            "texte":""
+            "texte":"Maa ja kieli"
           },
           "country_and_language_text": {
              "id": "1_1",
             "label":"country_and_language_text",
-            "texte":""
+            "texte":"Valitse maa ja kieli"
           }
         }
       },
       "global__utils":{
         "section":"global__utils",
         "blockText":{
+          "google_play_url": {
+             "id": "2_24",
+            "label":"google_play_url",
+            "texte":"https://play.google.com/store/apps/details?id=com.nespresso.activities"
+          },
+          "apple_store_url": {
+             "id": "2_23",
+            "label":"apple_store_url",
+            "texte":"https://itunes.apple.com/fi/app/nespresso/id342879434?mt=8"
+          },
+          "flip_mobile": {
+             "id": "2_25",
+            "label":"flip_mobile",
+            "texte":"Käännä tablettisi<br>pystysuoraan"
+          },
+          "flip_tablet": {
+             "id": "2_22",
+            "label":"flip_tablet",
+            "texte":"Käännä tablettisi<br>pystysuoraan"
+          },
           "loading": {
              "id": "2_1",
             "label":"loading",
-            "texte":""
+            "texte":"Lataa"
           },
           "order": {
              "id": "2_19",
             "label":"order",
-            "texte":""
+            "texte":"Tilaa"
           },
           "order_by_phone_": {
              "id": "2_20",
             "label":"order_by_phone_",
-            "texte":""
+            "texte":"Puhelimitse"
           },
           "order_phone_number_": {
              "id": "2_9",
             "label":"order_phone_number_",
-            "texte":""
+            "texte":"0800 177 601"
           },
           "order_now": {
              "id": "2_8",
             "label":"order_now",
-            "texte":""
+            "texte":"Tilaa"
           },
           "watch": {
              "id": "2_7",
             "label":"watch",
-            "texte":""
+            "texte":"Katso"
           },
           "watch_the_video": {
              "id": "2_18",
             "label":"watch_the_video",
-            "texte":""
+            "texte":"Katso video"
           },
           "play": {
              "id": "2_10",
             "label":"play",
-            "texte":""
+            "texte":"Toista"
           },
           "close": {
              "id": "2_17",
             "label":"close",
-            "texte":""
+            "texte":"Sulje"
           },
           "to": {
              "id": "2_16",
@@ -165,57 +185,57 @@
           "scroll": {
              "id": "2_15",
             "label":"scroll",
-            "texte":""
+            "texte":"Rullaa tai täppää"
           },
           "scroll_to_explore": {
              "id": "2_13",
             "label":"scroll_to_explore",
-            "texte":""
+            "texte":"Rullaa ja tutustu"
           },
           "top": {
              "id": "2_12",
             "label":"top",
-            "texte":""
+            "texte":"Ylös"
           },
           "down": {
              "id": "2_11",
             "label":"down",
-            "texte":""
+            "texte":"Alas"
           },
           "menu": {
              "id": "2_6",
             "label":"menu",
-            "texte":""
+            "texte":"Valikko"
           },
           "more": {
              "id": "2_5",
             "label":"more",
-            "texte":""
+            "texte":"Lisää"
           },
           "app": {
              "id": "2_4",
             "label":"app",
-            "texte":""
+            "texte":"Sovellus"
           },
           "application": {
              "id": "2_3",
             "label":"application",
-            "texte":""
+            "texte":"Sovellus"
           },
           "discover": {
              "id": "2_2",
             "label":"discover",
-            "texte":""
+            "texte":"Tutustu"
           },
           "discover_more": {
              "id": "2_14",
             "label":"discover_more",
-            "texte":""
+            "texte":"Lue lisää"
           },
           "back": {
              "id": "2_21",
             "label":"back",
-            "texte":""
+            "texte":"Takaisin"
           }
         }
       },
@@ -225,57 +245,57 @@
           "form_title": {
              "id": "4_11",
             "label":"form_title",
-            "texte":""
+            "texte":"Jaa sivu kaverille"
           },
           "form_subheading": {
              "id": "4_1",
             "label":"form_subheading",
-            "texte":""
+            "texte":"Täytä alla olevat kentät"
           },
           "form_senders_name": {
              "id": "4_2",
             "label":"form_senders_name",
-            "texte":""
+            "texte":"Nimesi"
           },
           "form_senders_email": {
              "id": "4_3",
             "label":"form_senders_email",
-            "texte":""
+            "texte":"Sähköpostiosoitteesi"
           },
           "form_receivers_email": {
              "id": "4_4",
             "label":"form_receivers_email",
-            "texte":""
+            "texte":"Kaverisi sähköpostiosoite"
           },
           "form_send": {
              "id": "4_5",
             "label":"form_send",
-            "texte":""
+            "texte":"Lähetä"
           },
           "success_message": {
              "id": "4_10",
             "label":"success_message",
-            "texte":""
+            "texte":"Viestisi on lähetetty."
           },
           "error_message": {
              "id": "4_9",
             "label":"error_message",
-            "texte":""
+            "texte":"Virhe sivulla. Pahoittelemme. Yritä myöhemmin uudelleen."
           },
           "email_template_subject": {
              "id": "4_8",
             "label":"email_template_subject",
-            "texte":""
+            "texte":"{senderName} kutsuu sinut tutustumaan Lattissima Pro -kahvikoneeseen."
           },
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":""
+            "texte":"Uusi Lattissima Pro on ammattilaiskäyttöön soveltuva, mutta<br>kosketusnäyttönsä ansiosta silti helppokäyttöinen, kahvikone.<br>Erikoiskahvit syntyvät helposti kotona vain yhden napin painalluksella.<br>Sen yksinkertainen design, sekä harjattu alumiininen viimeistely tuovat<br>elegantin lisän keittiöösi."
           },
           "email_template_call_to_action": {
              "id": "4_6",
             "label":"email_template_call_to_action",
-            "texte":""
+            "texte":"Tutustu"
           }
         }
       },
@@ -285,32 +305,32 @@
           "capsules_category_1": {
              "id": "7_5",
             "label":"capsules_category_1",
-            "texte":""
+            "texte":"Intenso"
           },
           "capsules_category_2": {
              "id": "7_11",
             "label":"capsules_category_2",
-            "texte":""
+            "texte":"Espresso"
           },
           "capsules_category_3": {
              "id": "7_9",
             "label":"capsules_category_3",
-            "texte":""
+            "texte":"Lungo"
           },
           "capsules_category_4": {
              "id": "7_12",
             "label":"capsules_category_4",
-            "texte":""
+            "texte":"Decaffeinato"
           },
           "capsules_category_5": {
              "id": "7_8",
             "label":"capsules_category_5",
-            "texte":""
+            "texte":"Pure Origin"
           },
           "capsules_category_6": {
              "id": "7_4",
             "label":"capsules_category_6",
-            "texte":""
+            "texte":"Variations"
           }
         }
       },
@@ -320,22 +340,22 @@
           "facebook_title": {
              "id": "3_13",
             "label":"facebook_title",
-            "texte":""
+            "texte":"Tutustu uuteen, Lattissima Pro -kahvikoneeseen"
           },
           "facebook_text": {
              "id": "3_5",
             "label":"facebook_text",
-            "texte":""
+            "texte":"Valmista herkullisimpia maitokahveja kotonasi yhdellä painalluksella."
           },
           "pinterest_text": {
              "id": "3_6",
             "label":"pinterest_text",
-            "texte":""
+            "texte":"Valmista herkullisimpia maitokahveja kotonasi yhdellä painalluksella."
           },
           "twitter_text": {
              "id": "3_7",
             "label":"twitter_text",
-            "texte":""
+            "texte":"Lattissima Pro -kahvikoneella valmistat herkullisia maitokahveja kotonasi, vain yhdellä napin painalluksella. #LattissimaPro #Nespresso"
           }
         }
       },
@@ -345,82 +365,87 @@
           "title": {
              "id": "5_5",
             "label":"title",
-            "texte":""
+            "texte":"Yksi painallus riittää"
           },
           "text": {
              "id": "5_6",
             "label":"text",
-            "texte":""
+            "texte":"Kahvin valmistaminen ei ole koskaan ollut helpompaa ja mukavampaa. Kosketusnäytön avulla ohjelmoit laitteen helposti ja nautit nopeasti erilaisista maitokahveista."
           },
           "touchscreen_cta": {
              "id": "5_7",
             "label":"touchscreen_cta",
-            "texte":""
+            "texte":"Tutustu kosketusnäyttöön"
           },
           "touchscreen_picto_1": {
              "id": "5_8",
             "label":"touchscreen_picto_1",
-            "texte":""
+            "texte":"Lungo"
           },
           "touchscreen_picto_2": {
              "id": "5_9",
             "label":"touchscreen_picto_2",
-            "texte":""
+            "texte":"Espresso"
           },
           "touchscreen_picto_3": {
              "id": "5_10",
             "label":"touchscreen_picto_3",
-            "texte":""
+            "texte":"Ristretto"
           },
           "touchscreen_picto_4": {
              "id": "5_11",
             "label":"touchscreen_picto_4",
-            "texte":""
+            "texte":"Kuuma vesi"
           },
           "touchscreen_picto_5": {
              "id": "5_3",
             "label":"touchscreen_picto_5",
-            "texte":""
+            "texte":"Lämmin maito"
           },
           "touchscreen_picto_6": {
              "id": "5_2",
             "label":"touchscreen_picto_6",
-            "texte":""
+            "texte":"Cappuccino"
           },
           "touchscreen_picto_7": {
              "id": "5_12",
             "label":"touchscreen_picto_7",
-            "texte":""
+            "texte":"Latte Macchiato"
           }
         }
       },
       "navigation_menu":{
         "section":"navigation_menu",
         "blockText":{
+          "": {
+             "id": "12_7",
+            "label":"",
+            "texte":""
+          },
           "home": {
              "id": "12_3",
             "label":"home",
-            "texte":""
+            "texte":"Aloitussivu"
           },
-          "one_touch_is_all": {
+          "one_touch": {
              "id": "12_2",
-            "label":"one_touch_is_all",
-            "texte":""
+            "label":"one_touch",
+            "texte":"Kosketusnäyttö"
           },
           "a_wide_range_of_grands_crus": {
              "id": "12_4",
             "label":"a_wide_range_of_grands_crus",
-            "texte":""
+            "texte":"Kahvivalikoima"
           },
           "delicious_coffee_and_milk_recipes": {
              "id": "12_5",
             "label":"delicious_coffee_and_milk_recipes",
-            "texte":""
+            "texte":"Maidonvaahdotus"
           },
           "powerful__inside_andamp;_out": {
              "id": "12_6",
             "label":"powerful__inside_andamp;_out",
-            "texte":""
+            "texte":"Toiminnot"
           }
         }
       },
@@ -430,32 +455,32 @@
           "_discover_range": {
              "id": "6_14",
             "label":"_discover_range",
-            "texte":""
+            "texte":"Tutustu kaikkiin Grands Crus -kahveihimme"
           },
           "title": {
              "id": "6_7",
             "label":"title",
-            "texte":""
+            "texte":"Laaja valikoima Grands Crus -kahveja"
           },
           "description_text": {
              "id": "6_8",
             "label":"description_text",
-            "texte":""
+            "texte":"Nespresso-kahvikapselit kätkevät sisäänsä kaikki kahvin aromit, ja pitävät ne tuoreena pitkään. Hyvän maitokahvin pohjana on aina laadukas kahvi, valitse siis 22 Grands Crus -kahvista ja luo oma, nautinnollinen kahvihetkesi!"
           },
           "intensity": {
              "id": "6_11",
             "label":"intensity",
-            "texte":""
+            "texte":"Vahvuusaste:"
           },
           "aromatic_notes": {
              "id": "6_13",
             "label":"aromatic_notes",
-            "texte":""
+            "texte":"Makuprofiili"
           },
           "with_milk___": {
              "id": "6_12",
             "label":"with_milk___",
-            "texte":""
+            "texte":"Maidon kera:"
           }
         }
       },
@@ -465,87 +490,87 @@
           "title": {
              "id": "10_15",
             "label":"title",
-            "texte":""
+            "texte":"Tehokas sisältä ja ulkoa"
           },
           "text": {
              "id": "10_14",
             "label":"text",
-            "texte":""
+            "texte":"Uusi Lattissima Pro on ammattilaiskäyttöön soveltuva, mutta<br>kosketusnäyttönsä ansiosta silti helppokäyttöinen, kahvikone.<br>Erikoiskahvit syntyvät helposti kotona vain yhden napin painalluksella.<br>Sen yksinkertainen design, sekä harjattu alumiininen viimeistely tuovat<br>elegantin lisän keittiöösi."
           },
           "bloc_1_•_characteristics": {
              "id": "10_13",
             "label":"bloc_1_•_characteristics",
-            "texte":""
+            "texte":"Lisätiedot"
           },
           "bloc_1__info_1": {
              "id": "10_17",
             "label":"bloc_1__info_1",
-            "texte":""
+            "texte":"Harjattu, alumiininen viimeistely"
           },
           "bloc_1__info_2": {
              "id": "10_18",
             "label":"bloc_1__info_2",
-            "texte":""
+            "texte":"19 barin paine"
           },
           "bloc_1__info_3": {
              "id": "10_19",
             "label":"bloc_1__info_3",
-            "texte":""
+            "texte":"Kahvikone on käyttövalmis 25 sekunnissa"
           },
           "bloc_1__info_4": {
              "id": "10_24",
             "label":"bloc_1__info_4",
-            "texte":""
+            "texte":"Automaattinen virrankatkaisu"
           },
           "bloc_2_•_intuitive_touchscreen": {
              "id": "10_20",
             "label":"bloc_2_•_intuitive_touchscreen",
-            "texte":""
+            "texte":"Kosketusnäyttö"
           },
           "bloc_2__info_1": {
              "id": "10_21",
             "label":"bloc_2__info_1",
-            "texte":""
+            "texte":"LCD näyttö ja selkeät ohjeet sen käyttöön"
           },
           "bloc_2__info_2": {
              "id": "10_22",
             "label":"bloc_2__info_2",
-            "texte":""
+            "texte":"Herkullisia kahveja vain yhdellä napin painalluksella"
           },
           "bloc_3_•_optimal_milk_froth_quality": {
              "id": "10_11",
             "label":"bloc_3_•_optimal_milk_froth_quality",
-            "texte":""
+            "texte":"Optimaalinen maidonvaahdotusjärjestelmä"
           },
           "bloc_3__info_1": {
              "id": "10_10",
             "label":"bloc_3__info_1",
-            "texte":""
+            "texte":"Edistyksellinen höyrytsteknologia"
           },
           "bloc_3__info_2": {
              "id": "10_1",
             "label":"bloc_3__info_2",
-            "texte":""
+            "texte":"Irrotettava 0,5 litran maitosäiliö, jota säilytetään jääkaapissa"
           },
           "bloc_4_•_auto_clean_system": {
              "id": "10_3",
             "label":"bloc_4_•_auto_clean_system",
-            "texte":""
+            "texte":"Automaattinen maidonvaahdotusjärjestelmän<br>huuhtelutoiminto"
           },
           "bloc_4__info_1": {
              "id": "10_4",
             "label":"bloc_4__info_1",
-            "texte":""
+            "texte":"International Certification Body -hyväksynnällä"
           },
           "bloc_4__info_2": {
              "id": "10_5",
             "label":"bloc_4__info_2",
-            "texte":""
+            "texte":"Maitosäiliön osat ovat konepestäviä"
           },
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":""
+            "texte":"Lataa käyttöohjeet"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -555,12 +580,12 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":""
+            "texte":"Katso ohjevideot"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
             "label":"youtube_video_playlist_url",
-            "texte":""
+            "texte":"http://www.youtube.com/Playlist"
           }
         }
       },
@@ -570,332 +595,332 @@
           "grand_cru_14": {
              "id": "8_33",
             "label":"grand_cru_14",
-            "texte":""
+            "texte":"Decaffeinato Intenso"
           },
           "grand_cru_1": {
              "id": "8_41",
             "label":"grand_cru_1",
-            "texte":""
+            "texte":"Kazaar"
           },
           "grand_cru_2": {
              "id": "8_42",
             "label":"grand_cru_2",
-            "texte":""
+            "texte":"Dharkan"
           },
           "grand_cru_15": {
              "id": "8_34",
             "label":"grand_cru_15",
-            "texte":""
+            "texte":"Decaffeinato"
           },
           "grand_cru_16": {
              "id": "8_35",
             "label":"grand_cru_16",
-            "texte":""
+            "texte":"Decaffeinato Lungo"
           },
           "grand_cru_3": {
              "id": "8_43",
             "label":"grand_cru_3",
-            "texte":""
+            "texte":"Ristretto"
           },
           "grand_cru_14_aromatic_profile": {
              "id": "8_28",
             "label":"grand_cru_14_aromatic_profile",
-            "texte":""
+            "texte":"Paahteinen, kaakaomainen, viljainen"
           },
           "grand_cru_4": {
              "id": "8_44",
             "label":"grand_cru_4",
-            "texte":""
+            "texte":"Arpeggio"
           },
           "grand_cru_14_aromatic_profile_with_milk": {
              "id": "8_27",
             "label":"grand_cru_14_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Pehmeä, tasapainoinen, kevyen paahteinen"
           },
           "grand_cru_5": {
              "id": "8_45",
             "label":"grand_cru_5",
-            "texte":""
+            "texte":"Roma"
           },
           "grand_cru_6": {
              "id": "8_46",
             "label":"grand_cru_6",
-            "texte":""
+            "texte":"Livanto"
           },
           "grand_cru_16_aromatic_profile_with_milk": {
              "id": "8_25",
             "label":"grand_cru_16_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Paahdetun viljainen, hedelmäinen"
           },
           "grand_cru_16_aromatic_profile": {
              "id": "8_26",
             "label":"grand_cru_16_aromatic_profile",
-            "texte":""
+            "texte":"Paahdetun viljainen"
           },
           "grand_cru_7": {
              "id": "8_47",
             "label":"grand_cru_7",
-            "texte":""
+            "texte":"Capriccio"
           },
           "grand_cru_15_aromatic_profile": {
              "id": "8_24",
             "label":"grand_cru_15_aromatic_profile",
-            "texte":""
+            "texte":"Hedelmäinen ja viinimäinen"
           },
           "grand_cru_8": {
              "id": "8_40",
             "label":"grand_cru_8",
-            "texte":""
+            "texte":"Volluto"
           },
           "grand_cru_9": {
              "id": "8_39",
             "label":"grand_cru_9",
-            "texte":""
+            "texte":"Cosi"
           },
           "grand_cru_15_aromatic_profile_with_milk": {
              "id": "8_23",
             "label":"grand_cru_15_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Kevyt ja pehmeä"
           },
           "grand_cru_10": {
              "id": "8_38",
             "label":"grand_cru_10",
-            "texte":""
+            "texte":"Indriya from India"
           },
           "grand_cru_11": {
              "id": "8_37",
             "label":"grand_cru_11",
-            "texte":""
+            "texte":"Rosabaya de Colombia"
           },
           "grand_cru_12": {
              "id": "8_36",
             "label":"grand_cru_12",
-            "texte":""
+            "texte":"Dulsão do Brasil"
           },
           "grand_cru_13": {
              "id": "8_32",
             "label":"grand_cru_13",
-            "texte":""
+            "texte":"Bukeela ka Ethiopia"
           },
           "grand_cru_17": {
              "id": "8_48",
             "label":"grand_cru_17",
-            "texte":""
+            "texte":"Fortissio Lungo"
           },
           "grand_cru_18": {
              "id": "8_49",
             "label":"grand_cru_18",
-            "texte":""
+            "texte":"Vivalto Lungo"
           },
           "grand_cru_19": {
              "id": "8_50",
             "label":"grand_cru_19",
-            "texte":""
+            "texte":"Linizio Lungo"
           },
           "grand_cru_20": {
              "id": "8_65",
             "label":"grand_cru_20",
-            "texte":""
+            "texte":"Caramelito"
           },
           "grand_cru_21": {
              "id": "8_64",
             "label":"grand_cru_21",
-            "texte":""
+            "texte":"Vanilio"
           },
           "grand_cru_22": {
              "id": "8_63",
             "label":"grand_cru_22",
-            "texte":""
+            "texte":"Cioccatino"
           },
           "grand_cru_1_aromatic_profile": {
              "id": "8_62",
             "label":"grand_cru_1_aromatic_profile",
-            "texte":""
+            "texte":"Puunomainen, mausteinen"
           },
           "grand_cru_1_aromatic_profile_with_milk": {
              "id": "8_61",
             "label":"grand_cru_1_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Paahteinen, karvas, kaakaomainen"
           },
           "grand_cru_2_aromatic_profile": {
              "id": "8_60",
             "label":"grand_cru_2_aromatic_profile",
-            "texte":""
+            "texte":"Voimakaspaahtoinen, viljainen"
           },
           "grand_cru_2_aromatic_profile_with_milk": {
              "id": "8_59",
             "label":"grand_cru_2_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Paahteinen, rikas, pähkinäinen"
           },
           "grand_cru_3_aromatic_profile": {
              "id": "8_58",
             "label":"grand_cru_3_aromatic_profile",
-            "texte":""
+            "texte":"Voimakaspaahtoinen, hieman hedelmäinen"
           },
           "grand_cru_3_aromatic_profile_with_milk": {
              "id": "8_57",
             "label":"grand_cru_3_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Vahva, täyteläinen, karvas"
           },
           "grand_cru_4_aromatic_profile": {
              "id": "8_56",
             "label":"grand_cru_4_aromatic_profile",
-            "texte":""
+            "texte":"Voimakaspaahtoinen, kaakaomainen"
           },
           "grand_cru_4_aromatic_profile_with_milk": {
              "id": "8_55",
             "label":"grand_cru_4_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Vahva, täyteläinen, karvas"
           },
           "grand_cru_5_aromatic_profile": {
              "id": "8_54",
             "label":"grand_cru_5_aromatic_profile",
-            "texte":""
+            "texte":"Puunomainen, viljainen"
           },
           "grand_cru_5_aromatic_profile_with_milk": {
              "id": "8_53",
             "label":"grand_cru_5_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Tasapainoinen, kevyesti paahdettu"
           },
           "grand_cru_6_aromatic_profile": {
              "id": "8_52",
             "label":"grand_cru_6_aromatic_profile",
-            "texte":""
+            "texte":"Karamellimainen"
           },
           "grand_cru_6_aromatic_profile_with_milk": {
              "id": "8_51",
             "label":"grand_cru_6_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Kevyt, makeahko, keksimäinen"
           },
           "grand_cru_7_aromatic_profile": {
              "id": "8_66",
             "label":"grand_cru_7_aromatic_profile",
-            "texte":""
+            "texte":"Viljainen"
           },
           "grand_cru_7_aromatic_profile_with_milk": {
              "id": "8_31",
             "label":"grand_cru_7_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Tasapainoinen, kevyesti paahteinen"
           },
           "grand_cru_8_aromatic_profile": {
              "id": "8_13",
             "label":"grand_cru_8_aromatic_profile",
-            "texte":""
+            "texte":"Viljainen, hedelmäinen"
           },
           "grand_cru_8_aromatic_profile_with_milk": {
              "id": "8_12",
             "label":"grand_cru_8_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Todella kevyt, makea ja pehmeä"
           },
           "grand_cru_9_aromatic_profile": {
              "id": "8_11",
             "label":"grand_cru_9_aromatic_profile",
-            "texte":""
+            "texte":"Sitruksinen"
           },
           "grand_cru_9_aromatic_profile_with_milk": {
              "id": "8_10",
             "label":"grand_cru_9_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Todella kevyt, makea ja pehmeä"
           },
           "grand_cru_10_aromatic_profile": {
              "id": "8_9",
             "label":"grand_cru_10_aromatic_profile",
-            "texte":""
+            "texte":"Mausteinen"
           },
           "grand_cru_10_aromatic_profile_with_milk": {
              "id": "8_8",
             "label":"grand_cru_10_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Vahva, täyteläinen, karvas"
           },
           "grand_cru_12_aromatic_profile": {
              "id": "8_7",
             "label":"grand_cru_12_aromatic_profile",
-            "texte":""
+            "texte":"Makean viljainen"
           },
           "grand_cru_12_aromatic_profile_with_milk": {
              "id": "8_6",
             "label":"grand_cru_12_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Kevyt, makea, keksimäinen"
           },
           "grand_cru_11_aromatic_profile": {
              "id": "8_5",
             "label":"grand_cru_11_aromatic_profile",
-            "texte":""
+            "texte":"Hedelmäinen, viinimäinen, paahteinen"
           },
           "grand_cru_11_aromatic_profile_with_milk": {
              "id": "8_4",
             "label":"grand_cru_11_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Kevyt, makea, keksimäinen"
           },
           "grand_cru_13_aromatic_profile": {
              "id": "8_3",
             "label":"grand_cru_13_aromatic_profile",
-            "texte":""
+            "texte":"Raikas ja kukkainen"
           },
           "grand_cru_13_aromatic_profile_with_milk": {
              "id": "8_2",
             "label":"grand_cru_13_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Kukkainen, täyteläinen, karamellimainen"
           },
           "grand_cru_17_aromatic_profile": {
              "id": "8_1",
             "label":"grand_cru_17_aromatic_profile",
-            "texte":""
+            "texte":"Voimakaspaahtoinen, viljainen"
           },
           "grand_cru_17_aromatic_profile_with_milk": {
              "id": "8_14",
             "label":"grand_cru_17_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Voimakkaan viljainen ja paahteinen"
           },
           "grand_cru_18_aromatic_profile": {
              "id": "8_15",
             "label":"grand_cru_18_aromatic_profile",
-            "texte":""
+            "texte":"Paahteinen, kukkainen"
           },
           "grand_cru_18_aromatic_profile_with_milk": {
              "id": "8_16",
             "label":"grand_cru_18_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Paahteinen, hedelmäinen, pähkinäinen"
           },
           "grand_cru_19_aromatic_profile": {
              "id": "8_30",
             "label":"grand_cru_19_aromatic_profile",
-            "texte":""
+            "texte":"Maltainen, viljainen"
           },
           "grand_cru_19_aromatic_profile_with_milk": {
              "id": "8_29",
             "label":"grand_cru_19_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Paahdetun viljainen, hedelmäinen"
           },
           "grand_cru_20_aromatic_profile": {
              "id": "8_21",
             "label":"grand_cru_20_aromatic_profile",
-            "texte":""
+            "texte":"Kinuskinen"
           },
           "grand_cru_20_aromatic_profile_with_milk": {
              "id": "8_22",
             "label":"grand_cru_20_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Täyteläinen, karamellimainen"
           },
           "grand_cru_21_aromatic_profile": {
              "id": "8_19",
             "label":"grand_cru_21_aromatic_profile",
-            "texte":""
+            "texte":"Vaniljainen"
           },
           "grand_cru_21_aromatic_profile_with_milk": {
              "id": "8_20",
             "label":"grand_cru_21_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Karamellimainen"
           },
           "grand_cru_22_aromatic_profile": {
              "id": "8_17",
             "label":"grand_cru_22_aromatic_profile",
-            "texte":""
+            "texte":"Tumma suklaa"
           },
           "grand_cru_22_aromatic_profile_with_milk": {
              "id": "8_18",
             "label":"grand_cru_22_aromatic_profile_with_milk",
-            "texte":""
+            "texte":"Kevyen karvas, kaakaomainen"
           }
         }
       },
@@ -905,22 +930,22 @@
           "title": {
              "id": "9_5",
             "label":"title",
-            "texte":""
+            "texte":"Herkulliset maitokahvit"
           },
           "text_paragraph_1_milk_frothtext_paragraph_1_milk_froth": {
              "id": "9_4",
             "label":"text_paragraph_1_milk_frothtext_paragraph_1_milk_froth",
-            "texte":""
+            "texte":"Kaikkein herkullisimmissa erikoiskahveissa maito on aina vaahdotettu parhaimmilleen. Säädä maitovaahdon paksuutta säätönupin avulla, jolloin voit valmistaa omaan makuusi sopivimman erikoiskahvin."
           },
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
             "label":"text_paragraph_2_auto_clean",
-            "texte":""
+            "texte":"Käännä maitovaahdin säätonuppi Clean-asentoon. Kahvikone puhdistaa maitoputket, jolloin maitosäiliö pysyy hygienisenä ja puhtaana."
           },
           "schema_milk_froth_text_": {
              "id": "9_2",
             "label":"schema_milk_froth_text_",
-            "texte":""
+            "texte":"Maitovaahdon paksuuden säätönuppi"
           }
         }
       },
@@ -930,32 +955,32 @@
           "receive": {
              "id": "11_5",
             "label":"receive",
-            "texte":""
+            "texte":"Saat 40 tai 80"
           },
           "currency": {
              "id": "11_4",
             "label":"currency",
-            "texte":""
+            "texte":"€"
           },
           "price": {
              "id": "11_3",
             "label":"price",
-            "texte":""
+            "texte":"takaisin"
           },
           "cta": {
              "id": "11_2",
             "label":"cta",
-            "texte":""
+            "texte":"Tilaa"
           },
           "range_date": {
              "id": "11_1",
             "label":"range_date",
-            "texte":""
+            "texte":"Voimasssa 1.4.-31.5.2014"
           },
           "url": {
              "id": "11_6",
             "label":"url",
-            "texte":""
+            "texte":"www.nespresso-promotion.com"
           }
         }
       }

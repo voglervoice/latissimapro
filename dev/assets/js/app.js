@@ -254,20 +254,23 @@ define([
 			}
 		};*/
 		var toggleFullScreen = function() {
-			if (    (document.fullScreenElement && document.fullScreenElement !== null) ||
-				(!document.mozFullScreen && !document.webkitIsFullScreen)) {
+			if (!isFullscreen) {
 				if (document.documentElement.requestFullScreen) {
 					document.documentElement.requestFullScreen();
 				}else if (document.documentElement.mozRequestFullScreen) {
 					document.documentElement.mozRequestFullScreen();
 				} else if (document.documentElement.webkitRequestFullScreen) {
 					document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+				}else if (document.documentElement.msRequestFullscreen) {
+					document.documentElement.msRequestFullscreen();
 				}
 				isFullscreen = true;
 			}else{
-				if (document.cancelFullScreen)          document.cancelFullScreen();
-				else if (document.mozCancelFullScreen)      document.mozCancelFullScreen();
-				else if (document.webkitCancelFullScreen)       document.webkitCancelFullScreen();
+				if (document.cancelFullScreen) document.cancelFullScreen();
+				else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+				else if (document.webkitCancelFullScreen) document.webkitCancelFullScreen();
+				else if (document.msExitFullscreen) document.msExitFullscreen();
+				
 				isFullscreen = false;
 				var pageTitle = "Lattissima Pro";
 				var url = baseLangUrl+currentId;

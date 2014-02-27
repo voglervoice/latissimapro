@@ -95,7 +95,7 @@
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":"https://www.nespresso.com/ch/it"
+            "texte":"http://www.nespresso.com/ch/it/Order-Machines"
           },
           "country_and_language": {
              "id": "1_2",
@@ -112,6 +112,26 @@
       "global__utils":{
         "section":"global__utils",
         "blockText":{
+          "google_play_url": {
+             "id": "2_24",
+            "label":"google_play_url",
+            "texte":"https://play.google.com/store/apps/details?id=com.nespresso.activities"
+          },
+          "apple_store_url": {
+             "id": "2_23",
+            "label":"apple_store_url",
+            "texte":"https://itunes.apple.com/fr/app/nespresso/id342879434?mt=8"
+          },
+          "flip_mobile": {
+             "id": "2_25",
+            "label":"flip_mobile",
+            "texte":"Ruota il suo cellulare <br>in posizione verticale"
+          },
+          "flip_tablet": {
+             "id": "2_22",
+            "label":"flip_tablet",
+            "texte":"Ruota il suo tablet <br>in posizione verticale"
+          },
           "loading": {
              "id": "2_1",
             "label":"loading",
@@ -215,7 +235,7 @@
           "back": {
              "id": "2_21",
             "label":"back",
-            "texte":""
+            "texte":"Indietro"
           }
         }
       },
@@ -270,7 +290,7 @@
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":"La nuova Lattissima Pro si ispira alla qualità delle macchine professionali, con la semplicità di un touchscreen. Ora potrà preparare le più deliziose ricette a base di latte a casa sua, con un semplice tocco."
+            "texte":"La nuova <i>Lattissima Pro</i> si ispira alla qualità delle macchine professionali, con la semplicità di un touchscreen. Ora potrà preparare le più deliziose ricette a base di latte a casa sua, con un semplice tocco."
           },
           "email_template_call_to_action": {
              "id": "4_6",
@@ -397,14 +417,19 @@
       "navigation_menu":{
         "section":"navigation_menu",
         "blockText":{
+          "": {
+             "id": "12_7",
+            "label":"",
+            "texte":""
+          },
           "home": {
              "id": "12_3",
             "label":"home",
             "texte":"Home"
           },
-          "one_touch_is_all": {
+          "one_touch": {
              "id": "12_2",
-            "label":"one_touch_is_all",
+            "label":"one_touch",
             "texte":"Touchscreen intuitivo"
           },
           "a_wide_range_of_grands_crus": {
@@ -545,7 +570,7 @@
           "download_user_guide": {
              "id": "10_9",
             "label":"download_user_guide",
-            "texte":"Scaricare la guida utente"
+            "texte":"Scaricare la<br>guida utente"
           },
           "user_guide_url": {
              "id": "10_23",
@@ -555,7 +580,7 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Visualizzare i nostri video di assistenza"
+            "texte":"Visualizzare i nostri<br>video di assistenza"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
@@ -930,7 +955,7 @@
           "receive": {
              "id": "11_5",
             "label":"receive",
-            "texte":"Ricevere"
+            "texte":"Riceva"
           },
           "currency": {
              "id": "11_4",
@@ -955,7 +980,7 @@
           "url": {
              "id": "11_6",
             "label":"url",
-            "texte":"http://www.nespresso.com/..."
+            "texte":"www.nespresso.com/promotion"
           }
         }
       }

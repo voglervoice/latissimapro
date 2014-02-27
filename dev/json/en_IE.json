@@ -112,6 +112,26 @@
       "global__utils":{
         "section":"global__utils",
         "blockText":{
+          "google_play_url": {
+             "id": "2_24",
+            "label":"google_play_url",
+            "texte":"https://play.google.com/store/apps/details?id=com.nespresso.activities"
+          },
+          "apple_store_url": {
+             "id": "2_23",
+            "label":"apple_store_url",
+            "texte":"https://itunes.apple.com/gb/app/nespresso/id342879434?mt=8"
+          },
+          "flip_mobile": {
+             "id": "2_25",
+            "label":"flip_mobile",
+            "texte":"FLIP YOUR PHONE <br>IN PORTRAIT MODE"
+          },
+          "flip_tablet": {
+             "id": "2_22",
+            "label":"flip_tablet",
+            "texte":"FLIP YOUR TABLET <br>IN PORTRAIT MODE"
+          },
           "loading": {
              "id": "2_1",
             "label":"loading",
@@ -215,7 +235,7 @@
           "back": {
              "id": "2_21",
             "label":"back",
-            "texte":""
+            "texte":"Back"
           }
         }
       },
@@ -270,7 +290,7 @@
           "email_template_content": {
              "id": "4_12",
             "label":"email_template_content",
-            "texte":"The new <i>Lattissima Pro</i> machine is inspired by professional quality with the simplicity of a touch screen. Now you can prepare the most indulgent milk recipes at home in a single touch."
+            "texte":"The new <i>Lattissima Pro</i> machine is inspired by professional quality with the simplicity of a touch screen. Now you can prepare the most indulgent milky coffees at home with a single touch."
           },
           "email_template_call_to_action": {
              "id": "4_6",
@@ -305,7 +325,7 @@
           "capsules_category_5": {
              "id": "7_8",
             "label":"capsules_category_5",
-            "texte":"Pure origin"
+            "texte":"Pure Origin"
           },
           "capsules_category_6": {
              "id": "7_4",
@@ -325,17 +345,17 @@
           "facebook_text": {
              "id": "3_5",
             "label":"facebook_text",
-            "texte":"Prepare the most indulgent milk recipes at home with a single touch."
+            "texte":"Prepare the most indulgent milky coffees at home with a single touch."
           },
           "pinterest_text": {
              "id": "3_6",
             "label":"pinterest_text",
-            "texte":"Prepare the most indulgent milk recipes at home with a single touch."
+            "texte":"Prepare the most indulgent milky coffees at home with a single touch."
           },
           "twitter_text": {
              "id": "3_7",
             "label":"twitter_text",
-            "texte":"With Lattissima Pro, prepare the most indulgent milk recipes at home with a single touch #LattissimaPro #Nespresso"
+            "texte":"With Lattissima Pro, prepare the most indulgent milky coffees at home with a single touch #LattissimaPro #Nespresso"
           }
         }
       },
@@ -345,12 +365,12 @@
           "title": {
              "id": "5_5",
             "label":"title",
-            "texte":"One touch is all"
+            "texte":"One touch"
           },
           "text": {
              "id": "5_6",
             "label":"text",
-            "texte":"The art of coffee has never been so simple and pleasurable. The intuitive touchscreen offers a simple way to program the machine and enjoy different types of coffee and milk recipes."
+            "texte":"The art of coffee has never been so simple and pleasurable. The intuitive touchscreen display offers a simple way to programme the machine and enjoy different types of coffee and milk recipes."
           },
           "touchscreen_cta": {
              "id": "5_7",
@@ -397,14 +417,19 @@
       "navigation_menu":{
         "section":"navigation_menu",
         "blockText":{
+          "": {
+             "id": "12_7",
+            "label":"",
+            "texte":""
+          },
           "home": {
              "id": "12_3",
             "label":"home",
             "texte":"Home"
           },
-          "one_touch_is_all": {
+          "one_touch": {
              "id": "12_2",
-            "label":"one_touch_is_all",
+            "label":"one_touch",
             "texte":"Intuitive<br>touchscreen"
           },
           "a_wide_range_of_grands_crus": {
@@ -440,7 +465,7 @@
           "description_text": {
              "id": "6_8",
             "label":"description_text",
-            "texte":"Nespresso Capsules preserve the aromas of freshly ground coffee. <br>A great Espresso and Milk specialty always starts with a great Espresso.<br>Choose from 22 Grands Crus and prepare for a voyage of sensorial experiences."
+            "texte":"Nespresso Capsules preserve the aromas of freshly ground coffee. <br>All great coffees start with a perfect Espresso.<br>Choose from 22 Grands Crus and discover our aromatic range."
           },
           "intensity": {
              "id": "6_11",
@@ -535,7 +560,7 @@
           "bloc_4__info_1": {
              "id": "10_4",
             "label":"bloc_4__info_1",
-            "texte":"Assessed by International Certification Body"
+            "texte":"Certified by International Certification Body"
           },
           "bloc_4__info_2": {
              "id": "10_5",
@@ -555,7 +580,7 @@
           "assistance_video": {
              "id": "10_7",
             "label":"assistance_video",
-            "texte":"Watch our<br>assistance videos"
+            "texte":"Watch our <br>assistance videos"
           },
           "youtube_video_playlist_url": {
              "id": "10_8",
@@ -910,17 +935,17 @@
           "text_paragraph_1_milk_frothtext_paragraph_1_milk_froth": {
              "id": "9_4",
             "label":"text_paragraph_1_milk_frothtext_paragraph_1_milk_froth",
-            "texte":"The milk is always foamed to perfection to make the most indulgent Cappuccino or Latte Macchiato. Adjust the milk froth texture regulator knob according to your taste."
+            "texte":"The milk is always foamed to perfection to make the most indulgent Cappuccino or Latte Macchiato. Adjust the milk froth texture dial according to your taste."
           },
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
             "label":"text_paragraph_2_auto_clean",
-            "texte":"Simply rotate the milk regulator knob in the Clean position. The machine hygiene is assessed by International Certification Body, ensuring high standard cleanliness."
+            "texte":"Simply rotate the milk froth texture dial to the Clean position. The machine hygiene is certified by an International Certification Body, ensuring high standard cleanliness."
           },
           "schema_milk_froth_text_": {
              "id": "9_2",
             "label":"schema_milk_froth_text_",
-            "texte":"Milk froth texture regulator"
+            "texte":"Milk froth texture dial"
           }
         }
       },
@@ -930,22 +955,22 @@
           "receive": {
              "id": "11_5",
             "label":"receive",
-            "texte":"Receive"
+            "texte":"Receive a"
           },
           "currency": {
              "id": "11_4",
             "label":"currency",
-            "texte":"£"
+            "texte":"Gift Card"
           },
           "price": {
              "id": "11_3",
             "label":"price",
-            "texte":"50"
+            "texte":"£50"
           },
           "cta": {
              "id": "11_2",
             "label":"cta",
-            "texte":"Redeem your offer"
+            "texte":"Claim yours"
           },
           "range_date": {
              "id": "11_1",
