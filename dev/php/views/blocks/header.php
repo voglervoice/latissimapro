@@ -3,6 +3,8 @@ $twitter = $jsonLangShare->twitter_text->texte;
 $pinterest = $jsonLangShare->pinterest_text->texte;
 $facebook = $jsonLangShare->facebook_text->texte;
 $pinterest_image = $baseurl.'assets/imgs/share.jpg';
+$appleUrl = $jsonLangGlobals->apple_store_url->texte;
+$androidUrl = $jsonLangGlobals->google_play_url->texte;
 ?>
 <!--HEADER-->
 <h1>Lattissima Pro</h1>
@@ -10,10 +12,12 @@ $pinterest_image = $baseurl.'assets/imgs/share.jpg';
 <header>
     <ul class="white">
         <li id="select_country" class="border flag"><a class="<?php echo '_'.$territory; ?> flags" href="#"></a><!--img src="<?php echo IMG_DIR;?>flags/<?php echo strtolower($code_country); ?>.png" alt="flag" /--></li>
-        <?php if($territory != "HU" ){ ?>
-        <li class="apple"><a target="_blank" href="https://itunes.apple.com/app/nespresso/id342879434" class="qrcode appleapp"><div class="apple_sprit"></div></a></li>
-        <li class="border android"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.nespresso.activities" class="qrcode androidapp"><div class="android_sprit"></div></a></li>
-         <?php } ?>
+        <?php if(isset($appleUrl) && $appleUrl != "" ){ ?>
+        <li class="apple"><a target="_blank" href="<?php echo $appleUrl; ?>" class="qrcode appleapp"><div class="apple_sprit"></div></a></li>
+         <?php };
+         if(isset($androidUrl) && $androidUrl != ""){ ?>
+         <li class="border android"><a target="_blank" href="<?php echo $androidUrl; ?>" class="qrcode androidapp"><div class="android_sprit"></div></a></li>
+        <?php } ?>
         <li class="mail"><a class="mail_sprit" href="#"></a></li>
         <?php if(isset($pinterest) && $pinterest != "" ){ ?>
         <li class="pinterest">

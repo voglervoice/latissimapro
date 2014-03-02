@@ -115,12 +115,12 @@
           "google_play_url": {
              "id": "2_24",
             "label":"google_play_url",
-            "texte":"https://play.google.com/store/apps/details?id=com.nespresso.activities"
+            "texte":""
           },
           "apple_store_url": {
              "id": "2_23",
             "label":"apple_store_url",
-            "texte":"https://itunes.apple.com/en/app/nespresso/id342879434?mt=8"
+            "texte":""
           },
           "flip_mobile": {
              "id": "2_25",
@@ -215,12 +215,12 @@
           "app": {
              "id": "2_4",
             "label":"app",
-            "texte":"App"
+            "texte":""
           },
           "application": {
              "id": "2_3",
             "label":"application",
-            "texte":"Aplikacja"
+            "texte":""
           },
           "discover": {
              "id": "2_2",
@@ -935,12 +935,12 @@
           "text_paragraph_1_milk_frothtext_paragraph_1_milk_froth": {
              "id": "9_4",
             "label":"text_paragraph_1_milk_frothtext_paragraph_1_milk_froth",
-            "texte":"Mleko jest zawsze spienione w perfekcyjny sposób, koronując idealne Cappuccino lub Latte Macchiato. Ustaw pokrętło regulacji spieniania mleka w sposób najbardziej odpowiadający Twoim preferencjom."
+            "texte":"Mleko jest zawsze spienione w perfekcyjny sposób, koronując idealne Cappuccino lub Latte Macchiato. Ustaw pokrętło regulacji spieniania mleka w sposób najbardziej odpowiadający Twoim preferencjom. Po prostu ustaw pokrętło regulacji spieniania mleka w pozycji CLEAN. Standardy higieniczne maszyny zostały wysoko ocenione przez International Certification Body."
           },
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
             "label":"text_paragraph_2_auto_clean",
-            "texte":"Po prostu ustaw pokrętło regulacji spieniania mleka w pozycji CLEAN. Standardy higieniczne maszyny zostały wysoko ocenione przez International Certification Body."
+            "texte":""
           },
           "schema_milk_froth_text_": {
              "id": "9_2",
@@ -960,7 +960,7 @@
           "currency": {
              "id": "11_4",
             "label":"currency",
-            "texte":"PLN"
+            "texte":"PLN na kawę"
           },
           "price": {
              "id": "11_3",
@@ -970,12 +970,12 @@
           "cta": {
              "id": "11_2",
             "label":"cta",
-            "texte":""
+            "texte":"Skorzystaj z oferty"
           },
           "range_date": {
              "id": "11_1",
             "label":"range_date",
-            "texte":""
+            "texte":"od 13.03.2014 do 04.05.2014"
           },
           "url": {
              "id": "11_6",

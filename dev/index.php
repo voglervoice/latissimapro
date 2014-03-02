@@ -86,10 +86,12 @@
             <div class="nespresso_logo"></div>
             <div class="preloader">
                 <div class="logo_preload"></div>
+                <?php if($jsonLangFooter->order->texte != ""){ ?>
                 <a class="machine_preload" href="<?php echo $jsonLangFooter->order_online_shop_link->texte; ?>" target="_blank">
                     <img src="assets/imgs/intro_machine_btn.png" />
                     <span><?php echo $jsonLangGlobals->order->texte; ?></span>
                 </a>
+                <?php } ?>
                 <span class="loader_pct">00<sup>%</sup></span>
             </div>
             <div class="content">

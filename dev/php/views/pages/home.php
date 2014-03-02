@@ -15,7 +15,7 @@
 		<a href="<?php echo $baseurlang; ?>touchscreen" data-centerx="-51" data-centery="-259" data-link="touchscreen">
 			<span><?php echo $jsonLang->one_touch_is_all->blockText->title->texte; ?></span>
 		</a>
-		<a href="<?php echo $baseurlang; ?>design" data-centerx="-125" data-centery="-75" data-link="design">
+		<a href="<?php echo $baseurlang; ?>features" data-centerx="-125" data-centery="-75" data-link="features">
 			<span><?php echo $jsonLang->{'powerful_inside_and_out'}->blockText->title->texte; ?></span>
 		</a>
 		<a href="<?php echo $baseurlang; ?>milksystem" data-centerx="23" data-centery="-175"  data-link="milksystem">

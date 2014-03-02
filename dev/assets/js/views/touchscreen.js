@@ -145,6 +145,7 @@ define([
         this.open = function(){
             opened = true;
             
+            $('.touchscreen_cta span').css('margin-top', $('.touchscreen_cta span').height()*-0.5);
             $('#touchscreen_puces').css('display', "block");
             for (var i = 0; i < puces.length; i++){
                 TweenMax.delayedCall(i*0.3, openPuce, [puces[i]]);
@@ -157,7 +158,7 @@ define([
 
             this.elem.off("mousemove");
             this.elem.on("mousemove", function( event ) {
-                  console.log(event.pageX);
+             
                   if(event.pageX > windowW*0.55 && !ctaOn){
                     ctaOn = true;
 					if(Globals.oldie)

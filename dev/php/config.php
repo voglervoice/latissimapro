@@ -156,6 +156,7 @@ if(strtoupper($languagesite) == 'PL' ||
     strtoupper($languagesite) == 'JP' ||
     strtoupper($languagesite) == 'CN' ||
     strtoupper($languagesite) == 'KR' ||
+    strtoupper($languagesite) == 'CZ' ||
     strtoupper($languagesite) == 'GR')
     $arialVersion  = true;
 

@@ -796,10 +796,33 @@
         }
       }
     },
-    "Oceania":{
-      "countries":[
-        
-      ]
+    "Oceanie":{
+      "countries":{
+        "AU":{
+          "publish_date":"0000-00-00",
+          "title":"AUSTRALIA",
+          "rsid":"19",
+          "languages":[
+            {
+              "code":"en_AU",
+              "lang":"en",
+              "name":"english"
+            }
+          ]
+        },
+        "NZ":{
+          "publish_date":"2013-03-03",
+          "title":"NEW ZEALAND",
+          "rsid":"40",
+          "languages":[
+            {
+              "code":"en_NZ",
+              "lang":"en",
+              "name":"english"
+            }
+          ]
+        }
+      }
     }
   }
 }

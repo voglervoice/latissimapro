@@ -95,7 +95,7 @@
           "order_online_shop_link": {
              "id": "1_3",
             "label":"order_online_shop_link",
-            "texte":"https://nesclub.nespresso.com/id/login/"
+            "texte":"http://www.nespresso.com/r/order/AR"
           },
           "country_and_language": {
              "id": "1_2",
@@ -215,12 +215,12 @@
           "app": {
              "id": "2_4",
             "label":"app",
-            "texte":"Aplicación"
+            "texte":""
           },
           "application": {
              "id": "2_3",
             "label":"application",
-            "texte":"Aplicación"
+            "texte":""
           },
           "discover": {
              "id": "2_2",

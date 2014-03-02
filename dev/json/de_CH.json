@@ -960,12 +960,12 @@
           "currency": {
              "id": "11_4",
             "label":"currency",
-            "texte":"Fr."
+            "texte":""
           },
           "price": {
              "id": "11_3",
             "label":"price",
-            "texte":"100.-"
+            "texte":"Fr. 100.-"
           },
           "cta": {
              "id": "11_2",
@@ -975,7 +975,7 @@
           "range_date": {
              "id": "11_1",
             "label":"range_date",
-            "texte":"Von 08.03.2014 bis zum 28.03.2014"
+            "texte":"Vom 08.03.2014 bis<br>zum 28.03.2014"
           },
           "url": {
              "id": "11_6",

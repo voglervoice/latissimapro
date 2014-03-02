@@ -115,12 +115,12 @@
           "google_play_url": {
              "id": "2_24",
             "label":"google_play_url",
-            "texte":"https://play.google.com/store/apps/details?id=com.nespresso.activities"
+            "texte":""
           },
           "apple_store_url": {
              "id": "2_23",
             "label":"apple_store_url",
-            "texte":"https://itunes.apple.com/en/app/nespresso/id342879434?mt=8"
+            "texte":""
           },
           "flip_mobile": {
              "id": "2_25",
@@ -215,12 +215,12 @@
           "app": {
              "id": "2_4",
             "label":"app",
-            "texte":"App"
+            "texte":""
           },
           "application": {
              "id": "2_3",
             "label":"application",
-            "texte":"Application"
+            "texte":""
           },
           "discover": {
              "id": "2_2",

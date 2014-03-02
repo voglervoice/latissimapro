@@ -90,7 +90,7 @@
           "order": {
              "id": "1_4",
             "label":"order",
-            "texte":"Order"
+            "texte":""
           },
           "order_online_shop_link": {
              "id": "1_3",

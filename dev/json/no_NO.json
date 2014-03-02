@@ -460,7 +460,7 @@
           "title": {
              "id": "6_7",
             "label":"title",
-            "texte":"Et stort og spennende sortiment av Grands Crus-kaffevarianter"
+            "texte":"Et spennende sortiment av Grands Crus-kaffevarianter"
           },
           "description_text": {
              "id": "6_8",
@@ -500,7 +500,7 @@
           "bloc_1_•_characteristics": {
              "id": "10_13",
             "label":"bloc_1_•_characteristics",
-            "texte":"Karakteristikker"
+            "texte":"Spesifikasjoner"
           },
           "bloc_1__info_1": {
              "id": "10_17",
@@ -530,7 +530,7 @@
           "bloc_2__info_1": {
              "id": "10_21",
             "label":"bloc_2__info_1",
-            "texte":"LCD skjerm med enkle tekstinstruksjoner for intuitiv bruk"
+            "texte":"LCD skjerm med enkle instruksjoner for intuitiv bruk"
           },
           "bloc_2__info_2": {
              "id": "10_22",
@@ -545,7 +545,7 @@
           "bloc_3__info_1": {
              "id": "10_10",
             "label":"bloc_3__info_1",
-            "texte":"Avansert steaming teknologi"
+            "texte":"Avansert steamingteknologi"
           },
           "bloc_3__info_2": {
              "id": "10_1",
@@ -555,7 +555,7 @@
           "bloc_4_•_auto_clean_system": {
              "id": "10_3",
             "label":"bloc_4_•_auto_clean_system",
-            "texte":"Automatisk rensefunksjon av systemet"
+            "texte":"Automatisk rensefunksjon"
           },
           "bloc_4__info_1": {
              "id": "10_4",
@@ -930,12 +930,12 @@
           "title": {
              "id": "9_5",
             "label":"title",
-            "texte":"Delikate melkebaserte kaffeoppskrifter"
+            "texte":"Delikate kaffedrikker med fersk melk"
           },
           "text_paragraph_1_milk_frothtext_paragraph_1_milk_froth": {
              "id": "9_4",
             "label":"text_paragraph_1_milk_frothtext_paragraph_1_milk_froth",
-            "texte":"Melken blir alltid skummet til perfeksjon for å lage den lekreste Cappuccino eller Latte Macchiato. Tilpass tykkelsen på melkeskummet med det justerbare hjulet i henhold til din smak."
+            "texte":"Den ferske melken blir alltid skummet til perfeksjon for å lage den lekreste Cappuccino eller Latte Macchiato. Tilpass tykkelsen på melkeskummet med det justerbare hjulet i henhold til din smak."
           },
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
@@ -960,22 +960,22 @@
           "currency": {
              "id": "11_4",
             "label":"currency",
-            "texte":"NOK"
+            "texte":""
           },
           "price": {
              "id": "11_3",
             "label":"price",
-            "texte":"250 eller 500"
+            "texte":"kr. 250 eller 500"
           },
           "cta": {
              "id": "11_2",
             "label":"cta",
-            "texte":"Benytt deg av tilbudet"
+            "texte":""
           },
           "range_date": {
              "id": "11_1",
             "label":"range_date",
-            "texte":"Inntil 31.5.2014"
+            "texte":"godskrevet din Nespresso Club-konto fra <br>1. april til 31. mai 2014."
           },
           "url": {
              "id": "11_6",

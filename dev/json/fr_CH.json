@@ -540,7 +540,7 @@
           "bloc_3_•_optimal_milk_froth_quality": {
              "id": "10_11",
             "label":"bloc_3_•_optimal_milk_froth_quality",
-            "texte":"Qualité de mousse de lait optimale"
+            "texte":"Qualité de mousse de lait <br>optimale"
           },
           "bloc_3__info_1": {
              "id": "10_10",
@@ -555,7 +555,7 @@
           "bloc_4_•_auto_clean_system": {
              "id": "10_3",
             "label":"bloc_4_•_auto_clean_system",
-            "texte":"Système de nettoyage automatique"
+            "texte":"Système de nettoyage<br>automatique"
           },
           "bloc_4__info_1": {
              "id": "10_4",
@@ -940,7 +940,7 @@
           "text_paragraph_2_auto_clean": {
              "id": "9_3",
             "label":"text_paragraph_2_auto_clean",
-            "texte":"Tournez le bouton de réglage du lait sur la position Clean. L'hygiène de l'appareil est évaluée par un organisme international de certification, garantissant un niveau élevé de propreté"
+            "texte":"Tournez le bouton de réglage du lait sur la position Clean. L'hygiène de l'appareil est évaluée par un organisme international de certification, garantissant un niveau élevé de propreté."
           },
           "schema_milk_froth_text_": {
              "id": "9_2",
@@ -960,12 +960,12 @@
           "currency": {
              "id": "11_4",
             "label":"currency",
-            "texte":"-Fr."
+            "texte":""
           },
           "price": {
              "id": "11_3",
             "label":"price",
-            "texte":"100."
+            "texte":"Fr. 100.-"
           },
           "cta": {
              "id": "11_2",

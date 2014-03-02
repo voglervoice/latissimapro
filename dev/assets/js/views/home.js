@@ -125,9 +125,10 @@ define([
         // ******************* private *******************
         var reposiBtn = function(btn, index){
             var dataBaseX = parseInt(btn.attr('data-centerx'), 10);
+            var dataBaseY = parseInt(btn.attr('data-centery'), 10);
             var posiX = raphaW*0.5 + dataBaseX*ratio +4;
-            var posiY = raphaH* 0.5 + parseInt(btn.attr('data-centery'), 10)*ratio+ 100;
-            var menuSpace = 240;
+            var posiY = raphaH* 0.5 + dataBaseY*ratio+ 100;
+            var menuSpace = 185;
             //var btnTextWidth = $('span', btn).width()+parseInt($('span', btn).css('padding-left'), 10)+parseInt($('span', btn).css('padding-right'), 10);
             var btnTextWidth = $('span', btn).width();
             var lineYLength = - 69;
@@ -140,26 +141,41 @@ define([
              //if(index == 1 && $('.home_promotion').attr('data-on') == '1'){
 
             if(index == 2 && $('.home_promotion').attr('data-on') == '1'){
-                dataBaseX = -90;
+                dataBaseX = 0;
+                dataBaseY = 4;
                 posiX = raphaW*0.5 + dataBaseX*ratio + 4;
-                posiY = raphaH* 0.5 + (-45)*ratio+ 100;
+                posiY = raphaH* 0.5 + dataBaseY*ratio+ 100;
+                lineXLength = 120;
                 lineYLength = 69;
             }
 
-            if(index == 3 && (posiX+btnTextWidth+lineXLength+lastStroke+80 > windowW-menuSpace)){
+            var btnInPageX = windowW*0.5 -875 +posiX;
+            var btnInPageXFull = btnInPageX+lineXLength+lastStroke+btnTextWidth;
+
+            if(index == 3 && btnInPageXFull > windowW-menuSpace){
                 posiX = raphaW*0.5 + (dataBaseX - 104)*ratio + 4;
                 posiY = raphaH* 0.5 + (dataBaseX -2)*ratio+ 100;
             }
 
-            if(posiX+btnTextWidth+lineXLength+lastStroke > windowW-menuSpace && dataBaseX > 0){
-                lineXLength = windowW-menuSpace - posiX - btnTextWidth;
-                lastStroke = 5;
-                if(index == 3 && lineXLength < 82){
-                    lineYLength = 40;
+            btnInPageX = windowW*0.5 -875 +posiX;
+            btnInPageXFull = btnInPageX+lineXLength+lastStroke+btnTextWidth;
+
+            if(btnInPageXFull > windowW-menuSpace && dataBaseX > 0){
+                if(index == 2 && $('.home_promotion').attr('data-on') != '1'){
+                    lastStroke = 20;
+                    lineXLength = Math.min(95, windowW-70 - btnInPageX-lastStroke-btnTextWidth);
+                }else{
+                    lastStroke = 5;
+                    lineXLength = windowW-menuSpace - btnInPageX-lastStroke-btnTextWidth;
+                    if(index == 3 && lineXLength < 82){
+                        lineYLength = 40;
+                        lastStroke = 10;
+                        lineXLength = Math.min(150, windowW-30 - btnInPageX-lastStroke-btnTextWidth);
+                    }
                 }
-            }else if(dataBaseX < 0 && posiX-btnTextWidth-lineXLength < 5){
-                lineXLength = posiX-btnTextWidth-5;
+            }else if(dataBaseX < 0 && btnInPageX-lastStroke-btnTextWidth-lineXLength < 8){
                 lastStroke = 5;
+                lineXLength = btnInPageX - lastStroke-btnTextWidth-8;
             }
 
             circleBase[index].attr({'cx':posiX, 'cy':posiY});
