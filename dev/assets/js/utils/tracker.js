@@ -12,17 +12,15 @@ define([
       
 
         // ******************* public ******************* 
-        this.trackPage = function(pageName, subPageName, prop4){
-            if(pageName === "" || typeof s == "undefined") return;
+        this.trackPage = function(pageName, prop4){
+            if(typeof s == "undefined") return;
             reinit();
 
-            var pageNameTrack =  channel+":"+pageName;
-            if(typeof subPageName == "undefined") subPageName = "";
+            var pageNameTrack =  channel;
+            if(pageName !== "") pageNameTrack += ":"+pageName;
             if(typeof prop4 == "undefined") prop4 = "";
 
-            if(subPageName !== ""){
-                pageNameTrack += ":"+subPageName;
-            }else if(prop4 !== "") pageNameTrack += ":"+prop4;
+            if(prop4 !== "") pageNameTrack += ":"+prop4;
 
             s = s_gi(s_account);
             s.currencyCode  =   "CHF";
