@@ -97,9 +97,7 @@ if(file_exists('admin/loc/includes/db_connect.php')){
 require_once("php/class/Mobile_Detect.php");
 $detectMobile   =   new Mobile_Detect();
 if ( $detectMobile->isMobile() || $detectMobile->isTablet() ) {
-    // TODO : good urls
-    $redirection = 'http://www.staging.nespresso.com/lattissima-pro/mobile/index.html?locale='.$languagesite.'_'.$territory;
-    //header('HTTP/1.0 308 Permanent Redirect');
+    $redirection = 'http://www.staging.nespresso.com/lattissima-pro/mobile/index.php?locale='.$languagesite.'_'.$territory;
     header('Location: ' . $redirection);
     exit();
 }
