@@ -7,7 +7,7 @@ define([
     var SiteTracker = function(lang_, countryCode_) {
         var self = this;
         var lang = lang_, countryCode = countryCode_;
-        var account = "nesp-preprod";
+        //var account = "nesp-preprod";
         var channel = "UCE:lattissima-pro";
       
 
@@ -22,11 +22,9 @@ define([
 
             if(subPageName !== ""){
                 pageNameTrack += ":"+subPageName;
-            }
+            }else if(prop4 !== "") pageNameTrack += ":"+prop4;
 
-            if(prop4 !== "") pageNameTrack += ":"+prop4;
-
-            s = s_gi(account);
+            s = s_gi(s_account);
             s.currencyCode  =   "CHF";
             s.ch               =   channel;
             s.channel      =   channel;
@@ -62,7 +60,7 @@ define([
             if(typeof event30 == "undefined") event30 = "";
             if(typeof event47 == "undefined") event47 = "";
 
-            s = s_gi(account);
+            s = s_gi(s_account);
             s.eVar20        =   eVar20;
             s.eVar30        =   eVar30;
             s.eVar41        =   eVar41;
