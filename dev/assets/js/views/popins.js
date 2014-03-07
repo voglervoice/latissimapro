@@ -61,6 +61,8 @@ define([
             var wBtn = ($('.lang_zones').width()-totWidth)/($('.lang_zones li a').length-1)-1;
             $('.lang_zones li a').each(function(index){ if(index > 0) $(this).css('margin-left', wBtn);});
 
+            if($('.lang_zones li a').length < 3) $('.lang_zones li a').css('margin-left', ($('.lang_zones').width()-totWidth)/($('.lang_zones li a').length+1));
+
             $('.popin_close').each(function(index){
                 var paper = Raphael($(this)[0], $('.popin_close').width(), $('.popin_close').height());
                 var centerX= Math.round($('.popin_close').width()*0.5), centerY = Math.round($('.popin_close').height()*0.5);
