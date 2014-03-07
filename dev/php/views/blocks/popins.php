@@ -4,13 +4,27 @@
 		<h4><?php echo $jsonLangFooter->country_and_language_text->texte; ?></h4>
 		<ul class="lang_zones">
 		<?php
-			foreach ($jsonCountries->continents as $key => $value)
-				echo "<li><a href='#' data-type='".$key."'>".$key."</a></li>";
+		$now = new DateTime("now");
+			foreach ($jsonCountries->continents as $key => $value){
+				$countriesOk = FALSE;
+				if(count((array)$value->countries) > 0){
+					foreach ($value->countries as $country_id => $country) {
+						$launchingDate = date_create($country->publish_date);
+						if(($staging || ($launchingDate <= $now)) && !is_null($country->title)){
+							$countriesOk = TRUE;
+							break;
+						}
+					}
+				}
+				if($countriesOk == t) echo "<li><a href='#' data-type='".$key."'>".$key."</a></li>";
+				//echo "<li><a href='#' data-type='".$key."'>".$key."</a></li>";
+				
+			}
 		?>
 		</ul>
 		<div class="select_langs">
 		<?php
-			$now = new DateTime("now");
+			
 			foreach ($jsonCountries->continents as $key => $value) {
 				echo "<div data-type='".$key."' class='lang_zone'>";
 				$i = 0;
