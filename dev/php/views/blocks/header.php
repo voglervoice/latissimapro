@@ -34,7 +34,7 @@ $androidUrl = $jsonLangGlobals->google_play_url->texte;
         <?php if(isset($facebook) && $facebook != ""){ ?>
         <li class="border facebook">
             <div class="facebook_sprit">
-                <a target="_blank" class="share_facebook" href="https://www.facebook.com/sharer.php?u=<?php echo $baseShareUrl; ?>" ></a>
+                <a target="_blank" class="share_facebook" href="https://www.facebook.com/sharer.php?u=<?php echo $baseurl.'index.php?l='.$languagesite."_".$territory; ?>" ></a>
             </div></li>
         <?php } ?>
         <li class="fullscreen"><a class="fullscreen_sprit" href="#"></a></li>

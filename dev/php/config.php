@@ -18,6 +18,7 @@ $fullPath = substr($baseFullPath, strlen($base));
 $pathSlices = explode('/', $fullPath, 2);
 $direct = "";
 $langDefined = 0;
+$langGet = 0;
 //echo var_dump($pathSlices);
 if(count($pathSlices) > 0){
     //echo "LANG : ".$pathSlices[0];
@@ -29,6 +30,15 @@ if(count($pathSlices) > 0){
         $direct = $pathSlices[1];
     }
     if(!empty($territory)) $langDefined = 1;
+}
+
+//In case of language and territory are defined by `locale` and `l` params
+if(isset($_GET['locale']) && strpos($_GET['locale'], '_') !== false){
+    $langGet = 1;
+    list($languagesite, $territory) = explode('_', $_GET['locale'], 2);
+}elseif(isset($_GET['l']) && strpos($_GET['l'], '_') !== false){
+    $langGet = 1;
+    list($languagesite, $territory) = explode('_', $_GET['l'], 2);
 }
 
 // preview mode
@@ -82,7 +92,7 @@ if(file_exists('admin/loc/includes/db_connect.php')){
     if($data->execute() && ($row = $data->fetch(PDO::FETCH_OBJ)) !== false && (strtotime($row->launching) <= time() || $previewMode || $staging)){
     //if($data->execute() && ($row = $data->fetch(PDO::FETCH_OBJ)) !== false){
         list($languagesite, $territory) = explode('_', $row->code, 2);
-    }elseif($langDefined == 0 || !$staging){
+    }elseif(($langDefined == 0 && $langGet ==0) || !$staging){
         $territory = NULL;
         $languagesite = NULL;
     }
