@@ -21,7 +21,7 @@
         <!-- Shares -->
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="<?php echo $jsonLangShare->facebook_title->texte; ?>"/>
-        <meta property="og:url" content="<?php echo $baseurl; ?>"/>
+        <meta property="og:url" content="<?php echo $baseurl.'index.php?l='.$languagesite."_".$territory; ?>"/>
         <meta property="og:image" content="<?php echo $baseurl; ?>assets/imgs/share.jpg"/>
         <meta property="og:description" content="<?php echo $jsonLangShare->facebook_text->texte; ?>"/>
 		<!--[if lt IE 9]>
