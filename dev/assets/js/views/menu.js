@@ -14,6 +14,10 @@ define([
         var musicPlaying = false, musicPlayingUser = false;
         var self = this;
         var menuSpace = 35;
+        if(Globals.lang == "fi"){
+            $('nav').width(150);
+            $('nav span').width(150);
+        }
         var paper = Raphael("menu_picts", $('nav').width(), $('nav').height());
         var paperScroll = Raphael("scroll_arrow", $('#scroll_arrow').width(), $('#scroll_arrow').height());
         var circles = [], cScroll, arrowScroll;

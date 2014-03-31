@@ -57,7 +57,7 @@ define([
             var lfooter = (w-(ctLeft+offsetCtPlus+wFooterBtn+180))*0.5;
             $('.design_footer').css('margin-left', lfooter);
 
-            if(w < 1350){
+            if(w < 1350 || Globals.lang == "fi"){
                 if(Globals.lang == "de"){
                     $('.design_content_infos_col h3').css('font-size', '12px');
                     $('.design_content_infos_col li').css('font-size', '11px');
