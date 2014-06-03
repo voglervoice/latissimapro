@@ -23,6 +23,29 @@ define([
 		//if(oldie_version) alert("OLDIE!");
 		Globals.lang = $('body').attr('data-lang');
 		Globals.canvas_enabled = (Modernizr.canvas && Modernizr.webgl)? true : false;
+
+
+		//MAC & safari test > disable WebGL si on est sur MAC + safari
+		var ua = navigator.userAgent.toLowerCase();
+		if( /macintosh/.test( ua ) || /mac os x/.test( ua ) )
+		{
+			console.log ( "isMac" );
+ 
+			var isChrome = /chrome/.test( ua );
+			console.log ( "isChrome", isChrome );
+ 
+			var isSafari = !isChrome && /safari/.test( ua );
+			console.log ( "isSafari", isSafari);
+ 
+			if( isSafari )
+			{
+				console.log ( "browser is Safari & OS is Mac, disable WebGL" );
+				Globals.canvas_enabled = false;
+			}
+		}
+		
+
+		console.log("--> Globals.canvas_enabled : "+Globals.canvas_enabled);
 		//Globals.canvas_enabled = false;
 
 		var mainMenu, home, design, milksystem, touchscreen, coffeerange;

@@ -77,6 +77,7 @@ define([
         };
 
         ///// INIT 
+        //console.log("navigator.userAgent.toLowerCase() : "+navigator.userAgent.toLowerCase());
         if(Globals.canvas_enabled && navigator.userAgent.toLowerCase().indexOf('firefox') == -1){
             canvas = fx.canvas();
             texture = canvas.texture(element[0]);

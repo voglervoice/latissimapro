@@ -23,8 +23,10 @@ define([
         var circles = [], cScroll, arrowScroll;
         if(buzz.isSupported()){
         var music = new buzz.sound($('body').attr("data-baseurl")+"assets/music/nespressoU_lead_loop", {
-    formats: [ "mp3"], preload: true
+    formats: [ "mp3", 'ogg'], preload: true
 });
+        }else{
+            console.log(">> Buzz is not supported !");
         }
         // ******************* public ******************* 
         this.resize = function(w, h){

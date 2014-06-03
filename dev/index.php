@@ -1,5 +1,5 @@
 <?php include_once('php/config.php'); ?>
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie ie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie ie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie ie" lang="en"> <![endif]-->
@@ -11,7 +11,8 @@
 
         <title>Lattissima Pro</title>
         <base href="<?php echo $baseurl; ?>">
-
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="description" content="TODO">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
