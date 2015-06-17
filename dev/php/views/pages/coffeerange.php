@@ -94,7 +94,7 @@ function getCapsules($datas, $start, $nbCaps){
 				</div>
 				<div class="range_cat_caps">
 					<?php
-						echo getCapsules($jsonLangRangeCapsules, $index, 3);
+						echo getCapsules($jsonLangRangeCapsules, $index, 4);
 						$index += 3;
 					?>
 				</div>

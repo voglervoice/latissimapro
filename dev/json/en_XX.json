@@ -90,7 +90,7 @@
           "order": {
              "id": "1_4",
             "label":"order",
-            "texte":""
+            "texte":"http://www.nespresso.com/r/order/UK"
           },
           "order_online_shop_link": {
              "id": "1_3",
@@ -100,7 +100,7 @@
           "country_and_language": {
              "id": "1_2",
             "label":"country_and_language",
-            "texte":"Country and Languages"
+            "texte":"Country <br>Languages"
           },
           "country_and_language_text": {
              "id": "1_1",
@@ -239,6 +239,31 @@
           }
         }
       },
+      "global__facebook_twitter":{
+        "section":"global__facebook_twitter",
+        "blockText":{
+          "facebook_title": {
+             "id": "3_13",
+            "label":"facebook_title",
+            "texte":"Discover Lattissima Pro, the new machine by Nespresso"
+          },
+          "facebook_text": {
+             "id": "3_5",
+            "label":"facebook_text",
+            "texte":"Prepare now the most indulgent milk recipes at home in a single touch."
+          },
+          "pinterest_text": {
+             "id": "3_6",
+            "label":"pinterest_text",
+            "texte":"Prepare now the most indulgent milk recipes at home in a single touch."
+          },
+          "twitter_text": {
+             "id": "3_7",
+            "label":"twitter_text",
+            "texte":"With Lattissima Pro, prepare the most indulgent milk recipes at home in a single touch #LattissimaPro #Nespresso"
+          }
+        }
+      },
       "global__mail":{
         "section":"global__mail",
         "blockText":{
@@ -299,66 +324,6 @@
           }
         }
       },
-      "range__capsules":{
-        "section":"range__capsules",
-        "blockText":{
-          "capsules_category_1": {
-             "id": "7_5",
-            "label":"capsules_category_1",
-            "texte":"Intenso"
-          },
-          "capsules_category_2": {
-             "id": "7_11",
-            "label":"capsules_category_2",
-            "texte":"Espresso"
-          },
-          "capsules_category_3": {
-             "id": "7_9",
-            "label":"capsules_category_3",
-            "texte":"Lungo"
-          },
-          "capsules_category_4": {
-             "id": "7_12",
-            "label":"capsules_category_4",
-            "texte":"Decaffeinato"
-          },
-          "capsules_category_5": {
-             "id": "7_8",
-            "label":"capsules_category_5",
-            "texte":"Pure origin"
-          },
-          "capsules_category_6": {
-             "id": "7_4",
-            "label":"capsules_category_6",
-            "texte":"Variations"
-          }
-        }
-      },
-      "global__facebook_twitter":{
-        "section":"global__facebook_twitter",
-        "blockText":{
-          "facebook_title": {
-             "id": "3_13",
-            "label":"facebook_title",
-            "texte":"Discover Lattissima Pro, the new machine by Nespresso"
-          },
-          "facebook_text": {
-             "id": "3_5",
-            "label":"facebook_text",
-            "texte":"Prepare now the most indulgent milk recipes at home in a single touch."
-          },
-          "pinterest_text": {
-             "id": "3_6",
-            "label":"pinterest_text",
-            "texte":"Prepare now the most indulgent milk recipes at home in a single touch."
-          },
-          "twitter_text": {
-             "id": "3_7",
-            "label":"twitter_text",
-            "texte":"With Lattissima Pro, prepare the most indulgent milk recipes at home in a single touch #LattissimaPro #Nespresso"
-          }
-        }
-      },
       "one_touch_is_all":{
         "section":"one_touch_is_all",
         "blockText":{
@@ -414,41 +379,6 @@
           }
         }
       },
-      "navigation_menu":{
-        "section":"navigation_menu",
-        "blockText":{
-          "": {
-             "id": "12_7",
-            "label":"",
-            "texte":""
-          },
-          "home": {
-             "id": "12_3",
-            "label":"home",
-            "texte":"Home"
-          },
-          "one_touch": {
-             "id": "12_2",
-            "label":"one_touch",
-            "texte":"Intuitive<br>touchscreen"
-          },
-          "a_wide_range_of_grands_crus": {
-             "id": "12_4",
-            "label":"a_wide_range_of_grands_crus",
-            "texte":"Coffee range"
-          },
-          "delicious_coffee_and_milk_recipes": {
-             "id": "12_5",
-            "label":"delicious_coffee_and_milk_recipes",
-            "texte":"Milk system"
-          },
-          "powerful__inside_andamp;_out": {
-             "id": "12_6",
-            "label":"powerful__inside_andamp;_out",
-            "texte":"Features"
-          }
-        }
-      },
       "range__global":{
         "section":"range__global",
         "blockText":{
@@ -484,119 +414,44 @@
           }
         }
       },
-      "powerful_inside_and_out":{
-        "section":"powerful_inside_and_out",
+      "range__capsules":{
+        "section":"range__capsules",
         "blockText":{
-          "title": {
-             "id": "10_15",
-            "label":"title",
-            "texte":"Powerful inside & out"
+          "capsules_category_1": {
+             "id": "7_5",
+            "label":"capsules_category_1",
+            "texte":"Intenso"
           },
-          "text": {
-             "id": "10_14",
-            "label":"text",
-            "texte":"The new Lattissima Pro is inspired by the quality of professional machines with a high level of simplicity, presented in a sleek, pure and robust design with aluminium finish."
+          "capsules_category_2": {
+             "id": "7_11",
+            "label":"capsules_category_2",
+            "texte":"Espresso"
           },
-          "bloc_1_•_characteristics": {
-             "id": "10_13",
-            "label":"bloc_1_•_characteristics",
-            "texte":"Characteristics"
+          "capsules_category_3": {
+             "id": "7_9",
+            "label":"capsules_category_3",
+            "texte":"Lungo"
           },
-          "bloc_1__info_1": {
-             "id": "10_17",
-            "label":"bloc_1__info_1",
-            "texte":"Refined brushed aluminium finish"
+          "capsules_category_4": {
+             "id": "7_12",
+            "label":"capsules_category_4",
+            "texte":"Decaffeinato"
           },
-          "bloc_1__info_2": {
-             "id": "10_18",
-            "label":"bloc_1__info_2",
-            "texte":"19 bar"
+          "capsules_category_5": {
+             "id": "7_8",
+            "label":"capsules_category_5",
+            "texte":"Pure origin"
           },
-          "bloc_1__info_3": {
-             "id": "10_19",
-            "label":"bloc_1__info_3",
-            "texte":"Machine ready in 25 seconds"
-          },
-          "bloc_1__info_4": {
-             "id": "10_24",
-            "label":"bloc_1__info_4",
-            "texte":"Auto power off"
-          },
-          "bloc_2_•_intuitive_touchscreen": {
-             "id": "10_20",
-            "label":"bloc_2_•_intuitive_touchscreen",
-            "texte":"Intuitive touchscreen"
-          },
-          "bloc_2__info_1": {
-             "id": "10_21",
-            "label":"bloc_2__info_1",
-            "texte":"LCD Display with clear text guidance for intuitive use"
-          },
-          "bloc_2__info_2": {
-             "id": "10_22",
-            "label":"bloc_2__info_2",
-            "texte":"Delicious beverages at the touch of a button"
-          },
-          "bloc_3_•_optimal_milk_froth_quality": {
-             "id": "10_11",
-            "label":"bloc_3_•_optimal_milk_froth_quality",
-            "texte":"Optimal milk froth quality"
-          },
-          "bloc_3__info_1": {
-             "id": "10_10",
-            "label":"bloc_3__info_1",
-            "texte":"Advanced steamer technology"
-          },
-          "bloc_3__info_2": {
-             "id": "10_1",
-            "label":"bloc_3__info_2",
-            "texte":"10 oz. milk container storable in fridge"
-          },
-          "bloc_4_•_auto_clean_system": {
-             "id": "10_3",
-            "label":"bloc_4_•_auto_clean_system",
-            "texte":"Auto clean system"
-          },
-          "bloc_4__info_1": {
-             "id": "10_4",
-            "label":"bloc_4__info_1",
-            "texte":"Assessed by International Certification Body"
-          },
-          "bloc_4__info_2": {
-             "id": "10_5",
-            "label":"bloc_4__info_2",
-            "texte":"Milk system components are dish washable"
-          },
-          "download_user_guide": {
-             "id": "10_9",
-            "label":"download_user_guide",
-            "texte":"Download <br>user guide"
-          },
-          "user_guide_url": {
-             "id": "10_23",
-            "label":"user_guide_url",
-            "texte":"http://www.nespresso.com/khjkhd.pdf"
-          },
-          "assistance_video": {
-             "id": "10_7",
-            "label":"assistance_video",
-            "texte":"Watch our <br>assistance videos"
-          },
-          "youtube_video_playlist_url": {
-             "id": "10_8",
-            "label":"youtube_video_playlist_url",
-            "texte":"http://www.youtube.com/Playlist"
+          "capsules_category_6": {
+             "id": "7_4",
+            "label":"capsules_category_6",
+            "texte":"Variations"
           }
         }
       },
       "range__grand_cru":{
         "section":"range__grand_cru",
         "blockText":{
-          "grand_cru_14": {
-             "id": "8_33",
-            "label":"grand_cru_14",
-            "texte":"Decaffeinato Intenso"
-          },
           "grand_cru_1": {
              "id": "8_41",
             "label":"grand_cru_1",
@@ -607,35 +462,15 @@
             "label":"grand_cru_2",
             "texte":"Dharkan"
           },
-          "grand_cru_15": {
-             "id": "8_34",
-            "label":"grand_cru_15",
-            "texte":"Decaffeinato"
-          },
-          "grand_cru_16": {
-             "id": "8_35",
-            "label":"grand_cru_16",
-            "texte":"Decaffeinato Lungo"
-          },
           "grand_cru_3": {
              "id": "8_43",
             "label":"grand_cru_3",
             "texte":"Ristretto"
           },
-          "grand_cru_14_aromatic_profile": {
-             "id": "8_28",
-            "label":"grand_cru_14_aromatic_profile",
-            "texte":"Roasted cocoa, cereal"
-          },
           "grand_cru_4": {
              "id": "8_44",
             "label":"grand_cru_4",
             "texte":"Arpeggio"
-          },
-          "grand_cru_14_aromatic_profile_with_milk": {
-             "id": "8_27",
-            "label":"grand_cru_14_aromatic_profile_with_milk",
-            "texte":"Sweet, balanced and lightly roasted"
           },
           "grand_cru_5": {
              "id": "8_45",
@@ -647,25 +482,10 @@
             "label":"grand_cru_6",
             "texte":"Livanto"
           },
-          "grand_cru_16_aromatic_profile_with_milk": {
-             "id": "8_25",
-            "label":"grand_cru_16_aromatic_profile_with_milk",
-            "texte":"Toasted cereal, green fruity"
-          },
-          "grand_cru_16_aromatic_profile": {
-             "id": "8_26",
-            "label":"grand_cru_16_aromatic_profile",
-            "texte":"Roasted cereal"
-          },
           "grand_cru_7": {
              "id": "8_47",
             "label":"grand_cru_7",
             "texte":"Capriccio"
-          },
-          "grand_cru_15_aromatic_profile": {
-             "id": "8_24",
-            "label":"grand_cru_15_aromatic_profile",
-            "texte":"Fruity, winey"
           },
           "grand_cru_8": {
              "id": "8_40",
@@ -676,11 +496,6 @@
              "id": "8_39",
             "label":"grand_cru_9",
             "texte":"Cosi"
-          },
-          "grand_cru_15_aromatic_profile_with_milk": {
-             "id": "8_23",
-            "label":"grand_cru_15_aromatic_profile_with_milk",
-            "texte":"Very light, sweet, smooth and milky"
           },
           "grand_cru_10": {
              "id": "8_38",
@@ -702,35 +517,115 @@
             "label":"grand_cru_13",
             "texte":"Bukeela <i>ka Ethiopia</i>"
           },
+          "grand_cru_14": {
+             "id": "8_33",
+            "label":"grand_cru_14",
+            "texte":"Decaffeinato Intenso"
+          },
+          "grand_cru_15": {
+             "id": "8_68",
+            "label":"grand_cru_15",
+            "texte":"Vivalto Lungo Decafeinato"
+          },
+          "grand_cru_16": {
+             "id": "8_69",
+            "label":"grand_cru_16",
+            "texte":"Volluto Decafeinato"
+          },
           "grand_cru_17": {
+             "id": "8_67",
+            "label":"grand_cru_17",
+            "texte":"Arpeggio Decafeinato"
+          },
+          "grand_cru_18": {
              "id": "8_48",
             "label":"grand_cru_17",
             "texte":"Fortissio Lungo"
           },
-          "grand_cru_18": {
+          "grand_cru_19": {
              "id": "8_49",
             "label":"grand_cru_18",
             "texte":"Vivalto Lungo"
           },
-          "grand_cru_19": {
+          "grand_cru_20": {
              "id": "8_50",
             "label":"grand_cru_19",
             "texte":"Linizio Lungo"
           },
-          "grand_cru_20": {
+          "grand_cru_21": {
              "id": "8_65",
             "label":"grand_cru_20",
             "texte":"Caramelito"
           },
-          "grand_cru_21": {
+          "grand_cru_22": {
              "id": "8_64",
             "label":"grand_cru_21",
             "texte":"Vanilio"
           },
-          "grand_cru_22": {
+          "grand_cru_23": {
              "id": "8_63",
             "label":"grand_cru_22",
             "texte":"Cioccatino"
+          },
+          "grand_cru_19_decafeinato_aromatic_profile_with_milk": {
+             "id": "8_73",
+            "label":"grand_cru_18_decafeinato_aromatic_profile_with_milk",
+            "texte":"Vivalto Decaf Arom Prof With Milk"
+          },
+          "grand_cru_8_decafeinato_aromatic_profile_with_milk": {
+             "id": "8_75",
+            "label":"grand_cru_8_decafeinato_aromatic_profile_with_milk",
+            "texte":"Volluto Decaf Arom Prof With Milk"
+          },
+          "grand_cru_8_decafeinato_aromatic_profile": {
+             "id": "8_74",
+            "label":"grand_cru_8_decafeinato_aromatic_profile",
+            "texte":"Volluto Decaf Arom Prof"
+          },
+          "grand_cru_4_decafeinato_aromatic_profile_with_milk": {
+             "id": "8_71",
+            "label":"grand_cru_4_decafeinato_aromatic_profile_with_milk",
+            "texte":"Arpeggio Decaf Arom Prof With Milk"
+          },
+          "grand_cru_19_decafeinato_aromatic_profile": {
+             "id": "8_72",
+            "label":"grand_cru_18_decafeinato_aromatic_profile",
+            "texte":"Vivalto Decaf Arom Prof"
+          },
+          "grand_cru_4_decafeinato_aromatic_profile": {
+             "id": "8_70",
+            "label":"grand_cru_4_decafeinato_aromatic_profile",
+            "texte":"Arpeggio Decaf Arom Prof"
+          },
+          "grand_cru_15_aromatic_profile": {
+             "id": "8_28",
+            "label":"grand_cru_14_aromatic_profile",
+            "texte":"Roasted cocoa, cereal"
+          },
+          "grand_cru_15_aromatic_profile_with_milk": {
+             "id": "8_27",
+            "label":"grand_cru_14_aromatic_profile_with_milk",
+            "texte":"Sweet, balanced and lightly roasted"
+          },
+          "grand_cru_17_aromatic_profile_with_milk": {
+             "id": "8_25",
+            "label":"grand_cru_16_aromatic_profile_with_milk",
+            "texte":"Toasted cereal, green fruity"
+          },
+          "grand_cru_17_aromatic_profile": {
+             "id": "8_26",
+            "label":"grand_cru_16_aromatic_profile",
+            "texte":"Roasted cereal"
+          },
+          "grand_cru_16_aromatic_profile": {
+             "id": "8_24",
+            "label":"grand_cru_15_aromatic_profile",
+            "texte":"Fruity, winey"
+          },
+          "grand_cru_16_aromatic_profile_with_milk": {
+             "id": "8_23",
+            "label":"grand_cru_15_aromatic_profile_with_milk",
+            "texte":"Very light, sweet, smooth and milky"
           },
           "grand_cru_1_aromatic_profile": {
              "id": "8_62",
@@ -949,38 +844,178 @@
           }
         }
       },
+      "powerful_inside_and_out":{
+        "section":"powerful_inside_and_out",
+        "blockText":{
+          "title": {
+             "id": "10_15",
+            "label":"title",
+            "texte":"Powerful inside & out"
+          },
+          "text": {
+             "id": "10_14",
+            "label":"text",
+            "texte":"The new Lattissima Pro is inspired by the quality of professional machines with a high level of simplicity, presented in a sleek, pure and robust design with aluminium finish."
+          },
+          "bloc_1_•_characteristics": {
+             "id": "10_13",
+            "label":"bloc_1_•_characteristics",
+            "texte":"Characteristics"
+          },
+          "bloc_1__info_1": {
+             "id": "10_17",
+            "label":"bloc_1__info_1",
+            "texte":"Refined brushed aluminium finish"
+          },
+          "bloc_1__info_2": {
+             "id": "10_18",
+            "label":"bloc_1__info_2",
+            "texte":"19 bar"
+          },
+          "bloc_1__info_3": {
+             "id": "10_19",
+            "label":"bloc_1__info_3",
+            "texte":"Machine ready in 25 seconds"
+          },
+          "bloc_1__info_4": {
+             "id": "10_24",
+            "label":"bloc_1__info_4",
+            "texte":"Auto power off"
+          },
+          "bloc_2_•_intuitive_touchscreen": {
+             "id": "10_20",
+            "label":"bloc_2_•_intuitive_touchscreen",
+            "texte":"Intuitive touchscreen"
+          },
+          "bloc_2__info_1": {
+             "id": "10_21",
+            "label":"bloc_2__info_1",
+            "texte":"LCD Display with clear text guidance for intuitive use"
+          },
+          "bloc_2__info_2": {
+             "id": "10_22",
+            "label":"bloc_2__info_2",
+            "texte":"Delicious beverages at the touch of a button"
+          },
+          "bloc_3_•_optimal_milk_froth_quality": {
+             "id": "10_11",
+            "label":"bloc_3_•_optimal_milk_froth_quality",
+            "texte":"Optimal milk froth quality"
+          },
+          "bloc_3__info_1": {
+             "id": "10_10",
+            "label":"bloc_3__info_1",
+            "texte":"Advanced steamer technology"
+          },
+          "bloc_3__info_2": {
+             "id": "10_1",
+            "label":"bloc_3__info_2",
+            "texte":"10 oz. milk container storable in fridge"
+          },
+          "bloc_4_•_auto_clean_system": {
+             "id": "10_3",
+            "label":"bloc_4_•_auto_clean_system",
+            "texte":"Auto clean system"
+          },
+          "bloc_4__info_1": {
+             "id": "10_4",
+            "label":"bloc_4__info_1",
+            "texte":"Assessed by International Certification Body"
+          },
+          "bloc_4__info_2": {
+             "id": "10_5",
+            "label":"bloc_4__info_2",
+            "texte":"Milk system components are dish washable"
+          },
+          "download_user_guide": {
+             "id": "10_9",
+            "label":"download_user_guide",
+            "texte":"Download <br>user guide"
+          },
+          "user_guide_url": {
+             "id": "10_23",
+            "label":"user_guide_url",
+            "texte":"http://www.nespresso.com/khjkhd.pdf"
+          },
+          "assistance_video": {
+             "id": "10_7",
+            "label":"assistance_video",
+            "texte":"Watch our <br>assistance videos"
+          },
+          "youtube_video_playlist_url": {
+             "id": "10_8",
+            "label":"youtube_video_playlist_url",
+            "texte":"https://www.youtube.com/watch?v=p0bsu9KEIWE&list=PLQ2eIUsAVWUzUKnxH7igFum7zr5UyULBt"
+          }
+        }
+      },
       "spring_activation":{
         "section":"spring_activation",
         "blockText":{
-          "receive": {
+          "": {
              "id": "11_5",
-            "label":"receive",
+            "label":"",
             "texte":"Receive"
           },
-          "currency": {
+          "": {
              "id": "11_4",
-            "label":"currency",
+            "label":"",
             "texte":"€"
           },
-          "price": {
+          "": {
              "id": "11_3",
-            "label":"price",
+            "label":"",
             "texte":"50"
           },
-          "cta": {
+          "": {
              "id": "11_2",
-            "label":"cta",
-            "texte":"Redeem your offer"
+            "label":"",
+            "texte":"Discover more"
           },
-          "range_date": {
+          "": {
              "id": "11_1",
-            "label":"range_date",
+            "label":"",
             "texte":"Until 31.5.2014"
           },
-          "url": {
+          "": {
              "id": "11_6",
-            "label":"url",
+            "label":"",
             "texte":"http://www.nespresso.com/..."
+          }
+        }
+      },
+      "navigation_menu":{
+        "section":"navigation_menu",
+        "blockText":{
+          "": {
+             "id": "12_7",
+            "label":"",
+            "texte":""
+          },
+          "home": {
+             "id": "12_3",
+            "label":"home",
+            "texte":"Home"
+          },
+          "one_touch": {
+             "id": "12_2",
+            "label":"one_touch",
+            "texte":"Intuitive<br>touchscreen"
+          },
+          "a_wide_range_of_grands_crus": {
+             "id": "12_4",
+            "label":"a_wide_range_of_grands_crus",
+            "texte":"Coffee range"
+          },
+          "delicious_coffee_and_milk_recipes": {
+             "id": "12_5",
+            "label":"delicious_coffee_and_milk_recipes",
+            "texte":"Milk system"
+          },
+          "powerful__inside_andamp;_out": {
+             "id": "12_6",
+            "label":"powerful__inside_andamp;_out",
+            "texte":"Features"
           }
         }
       }
